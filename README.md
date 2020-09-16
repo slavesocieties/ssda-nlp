@@ -1,4 +1,3 @@
-# nbdev template
+# ssda-nlp
 
-Use this template to more easily create your nbdev project.
-
+Working toward automated solutions for processing machine-readable transcriptions of SSDA records.
