@@ -3,8 +3,8 @@
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
 index = {"xml_to_jsonl": "data-preprocessing.ipynb",
-         "writeHeader": "SSDA markup to spaCy input.ipynb",
-         "writeFooter": "SSDA markup to spaCy input.ipynb"}
+         "writeHeader": "markup-to-spacy.ipynb",
+         "writeFooter": "markup-to-spacy.ipynb"}
 
 modules = ["preprocessing.py",
            "markup2spacy.py"]
