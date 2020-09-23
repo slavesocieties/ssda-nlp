@@ -2,7 +2,8 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"genAltEnts": "31-collate-xml-entities-spans.ipynb",
+index = {"parse_xml": "12-ssda-xml-parser.ipynb",
+         "genAltEnts": "31-collate-xml-entities-spans.ipynb",
          "generateSpans": "31-collate-xml-entities-spans.ipynb",
          "parseEntities": "31-collate-xml-entities-spans.ipynb",
          "parseManualEntities": "31-collate-xml-entities-spans.ipynb",
@@ -29,7 +30,8 @@ index = {"genAltEnts": "31-collate-xml-entities-spans.ipynb",
          "writeHeader": "53-markup-to-spacy.ipynb",
          "writeFooter": "53-markup-to-spacy.ipynb"}
 
-modules = ["collate.py",
+modules = ["xml_parser.py",
+           "collate.py",
            "split_data.py",
            "modeling.py",
            "model_performance_utils.py",
