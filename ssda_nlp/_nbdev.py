@@ -2,11 +2,38 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"xml_to_jsonl": "data-preprocessing.ipynb",
-         "writeHeader": "markup-to-spacy.ipynb",
-         "writeFooter": "markup-to-spacy.ipynb"}
+index = {"genAltEnts": "31-collate-xml-entities-spans.ipynb",
+         "generateSpans": "31-collate-xml-entities-spans.ipynb",
+         "parseEntities": "31-collate-xml-entities-spans.ipynb",
+         "parseManualEntities": "31-collate-xml-entities-spans.ipynb",
+         "parseXML": "31-collate-xml-entities-spans.ipynb",
+         "genEntryIDs": "31-collate-xml-entities-spans.ipynb",
+         "collate_frames": "31-collate-xml-entities-spans.ipynb",
+         "manual_collate": "31-collate-xml-entities-spans.ipynb",
+         "genSpaCyInput": "31-collate-xml-entities-spans.ipynb",
+         "frames_to_spacy": "31-collate-xml-entities-spans.ipynb",
+         "split_data": "33-split-data.ipynb",
+         "split_data_grp": "33-split-data.ipynb",
+         "load_model": "41-generic-framework-for-spacy-training.ipynb",
+         "train_model": "41-generic-framework-for-spacy-training.ipynb",
+         "save_model": "41-generic-framework-for-spacy-training.ipynb",
+         "test_model": "41-generic-framework-for-spacy-training.ipynb",
+         "model_meta_training": "42-initial-model.ipynb",
+         "get_ner_df": "42-initial-model.ipynb",
+         "get_corrects_df": "42-initial-model.ipynb",
+         "get_fns_df": "42-initial-model.ipynb",
+         "get_fps_df": "42-initial-model.ipynb",
+         "xml_to_jsonl": "51-data-preprocessing.ipynb",
+         "parse_annotation": "51-data-preprocessing.ipynb",
+         "prodigy_output_to_collated_df": "51-data-preprocessing.ipynb",
+         "writeHeader": "53-markup-to-spacy.ipynb",
+         "writeFooter": "53-markup-to-spacy.ipynb"}
 
-modules = ["preprocessing.py",
+modules = ["collate.py",
+           "split_data.py",
+           "modeling.py",
+           "model_performance_utils.py",
+           "preprocessing.py",
            "markup2spacy.py"]
 
 doc_url = "https://d-genk.github.io/ssda_nlp/"
