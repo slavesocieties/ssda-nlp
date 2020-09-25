@@ -1,6 +1,6 @@
 <ssda xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <volume country="Cuba" state="Matanzas" city="Ceiba Mocha" institution="Iglesia de San Agustín de Ceiba Mocha" id="246690" title="Libro 7 de Bautismos de Pardos y Morenos, 1872-1892">
-    <image id="1002" image-type="JPG">
+  <volume type="baptism" country="Cuba" state="Matanzas" city="Ceiba Mocha" institution="Iglesia de San Agustín de Ceiba Mocha" id="246690" title="Libro 7 de Bautismos de Pardos y Morenos, 1872-1892">
+    <image id="1002" type="JPG">
       <entry id="1">
         <margin>
           [Número] 2,138
@@ -50,7 +50,7 @@
         </body>
       </entry>
     </image>
-    <image id="1003" image-type="JPG">
+    <image id="1003" type="JPG">
       <entry id="1">
         <margin>
           [Número 2,140]

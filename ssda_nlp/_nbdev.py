@@ -3,6 +3,7 @@
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
 index = {"parse_xml": "12-ssda-xml-parser.ipynb",
+         "parse_xml_v2": "12-ssda-xml-parser.ipynb",
          "genAltEnts": "31-collate-xml-entities-spans.ipynb",
          "generateSpans": "31-collate-xml-entities-spans.ipynb",
          "parseEntities": "31-collate-xml-entities-spans.ipynb",
@@ -27,8 +28,10 @@ index = {"parse_xml": "12-ssda-xml-parser.ipynb",
          "xml_to_jsonl": "51-data-preprocessing.ipynb",
          "parse_annotation": "51-data-preprocessing.ipynb",
          "prodigy_output_to_collated_df": "51-data-preprocessing.ipynb",
+         "universal_markup_converter": "52-unstructured-to-markup.ipynb",
          "writeHeader": "53-markup-to-spacy.ipynb",
-         "writeFooter": "53-markup-to-spacy.ipynb"}
+         "writeFooter": "53-markup-to-spacy.ipynb",
+         "build_relationships": "71-relationship-builder.ipynb"}
 
 modules = ["xml_parser.py",
            "collate.py",
@@ -36,7 +39,9 @@ modules = ["xml_parser.py",
            "modeling.py",
            "model_performance_utils.py",
            "preprocessing.py",
-           "markup2spacy.py"]
+           "unstructured2markup.py",
+           "markup2spacy.py",
+           "relationships.py"]
 
 doc_url = "https://d-genk.github.io/ssda_nlp/"
 
