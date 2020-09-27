@@ -26,13 +26,19 @@ def xml_to_jsonl(path_to_xml_transcription):
             prodigy_input.write("{\"text\":\"" + current_entry + "\"}\n")
             current_entry = ''
         elif in_entry:
+            while line[0] == ' ':
+                line = line[1:]
             if ((line[len(line) - 1] == '\n') or (line[len(line) - 1] == '\r')) and (line[len(line) - 2] == '-'):
                 current_entry += line[:len(line) - 2]
             elif line[len(line) - 1] == '-':
                 current_entry += line[:len(line) - 1]
+            elif (line == '\n') or (line == '\r'):
+                continue
             elif (line[len(line) - 1] == '\n') or (line[len(line) - 1] == '\r'):
                 current_entry += line[:len(line) - 1] + ' '
             else:
+                while line[len(line) - 1] == ' ':
+                    line = line[:-1]
                 current_entry += line
 
     xml_transcription.close()

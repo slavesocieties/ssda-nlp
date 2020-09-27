@@ -29,8 +29,8 @@ index = {"parse_xml": "12-ssda-xml-parser.ipynb",
          "parse_annotation": "51-data-preprocessing.ipynb",
          "prodigy_output_to_collated_df": "51-data-preprocessing.ipynb",
          "universal_markup_converter": "52-unstructured-to-markup.ipynb",
-         "writeHeader": "53-markup-to-spacy.ipynb",
-         "writeFooter": "53-markup-to-spacy.ipynb",
+         "writeHeader": "53-markup-to-spatial-historian.ipynb",
+         "writeFooter": "53-markup-to-spatial-historian.ipynb",
          "build_relationships": "71-relationship-builder.ipynb"}
 
 modules = ["xml_parser.py",
@@ -40,7 +40,7 @@ modules = ["xml_parser.py",
            "model_performance_utils.py",
            "preprocessing.py",
            "unstructured2markup.py",
-           "markup2spacy.py",
+           "markup2sh.py",
            "relationships.py"]
 
 doc_url = "https://d-genk.github.io/ssda_nlp/"
