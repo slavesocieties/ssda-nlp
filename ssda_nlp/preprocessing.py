@@ -18,7 +18,7 @@ def xml_to_jsonl(path_to_xml_transcription):
     current_entry = ''
 
     for line in xml_transcription:
-        if "<entry>" in line:
+        if "<entry" in line:
             in_entry = True
         elif in_entry and ("</entry>" in line):
             current_entry += line[:line.find("</entry>")]

@@ -31,6 +31,12 @@ index = {"parse_xml": "12-ssda-xml-parser.ipynb",
          "universal_markup_converter": "52-unstructured-to-markup.ipynb",
          "writeHeader": "53-markup-to-spatial-historian.ipynb",
          "writeFooter": "53-markup-to-spatial-historian.ipynb",
+         "id_unique_individuals": "71-relationship-builder.ipynb",
+         "determine_principals": "71-relationship-builder.ipynb",
+         "determine_event_date": "71-relationship-builder.ipynb",
+         "determine_event_location": "71-relationship-builder.ipynb",
+         "identify_cleric": "71-relationship-builder.ipynb",
+         "build_event": "71-relationship-builder.ipynb",
          "build_relationships": "71-relationship-builder.ipynb"}
 
 modules = ["xml_parser.py",
