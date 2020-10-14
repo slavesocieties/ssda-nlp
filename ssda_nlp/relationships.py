@@ -65,15 +65,33 @@ def determine_principals(entry_text, entities, n_principals):
 
 # Cell
 
-def determine_event_date(entry_text, entities, event_type):
+def determine_event_date(entry_text, entities, primary_event_type, secondary_event_type = None):
     '''
     determines the date of a specific event
         entry_text: the full text of a single entry, ported directly from spaCy to ensure congruity
         entities: entities of all kinds extracted from that entry by an NER model
-        event_type: this could be either a valid record_type OR a secondary event like a birth
+        primary_event_type: a valid record_type (i.e. "baptism", "marriage", or "burial")
+        secondary_event_type: use if attempting to identify a secondary event (i.e. "birth") in a primary record
 
         returns: the date of the event in question, or None if no date can be identified
     '''
+    date = None
+
+    if secondary_event_type != None:
+        primary_event_date = determine_event_date(entry_text, entities, primary_event_type)
+        for index, entity in entities.iterrows():
+            if entity['pred_label'] == 'DATE' and entity['pred_entity'] != primary_event_date:
+                date = entity['pred_entity']
+
+    elif primary_event_type == "baptism":
+        entry_length = len(entry_text)
+
+        for index, entity in entities.iterrows():
+            if entity['pred_label'] == 'DATE' and entity['pred_start'] <= (entry_length / 3):
+                date = entity['pred_entity']
+
+    else:
+        date = "That event type is not supported yet."
 
     return date
 
@@ -155,4 +173,4 @@ def build_relationships(entry_text, entities, record_type):
 
     #code that turns pieces defined above into well-formed relationships
 
-    return principals #this will eventually be the full set of relationships
+    return relationships
