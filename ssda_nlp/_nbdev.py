@@ -4,6 +4,7 @@ __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
 index = {"parse_xml": "12-ssda-xml-parser.ipynb",
          "parse_xml_v2": "12-ssda-xml-parser.ipynb",
+         "retrieve_volume_metadata": "12-ssda-xml-parser.ipynb",
          "genAltEnts": "31-collate-xml-entities-spans.ipynb",
          "generateSpans": "31-collate-xml-entities-spans.ipynb",
          "parseEntities": "31-collate-xml-entities-spans.ipynb",

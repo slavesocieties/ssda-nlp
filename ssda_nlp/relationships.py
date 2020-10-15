@@ -65,25 +65,25 @@ def determine_principals(entry_text, entities, n_principals):
 
 # Cell
 
-def determine_event_date(entry_text, entities, primary_event_type, secondary_event_type = None):
+def determine_event_date(entry_text, entities, event_type, volume_metadata):
     '''
     determines the date of a specific event
         entry_text: the full text of a single entry, ported directly from spaCy to ensure congruity
         entities: entities of all kinds extracted from that entry by an NER model
-        primary_event_type: a valid record_type (i.e. "baptism", "marriage", or "burial")
-        secondary_event_type: use if attempting to identify a secondary event (i.e. "birth") in a primary record
+        event_type: this could be either a valid record_type OR a secondary event like a birth
+        volume_metadata: metadata for the volume that the entry comes from, built by retrieve_volume_metadata
 
         returns: the date of the event in question, or None if no date can be identified
     '''
     date = None
 
-    if secondary_event_type != None:
-        primary_event_date = determine_event_date(entry_text, entities, primary_event_type)
+    if event_type != volume_metadata["type"]:
+        primary_event_date = determine_event_date(entry_text, entities, event_type, volume_metadata)
         for index, entity in entities.iterrows():
             if entity['pred_label'] == 'DATE' and entity['pred_entity'] != primary_event_date:
                 date = entity['pred_entity']
 
-    elif primary_event_type == "baptism":
+    elif volume_metadata["type"] == "baptism":
         entry_length = len(entry_text)
 
         for index, entity in entities.iterrows():
@@ -97,15 +97,22 @@ def determine_event_date(entry_text, entities, primary_event_type, secondary_eve
 
 # Cell
 
-def determine_event_location(entry_text, entities, event_type):
+def determine_event_location(entry_text, entities, event_type, volume_metadata):
     '''
     determines the location of a specific event
         entry_text: the full text of a single entry, ported directly from spaCy to ensure congruity
         entities: entities of all kinds extracted from that entry by an NER model
         event_type: this could be either a valid record_type OR a secondary event like a birth
+        volume_metadata: metadata for the volume that the entry comes from, built by retrieve_volume_metadata
 
         returns: the location of the event in question, or None if no date can be identified
     '''
+    location = None
+
+    if event_type == volume_metadata["type"]:
+        location = volume_metadata["institution"]
+    else:
+        location = "That event type is not supported yet."
 
     return location
 
@@ -119,6 +126,30 @@ def identify_cleric(entry_text, entities):
 
         returns: the associated cleric(s), or None if no date can be identified
     '''
+    clerics = None
+
+    for index, entity in entities.iterrows():
+            if ((entity['pred_label'] == 'PER') and ((len(entry_text) - entity['pred_end']) <= 10) and (len(entry_text) > 100)):
+                clerics = entity['pred_entity']
+            #going to keep this condition for now, but it can create false positives when long, incorrect entities are extracted
+            #from short and/or garbled entries
+            elif (entity['pred_entity'] != None) and (len(entry_text) - entity['pred_end'] <= 2) and (entity['pred_label'] == 'PER'):
+                clerics = entity['pred_entity']
+
+    if clerics == None:
+        pvs_label = None
+        pvs_end = None
+        for index, entity in entities.iterrows():
+            if entity['pred_label'] == 'PER' and pvs_label == 'DATE' and (entity['pred_start'] - pvs_end) <= 15:
+                clerics = entity['pred_entity']
+            pvs_label = entity['pred_label']
+            pvs_end = entity['pred_end']
+
+    if clerics == None:
+        entry_text = entry_text.lower()
+        for index, entity in entities.iterrows():
+            if entity['pred_label'] == 'PER' and entry_text.find("cura", entity['pred_start'] + len(entity['pred_entity'])) != -1 and ((entry_text.find("cura", entity['pred_start'] + len(entity['pred_entity']))) - entity['pred_end']) <= 15:
+                clerics = entity['pred_entity']
 
     return clerics
 
@@ -142,7 +173,7 @@ def build_event(entry_text, entities, event_type, principals):
 
 # Cell
 
-def build_relationships(entry_text, entities, record_type):
+def build_relationships(entry_text, entities, path_to_volume_xml):
     '''
     Master function that will combine all helper functions built above
         entry_text: the full text of a single entry, ported directly from spaCy to ensure congruity
@@ -154,16 +185,18 @@ def build_relationships(entry_text, entities, record_type):
     '''
     #unique_individuals = id_unique_indviduals(entry_text, entities, record_type)
 
-    if record_type == "baptism":
+    volume_metadata = retrieve_metadata(path_to_volume_xml)
+
+    if volume_metadata["type"] == "baptism":
         principals = determine_principals(entry_text, entities, 1)
         #event_relationships = build_event(entry_text, entities, "baptism", principals)
         #interpersonal_relationships = process_interpersonal(entry_text, entities)
         #characteristics = process_characteristics(entry_text, entities, interpersonal_relationships)
-    elif record_type == "marriage":
+    elif volume_metadata["type"] == "marriage":
         #process marriage record
         print("That record type is not supported yet.")
         return None
-    elif record_type == "burial":
+    elif volume_metadata["type"] == "burial":
         #process burial record
         print("That record type is not supported yet.")
         return None
