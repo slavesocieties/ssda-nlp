@@ -15,6 +15,10 @@ def id_unique_individuals(entry_text, entities, record_type):
 
         returns: a list of the unique individuals who appear in an entry
     '''
+    people_df = entities.loc[entities['pred_label'] == 'PER']
+    people_df.reset_index(inplace=True)
+    people_df = people_df.drop('index',axis=1)
+    unique_individuals = people_df['pred_entity'].unique()
 
     return unique_individuals
 
