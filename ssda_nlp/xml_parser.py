@@ -79,15 +79,15 @@ def parse_xml_v2(path_to_xml):
 
     for line in master_xml:
         if "<volume" in line:
-            title_start = line.find('\"', line.find("title")) + 1
+            title_start = line.find('\"', line.find("title=")) + 1
             title_end = line.find('\"', title_start)
             curr_vol_titl = line[title_start:title_end]
-            id_start = line.find('\"', line.find("id")) + 1
+            id_start = line.find('\"', line.find("id=")) + 1
             id_end = line.find('\"', id_start)
             curr_vol_id = line[id_start:id_end]
         elif "<image" in line:
             entry_id = 0
-            id_start = line.find('\"', line.find("id")) + 1
+            id_start = line.find('\"', line.find("id=")) + 1
             id_end = line.find('\"', id_start)
             curr_fol_id = line[id_start:id_end]
         elif "<entry" in line:

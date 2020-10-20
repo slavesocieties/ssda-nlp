@@ -165,6 +165,7 @@ def build_event(entry_text, entities, event_type, principals):
     builds out relationships related to a baptism or burial event
         entry_text: the full text of a single entry, ported directly from spaCy to ensure congruity
         entities: entities of all kinds extracted from that entry by an NER model
+        event_type: this could be either a valid record_type OR a secondary event like a birth
 
         returns: structured representation of these relationships, including (but not necessarily limited to)
         the event's principal, the date of the event, the location of the event, and the associated cleric

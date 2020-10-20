@@ -4,10 +4,17 @@ __all__ = ['universal_markup_converter']
 
 # Cell
 
+from .markup2sh import *
+
+# Cell
+
 def universal_markup_converter(path_to_transcription, transcription_type):
 
-    if transcription_type == "spatial_historian":
+    #this is configured for a specific folio naming convention in SH, so isn't really unviersal
+    #but should probably be deprecated regardless since we don't want to be dealing in SH transcription format
+    if transcription_type == "spatial historian":
         inp = open(path_to_transcription,'r',encoding="utf-8")
+        #also wtf is this
         transcription = ''
         for line in inp:
             transcription += line
@@ -56,6 +63,55 @@ def universal_markup_converter(path_to_transcription, transcription_type):
 
         inp.close()
         output.close()
+
+    #this works
+    elif transcription_type == "markup v1":
+        inp = open(path_to_transcription,'r',encoding="utf-8")
+        typ = input("Enter record type: ")
+        country = input("Enter country: ")
+        state = input("Enter first-level administrative division: ")
+        city = input("Enter city: ")
+        institution = input("Enter institution: ")
+        output_dir = input("Enter output directory: ")
+        volume_identifier = input("Enter the volume's unique identifier: ")
+        volume_title = input("Enter the volume's title: ")
+        img_type = input("Enter image file extensions: ")
+        curr_image_id = int(input("Enter first transcribed image file name: "))
+
+        output = open(output_dir,'w',encoding="utf-8")
+        output.write("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n")
+        output.write("<ssda xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\n")
+        output.write("<volume type=\"" + typ + "\" country=\"" + country + "\" state=\"" + state + "\" city=\"" + city + "\" institution=\"" + institution + "\" id=\"" + volume_identifier + "\" title=\"" + volume_title + "\">\n")
+
+        in_entry = False
+        for line in inp:
+            if ("<folio>" in line) and ("</folio>" not in line):
+                output.write("<image id=\"" + str(curr_image_id) + "\" type=\"" + img_type + "\">\n")
+                curr_image_id += 1
+                curr_entry = 1
+            elif ("<folio>" in line) and ("</folio>" in line):
+                output.write("</image>\n")
+                output.write("<image id=\"" + str(curr_image_id) + "\" type=\"" + img_type + "\">\n")
+                curr_image_id += 1
+                curr_entry = 1
+            elif "<entry>" in line:
+                in_entry = True
+                output.write("<entry id=\"" + str(curr_entry) + "\">\n")
+                curr_entry += 1
+            elif "</entry>" in line:
+                in_entry = False
+                output.write("</entry>\n")
+            elif in_entry:
+                output.write(line)
+            elif "</folio>" in line:
+                output.write("</image>\n")
+
+        output.write("</volume>\n")
+        output.write("</ssda>")
+
+        inp.close()
+        output.close()
+
     else:
         print("that transcription type is not supported yet")
 

@@ -1,7 +1,8 @@
-<ssda>
-  <volume>
-<folio>
-<entry> 1793 pag. 1
+<?xml version="1.0" encoding="utf-8"?>
+<ssda xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<volume type="baptism" country="United States" state="Florida" city="St. Augustine" institution="Archives of the Diocese of St. Augustine" id="239746" title="Baptisms - 1793-1807">
+<image id="1013" type="JPG">
+<entry id="1">
 1.
 María
 Dolores
@@ -20,9 +21,8 @@ ron sus padrinos el Mulato libre José Rivas y la
 Negra libre María de la Luz Blanco, vecinos de esta
 Ciudad, y advertí el parentesco espiritual, y demás obli
 gaciones, y lo firmé en dicho dia, mes y año.
- Miguel OReilly </entry>
-
-<entry> Juan
+</entry>
+<entry id="2">
 2.
 Antonio
 Guillo
@@ -41,10 +41,10 @@ Antonio. Fueron sus padrinos Antonio Pellice, y
 Susana Pellicer vecinos de esta Ciudad, les advertí el
 parentesco espiritual, y demás obligaciones, y lo firmé
 en dicho dia, mes y año.
- Miguel OReilly </entry>
-
-</folio> <folio>
-<entry>
+</entry>
+</image>
+<image id="1014" type="JPG">
+<entry id="1">
 3.
 María
 Juana
@@ -66,8 +66,8 @@ Juana Francisca fueron sus padrinos Lorenzo
 Capó y Juana Joaquina Gonzalez, vecinos de esta
 Ciudad, les advertí el parentesco espiritual, y demás
 obligaciones, y lo firmé en dicho dia, mes y año.
- Miguel OReilly </entry>
-<entry>
+</entry>
+<entry id="2">
 4.
 Maria
 Teresa
@@ -88,10 +88,10 @@ sa. fueron sus padrinos Francisco Huiten, y
 Andrea Ortigas ambos morenos y vecinos de esta Ciu
 dad, les advertí el parentesco espiritual, y demás
 obligaciones, y lo firmé en dicho dia, mes y año.
- Miguel OReilly </entry>
-</folio><folio>
-
-<entry>5.
+</entry>
+</image>
+<image id="1015" type="JPG">
+<entry id="1">
 Maria
 Josefa
 Andrea
@@ -112,8 +112,8 @@ sus padrinos Domingo y Doña Corolinda
 Josefa Leonardy, vecinos de esta Ciudad, les advertí el
 parentesco espiritual, y demás obligaciones,
 y lo firmé en dicho dia, mes y año.
- Miguel OReilly </entry>
-<entry>6
+</entry>
+<entry id="2">
 Juana
 Teresa
 de Jesus
@@ -132,9 +132,10 @@ por nombre Juana Teresa de Jesus fue su madrina
 Doña Teresa Rodríguez, vecina de esta Ciudad, a
 quien le advertí el parentesco espiritual, y demás obli
 gaciones, y lo firmé en dicho dia, mes y año.
- Miguel OReilly </entry>
-</folio><folio>
-<entry>
+</entry>
+</image>
+<image id="1016" type="JPG">
+<entry id="1">
 7.
 Maria
 Josepha
@@ -157,8 +158,8 @@ Maria Josefa de los Dolores fue su madrina Doña
 Catalina Gerónima Porras, vecina de esta Ciudad,
 á quien advertí el parentesco espiritual, y demás obli
 gaciones, y lo firmé en dicho dia, mes y año.
- Miguel OReilly </entry>
-<entry> 8.
+</entry>
+<entry id="2">
 Maria
 Dolores
 Tomson
@@ -179,9 +180,10 @@ y Maria Raphaela Quinty, Negros libres
 y vecinos de esta Ciudad, les advertí el parentesco
 espiritual, y demás obligaciones, y lo firmé en dicho
 dia, mes y año.
- Miguel OReilly </entry>
-</folio><folio>
-<entry>
+</entry>
+</image>
+<image id="1017" type="JPG">
+<entry id="1">
 1794
 9.
 Maria
@@ -202,8 +204,8 @@ sus padrinos Juan Martinely y Mariana Cavedo,
 vecinos de esta Ciudad, les advertí el parentesco espiri
 tual, y demás obligaciones, y lo firmé en dicho dia,
 mes y año.
- Miguel OReilly </entry>
-<entry> 10.
+</entry>
+<entry id="2">
 Isabel
 Francisca
 Cupar
@@ -221,10 +223,10 @@ cisca. fue su madrina Isabel Ridavels, vecina de esta
 Ciudad, a quien advertí el parentesco espiritual
 y demás obligaciones, y lo firmé en dicho dia, mes
 y año.
- Miguel OReilly </entry>
-</folio><folio>
-
-<entry> 11.
+</entry>
+</image>
+<image id="1018" type="JPG">
+<entry id="1">
 Joseph
 Manuel
 Leslie
@@ -243,8 +245,8 @@ Manuel fue su madrina la mulata libre Maria
 Guadalupe de Rubio, vecina de esta Ciudad, a quien
 advertí el parentesco espiritual, y demás obligac
 iones, y lo firmé en dicho dia, mes y año.
- Miguel OReilly </entry>
-<entry> 12.
+</entry>
+<entry id="2">
 Eusebio
 Joseph
 Ramon
@@ -264,10 +266,10 @@ Joseph Ramon fueron sus padrinos Pedro Miranda y Ma
 ria Dolores Miranda vecinos de esta Ciudad, les advertí
 el parentesco espiritual, y demás obligaciones, y lo firmé
 en dicho dia, mes y año.
- Miguel OReilly </entry>
-</folio><folio>
-
-<entry> 13.
+</entry>
+</image>
+<image id="1019" type="JPG">
+<entry id="1">
 Antonio
 Joseph
 Dimas
@@ -285,8 +287,8 @@ sia, y la puse por nombre Antonio Joseph Dimas Pater
 fueron sus padrinos Dimas Ponz y Margarita Fray
 vecinos de esta Ciudad, les advertí el parentesco espiritual,
 y demás obligaciones, y lo firmé en dicho dia, mes y año.
- Miguel OReilly </entry>
-<entry> 14.
+</entry>
+<entry id="2">
 Maria
 Dolores
 Judith
@@ -306,9 +308,10 @@ Dolores Judith Smith fue su madrina Doña Rosa
 de la Luz, vecina de esta Ciudad a quien advertí el
 parentesco espiritual, y demás obligaciones, y lo firmé
 en dicho dia, mes y año.
- Miguel OReilly </entry>
-</folio><folio>
-<entry>
+</entry>
+</image>
+<image id="1020" type="JPG">
+<entry id="1">
 15.
 Juan
 Nepomu
@@ -330,8 +333,8 @@ le puse por nombre Juan Nepomuceno. fue su madrina
 Maria Dolores Salcedo, esclava de Don Pedro Slace
 do, á quien advertí el parentesco espiritual, y de
 más obligaciones, y lo firmé en dicho dia, mes y año.
- Miguel OReilly </entry>
-<entry> 16.
+</entry>
+<entry id="2">
 Juan
 Baptista
 Antonio
@@ -352,10 +355,10 @@ Antonio fueron sus padrinos Don Juan Gu
 tierrez, y Ageda Ponz, vecinos de esta Ciudad
 les advertí el parentesco espiritual, y demás obligaciones,
 y lo firmé en dicho dia, mes y año.
- Thomas Hafsett </entry>
-</folio><folio>
-
-<entry> 17.
+</entry>
+</image>
+<image id="1021" type="JPG">
+<entry id="1">
 Mariana
 Guadalupe
 Perpal
@@ -374,8 +377,8 @@ Juan Baptista Huiten y Maria Rafaela Quinty
 Negros libres y vecinos de esta Ciudad, les adverti el par
 entesco espiritual, y demás obligaciones,
 y lo firmé en dicho dia, mes y año.
- Miguel O Reilly </entry>
-<entry> 18.
+</entry>
+<entry id="2">
 Maria
 na
 Basilia
@@ -395,9 +398,10 @@ Basilia Anastacía. fueron sus padrinos Lorenzo
 Capo y Anna Cherez, vecinos de esta Ciudad, le adver
 ti el parentesco espiritual, y demás obligaciones,
 y lo firmé en dicho dia, mes y año.
- Thomas Hafsett </entry>
-</folio><folio>
-<entry>
+</entry>
+</image>
+<image id="1022" type="JPG">
+<entry id="1">
 19.
 Juan
 Baptista
@@ -416,8 +420,8 @@ bre Juan Baptistafue su padrino Don Miguel
 Lorenzo Isnardy, vecino de esta Ciudad, le advertí
 el parentesco espiritual, y demás obligaciones, y
 lo firmé en dicho dia, mes y año.
- Miguel OReilly </entry>
-<entry> 20.
+</entry>
+<entry id="2">
 Roberto
 Macqueen
 Miércoles
@@ -435,10 +439,10 @@ y le puse por nombre Roberto y fue su padrino
 El Doctor Don Thomas Sterling vecino de esta provin
 cia, le adverti el parentesco espiritual, y demás obli
 gaciones, y lo firmé en dicho dia, mes y año.
- Thomas Hafsett </entry>
-
-</folio><folio>
-<entry>
+</entry>
+</image>
+<image id="1023" type="JPG">
+<entry id="1">
 21.
 Thomas
 Macqueen
@@ -456,8 +460,8 @@ nombre Thomas fue su padrino el Doctor Don Thomas
 Sterling, vecino de esta provincia, le adverti el paren
 tesco espiritual, y demás obligaciones, y lo firmé
 en dicho dia, mes y año.
- Thomas Hafsett </entry>
-<entry> 22.
+</entry>
+<entry id="2">
 Catarina
 Macqueen
 Miércoles, día veinte y uno de Mayo de
@@ -475,10 +479,10 @@ nombre Catarina fue su padrino el Doctor
 Don Thomas Sterling, vecino de esta provincia,
 le adverti el parentesco espiritual, y demás obliga
 ciones, y lo firmé en dicho dia, mes y año.
- Thomas Hafsett </entry>
-
-</folio><folio>
-<entry>
+</entry>
+</image>
+<image id="1024" type="JPG">
+<entry id="1">
 Juana
 Macqueen
 Miércoles, día veinte y uno de Mayo de
@@ -497,8 +501,8 @@ su padrino el Doctor Don Thomas Sterling,
 vecino de esta provincia, le adverti el parentesco
 espiritual, y demás obligaciones, y lo firmé en
 dicho dia, mes y año.
- Thomas Hafsett </entry>
-<entry> 24.
+</entry>
+<entry id="2">
 Benjamin
 Macqueen
 
@@ -519,11 +523,10 @@ el Doctor Don Thomas Sterling, vecino de esta
 provincia, le adverti el parentesco espiritual,
 y demás obligaciones, y lo firmé en
 dicho dia, mes y año.
- Thomas Hafsett </entry>
-</folio><folio>
-
-
-<entry> 25.
+</entry>
+</image>
+<image id="1025" type="JPG">
+<entry id="1">
 Pablo
 Macqueen
 
@@ -540,9 +543,8 @@ santa madre Iglesia, y le puse por nombre Pablo
 fue su padrino el Doctor Don Thomas Sterling
 vecino de esta provincia, le adverti el parentesco espiritual, y
 demás obligaciones, y lo firmé en dicho dia, mes y año.
- Thomas Hafsett </entry>
-
-<entry> 26.
+</entry>
+<entry id="2">
 María
 Josefa
 Macqueen
@@ -561,10 +563,10 @@ Josepha, fue su padrino el Doctor Don Thomas
 Sterling vecino de esta provincia, le adverti el pa
 rentesco espiritual, y demás obligaciones, y lo firmé
 en dicho dia, mes y año.
- Thomas Hafsett </entry>
-
-</folio><folio>
-<entry>
+</entry>
+</image>
+<image id="1026" type="JPG">
+<entry id="1">
 27.
 Thomas
 Macqueen
@@ -584,8 +586,8 @@ fue su padrino el Doctor Don Thomas Sterling
 vecino de esta provincia, le adverti el parentesco
 espiritual, y demás obligaciones, y lo firmé
 en dicho dia, mes y año.
- Thomas Hafsett </entry>
-<entry> 28
+</entry>
+<entry id="2">
 Dorotea
 Macqueen
 Miércoles, día veinte y uno de Mayo de
@@ -603,10 +605,10 @@ madre Iglesia, y le puse por nombre Dorotea fue
 su padrino el Doctor Don Thomas Sterling vecino
 de esta provincia, le adverti el parentesco espiritual, y
 demás obligaciones, y lo firmé en dicho dia, mes y año.
- Thomas Hafsett </entry>
-</folio><folio>
-
-<entry>19.
+</entry>
+</image>
+<image id="1027" type="JPG">
+<entry id="1">
 Andres
 Macqueen
 Miércoles, día veinte y uno de Mayo de Mil Sete
@@ -624,8 +626,8 @@ Doctor Don Thomas Sterling vecino de esta pro
 vincia, le adverti el parentesco espiritual, y de
 más obligaciones, y lo firmé en dicho dia, mes y
 año.
- Thomas Hafsett </entry>
-<entry>30.
+</entry>
+<entry id="2">
 Maria
 Macqueen
 Miércoles, día veinte y uno de Mayo
@@ -645,10 +647,10 @@ fue su padrino el Doctor Don Thomas Sterling
 vecino de esta provincia, le adverti el parentesco
 espiritual, y demás obligaciones, y lo firmé
 en dicho dia, mes y año.
- Thomas Hafsett </entry>
-</folio><folio>
-
-<entry> 31.
+</entry>
+</image>
+<image id="1028" type="JPG">
+<entry id="1">
 Simon
 Macqueen
 Miércoles, día veinte y uno de Mayo de
@@ -667,8 +669,8 @@ el Doctor Don Thomas Sterling vecino de esta
 provincia, le adverti el parentesco espiritual
 y demás obligaciones, y lo firmé en dicho dia,
 mes y año.
- Thomas Hafsett </entry>
-<entry>32.
+</entry>
+<entry id="2">
 Isabel
 Macqueen
 Miércoles, día veinte y uno de Mayo
@@ -687,10 +689,10 @@ Isabel fue su padrino el Doctor Don Thomas Ster
 ling vecino de esta provincia, le adverti el paren
 tesco espiritual, y demás obligaciones, y lo firmé
 en dicho dia, mes y año.
- Thomas Hafsett </entry>
-</folio><folio>
-
-<entry>33.
+</entry>
+</image>
+<image id="1029" type="JPG">
+<entry id="1">
 Juan
 Macqueen
 Miércoles, día veinte y uno de Mayo de
@@ -708,8 +710,8 @@ no el Doctor Don Thomas Sterling vecino de esta
 provincia, le adverti el parentesco espiritual, y
 demás obligaciones, y lo firmé en dicho dia, mes
 y año.
- Thomas Hafsett </entry>
-<entry>34.
+</entry>
+<entry id="2">
 Patricio
 Macqueen
 Miércoles, día veinte y uno de Mayo de Mil
@@ -727,10 +729,10 @@ nombre Patricio fue su padrino el Doctor Don
 Thomas Sterling vecino de esta provincia, le adverti
 el parentesco espiritual, y demás obligaciones, y lo
 firmé en dicho dia, mes y año.
- Thomas Hafsett </entry>
-</folio><folio>
-
-<entry> 35.
+</entry>
+</image>
+<image id="1030" type="JPG">
+<entry id="1">
 Sara Macqueen
  Miércoles, día veinte y uno de Mayo de
 Mil Setecientos Noventa y quatro. Yo Don Thomas
@@ -747,8 +749,8 @@ bre Sara fue su padrino el Doctor Don Thomas
 Sterling vecino de esta provincia, le adverti el pa
 rentesco espiritual, y demás obligaciones, y lo firmé
 en dicho dia, mes y año.
- Thomas Hafsett </entry>
-<entry> 36.
+</entry>
+<entry id="2">
 Juan
 Macqueen
  Miércoles, día veinte y uno de Mayo de
@@ -766,10 +768,10 @@ y preces de nuestra santa madre Iglesia, y le puse por nom
 bre Juan fue su padrino el Doctor Don Thomas Sterling
 vecino de esta provincia, le adverti el parentesco espiritual,
 y demás obligaciones, y lo firmé en dicho dia, mes y año.
- Thomas Hafsett </entry>
-</folio><folio>
-
-<entry> 37.
+</entry>
+</image>
+<image id="1031" type="JPG">
+<entry id="1">
 Andres
 Macqueen
  Miércoles, día veinte y uno de Mayo de Mil Sete
@@ -785,8 +787,8 @@ Iglesia, y le puse por nombre Thomas fue su padri
 no el Doctor Don Thomas Sterling vecino de esta
 provincia, le adverti el parentesco espiritual, y demás
 obligaciones, y lo firmé en dicho dia, mes y año.
- Thomas Hafsett </entry>
-<entry> 38.
+</entry>
+<entry id="2">
 Juana
 Macqueen
  Miércoles, día veinte y uno de Mayo de
@@ -805,10 +807,10 @@ Don Thomas Sterling vecino de esta provincia, le
 
 adverti el parentesco espiritual, y demás obligacio
 nes, y lo firmé en dicho dia, mes y año.
- Thomas Hafsett </entry>
-</folio><folio>
-
-<entry> 39.
+</entry>
+</image>
+<image id="1032" type="JPG">
+<entry id="1">
 Matilda
 Macqueen
  Miércoles, día veinte y uno de Mayo de
@@ -827,8 +829,8 @@ fue su padrino el Doctor Don Thomas Sterling
 vecino de esta provincia, le adverti el parentesco
 espiritual, y demás obligaciones, y lo firmé en
 dicho dia, mes y año.
- Thomas Hafsett </entry>
-<entry> 40.
+</entry>
+<entry id="2">
 Dionicia
 Macqueen
  Miércoles, día veinte y uno de Mayo
@@ -848,11 +850,10 @@ bre Dionicia fue su padrino el Doctor Don Thomas Sterling
 vecino de esta provincia, le adverti el paren
 tesco espiritual, y demás obligaciones, y lo firmé
 en dicho dia, mes y año.
- Thomas Hafsett </entry>
-</folio><folio>
-
-
-<entry> 41.
+</entry>
+</image>
+<image id="1033" type="JPG">
+<entry id="1">
 Dorothea
 Macqueen
  Miércoles, día veinte y uno de Mayo de Mil
@@ -870,8 +871,8 @@ padrino el Doctor Don Thomas Sterling vecino
 de esta provincia, le adverti el parentesco espiritual,
 y demás obligaciones, y lo firmé en dicho dia, mes
 y año.
- Thomas Hafsett </entry>
-<entry> 42.
+</entry>
+<entry id="2">
 Heneríquía
 Macqueen
  Miércoles, día veinte y uno de Mayo de Mil
@@ -890,11 +891,10 @@ el Doctor Don Thomas Sterling vecino de esta pro
 vincia, le adverti el parentesco espiritual, y demás
 obligaciones, y lo firmé en dicho dia, mes
 y año.
- Thomas Hafsett </entry>
-
-</folio><folio>
-
-<entry> 43.
+</entry>
+</image>
+<image id="1034" type="JPG">
+<entry id="1">
 Manuel
 Macqueen
  Miércoles, día veinte y uno de Mayo
@@ -913,8 +913,8 @@ su padrino el Doctor Don Thomas Sterling vecino de
 esta provincia, le adverti el parentesco espiritual, y
 demás obligaciones, y lo firmé en dicho dia, mes
 y año.
- Thomas Hafsett </entry>
-<entry> 44.
+</entry>
+<entry id="2">
 Thomas
 Macqueen
  Miércoles, día veinte y uno de Mayo de
@@ -933,10 +933,10 @@ Thomas fue su padrino el Doctor Don Thomas Sterling
 vecino de esta provincia, le adverti el parentesco espi
 ritual, y demás obligaciones, y lo firmé en dicho dia,
 mes y año.
- Thomas Hafsett </entry>
-</folio><folio>
-
-<entry> 45.
+</entry>
+</image>
+<image id="1035" type="JPG">
+<entry id="1">
 Isabela
 Macqueen
  Miércoles, día veinte y uno de Mayo de Mil Setecien
@@ -953,9 +953,8 @@ fue su padrino el Doctor Don Thomas Sterling vecino de
 esta provincia, le adverti el parentesco espiritual,
 y demás obligaciones, y lo firmé en dicho dia, mes
 y año.
- Thomas Hafsett </entry>
-
-<entry> 46
+</entry>
+<entry id="2">
 Juana
 Macqueen
  Miércoles, día veinte y uno de Mayo de Mil
@@ -973,10 +972,10 @@ Don Thomas Sterling vecino de esta provincia,
 
 le adverti el parentesco espiritual, y demás obli
 gaciones, y lo firmé en dicho dia, mes y año.
- Thomas Hafsett </entry>
-</folio><folio>
-
-<entry> 47
+</entry>
+</image>
+<image id="1036" type="JPG">
+<entry id="1">
 Dionicia
 Antonia
 Friay
@@ -999,8 +998,8 @@ y Josefa Manuela Sanchez, vecinos de esta
 Ciudad, les advertí el parentesco espiritual, y
 demás obligaciones, y lo firmé en dicho día
 mes y año.
- Miguel OReilly </entry>
-<entry> 48.
+</entry>
+<entry id="2">
 María
 Matilda
 Espinoza
@@ -1020,10 +1019,10 @@ bre Maria Matilda fue su madrina Maria de Luz
 ruiz morena libre, y vecina de esta plaza á quien adver
 tí el parentesco espiritual, y demás obligaciones, y lo
 firmé en dicho día mes y año.
- Miguel OReilly </entry>
-</folio><folio>
-
-<entry>49.
+</entry>
+</image>
+<image id="1037" type="JPG">
+<entry id="1">
 Joseph
 Phelipe
 Sanchez
@@ -1044,8 +1043,8 @@ ron sus padrinos los Negros líbres Tomas Joseph
 Alvarez, y Maria de la Luz Ruiz, vecinos de esta Ciu
 dad, les advertí el parentesco espiritual, y demás obli
 gaciones, y lo firmé en dicho díames y año.
- Miguel OReilly </entry>
-<entry> 50.
+</entry>
+<entry id="2">
 Maria
 Felicia
 Sanchez
@@ -1066,10 +1065,10 @@ drinos los negros libres Tomas Joseph Alvarez
 y Maria de al Luz Ruiz, vecinos de esta Ciudad
 les advertí el parentesco espiritual, y demás obliga
 ciones, y lo firmé en dicho día mes y año.
- Miguel OReilly </entry>
-</folio><folio>
-
-<entry> 51.
+</entry>
+</image>
+<image id="1038" type="JPG">
+<entry id="1">
 Maria
 Gracia
 Benigal
@@ -1089,8 +1088,8 @@ por nombre Maria Gracia. fue su madrina Doña
 Maria Gracia Perpal, vecina de esta Ciudad á quién
 advertí el parentesco espiritual, y demás obligaci
 ones, y lo firmé en dicho día mes y año.
- Miguel OReilly </entry>
-<entry> 52.
+</entry>
+<entry id="2">
 Juana
 Francisca
 Sanchez
@@ -1111,10 +1110,10 @@ sus padrinos el Mulato libre Joseph de Arresias
 y la Negra libre Maria de la Luz Ruiz, vecinos de esta Ciu
 dad, les advertí el parentesco espiritual, y demás obli
 gaciones, y lo firmé en dicho día mes y año.
- Thomas Hafsett </entry>
-</folio><folio>
-
-<entry>53.
+</entry>
+</image>
+<image id="1039" type="JPG">
+<entry id="1">
 Domingo
 Joseph
 Espinoza
@@ -1134,10 +1133,10 @@ mingo, fue su madrina la Negra libre Ma
 ria de la Luz Ruiz, vecina de esta Ciudad, á quien
 advertí el parentesco espiritual, y demás obligacio
 nes, y lo firmé en dicho día mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry>
+</entry>
+</image>
+<image id="1040" type="JPG">
+<entry id="1">
 54.
 Lorenzo
 Tomas
@@ -1158,8 +1157,8 @@ nos Don Lorenzo Capó y Antonia Clá, vecinos
 de esta Ciudad les advertí el parentesco espiritual,
 y demás obligaciones, y lo firmé en dicho día, mes,
 y año.
- Miguel OReilly </entry>
-<entry>55.
+</entry>
+<entry id="2">
 Dominga
 Josepha
 Leslie
@@ -1180,10 +1179,10 @@ el Negro Luis Almanza, Esclavo de Don Manu
 el de Almanza, le adverti el parentesco espiri
 tual, y demás obligaciones, y lo firmé en dicho día, mes,
 y año.
- Miguel OReilly </entry>
-</folio><folio>
-
-<entry>56.
+</entry>
+</image>
+<image id="1041" type="JPG">
+<entry id="1">
 Francisco
 Joseph
 Hipolito
@@ -1205,8 +1204,8 @@ Ruiz del Canto y Francisca Isabel Honeycut
 vecinos de esta Ciudad,  les advertí el parentesco es
 piritual, y demás obligaciones, y lo firmé en dicho
 día, mes, y año.
- Miguel OReilly </entry>
-<entry> 57.
+</entry>
+<entry id="2">
 Juana
 Joseph
 Rafaela
@@ -1229,10 +1228,10 @@ Cadete de fusileros de Montana á quien
 adverti el parentesco espiritual, y demás
 obligaciones, y lo firmé en dicho día, mes, y
 año.
- Miguel OReilly </entry>
-</folio><folio>
-
-<entry> 58.
+</entry>
+</image>
+<image id="1042" type="JPG">
+<entry id="1">
 Juan
 Nepomuceno
 Eustaquio
@@ -1253,10 +1252,10 @@ Nepomuceno Eustaquio. fueron sus padrinos
 Lorenzo Capó y Anna Cherez, vecinos de esta
 Ciudad, les advertí el parentesco espiritual, y demás
 obligaciones, y lo firmé en dicho día, mes, y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry>
+</entry>
+</image>
+<image id="1043" type="JPG">
+<entry id="1">
 59.
 Juan
 Geronimo
@@ -1276,9 +1275,8 @@ fueron sus padrinos Juan Antonio Guadarrama y
 Juana Paredes, vecinos de esta Ciudad, le advertí el
 el parentesco espiritual, y demás obligaciones, y lo f
 irmé en dicho día, mes, y año.
- Miguel OReilly </entry>
-
-<entry> 60.
+</entry>
+<entry id="2">
 Maria
 Raphaela
 Quesada
@@ -1300,9 +1298,10 @@ Belen Almanza, Negra Esclava de Don Manuel de
 Almanza, vecino de esta Ciudad, á quien advertí
 el parentesco espiritual, y demás obligaciones, y lo firmé
 en dicho día, mes, y año.
- Miguel OReilly </entry>
-</folio><folio>
-<entry>
+</entry>
+</image>
+<image id="1044" type="JPG">
+<entry id="1">
 61.
 Henerieta
 Raphaela
@@ -1322,8 +1321,8 @@ fueron sus padrinos Lorenzo Capó, y Raphaela
 Capó, vecinos de esta Ciudad les advertí el paren
 tesco espiritual, y demás obligaciones, y lo firmé
 en dicho día, mes, y año.
- Thomas Hafsett </entry>
-<entry> 64.
+</entry>
+<entry id="2">
 Juan
 Fatio
  Viernes dia quatorze de Noviembre de
@@ -1344,10 +1343,10 @@ Juan, fue su madrina Doña Maria Magdalena
 Crespel, vecina de esta provincia á quien adverti
 el parentesco espiritual, y demás obligaciones, y
 lo firmé en dicho día, mes, y año.
- Thomas Hafsett </entry>
-</folio><folio>
-
-<entry> 63.
+</entry>
+</image>
+<image id="1045" type="JPG">
+<entry id="1">
 Santiago
 Fatio
  Viernes dia quatorze de Noviembre de
@@ -1366,8 +1365,8 @@ bre Santiago. fue su madrina Doña Maria Mag
 dalena Crespel, vecina de esta provincia á quien
 adverti el parentesco espiritual, y demás obligacio
 nes, y lo firmé en dicho día, mes, y año.
- Thomas Hafsett </entry>
-<entry> 64.
+</entry>
+<entry id="2">
 Maria
 Fatio
  Viernes dia quatorze de Noviembre de
@@ -1388,10 +1387,10 @@ Magdalena Crespel, vecina de esta provincia
 á quien adverti el parentesco espiritual, y
 demás obligaciones, y lo firmé en dicho día, mes,
 y año.
- Thomas Hafsett </entry>
-</folio><folio>
-
-<entry> 65.
+</entry>
+</image>
+<image id="1046" type="JPG">
+<entry id="1">
 Francisco
 Xavier
 Quinty
@@ -1412,8 +1411,8 @@ cisco Witen y Maria Raphaela Witen veci
 nos de esta Ciudad, les adverti el parentesco espi
 ritual, y demás obligaciones, y lo firmé en
 dicho día, mes, y año.
- Miguel OReilly </entry>
-<entry> 66.
+</entry>
+<entry id="2">
 Barbara
 Sanchez
  Jueves, dia onze de Diciembre de
@@ -1434,10 +1433,10 @@ Sanchez. fue su madrina Maria Guadalupe Sanch
 ez, Negra Esclava de dicho Don Juan Sanchez á quien
 adverti el parentesco espiritual, y demás obligaciones,
 y lo firmé en dicho día, mes, y año.
- Miguel OReilly </entry>
-</folio><folio>
-
-<entry> 67.
+</entry>
+</image>
+<image id="1047" type="JPG">
+<entry id="1">
 Maria
 Dolores
 Fravers
@@ -1456,8 +1455,8 @@ Negra esclava de Edmundo Wanton, vecino de esta
 provincia, á quien adverti el parentesco espiritual
 y demás obligaciones, y lo firmé en dicho día, mes,
 y año.
- Thomas Hafsett </entry>
-<entry>68.
+</entry>
+<entry id="2">
 Jorge
 Joseph
 Sanchez
@@ -1479,10 +1478,10 @@ lato libre Joseph Arrívas, y la negra libre Maria
 de la Luz Ruiz, vecinos de esta Ciudad, les adverti
 el parentesco espiritual, y demás obligaciones,
 y lo firmé en dicho día, mes, y año.
- Miguel OReilly </entry>
-</folio><folio>
-
-<entry>69.
+</entry>
+</image>
+<image id="1048" type="JPG">
+<entry id="1">
 Antonio
 Joseph
 Sanchez
@@ -1504,8 +1503,8 @@ Arrivas y la negra Maria del Rosario San
 chez, les advertí el parentesco espiritual y
 demás obligaciones, y lo firmé en dicho dia
 mes, y año.
- Miguel OReilly </entry>
-<entry>70.
+</entry>
+<entry id="2">
 Maria
 del Carmen
 Sanchez
@@ -1527,10 +1526,10 @@ nos el Mulato libre Joseph Arrivas y la negra
 Maria Felicia Sanchez, les advertí el parentesco
 espiritual y demás obligaciones, y lo firmé
 en dicho dia mes, y año.
- Miguel OReilly </entry>
-</folio><folio>
-
-<entry> 71.
+</entry>
+</image>
+<image id="1049" type="JPG">
+<entry id="1">
 Maria
 Basilia
 Sanchez
@@ -1552,10 +1551,10 @@ Joseph Arrivas y la negra libre Maria de la
 Lux Ruiz, vecinos de esta plaza, les advertí el
 parentesco espiritual y demás obligaciones, y lo
 firmé en dicho dia mes, y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry>
+</entry>
+</image>
+<image id="1050" type="JPG">
+<entry id="1">
 1795
 72.
 Manuela
@@ -1581,8 +1580,8 @@ toval Martinez, y Maria de Regla Coruña,
 vecinos de esta Ciudad, les advertí el parentes
 co espiritual y demás obligaciones, y lo firmé
 en dicho dia mes, y año.
- Thomas Hafsett </entry>
-<entry> 73.
+</entry>
+<entry id="2">
 Juana
 Maria
 Blanca
@@ -1606,10 +1605,10 @@ le puse por nombre Juana maria Blanca. fue su
 madrina Doña Blanca Seguí, de esta Ciudad, á qui
 en advertí el parentesco espiritual y demás obligaci
 ones, y lo firmé en dicho dia mes, y año.
- Miguel OReilly </entry>
-</folio><folio>
-
-<entry>74.
+</entry>
+</image>
+<image id="1051" type="JPG">
+<entry id="1">
 Juana
 Maria
 Josepha
@@ -1629,8 +1628,8 @@ por nombre Juana Maria Josepha. fue su madrina
 Raphaela Witen, morena libre de esta Ciudad, a
 quien advertí el parentesco espiritual y demás obli
 gaciones y lo firmé en dicho dia mes, y año.
- Miguel O’Reilly </entry>
-<entry> 75.
+</entry>
+<entry id="2">
 Manuel
 Jesus
 Almanza
@@ -1652,8 +1651,8 @@ Canales y Juana Joaquina Gonzalez, vecinos de
 de esta Ciudad, le adverti el parentesco espiritual y demás obli
 gaciones y lo firmé en dicho dia
 mes, y año.
- Miguel O’Reilly </entry>
-<entry> 76.
+</entry>
+<entry id="3">
 Patricia
 Wiggins
 Adulta
@@ -1673,10 +1672,10 @@ padrino el Doctor Don Thomas Travers, veci
 no de esta Ciudad, le adverti el parentesco espiri
 tual y demás obligaciones y lo firmé en dicho
 dia mes, y año.
- Thomas Hafsett </entry>
-
-</folio><folio>
-<entry>
+</entry>
+</image>
+<image id="1052" type="JPG">
+<entry id="1">
 77.
 María
 Wiggins
@@ -1692,8 +1691,8 @@ tra Santa Madre Iglesia, y la puse por nombre Maria, fue
 su padrino el Doctor Don Thomas Travers, vecino de esta Ciu
 dad, y le advertí el parentesco espiritual y demás obligaciones,
  y lo firmé en dicho dia mes, y año.
- Thomas Hafsett </entry>
-<entry> 78.
+</entry>
+<entry id="2">
 Benjamin
 Wiggins
  Viernes, dia treze de febrero de Mil Setecientos,
@@ -1710,8 +1709,8 @@ nombre Benjamin. fue su padrino el Doctor
 Don Thomas Travers, vecino de esta Ciudad, le
 adverti el parentesco espiritual y demás obligaci
 ones y lo firmé en dicho dia mes, y año.
- Thomas Hafsett </entry>
-<entry> 79.
+</entry>
+<entry id="3">
 Juana
 Abigail
 Wiggins
@@ -1731,10 +1730,10 @@ gal. fue su padrino el Doctor Don Thomas Tra
 vers, vecino de esta Ciudad, le adverti el paren
 tesco espiritual y demás obligaciones y lo firmé
 en dicho dia mes, y año.
- Thomas Hafsett </entry>
-</folio><folio>
-
-<entry>80.
+</entry>
+</image>
+<image id="1053" type="JPG">
+<entry id="1">
 Juana
 Leslie
  Viernes, dia treze de febrero de Mil
@@ -1753,8 +1752,8 @@ Juana. fue su madrina la Mulata Patricia
 Wiggins de esta provincia, á quien adverti el
 parentesco espiritual y demás obligaciones y
 lo firmé en dicho dia mes, y año.
- Thomas Hafsett </entry>
-<entry> 81.
+</entry>
+<entry id="2">
 Jorge
 Leslie
  Viernes, dia treze de febrero de Mil
@@ -1772,10 +1771,10 @@ tra santa madre Iglesia, y le puse por nombre Jorge.
 fue su madrina la Mulata Patricia Wiggins de esta
 provincia á quien adverti el parentesco espiritual y
 demás obligaciones y lo firmé en dicho dia mes, y año.
- Thomas Hafsett </entry>
-</folio><folio>
-
-<entry> 82.
+</entry>
+</image>
+<image id="1054" type="JPG">
+<entry id="1">
 Patricio
 Leslie
  Viernes, dia treze de febrero de Mil Se
@@ -1794,8 +1793,8 @@ la mulata libre Patricia Wiggins, de esta provin
 cia, á quien adverti el parentesco espiritual y
 demás obligaciones y lo firmé en dicho dia mes,
 y año.
- Thomas Hafsett </entry>
-<entry> 83.
+</entry>
+<entry id="2">
 Maria
 Candelaria
 Capó
@@ -1815,8 +1814,8 @@ laria. fueron sus padrinos Lorenzo Capó y
 Margarita Costell, vecinos de esta Ciudad les
 advertí el parentesco espiritual y demás obli
 gaciones y lo firmé en dicho dia mes, y año.
- Thomas Hafsett </entry>
-<entry> 84.
+</entry>
+<entry id="3">
 Antonio
 Francisco
 Sanchez
@@ -1838,10 +1837,10 @@ go Arnau y Barbara Hinsman, vecinos de
 esta Ciudad, les adverti el parentesco espiritual
 y demás obligaciones y lo firmé en dicho dia mes,
 y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 85.
+</entry>
+</image>
+<image id="1055" type="JPG">
+<entry id="1">
 AnnaJosepha
 Jorge Gómez
 pag. 45
@@ -1859,8 +1858,8 @@ Anna Josefa. fue su madrina Doña Catalina de Por
 ras, vecina de esta Ciudad, á quien advertí el parentesco
 espiritual y demás obligaciones y lo firmé en dicho dia
 mes, y año.
- Thomas Hafsett </entry>
-<entry> 86.
+</entry>
+<entry id="2">
 Ignacio
 Crescencio
 Alvarez
@@ -1878,8 +1877,8 @@ Iglesia, y le puse por nombre Ignacio Cresencio. fue su padri
 no el Granadero del tercer Batn de Cuba Santiago Duarte
 á quien adverti el parentesco espiritual y demás obligaciones
 y lo firmé en dicho dia mes, y año.
- Miguel OReilly </entry>
-<entry> 87.
+</entry>
+<entry id="3">
 Josef Joaqn
 la Ascension
 Espinoza
@@ -1898,10 +1897,10 @@ le puse por nombre Jose Joaquín de la Ascensión
 fue su padrino Josef Joaquin Landeros a quien adverti
 El parentesco espiritual y demás obligaciones y lo
 firmé en dicho dia mes, y año.
- Miguel OReilly </entry>
-</folio><folio>
-
-<entry> 88.
+</entry>
+</image>
+<image id="1056" type="JPG">
+<entry id="1">
 Luis
 Guillermo
 Wanton
@@ -1922,8 +1921,8 @@ y María Belero Sayas ambos Esclavos de Dn
 Manuel Almanza a quienes adverti el Parentes
 co y demás obligaciones y lo firmé en dicho
 dia mes, y año.
- Miguel OReilly </entry>
-<entry> 89.
+</entry>
+<entry id="2">
 Helena María
 de los Dolores
 Macqueen
@@ -1944,10 +1943,10 @@ Da Maria Jones Vecinos de esta Ciudad les
 adverti el parentesco espiritual y demás obligaci
 ones y lo firmé en dicho dia mes, y año por
 Ausencia del Cura propietario Dn Thoms Hafsett.
- Miguel OReilly </entry>
-</folio><folio>
-
-<entry> 90.
+</entry>
+</image>
+<image id="1057" type="JPG">
+<entry id="1">
 Bonifacio
 Yosef de
 Escalona
@@ -1966,8 +1965,8 @@ Facio Josef, fue su padrino Dn Josef Ponz, vecino
 de esta Ciudad, a quien adverti el parentesco espiri
 tual y demás obligaciones y lo firmé en dicho dia
 mes, y año.
- Miguel OReilly </entry>
-<entry> 91.
+</entry>
+<entry id="2">
 Maria
 de
 Yesus
@@ -1986,10 +1985,10 @@ Fue su madrina Maria de la Luz Ruiz Ne
 gra libre, a quien adverti el parentesco espi
 ritual y demás obligaciones y lo firmé en
 dicho dia mes, y año.
- Miguel OReilly </entry>
-</folio><folio>
-
-<entry> 92.
+</entry>
+</image>
+<image id="1058" type="JPG">
+<entry id="1">
 María
 Bibiana
 Travers
@@ -2009,8 +2008,8 @@ rio Bibiana. fue su Madrina Maria Fran
 cisca Ortega, vecina de esta, a quien adverti el
 parentesco espiritual y demás obligaciones
 y lo firmé en dicho Dia mez, y Año.
- Miguel OReilly </entry>
-<entry> 93.
+</entry>
+<entry id="2">
 Anacleto
 Yosef del
 carmen
@@ -2031,10 +2030,10 @@ Carmen. fue su Madrina Da Maria del Rosa
 rio Sanchez Vecina de esta Ciudad, le adverti el
 parentesco espiritual y demás obligaciones
 y lo firmé en dicho Dia mez, y Año.
- Miguel OReilly </entry>
-</folio><folio>
-
-<entry> 94.
+</entry>
+</image>
+<image id="1059" type="JPG">
+<entry id="1">
 Carlos
 Camilo
 Marcos
@@ -2057,10 +2056,10 @@ nos Carlos Muñoz Astillero y Rafaela Capó
 Vecina de esta Ciudad a quienes adverti el Paren
 tesco espiritual y demás obligaciones y lo
 firmé en dho dia mez, y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 50
+</entry>
+</image>
+<image id="1060" type="JPG">
+<entry id="1">
 Juan
 Francisco
 Chiquen
@@ -2081,8 +2080,8 @@ no Francisco Perez Vecino de esta Ciudad
 a quien adverti el Parentesco espiritual y
 demás obligaciones y lo firmé en dho dia
 mez, y año.
- Miguel OReilly </entry>
-<entry> 96
+</entry>
+<entry id="2">
 Agustin Jose
 Cayetano
 Sanchez
@@ -2102,11 +2101,8 @@ vo de Dn Manuel Almanza, Vecino de esta Ciu
 dad, a quien adverti el Parentesco espiritual y
 demás obligaciones y lo firmé en dho dia mez,
 y año.
- Miguel OReilly </entry>
-
- Jueves, dia tres de Septiembre de Mil
-Setecientos Noventa y Cinco. Yo Dn Miguel
-<entry> 51
+</entry>
+<entry id="3">
 Yosef
 Ramon
 Boix
@@ -2131,11 +2127,10 @@ y Da Josefa Escalona Vecinos de esta Ciudad
 á quienes adverti el Parentesco espiritual y
 demás obligaciones y lo firmé en dho dia mez,
 y año.
- Miguel OReilly </entry>
-</folio><folio>
-
-
-<entry> 98
+</entry>
+</image>
+<image id="1061" type="JPG">
+<entry id="1">
 Bartolomé
 Agustín
 Yosé
@@ -2157,10 +2152,10 @@ ambos esclavos de Dn Josef de Ortega les ad
 verti el Parentesco espiritual y demás obli
 gaciones y lo firmé en dho dia mez,
 y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 99
+</entry>
+</image>
+<image id="1062" type="JPG">
+<entry id="1">
 María
 Rosa
 Thomson
@@ -2179,8 +2174,8 @@ fue su Madrina María Francisca Rafaela
 Quenty vecina de esta Ciudad, a quien adver
 ti el Parentesco espiritual y demás obligaci
 ones y lo firmé en dho dia mez, y año.
- Miguel OReilly </entry>
-<entry> 100
+</entry>
+<entry id="2">
 José
 Antonio
  Martes, dia quince de Septiembre de mil
@@ -2200,10 +2195,10 @@ Mariana. Esclava del Presbítero Dn Tomas
 Hafsett a quién advertí el Parentesco espi
 ritual y demás obligaciones y lo firmé en
 dicho dia mez, y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 53
+</entry>
+</image>
+<image id="1063" type="JPG">
+<entry id="1">
 101
 Yosé
 Rafael
@@ -2224,8 +2219,8 @@ Deweer y Maria Rafaela Viten vecinos de esta
 Ciudad a quienes adverti el Parentesco es
 piritual y demás obligaciones y lo firmé
 en dho dia mez, y año.
- Miguel OReilly </entry>
-<entry> 102
+</entry>
+<entry id="2">
 Maria
 Rafaela
  Domingo, dia veinte y siete de Septiembre
@@ -2244,10 +2239,10 @@ nos Francisco Viten y María Rafaela Viten
 vecinos de esta Ciudad a quienes adverti el
 Parentezco espiritual y demás obligaciones
 y lo firme en dicho dia y mez y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 54
+</entry>
+</image>
+<image id="1064" type="JPG">
+<entry id="1">
 103
 Maria
 Josefa
@@ -2267,8 +2262,8 @@ sefa fue su madrina su Ama Da Juana de
 Torres Vecina de esta Ciudad, a quien adverti
 el Parentesco espiritual y demás obligaciones
 y lo firmé en dicho Dia Mez, y Año.
- Miguel OReilly </entry>
-<entry> 104
+</entry>
+<entry id="2">
 Maria
 Isabel
 Benny
@@ -2291,9 +2286,10 @@ Guadalupe Mulata libre y vecina de esta
 Ciudad a quien adverti el Parentesco espiri
 tual y demás obligaciones y lo firmé en
 dicho dia mez, y año.
- Miguel OReilly </entry>
-</folio><folio>
-<entry> 105
+</entry>
+</image>
+<image id="1065" type="JPG">
+<entry id="1">
 Juan
 de Dios
 Severo
@@ -2316,8 +2312,8 @@ sus Padrinos Pedro Flemion y Maria Francisca
 Renci, a quienes adverti el Parentesco espiritual
 y demás obligaciones y lo firmé en dho Dia
 mez, y año.
- Miguel OReilly </entry>
-<entry> 106
+</entry>
+<entry id="2">
 Yuana
 Francisca
 Leonarda
@@ -2339,8 +2335,8 @@ y Da Francisca Samorano Vecinos de esta Ciu
 dad a quienes adverti el Parentesco espiritual y
 demás obligaciones y lo firmé en dho dia
 Mez, y año.
- Miguel OReilly </entry>
-<entry>
+</entry>
+<entry id="3">
  Martes, Día diez y siete de Noviembre de
 Mil setecientos noventa y cinco. Yo Dn Miguel
 O’Reilly Cura Beneficiado, Vicario y Juez Eclesiástico
@@ -2358,8 +2354,8 @@ Juan Josef. Esclavo de Dn Miguel Isnandy
 a quien adverti el Parentesco espiritual y
 demás obligaciones y lo firmé en dicho
 dia mez, y año.
- Miguel OReilly </entry>
-<entry> 108
+</entry>
+<entry id="4">
 Yosef Maria
 Juan
 Forrester
@@ -2378,9 +2374,10 @@ Padrinos Juan Quevedo y Ines Victoria Ve
 cino de esta Ciudad les adverti el Paren
 tesco espiritual y demás obligaciones y lo
 firmé en dho dia mez, y año.
- Miguel OReilly </entry>
-</folio><folio>
-<entry> 57
+</entry>
+</image>
+<image id="1066" type="JPG">
+<entry id="1">
 109
 Andrea
 Maria
@@ -2402,8 +2399,8 @@ Yuana fueron sus Padrinos Dn Phelipe Aguirre
 y Maria Magdalena Medechi Vecinos de esta Ci
 udad les adverti el Parentesco espiritual y demás
 obligaciones y lo firmé en dho dia mez, y año.
- Miguel OReilly </entry>
-<entry> 110
+</entry>
+<entry id="2">
 Margarita
 Clarke
  Domingo, Dia trece de Diciembre de Mil
@@ -2423,10 +2420,10 @@ sus Padrinos los morenos libres Francisco Espal
 din y Margarita Spaldin. Vecinos de esta Ciudad.
 les advertí Parentesco espiritual y demás obli
 gaciones y lo firme en dicho dia, mez y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 58
+</entry>
+</image>
+<image id="1067" type="JPG">
+<entry id="1">
 111
 Santiago
 Clarke
@@ -2446,8 +2443,8 @@ fueron sus Padrinos  Dn Pedro Cocifacio y su
 Hija Dn Marta Cocifacio Vecinos de esta Ciudad
 les adverti el Parentesco espiritual y demás
 obligaciones y lo firmé en dho dia mez, y año.
- Miguel OReilly </entry>
-<entry> 112
+</entry>
+<entry id="2">
 Yuan Antonio
 Yosef
 Rodriguez
@@ -2467,10 +2464,10 @@ no el Sacristan Dn Lorenzo Capo le advertí
 el Parentesco espiritual y demás obliga
 ciones y lo firme en dicho Dia Mez y
 Año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 59
+</entry>
+</image>
+<image id="1068" type="JPG">
+<entry id="1">
 113
 Ana
 María
@@ -2490,9 +2487,8 @@ ria fue su madrina Da Ynez Victoria vecina
 de esta Ciudad le adverti el Parentesco espiritual
 y demás obligaciones y lo
 firmé en dho dia mez, y año.
- Miguel OReilly </entry>
-Año de 1796
-<entry> 114
+</entry>
+<entry id="2">
 Yuan
 Luíz
 Sanchez
@@ -2515,10 +2511,10 @@ Manuel de Almanza Vecino de esta Ciudad.
 le adverti el Parentesco espiritual y demás Ob
 ligaciones y lo firmé en dicho dia mez,
 y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 60
+</entry>
+</image>
+<image id="1069" type="JPG">
+<entry id="1">
 115
 Brígida
 Hafsett
@@ -2539,8 +2535,8 @@ fueron sus Padrinos Dn Pedro Fitzpatrick
 y Da Ysabel Forraster Vecinos de esta Cuidad
 les adverti el Parentesco espiritual y demás
 Obligaciones y lo firmé en dicho dia mez, y año.
- Miguel Crosby </entry>
-<entry> 116
+</entry>
+<entry id="2">
 Yuana Maria
 Francisca
 Saunders
@@ -2561,10 +2557,10 @@ fue su madrina Maria Rafaela Francisca Quen
 ty Vecina de esta Ciudad le adverti el Parentesco
 espiritual y demás Obligaciones y lo firmé en
 dicho dia mez, y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 117
+</entry>
+</image>
+<image id="1070" type="JPG">
+<entry id="1">
 Maria
 Rosa
 Marin
@@ -2584,8 +2580,8 @@ eron sus padrinos Dn Manuel Almanza y Da
 Francisca Zamorano Vecinos de esta Ciudad
 les adverti el Parentesco espiritual y demás
 Obligaciones y lo firmé en dicho dia mez, y año.
- Miguel OReilly </entry>
-<entry> 118
+</entry>
+<entry id="2">
 Francisco
 Yosef
 Cocifacio
@@ -2604,10 +2600,10 @@ Francisco Yosef fueron sus Padrinos Santiago
 Ortegas y Praxedis Cocifacio les adverti el Pa
 rentesco espiritual y demás obligaciones
 y lo firmé en dicho dia mez, y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 110
+</entry>
+</image>
+<image id="1071" type="JPG">
+<entry id="1">
 Cecília
 Francisca
 Tunno
@@ -2628,8 +2624,8 @@ cisca fue su Madrina Da Francisca del Cor
 ral Vecina de esta ciudad le adverti el Paren
 tesco espiritual y demás Obligaciones y lo
 firmé en dicho dia mez, y año.
- Miguel Crosby </entry>
-<entry> 120
+</entry>
+<entry id="2">
 Catalina
 Yoaquina
 Tunno
@@ -2651,10 +2647,10 @@ fue su Madrina Da Francisca del Corral Vecina
 de esta Ciudad le adverti el Parentesco espiritual
 y demás Obligaciones y lo firmé en dicho Dia
 Mez, y año.
- Miguel Crosby </entry>
-
-</folio><folio>
-<entry> 63
+</entry>
+</image>
+<image id="1072" type="JPG">
+<entry id="1">
 121
 Tomas
 Yosef
@@ -2675,8 +2671,8 @@ le puse por Nombre Tomas Yosé fue su Madri
 na Simona Morena. Esclava de Antonio Berta
 le adverti el Parentesco espiritual y demás Ob
 ligaciones y lo firmé en dicho dia mez, y año.
- Miguel OReilly </entry>
-<entry> 122
+</entry>
+<entry id="2">
 Faustina
 Margarita
 Ysabel
@@ -2699,10 +2695,10 @@ Dn Antonio Maestre y Da Margarita Gainer
 Vecinos de esta Ciudad les adverti el Parentesco
 espiritual y demás obligaciones y lo firmé en
 dicho dia mez, y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 64
+</entry>
+</image>
+<image id="1073" type="JPG">
+<entry id="1">
 123
 Yosef
 Antonio
@@ -2725,8 +2721,8 @@ Padrinos Jose Carreras y Juana Carreras
 Vecinos de esta Ciudad les adverti el Parentes
 co espiritual y demás obligaciones y lo firmé
 en dicho dia mez, y año.
- Miguel OReilly </entry>
-<entry> 124
+</entry>
+<entry id="2">
 Francisco
 Yosé
 Bernard
@@ -2746,10 +2742,10 @@ fueron sus Padrinos Yose Simon Tellis y Ana
 Maria Teresa Tellis Vecinos de esta Ciudad.
 les adverti el Parentesco espiritual y demás
 obligaciones y lo firmé en dicho dia mez, y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry>65
+</entry>
+</image>
+<image id="1074" type="JPG">
+<entry id="1">
 125
 Maria
 de la
@@ -2773,8 +2769,8 @@ Ysidora Vizenta fue su madrina Da Nicolasa
 Gomez Vecina de esta Ciudad. la adverti el Paren
 tesco espiritual y demás obligaciones y lo firmé
 en dicho dia mez, y año.
- Miguel OReilly </entry>
-<entry> 126
+</entry>
+<entry id="2">
 Celestina
 Yuana
 Yosefa
@@ -2795,10 +2791,10 @@ fa fue su Madrina Yuana Gomez Vecina de
 esta Ciudad la adverti el Parentesco espiritual
 y demás obligaciones y lo firmé en dicho
 Dia Mez, y Año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 66
+</entry>
+</image>
+<image id="1075" type="JPG">
+<entry id="1">
 127
 Alfonso
 Casimiro
@@ -2820,8 +2816,8 @@ próximo pasado fueron sus Padrinos Alfonso
 Gil y Juana Pellicer Vecinos de esta Ciudad.
 les adverti el Parentesco espiritual y demás
 obligaciones y lo firmé en dicho dia mez, y año.
- Miguel OReilly </entry>
-<entry> 128
+</entry>
+<entry id="2">
 Yuan
 Antonio
 Yosef
@@ -2842,10 +2838,10 @@ Uan Maestre y Ursula Llufrio. Vecinos de esta
 Ciudad les adverti el Parentesco espiritual y de
 más obligaciones y lo firmé en dicho dia mez, y
 año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 67
+</entry>
+</image>
+<image id="1076" type="JPG">
+<entry id="1">
 129
 a un niño qe
 nacio el dia
@@ -2869,8 +2865,8 @@ rita Antonia, fueron sus padrinos, Lorenzo Capó y
 Rafaela Capó, vecinos de esta Ciudad, les adverti el
 Parentesco espiritual y demás obligaciones y lo firmé
 en dicho dia mez, y año.
- Miguel OReilly </entry>
-<entry> 131
+</entry>
+<entry id="2">
 Antonia
 Ma Sanders
  Martes, Dia primero de Mayo de mil setecientos
@@ -2887,8 +2883,8 @@ y la puso por Nombre Antonia Maria fue
 su madrina Yones Victori, le adverti el Parentez
 co espiritual y demás obligaciones y lo firmé
 en dicho dia mez, y año.
- Miguel OReilly </entry>
-<entry> 132
+</entry>
+<entry id="3">
 Juan José
 Cocifacio
  Domingo, Dia veinte y dos de Mayo de Mil
@@ -2905,8 +2901,8 @@ Santa Madre Yglesia, y le puse por nombre
 Juan Jose fue su madrina Ynes Victori le
 adverti el parentesco espiritual y demás obli
 gaciones y lo firmé en dicho dia mez, y año.
- Miguel OReilly </entry>
-<entry>133
+</entry>
+<entry id="4">
 Maria
 Sofia Fish
  Martes, Dia veinte y quatro de Mayo de mil
@@ -2924,10 +2920,10 @@ Yglesia, y le puse por Nombre Maria Sofia de la Luz
 fue su madrina Maria de la Luz Ruiz, le adverti
 el Parentesco espiritual y demás obligaciones y lo firmé
 en dicho dia mez, y año.
- Miguel OReilly </entry>
-</folio><folio>
-
-<entry> 134
+</entry>
+</image>
+<image id="1077" type="JPG">
+<entry id="1">
 Antonio
 Jose Or
 tega
@@ -2943,8 +2939,8 @@ Nuestra Santa Madre Yglesia, y le puse por
 nombre Antonio Jose fue su padrino Domingo
 Valles, le adverti el Parentesco espiritual y demás
 obligaciones y lo firmé en dicho dia mez, y año.
- Miguel OReilly </entry>
-<entry> 135
+</entry>
+<entry id="2">
 Felicia
 no Anto
 nio Canto
@@ -2962,10 +2958,10 @@ no Antonio fueron sus padrinos Juan de Dios
 Canto y Maria del Carmen ambos morenos escla
 vos les adverti el parentesco espiritual y demás
 obligaciones y lo firmé en dicho dia, mez y año.
- Miguel o Reilly </entry>
-</folio><folio>
-
-<entry> 70
+</entry>
+</image>
+<image id="1078" type="JPG">
+<entry id="1">
 136
 Maria
 Ysabel Mar
@@ -2984,8 +2980,8 @@ de Nuestra Santa Madre Yglesia, y le puse por
 nombre Maria Rafaela Witten morena libre le ad
 verti el parentesco espiritual y demás obliga
 ciones y lo firmé en dicho dia mez, y año.
- Miguel OReilly </entry>
-<entry> 137
+</entry>
+<entry id="2">
 Maria Agus
 tina Joly
  Domingo, dia treinta y uno de Julio de Mil se
@@ -3003,10 +2999,10 @@ José Tomas Alvarez y Maria Agustina Sanchez
 ambos morenos libres les adverti el paren
 tesco espiritual y demás obligaciones y lo firmé
 en dicho dia mez, y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry>73
+</entry>
+</image>
+<image id="1079" type="JPG">
+<entry id="1">
 138
 Lucia
 Agustina
@@ -3026,8 +3022,8 @@ Alvarez y Maria Agustina Sanchez ambos mo
 renos libres les adverti el Parentesco espiritual y
 demás obligaciones y lo firmé en dicho dia mez, y
 año.
- Miguel OReilly </entry>
-<entry> 139
+</entry>
+<entry id="2">
 Helena
 Maria
 Rafaela
@@ -3050,10 +3046,10 @@ fue su Madrina Maria Rafaela Quinty Mo
 rena libre, Vecina de esta Ciudad. le adverti
 el Parentesco espiritual y demás obligaciones
 y lo firmé en dicho dia mez, y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 72
+</entry>
+</image>
+<image id="1080" type="JPG">
+<entry id="1">
 140
 Agustín
 Yose
@@ -3079,8 +3075,8 @@ tin Yose Antonio fue su Madrina Catalina Cue
 na Nueva Morena Esclava de Yose Ponz y Friay
 la adverti el Parentesco espiritual y demás Ob
 ligaciones y lo firmé en dicho dia mez, y año.
- Miguel Crosby </entry>
-<entry> 141
+</entry>
+<entry id="2">
 Francisca
 Phelipa
 Mac Kenny
@@ -3101,10 +3097,10 @@ Batallon de Cuba que guarnece esta Plaza y Fran
 cisca Rosy vecina de esta Ciudad les adverti
 el Parentesco espiritual y demás obligaciones
 y lo firmé en dicho dia mez, y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 73
+</entry>
+</image>
+<image id="1081" type="JPG">
+<entry id="1">
 142
 Yuana
 Maria
@@ -3127,8 +3123,8 @@ drinos Dn Tomas de Aguilar y Da Teresa de
 Yesus Hambly Vecinos de esta Ciudad. les ad
 verti el Parentesco espiritual y demás obliga
 ciones y lo firmé en dicho dia mez, y año.
- Miguel OReilly </entry>
-<entry> 143
+</entry>
+<entry id="2">
 Simon
 Mariano
 Yosef
@@ -3151,10 +3147,10 @@ Yosé fue su Madrina Da Agueda Coll Veci
 na de esta Ciudad le adverti el Parentesco
 espiritual y demás obligaciones y lo firme
 en dicho dia mez, y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 74
+</entry>
+</image>
+<image id="1082" type="JPG">
+<entry id="1">
 Francisco
 Gaspar
 de Quesada
@@ -3175,8 +3171,8 @@ puse por Nombre Francisco Gaspar fue su
 Padrino Gaspar Papi. Vecino de esta Ciudad.
 le adverti el Parentesco espiritual y demás obli
 gaciones y lo firmé en dicho dia mez, y año.
- Miguel OReilly </entry>
-<entry> 145
+</entry>
+<entry id="2">
 Clara
 Maria
 Nibleu
@@ -3196,10 +3192,10 @@ Agueda Segui Vecina de esta Ciudad.
 le adverti el Parentesco espiritual y de
 más obligaciones y lo firmé en di
 cho dia mez, y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 75
+</entry>
+</image>
+<image id="1083" type="JPG">
+<entry id="1">
 146
 Florintin
 Yosé de
@@ -3221,8 +3217,8 @@ Luz Ruiz Morena Esclava de Don Mateo
 Guadarrama Vecino de esta Ciudad le adver
 ti el Parentesco espiritual y demás obligaci
 ones y lo firmé en dicho dia mez, y año.
- Miguel OReilly </entry>
-<entry> 147
+</entry>
+<entry id="2">
 Ana
 Maria
 Tomas
@@ -3243,10 +3239,10 @@ Luz Ruiz Esclava de Don Mateo Guadarrama
 Vecino de esta Ciudad le adverti el Parentes
 co espiritual y demás obligaciones y lo
 firmé en dicho dia mez, y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 148
+</entry>
+</image>
+<image id="1084" type="JPG">
+<entry id="1">
 Ana
 Maria Yose
 fa Fort
@@ -3265,8 +3261,8 @@ Yosefa fue su madrina Da Ana Maria Mc
 Donato Vecina de esta Ciudad a la qual ad
 verti el Parentesco espiritual y demás Ob
 ligaciones y lo firmé en dicho dia mez, y año.
- Miguel OReilly </entry>
-<entry> Calixto
+</entry>
+<entry id="2">
 Tomas
 Rodriguez
  Sabado, Dia veinte y nueve de Octubre de
@@ -3287,10 +3283,10 @@ fue su Padrino Dn Tomas de Aguilar
 le adverti el Parentesco espiritual y demás
 obligaciones y lo firmé en dicho Dia
 Mez, y Año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 77
+</entry>
+</image>
+<image id="1085" type="JPG">
+<entry id="1">
 150
 Yuan
 Phelipe
@@ -3314,8 +3310,8 @@ gueña y Francisca de Sales Honeycutt Vecinos
 de esta Ciudad les adverti el Parentesco espiri
 tual y demás obligaciones y lo firmé en dicho
 Dia Mez, y Año.
- Miguel OReilly </entry>
-<entry> 151
+</entry>
+<entry id="2">
 Francisco
 Antonio
 Yosé
@@ -3337,10 +3333,10 @@ se fueron sus padrinos Dn Lorenzo Capó y
 Maria Triay Vecinos de esta Ciudad les adverti
 el Parentezco espiritual y demás obligaciones
 y lo firmé en dicho Dia Mez, y Año.
- Miguel Crosby </entry>
-
-</folio><folio>
-<entry> 78
+</entry>
+</image>
+<image id="1086" type="JPG">
+<entry id="1">
 152
 Maria
 Martina
@@ -3363,8 +3359,8 @@ Madrina Da Agustina Busquet Vecina de
 esta Ciudad á la qual adverti el Parentesco
 espiritual y demás obligaciones y lo firmé
 en dicho Dia Mez, y Año.
- Miguel OReilly </entry>
-<entry> 153
+</entry>
+<entry id="2">
 Carlos
 Santiago
 Sanchez
@@ -3385,10 +3381,10 @@ fueron sus padrinos Santiago Pratts y Mar
 garita Vivas Vecinos de esta Ciudad: les
 adverti el Parentesco espiritual y demás Ob
 ligaciones y lo firmé en dicho Dia Mez, y Año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 79
+</entry>
+</image>
+<image id="1087" type="JPG">
+<entry id="1">
 154
 Geronimo
 Antonio
@@ -3409,8 +3405,8 @@ Padrinos Dn Lorenzo Capo y Antonia Cla
 Vecios de esta Ciudad les adverti el Parentes
 co espiritual y demás obligaciones y lo firmé
 en dicho Dia Mez, y Año.
- Miguel OReilly </entry>
-<entry> 155
+</entry>
+<entry id="2">
 Yose
 McSuit
  Domingo, Dia diez y ocho de Diziembre de
@@ -3431,9 +3427,10 @@ Regimiento de Cuba y Tereza Hambly vecina
 de esta Ciudad, les adverti el Parentesco espiritual y
 demás obligaciones y lo firmé en dicho Dia
 Mez, y Año.
- Miguel OReilly </entry>
-</folio><folio>
-<entry> 80
+</entry>
+</image>
+<image id="1088" type="JPG">
+<entry id="1">
 Año de 1797
 156
 Manuel
@@ -3456,8 +3453,8 @@ de Paula fueron sus padrinos Luiz Almanza y
 Maria Yosefa Ysnandy ambos morenos y Esclavos
 les adverti el Parentesco espiritual y demás Ob
 ligaciones y lo firmé en dicho Dia Mez, y Año.
- Miguel OReilly </entry>
-<entry> 157
+</entry>
+<entry id="2">
 Tomasa
 Yosefa
 Almanza
@@ -3479,10 +3476,10 @@ Coronel Comandante del Tercer Batallon de Cuba
 que guarnece esta Plaza les adverti el Parentesco espiritual
 y demás Obligaciones y lo firmé en dicho Dia Mez,
 y Año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 81
+</entry>
+</image>
+<image id="1089" type="JPG">
+<entry id="1">
 158
 Maria
 Yosefa
@@ -3503,8 +3500,8 @@ bre Maria Yosefa fueron sus Padrinos Dn Lorenzo
 Capó y Da Margarita del Castillo Vecinos de esta
 Ciudad, les adverti el Parentesco espiritual y demás
 Obligaciones y lo firmé en dicho Dia Mez, y Año.
- Miguel OReilly </entry>
-<entry> 159
+</entry>
+<entry id="2">
 Maria
 Manuela
 Nowls
@@ -3526,9 +3523,10 @@ an de lso Remedios Comandante del Real cuerpo
 de Artillería en esta Plaza. le adverti el Parentesco
 espiritual y demás Obligaciones y lo firmé en
 dicho Dia Mez, y Año.
- Miguel OReilly </entry>
-</folio><folio>
-<entry> 160
+</entry>
+</image>
+<image id="1090" type="JPG">
+<entry id="1">
 Maria
 Yosefa
 Fontanel
@@ -3552,8 +3550,8 @@ drinos Christobal Barroso y Francisca Galloso
 Vecinos de esta Ciudad, les adverti el Parentesco espi
 ritual y demás Obligaciones y lo firmé en dicho
 Dia Mez, y Año.
- Miguel OReilly </entry>
-<entry> 161
+</entry>
+<entry id="2">
 María del
 Carmen
 Lamorano
@@ -3575,8 +3573,8 @@ Carmen fueron sus Padrinos Phelipe Magriná
 y Francisco de Slaes Honeycutt Vecinos de esta Ci
 udad les adverti el Parentesco espiritual y demás
 Obligaciones y lo firmé en dicho Dia Mez, y Año.
- Miguel OReilly </entry>
-<entry> 87
+</entry>
+<entry id="3">
 162
 Marcos
 Yose
@@ -3601,8 +3599,8 @@ nombre Marcos Yosé Antonio fue su Padrino Dn
 Lorenzo Capó Vecino de esta Ciudad a quien adverti
 el Parentesco espiritual y demás Obligaciones y lo
 firmé en dicho Dia Mez, y Año.
- Miguel Crosby </entry>
-<entry> 163
+</entry>
+<entry id="4">
 Ana
 Carlota
 Fatio
@@ -3623,10 +3621,10 @@ faela Wuiten Morena libre y Vecina de esta
 Ciudad le adverti el Parentesco espiritual y de
 más Obligaciones y lo firmé en dicho Dia
 mez, y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 164
+</entry>
+</image>
+<image id="1091" type="JPG">
+<entry id="1">
 Yose María
 Eufemio
 de Castro y
@@ -3646,8 +3644,8 @@ sus Padrinos Dn Bernardo Segui y Da MAria
 Segui, Vecinos de esta Ciudad les adverti el Pa
 rentesco espiritual y demás Obligaciones y
 lo firmé en dicho Dia mez, y año.
- Miguel OReilly </entry>
-<entry> 165
+</entry>
+<entry id="2">
 Ysabel
 Peavett
 Adulta
@@ -3669,10 +3667,10 @@ drinos  Dn Manuel Rengil y Da Maria Yones
 Vecinos de esta Ciudad les adverti el Parentesco
 espiritual y demás Obligaciones y lo firmé en
 dicho Dia mez, y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 166
+</entry>
+</image>
+<image id="1092" type="JPG">
+<entry id="1">
 Maria
 Petrona
 Hortegas
@@ -3693,8 +3691,8 @@ ago Martinelly y Petrona Martinelly Vecinos
 de esta Ciudad les adverti el Parentesco espi
 ritual y demás Obligaciones y lo firmé en
 dicho Dia mez, y año.
- Miguel OReilly </entry>
-<entry> 167
+</entry>
+<entry id="2">
 María
 Margarita
 Agustina
@@ -3718,10 +3716,10 @@ an Fernandez y Maria Agustina Yuly Veci
 nos de esta Ciudad les adverti el Parentesco espi
 ritual y demás Obligaciones y lo firmé en dicho
 Dia mez, y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 168
+</entry>
+</image>
+<image id="1093" type="JPG">
+<entry id="1">
 Yuan
 Antonio
 Sanchez
@@ -3746,8 +3744,8 @@ ago Martinelly y Petrona Martinelly Vecinos
 de esta Ciudad les adverti el Parentesco espi
 ritual y demás Obligaciones y lo firmé en
 dicho Dia mez, y año.
- Miguel OReilly </entry>
-<entry> 169
+</entry>
+<entry id="2">
 Mariana
 Norberta
 Gomez
@@ -3768,10 +3766,10 @@ Ana Norberta fue su Madrina Ana Cherez
 Vecina de esta Ciudad la adverti el Parentesco
 espiritual y demás Obligaciones y lo firmé
 en dicho Dia mez, y año.
- Miguel Crosby </entry>
-
-</folio><folio>
-<entry>87
+</entry>
+</image>
+<image id="1094" type="JPG">
+<entry id="1">
 170
 Margarita
 Maria
@@ -3795,8 +3793,8 @@ Maria Pascua Vecinos de esta Ciudad les
 adverti el Parentesco espiritual y demás
 Obligaciones y lo firmé en dicho Dia mez,
 y Año.
- Miguel OReilly </entry>
-<entry> 171
+</entry>
+<entry id="2">
 Maria
 Rafaela
 Manuela
@@ -3820,10 +3818,10 @@ Nombre Maria Rafaela Manuela fueron sus Padrinos
 Manuel Pedrianes y María de los Dolores Bernabe Veci
 nos de esta Ciudad, les adverti el Parentesco espiritual y de
 más Obligaciones y lo firmé en dicho Dia mez, y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 172
+</entry>
+</image>
+<image id="1095" type="JPG">
+<entry id="1">
 Yose
 Antonio
 Clevy
@@ -3845,8 +3843,8 @@ Yuana Martin Vecinos de esta Ciudad les
 adverti el Parentesco espiritual y demás
 Obligaciones y lo firmé en dicho Dia mez,
 y año.
- Miguel OReilly </entry>
-<entry> 173
+</entry>
+<entry id="2">
 Trinidad
 Catalina
 de la Luz
@@ -3868,10 +3866,10 @@ ron sus Padrinos Yuan de Dios Cantos y
 Catalina Hortego Morenos Esclavos les ad
 verti el Parentesco espiritual y demás Obliga
 ciones y lo firmé en dicho Dia mez, y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 174
+</entry>
+</image>
+<image id="1096" type="JPG">
+<entry id="1">
 Antonia
 Maria
 Chickens
@@ -3892,8 +3890,8 @@ Padrinos Francisco Viten y Maria de Yesus
 Espinosa Vecinos de esta Ciudad les adverti
 el Parentesco espiritual y demás Obligaciones
 y lo firmé en dicho Dia mez, y año.
- Miguel OReilly </entry>
-<entry> 175
+</entry>
+<entry id="2">
 Ana
 Maria
 Antonia
@@ -3914,9 +3912,10 @@ sus Padrinos Dn Lorenzo Capó y Ana Che
 rez Vecinos de esta Ciudad les adverti
 el Parentesco espiritual y demás Obliga
 ciones y lo firmé en dicho Dia mez, y año.
- Miguel Crosby </entry>
-</folio><folio>
-<entry> 176
+</entry>
+</image>
+<image id="1097" type="JPG">
+<entry id="1">
 Maria del
 Carmen
 Yacobo
@@ -3941,8 +3940,8 @@ Ana Grand Pris Morenos libres y vecinos de esta
 Ciudad les adverti el Parentesco espiritual y de
 más Obligaciones y lo firmé en dicho Dia mez,
 y año.
- Miguel OReilly </entry>
-<entry> 177
+</entry>
+<entry id="2">
 Antonia
 María
 Hortegas
@@ -3962,10 +3961,10 @@ drina Da Maria del Rosario Sanchez vecina
 de esta Ciudad le adverti el Parentesco espiritual
 y demás Obligaciones y lo firmé en dicho Dia
 Mez, y Año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 178
+</entry>
+</image>
+<image id="1098" type="JPG">
+<entry id="1">
 Yuan
 Antonio
 Pedro
@@ -3983,8 +3982,8 @@ Antonio Pedro fueron sus padrinos Pedro Manuel Albarra
 cin y Antonia Petros Vecinos de esta Ciudad les adver
 ti el Parentesco espiritual y demás Obligaciones y lo firme
 en dicho Dia Mez, y Año.
- Miguel Crosby </entry>
-<entry> 179
+</entry>
+<entry id="2">
 Nicolas
 Eduardo
  Miercoles, dia veinte de septiembre de mil setecientos noventa y
@@ -3998,8 +3997,8 @@ y Preces de nuestra santa madre Yglesia, y le puse por nombre
 Nicolas fueron sus Padrinos Don Lorenzo Capo y Doña Maria
 del Carmen Scott Vecinos de esta Ciudad les adverti el Parentesco
 espiritual y demás Obligaciones y lo firmé en dicho Dia Mez, y Año.
- Miguel OReilly </entry>
-<entry> 180
+</entry>
+<entry id="3">
 Ricardo
 Edwardo
  Miercoles, Dia veinte de Septiembre de mil setecientos noventa y siete. Yo Don
@@ -4012,8 +4011,8 @@ Ceremonias, y Preces de nuestra santa madre Yglesia, y le puse Ricardo fueron
 sus padrinos Don lOrenzo Capo y Doña Ana Sanders Vecinos de esta
 Ciudad les adverti el Parentesco espiritual y demás Obligaciones y lo firme
 en dicho Dia Mez, y Año.
- Miguel OReilly </entry>
-<entry> 181
+</entry>
+<entry id="4">
 Tomas
 Leslie
  Domingo, Dia veinte y quatro de Septiembre de mil setecientos noventa y sie
@@ -4027,8 +4026,8 @@ y la puse por nombre Tomas fueron sus Padrinos Pedro Morales more
 no y Maria Morales morena, ambos esclavos del Señor Don Bartolo
 me Morales. Vecinos de esta Ciudad les adverti el Parentesco espiritual
 y demás Obligaciones y lo firmé en dicho Dia Mez, y Año.
- Miguel OReilly </entry>
-<entry> 182
+</entry>
+<entry id="5">
 Maria
 Francisca
 Sanchez
@@ -4043,8 +4042,8 @@ ci las sacras Ceremonias, y Preces de nuestra santa madre Yglesia, y la
 puse aria Francisca fueron sus Padrinos José Arribay y María
 de la Luz Ruz, Vecinos de esta Ciudad les adverti el Parentesco espíritu
 al y demás Obligaciones y lo firmé en dicho Dia Mez, y Año.
- Miguel Crosby </entry>
-<entry> 183
+</entry>
+<entry id="6">
 Yuan
 Francisco
 Sanchez
@@ -4057,10 +4056,10 @@ y en el exerci las sacras Ceremonias, y Preces de nuestra santa madre
 Yglesia, y la puse por nombre Juan Francisco fue su padrino Juan Rafo
 Vecino de esta Ciudad le adverti el Parentesco espiritual y demás Obliga
 ciones y lo firmé en dicho dia mes, y año.
- Miguel Crosby </entry>
-
-</folio><folio>
-<entry> 194
+</entry>
+</image>
+<image id="1099" type="JPG">
+<entry id="1">
 Ana
 María
 Wiggins
@@ -4075,8 +4074,8 @@ nuestra santa madre Yglesia, y la puse por nombre Ana Maria fueron
 sus padrinos Don Carlos Clarkey Doña Ana Sandres Vecinos de esta
 Ciudad les adverti el Parentesco espiritual y demás Obligaciones y lo fir
 mé en dicho dia mez, y año.
- Miguel OReilly </entry>
-<entry> 185
+</entry>
+<entry id="2">
 Yorge
 Yosé
 Wiggins
@@ -4089,8 +4088,8 @@ ci las sacras Ceremonias, y Preces de nuestra santa madre Yglesia, y le puse
 por nombre Jorge Josef fueron sus padrinos Lorenzo Solana y Maria
 Scott Vecinos de esta Ciudad les adverti el Parentesco espiritual y demás obli
 gaciones y lo firmé en dicho dia mez, y año.
- Miguel OReilly </entry>
-<entry> 186
+</entry>
+<entry id="3">
 Catalina
 Mariana
 Antonia
@@ -4106,10 +4105,10 @@ puse por nombre Catalina Mariana Antonia fueron sus padrinos Don
 Lorenzo Capo y Doña Ana Chery Vecinos de esta Ciudad les adverti el
 parentesco espiritual y demás Obligaciones y lo firmé en dicho dia mes,
 y año.
- Miguel Crosby </entry>
-
-</folio><folio>
-<entry> 94
+</entry>
+</image>
+<image id="1100" type="JPG">
+<entry id="1">
 187
 María
 Felícia
@@ -4125,8 +4124,8 @@ Yglesia, y la puse por nombre Maria Felicia fueron sus padrinos Jose de
 Chibas y Juana Ferera de Jesus Sanches Morena libre. Vecinos de esta Ciudad
 les adverti el Parentesco espiritual y demás Obligaciones y lo firmé en dicho
 dia mes, y año.
- Miguel Crosby </entry>
-<entry> 188
+</entry>
+<entry id="2">
 Yuan
 Antonio
 Francisco
@@ -4143,8 +4142,8 @@ santa madre Yglesia, y la puse por nombre Juan Antonio Francisco fueron
 sus padrinos Juan Bautista Huiten y Maria Rafaela Quenty. Vecinos de
 de esta Ciudad le adverti el Parentesco espiritual y demás Obligaciones y lo fir
 mé en dicho dia mez, y año.
- Miguel Crosby </entry>
-<entry> 189
+</entry>
+<entry id="3">
 Carlos
 Yuan Yosé
 Sanchez
@@ -4160,10 +4159,10 @@ de nuestra santa madre Yglesia, y la puse por nombre Carlos Yuan Yosé fue
 su padrino Yuan José moreno Esclavo de Don Francisco Sanchez Vecino de
 esta Ciudad le adverti el Parentesco espiritual y demás Obligaciones y lo
 firmé en dicho dia mez, y año.
- Miguel Crosby </entry>
-
-</folio><folio>
-<entry> 95
+</entry>
+</image>
+<image id="1101" type="JPG">
+<entry id="1">
 Año de 1798
 190
 Esteban
@@ -4182,8 +4181,8 @@ sia, y le puse por nombre Esteban José Fernando fueron su spadrinos Don Fran
 cisco Sanchez, y Doña Maria del Carmen Hill Vecinos de esta Ciudad les ad
 verti el Parentesco espiritual y demás obligaciones y lo firmé en dicho dia mez,
 y año.
- Miguel OReilly </entry>
-<entry> 191
+</entry>
+<entry id="2">
 Maria
 Dionisia
 Sanchez
@@ -4198,8 +4197,8 @@ preces de nuestra santa madre Yglesia, y la puse por nombre aria Dio
 nisa y fueron sus padrinos Juan Jose y Maria del Rosario, ambos morenos
 y esclavos de Don Grancisco Sanchez Vecinos de esta Ciudad, les adverti el paren
 espiritual y demás Obligaciones y lo firmé en dicho dia mez, y año.
- Miguel Crosby </entry>
-<entry> 192
+</entry>
+<entry id="3">
 Maria
 Francisco
 Fatio
@@ -4212,10 +4211,10 @@ Felipe Fatio y en ella exerci las sacras ceremonias, y preces de nuestra santa m
 Yglesia, y la puse por nombre maria Frsncisca fueron sus padrinos Juan Bautista
 Huiten y Rafaela Quenty. Vecinos de esta Ciudad les adverti el Parentesco es
 piritual y demás Obligaciones y lo firmé en dicho dia mez, y año.
- Miguel Crosby </entry>
-
-</folio><folio>
-<entry> 96
+</entry>
+</image>
+<image id="1102" type="JPG">
+<entry id="1">
 193
 Manuel
 Guillermo
@@ -4229,8 +4228,8 @@ dre no conocido, y en el exerci las sacras ceremonias, y preces de nuestra santa
 madre Yglesia, y la puse por nombre Manuel Guillermo fueron sus padrinos Fran
 cisco Huiten y Maria Guadalupe Morillo Vecinos de esta Ciudad les adverti
 el Parentesco espiritual y demás Obligaciones y lo firmé en dicho dia mez, y año.
- Miguel Crosby </entry>
-<entry> 194
+</entry>
+<entry id="2">
 Maria
 Yosefa
 Berta
@@ -4244,8 +4243,8 @@ clavos de Don Antonio Berta y en ella exerci las sacras ceremonias, y preces de
 nuestra santa madre Yglesia, y le puse por nombre Maria Josefa fue su madrina
 Victoria Velles Vecinos de esta Ciudad, les el Parentesco espiritual y demás obligaciones
 y lo firmé endicho dia mez, y año.
- Miguel OReilly </entry>
-<entry> 195
+</entry>
+<entry id="3">
 Pedro Yosé
 Berta; adulto
  Lunes dia veinte y nueve de enero de mil setecientos noventa y ocho. Yo
@@ -4257,8 +4256,8 @@ vos de Don Antonio Berta y en el Exerci las sacras ceremonias, y preces de
 nuestra santa madre Yglesia, y le puse por nombre Pedro Jose fue su madrina
 Victoria Vellez vecina de esta Ciudad le adverti el Parentesco espiritual
 y demás obligaciones y lo firmé en dicho dia mez, y año.
- Miguel OReilly </entry>
-<entry> 196
+</entry>
+<entry id="4">
 María Teresa
 Berta
  Lunes dia veinte y nueve de enero de mil setecientos noventa y ocho. Yo Don Mi
@@ -4270,10 +4269,10 @@ Berta y en ella exerci las sacras ceremonias, y preces de nuestra santa madre
 Yglesia, y le puse por nombre Maria Teresa fueron sus padrinos Lorenzo
 Capo y Victoria Vellez Vecinos de esta Ciudad les adverti el parentesco espiritual
 y demás obligaciones y lo firmé en dicho dia mez, y año.
- Miguel OReilly </entry>
-</folio><folio>
-
-<entry> 197
+</entry>
+</image>
+<image id="1103" type="JPG">
+<entry id="1">
 Maria
 Ynes
 Berta
@@ -4287,8 +4286,8 @@ estra santa madre Yglesia, y le puse por nombre Maria Ynes fueron sus
 padrinos Don Lorenzo Capo y Victoria Vellez vecinos de esta Ciudad les
 adverti el Parentesco espiritual y demás obligaciones y lo firmé en dicho dia
 mez, y año.
- Miguel OReilly </entry>
-<entry>   Maria
+</entry>
+<entry id="2">
 Victoria
 Berta
  Lunes dia veinte y nueve de Enero de mil setecientos noventa y ocho. Yo Don
@@ -4299,8 +4298,8 @@ ella exerci las sacras ceremonias, y preces de nuestra santa madre Yglesia,
 y le puse por nombre Maria Victoria fueron sus padrinos Don Lorenzo Capó
 y Victoria Vellez Vecinos de esta Ciudad les adverti el Parentesco espiritual y
 demás obligaciones y lo firmé en dicho dia mez, y año.
- Miguel OReilly </entry>
-<entry> 198
+</entry>
+<entry id="3">
 Francisco
 Antonio
 Forno
@@ -4314,10 +4313,10 @@ padre no conocido, y le puse por nombre franco Antonio fueron sus padrinos Don
 Lorenzo Capo y Maria Gracia morena esclava del Señor Gobernador Don enrri
 Wiht Vecinos de esta Ciudad les adverti el parentesco espiritual y demás obligacio
 nes y lo firmé en dicho dia mez, y año.
- Miguel OReilly </entry>
-</folio><folio>
-
-<entry> 199
+</entry>
+</image>
+<image id="1104" type="JPG">
+<entry id="1">
 María de Yesus
 Lasaga
  Jueves dia ocho de Febrero de mil setecientos noventa y ocho. Yo Don
@@ -4331,8 +4330,8 @@ ceremonias, y preces de nuestra santa madre Yglesia, y la puse por
 nombre Maria de Jesus, fue su madrina Doña Praxedes Cocifacio
 Vecina de esta Ciudad le adverti el Parentesco espiritual y demás obli
 gaciones y lo firmé en dicho dia mez, y año.
- Miguel OReilly </entry>
-<entry> 200
+</entry>
+<entry id="2">
 Yuan
 Matías
 Bruce
@@ -4355,10 +4354,10 @@ Bautista Ferrer y Da Dionisia Hull vecinos
 de esta Ciudad a quienes adverti el Parentesco
 espiritual y demás obligaciones y lo firmé en dicho
 Dia Mez, y Año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 99
+</entry>
+</image>
+<image id="1105" type="JPG">
+<entry id="1">
 201
 Florintin
 Mariano
@@ -4384,8 +4383,8 @@ y Maria de los Dolores Solana Vecinos de
 esta Ciudad les adverti el Parentesco espiritual
 y demás obligaciones y lo firmé en dicho
 Dia Mez, y año.
- Miguel OReilly </entry>
-<entry>202
+</entry>
+<entry id="2">
 Yorge Yosé
 Francisco
 Peso de
@@ -4409,10 +4408,10 @@ Francisco fueron sus Padrinos Nicolas Gomez y Mag
 dalena Paxeti Vecinos de esta Ciudad les adverti
 el Parentesco espiritual y demás obligaciones y
 lo firmé en dicho dia mez, y año.
- Miguel OReilly </entry>
-</folio><folio>
-
-<entry> 205
+</entry>
+</image>
+<image id="1106" type="JPG">
+<entry id="1">
 Catalina
 Victoria
 Berta
@@ -4431,8 +4430,8 @@ ria fue su Madrina Victoria Vives Vecina de esta
 Ciudad a quien adverti el Parentesco espiritual y
 demás obligaciones y lo firmé en dicho dia mez, y
 año.
- Miguel OReilly </entry>
-<entry> 204
+</entry>
+<entry id="2">
 Margarita
 Agueda
 Maria
@@ -4456,10 +4455,10 @@ Segui Vecinos de esta Ciudad les adverti
 el Parentesco espiritual y demás obliga
 ciones y lo firmé en dicho Dia mez,
 y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 205
+</entry>
+</image>
+<image id="1107" type="JPG">
+<entry id="1">
 Yosefa
 Ysabel
 Cumings
@@ -4481,8 +4480,8 @@ Padrinos Esteban Lartiga y Maria Segui Neci
 nos de esta Ciudad les adverti el Parentesco
 espiritual y demás obligaciones y lo
 firme en dicho dia mez, y año.
- Miguel OReilly </entry>
-<entry> 206
+</entry>
+<entry id="2">
 Santiago
 Federico
 Culiet
@@ -4499,10 +4498,10 @@ ces de nuestra santa madre Yglesia, y la puse por
 nombre Santiago: fue madrina Maria Rafaela
 Witen, le adverti el Parentesco espiritual y demás
 obligaciones y lo firmé en dicho dia mez, y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 102
+</entry>
+</image>
+<image id="1108" type="JPG">
+<entry id="1">
 207
 Antonio Whi
 llers
@@ -4521,9 +4520,8 @@ nos Juan Bautista Whiten y Maria Rafaela
 Guenti ambos morenos libres: le adverti el pa
 rentesco espiritual y demás obligaciones y lo fir
 mé en dicho dia mez, y año.
- Miguel OReilly </entry>
-
-<entry> 208
+</entry>
+<entry id="2">
 Maria del
 Rosario Bert
  Domingo dia trece de Mayo de mil setecientos no
@@ -4540,10 +4538,10 @@ Maria del Rosario: fue su madrina Maria Ra
 Cuenti, morena libre, le adverti el parentesco
 espiritual y demás obligaciones y lo firmé en dicho dia
 mez, y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 103
+</entry>
+</image>
+<image id="1109" type="JPG">
+<entry id="1">
 209
 Juan Nepo
 muceno Jo
@@ -4563,8 +4561,8 @@ y la puse por nombre Juan Nepomuceno Josef: fue
 su madrina Rita, morena esclava esclava del dicho Don
 Pedro: le advertí el Parentesco espiritual y demás
 obligaciones y lo firmé en dicho dia mez, y año.
- Miguel OReilly </entry>
-<entry> 210
+</entry>
+<entry id="2">
 Ubalda Jua
 na Nepomuce
 no Berrio
@@ -4583,10 +4581,10 @@ puse por nombre Ubalda Juana Nepomucena: fue su
 madrina Rita, morena esclava esclava del dicho Don Pedro:
 le advertí el Parentesco espiritual y demás obligaciones
 y lo firmé en dicho dia mez, y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 211
+</entry>
+</image>
+<image id="1110" type="JPG">
+<entry id="1">
 Francisco Gui
 llermo
  Miercoles dia veinte y tres de Mayo de mil setecien
@@ -4603,8 +4601,8 @@ y la puse por nombre Juan Nepomuceno Josef: fue
 su madrina Rita, morena esclava esclava del dicho Don
 Pedro: le advertí el Parentesco espiritual y demás
 obligaciones y lo firmé en dicho dia mez, y año.
- Miguel OReilly </entry>
-<entry> 212
+</entry>
+<entry id="2">
 Juan Santia
 go Mañé
  Domingo dia veinte y uno de Mayo de mil sete
@@ -4624,10 +4622,10 @@ fue su padrino Don Santiago Gonzalez, Peon de confianza
 de estos Reales Almacenes: le adverti el parentesco espi
 ritual y demás obligaciones y lo firmé en dicho dia mez,
 y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 105
+</entry>
+</image>
+<image id="1111" type="JPG">
+<entry id="1">
 213
 Felipa Ma
 ria Fernan
@@ -4647,8 +4645,8 @@ bre Felipa Maria Fernanda: fue su madrina Do
 ña Maria de la Luz Segui, vecina de esta Ciudad
 la advertí el Parentesco espiritual y demás
 obligaciones y lo firmé en dicho dia mez, y año.
- Miguel OReilly </entry>
-<entry> 214
+</entry>
+<entry id="2">
 Germana
 Maria de
 Jesus Cosi
@@ -4667,10 +4665,10 @@ nombre Germana Maria de Jesus, morena esclava de Don
 Mariano de Lasaga: la advertí el Parentesco es
 piritual y demás obligaciones y lo firmé en dicho dia
 mez, y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 106
+</entry>
+</image>
+<image id="1112" type="JPG">
+<entry id="1">
 216
 Rafaela
 Guillerma
@@ -4690,10 +4688,10 @@ llermo: fue su madrina Maria de la Encarnacion
 morena esclava del dicho Lamorano: le advertí el pa
 rentesco espiritual y demás obligaciones y lo firmé
 en dicho dia mez, y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 107
+</entry>
+</image>
+<image id="1113" type="JPG">
+<entry id="1">
 218
 Josef Jor
 ge Peso de
@@ -4713,8 +4711,8 @@ Yglesia, y le puse por nombre Jose Jorge: fue su madrina
 Doña Catalina de Jesus de los Hijuelos, vecina de esta Ciudad
 le advertí el parentesco espiritual y demás obligaciones
 y lo firmé en dicho dia mez, y año.
- Miguel OReilly </entry>
-<entry> 219
+</entry>
+<entry id="2">
 Maria
 Ana Peso
 de Burgo
@@ -4734,10 +4732,10 @@ su madrina Doña Catalina de Jesus de los Hijuelos
 vecina de esta Ciudad, le advertí el parentesco espiri
 tual y demás obligaciones y lo firmé en dicho dia mez,
 y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 108
+</entry>
+</image>
+<image id="1114" type="JPG">
+<entry id="1">
 220
 Maria So
 fia Fatio
@@ -4753,8 +4751,8 @@ santa madre Yglesia, y le puse por nombre Maria So
 fia: fueron sus padrinos Luis Almanza y Margarita
 Dode, morenos: les advertí el parentesco espiritual y demás obligaciones y
 lo firmé en dicho dia mez, y año.
- Miguel OReilly </entry>
-<entry> 221
+</entry>
+<entry id="2">
 Maria
 Magdalena
 Ana Barnem
@@ -4774,10 +4772,10 @@ Yglesia, y le puse por nombre Maria Magdalena Ana
 fueron sus padrinos Lorenzo Capó, y Ana Cherez veci
 nos de esta Ciudad les adverti el parentesco espiritual, y
 demás obligaciones y lo firmé en dicho dia mez, y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 109
+</entry>
+</image>
+<image id="1115" type="JPG">
+<entry id="1">
 222
 Manuel
 Antonio
@@ -4796,8 +4794,8 @@ Yglesia: y le puse por nombre Manuel Antonio: fueron
 sus padrinos Luis Almanza, y Maria Josefa Justaes
 morenos esclavos: les advertí el parentesco espiritual y de
 más obligaciones y lo firmé en dicho dia mez, y año.
- Miguel OReilly </entry>
-<entry> 223
+</entry>
+<entry id="2">
 Tomas
 Clarke
  Domingo dia diez y nueve de Agosto de mil setecientos
@@ -4814,10 +4812,10 @@ ron sus padrinos Santiago Gonzalez, y Josefa Simona
 Pustas, vecinos de esta Ciudad les advertí el parentesco es
 piritual y demás obligaciones y lo firmé en dicho dia
 mez, y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 110
+</entry>
+</image>
+<image id="1116" type="JPG">
+<entry id="1">
 Yuan Leferino
 Alexandro
 Wanton
@@ -4833,8 +4831,8 @@ y le puse por nombre Juan Zeferino Alexandro, fueron sus padrinos
 Don Santos Rodriguez y Doña Ana Saunders; vecinos de esta Ciudad
 les adverti el parentesco espiritual y demás obligaciones y lo firmé en
 dicho dia mez, y año.
- Miguel OReilly </entry>
-<entry> 225
+</entry>
+<entry id="2">
 Tomas
 Wete
  Domingo dia nueve de Septiembre de mil setecientos noventa y ocho. Yo Don
@@ -4848,8 +4846,8 @@ as, y preces de nuestra santa madre Yglesia, y le puse por nombre Tomas
 fueron sus padrinos Tomas Perete y Agueda Segui, Vecinos de esta Ciudad les
 advertí el parentesco espiritual y demás obligaciones y lo firmé en dicho dia
 mez, y año.
- Miguel OReilly </entry>
-<entry> 226
+</entry>
+<entry id="3">
 Clara Yuana
 Ysabel
 Wete
@@ -4865,10 +4863,10 @@ ta madre Yglesia, y le puse por nombre Juana Ysabel, fueron
 sus padrinos, Juan Sans y Clara Sans Vecinos de esta Ciudad les adverti
 el parentesco espiritual y demás obligaciones y lo firmé en dicho dia mez,
 y año.
- Miguel OReilly </entry>
-</folio><folio>
-
-<entry> 227
+</entry>
+</image>
+<image id="1117" type="JPG">
+<entry id="1">
 Ana
 Maria
 Magdalena
@@ -4885,8 +4883,8 @@ nombre Ana Maria Magdalena, fueron sus padrinos Juan Sans y
 Maria Magdalena Pascua, Vecinos de esta Ciudad les advertí el
 parentesco espiritual y demás obligaciones y lo firmé en dicho dia mes,
 y año.
- Miguel OReilly </entry>
-<entry>
+</entry>
+<entry id="2">
 228
 Ysabel
 Deviz
@@ -4901,8 +4899,8 @@ Yglesia, y la puse por nombre Ysabel, fueron sus padrinos Marcelino Espinosa
 y Maria Gracia morena esclava, Vecinos de esta Ciudad les advertí el paren
 tesco espiritual y demás obligaciones y lo firmé en dicho dia mes,
 y ano.
- Miguel Crosby </entry>
-<entry> 229
+</entry>
+<entry id="3">
 María
 Mestre
  Domingo dia treinta de Septiembre de mil setecientos noventa y ocho. Yo
@@ -4915,10 +4913,10 @@ exerci las sacras ceremonias, y preces de nuestra santa madre Yglesia, y
 puse por nombre Maria, fueron sus padrinos Juan Bautista Witen y
 Maria Rafaela Quenty, Vecinos de esta Ciudad les advertí el parentes
 co espiritual y demás obligaciones y lo firmé en dicho dia mes, y año.
- Miguel OReilly </entry>
-</folio><folio>
-
-<entry> 230
+</entry>
+</image>
+<image id="1118" type="JPG">
+<entry id="1">
 Agustin An
 gel Custodio
 Papi y Friay
@@ -4938,8 +4936,8 @@ del tercer Batallón de Cuba y Maria Agustina, more
 na, esclava de Doña Ester Tulley: les adverti el paren
 tesco espiritual y demás obligaciones y lo firmé en di
 cho dia mes, y año.
- Miguel OReilly </entry>
-<entry> 231
+</entry>
+<entry id="2">
 Ana Maria
 Saunders
  Domingo dia catorce de Octubre de mil setecientos
@@ -4957,10 +4955,10 @@ Francisco Weten, y Margarita Dudley, ambos
 morenos libres: les advertí el parentesco espiritual,
 y demas obligaciones y lo firmé en
 dicho dia mes, y año.
- Miguel OReilly </entry>
-</folio><folio>
-
-<entry> 232
+</entry>
+</image>
+<image id="1119" type="JPG">
+<entry id="1">
 Juan
 Martin
 Andreu
@@ -4977,8 +4975,8 @@ tin oderiz, Sargento primero del tercer Batallon de
 Cuba, y Francisco Andres: les adverti el parentezco
 espiritual y demás obligaciones y lo firmé en dicho dia
 mes, y año.
- Miguel Crosby </entry>
-<entry> 232
+</entry>
+<entry id="2">
 Maria
 Pilar
 Ysnardy
@@ -4996,9 +4994,10 @@ bre Maria del Pilar Rafaela Josefa: fueron sus Padrinos
 Ventura Morales y Ramona Jacobo, morenos esclavos:
 les adverti el parentezco espiritual y demás obligaciones
 y lo firmé en dicho dia mes, y año.
- Miguel Crosby </entry>
-</folio><folio>
-<entry> 114
+</entry>
+</image>
+<image id="1120" type="JPG">
+<entry id="1">
 234
 Rosalia
 Antonia
@@ -5016,8 +5015,8 @@ sia y la puse por nombre Rosalia Antonia: fueron sus
 padrinos Antonio Pellicer y Antonia Pellicer vecinos de
 esta Ciudad: les adverti el parentezco espiritual y demás
 obligaciones y lo firmé en dicho dia mes, y año.
- Miguel Crosby </entry>
-<entry> 239
+</entry>
+<entry id="2">
 Juan Luis
 Dubarry
  Domingo dia veinte y ocho de Octubre de mil se
@@ -5034,10 +5033,10 @@ padrinos Juan José moreno esclavo de D. Miguel de
 Ysnardy, y Barbara Biasou morena libre: les adver
 ti el parentezco espiritual y demás obligaciones, y
 y lo firmé en dicho dia mes, y año.
- Miguel Crosby </entry>
-
-</folio><folio>
-<entry> 119
+</entry>
+</image>
+<image id="1121" type="JPG">
+<entry id="1">
 236
 Juan
 Bautista
@@ -5057,8 +5056,8 @@ Romualdo: fueron sus padrinos Don Juan Moreno y
 Da Buenaventura Rodriguez, vecinos de esta
 les adverti el parentezco espiritual y demás obli
 gaciones y lo firmé en dicho dia mes, y año.
- Miguel Crosby </entry>
-<entry> 237
+</entry>
+<entry id="2">
 Sacarias
 Josef
 Cosifacio
@@ -5075,10 +5074,10 @@ nombre Sacarías Josef: fueron sus padrinos Don Lo
 renzo Capó y Da Petrona Martinely, vercinos de esta Ciu
 dad: les adverti el parentezco espiritual y demás obli
 gaciones y lo firmé en dicho dia mes, y año.
- Miguel Crosby </entry>
-
-</folio><folio>
-<entry> 116
+</entry>
+</image>
+<image id="1122" type="JPG">
+<entry id="1">
 238
 Maria
 Teresa
@@ -5099,8 +5098,8 @@ y le puse por nombre Maria Teresa Beatriz: fue
 su madrina Maria Gracia White morena esclava
 le adverti el parentezco espiritual y demás obligacio
 nes y lo firmé en dicho dia mes, y año.
- Miguel O’Reilly </entry>
-<entry> 239
+</entry>
+<entry id="2">
 Juana de
 la Cruz Cas
 tro y Ferrer
@@ -5118,10 +5117,10 @@ nombre Juana de la Cruz Catalina: fueron sus padrinos
 D Lorenzo Segui y D. Ursula Arribas, les adverti
 el parentesco espiritual y demás obligaciones y lo fir
 mé en dicho dia mes, y año.
- Miguel O’Reilly </entry>
-
-</folio><folio>
-<entry> 117
+</entry>
+</image>
+<image id="1123" type="JPG">
+<entry id="1">
 240
 Maria
 Magdale
@@ -5141,8 +5140,8 @@ dalena Antonia: fue su madrina Maria Magda
 lena Pons, vecina de esta Ciudad, le advertí el pa
 rentesco espiritual y demás obligaciones y lo firmé
 en dicho dia mes, y año.
- Miguel O’Reilly </entry>
-<entry> 241
+</entry>
+<entry id="2">
 Maria
 Francisca
 Juana
@@ -5161,10 +5160,10 @@ Maria Francisca Juana: fueron sus padrinos Felipe
 Sanchez y Ramona Jacobo ambos morenos libres: les ad
 verti el parentesco espiritual y demás obligaciones y lo
 firmé en dicho dia mes, y año.
- Miguel O’Reilly </entry>
-
-</folio><folio>
-<entry> 118
+</entry>
+</image>
+<image id="1124" type="JPG">
+<entry id="1">
 242
 Maria del
 Carmen Ri
@@ -5183,8 +5182,8 @@ madre Yglesia y la puse por nombre María del Car
 men: fue su madrina Maria Rita, morena esclava: la
 adverti el parentesco espiritual y demás obligaciones y lo fir
 mé en dicho dia mes, y año.
- Miguel O’Reilly </entry>
-<entry> 243
+</entry>
+<entry id="2">
 Demetria
 Victoria de
 Jesus Peres
@@ -5202,10 +5201,10 @@ y la puse por nombre Demetria Victoria de Jesus
 fue su madrina Maria Andrea Ortega, morena esclava
 la adverti el parentesco espiritual y demás obligaciones y lo fir
 mé en dicho dia mes, y año.
- Miguel Crosby </entry>
-
-</folio><folio>
-<entry> 120
+</entry>
+</image>
+<image id="1125" type="JPG">
+<entry id="1">
 245
 Ana Ma
 ria Teresa
@@ -5224,10 +5223,8 @@ la puse por nombre Ana Maria Teresa: fueron sus
 padrinos Josef Fel y Ana Maria Teresa Fel: les
 advertí el parentesco espiritual y demás obligaciones y lo fir
 mé en dicho dia mes, y año.
- Miguel O’Reilly </entry>
-
-Año de 1799
-<entry> 245
+</entry>
+<entry id="2">
 Manuel
 Gregorio
  Martes dia primero de Enero de mil setecientos
@@ -5247,10 +5244,10 @@ do Dn Francisco y Maria Yosefa Morena esclava de
 Monseñor  les advertí el Parentesco espiritual
 y demás obligaciones y lo firmé en dicho dia mes,
 y año.
- Miguel O’Reilly </entry>
-
-</folio><folio>
-<entry> 120
+</entry>
+</image>
+<image id="1126" type="JPG">
+<entry id="1">
 246
 Yosef
 Carlos
@@ -5272,8 +5269,8 @@ ter Esclavo de Dn Yuan Forrester  y Maria Rafaela
 Launders Esclava de Dn Yuan Saunders les adverti
 el Parentesco espiritual y demás obligaciones y lo
 firmé en dicho dia mes, y año.
- Miguel Crosby </entry>
-<entry> 247
+</entry>
+<entry id="2">
 Felicia
 Cheves
  Domingo dia primero de Enero de Mil se
@@ -5295,10 +5292,10 @@ Padrinos Nicolas Gomez y Margarira Douglas Ve
 cinos de esta Ciudad, les advertí el Parentesco espi
 ritual y demás obligaciones y lo firmé en dicho
 Dia mes, y año.
- Miguel O’Reilly </entry>
-
-</folio><folio>
-<entry> 121
+</entry>
+</image>
+<image id="1127" type="JPG">
+<entry id="1">
 248
 Yuan
 Yosef
@@ -5318,8 +5315,8 @@ fueron sus Padrinos, Pedro Paxelli y Lucia Mo
 renos Esclavos de Andres Paxetty les adverti el
 Parentesco espiritual y demás obligaciones y
 lo firmé en dicho Dia mez, y año.
- Miguel O’Reilly </entry>
-<entry> 249
+</entry>
+<entry id="2">
 Antonio
 Florentino
 Sanchez
@@ -5342,10 +5339,10 @@ Luz Ruiz, Morenos libres. Vecinos de esta Ciudad.
 les advertí el Parentesco espiritual y demás
 obligaciones y lo firmé en dicho Dia, mez,
 y año.
- Miguel O’Reilly </entry>
-
-</folio><folio>
-<entry> 122
+</entry>
+</image>
+<image id="1128" type="JPG">
+<entry id="1">
 250
 Yuan
 Tomas
@@ -5367,8 +5364,8 @@ Senor Auditor Dn Yose Ortega y Maria Gracia White
  Morena Esclava del Señor Governador Dn Enrique White
 les advertí el Parentesco espiritual y demás obliga
 ciones y lo firmé en dicho dia mes, y año.
- Miguel O’Reilly </entry>
-<entry> 251
+</entry>
+<entry id="2">
 Maria
 Francisca
 Cocifacio
@@ -5387,10 +5384,10 @@ Francisca. Fue su madrina Francisca Arnau
 Vecina de esta Ciudad a quien advertí el Paren
 tesco espiritual y demás obligaciones y lo fir
 mé en dicho Dia Mez, y año.
- Miguel O’Reilly </entry>
-
-</folio><folio>
-<entry> 123
+</entry>
+</image>
+<image id="1129" type="JPG">
+<entry id="1">
 Antonio
 Yosef
 Lasaga
@@ -5412,8 +5409,8 @@ drina Da Mariana Quebedo. Vecina de esta Ciu
 dad a quien advertí el Parentesco espiritual y
 demás obligaciones y lo firmé en dicho Dia
 Mez, y año.
- Miguel O’Reilly </entry>
-<entry> 253
+</entry>
+<entry id="2">
 Miguel
 Lorenzo
 Llanes
@@ -5433,10 +5430,10 @@ fueron sus Padrinos Lorenzo Solana y Maria
 Maestre, Vecino de esta Ciudad les advertí el
 Parentesco espiritual y demás obligaciones y lo
 firme en dicho dia mes, y año.
- Miguel O’Reilly </entry>
-
-</folio><folio>
-<entry> 124
+</entry>
+</image>
+<image id="1130" type="JPG">
+<entry id="1">
 254
 Mariano
 de la Maza
@@ -5459,8 +5456,8 @@ fue su Padrino Dn Eusebio Gomez Vecino de esta
 Ciudad a quien adverti el Parentesco espiritual
 y demás obligaciones y lo firmé en dicho Dia
 Mez, y año. entre renglones instruido Vale
- Miguel O’Reilly </entry>
-<entry> 255
+</entry>
+<entry id="2">
 Paulo
 Pellicer
  Martes dia veinte y seis de Marzo de Mil
@@ -5480,10 +5477,10 @@ clavos del Señor Comandante de este tercer Bat
 allón de Cuba Dn Bartolomé Morales les ad
 vertí el Parentesco espiritual y demás obligaciones y
 lo firme en dicho dia, mez, y año.
- Miguel O’Reilly </entry>
-
-</folio><folio>
-<entry> 256
+</entry>
+</image>
+<image id="1131" type="JPG">
+<entry id="1">
 Edmundo
 Phelipe
 Beaker
@@ -5503,8 +5500,8 @@ Sanchez Moreno libre y Ramona Yacobo More
 na tambien y libres ambos Vecinos de esta Ciu
 dad, les advertí el Parentesco espiritual y demás
 obligaciones y lo firme en dicho dia, mez, y año.
- Miguel O’Reilly </entry>
-<entry> 257
+</entry>
+<entry id="2">
 Ana
 Maria
 Felicitas
@@ -5525,10 +5522,10 @@ Morena libre Vecina de esta Ciudad a quien
 adverti el Parentesco espiritual y demás Ob
 ligaciones y lo firme en dicho Dia, mez,
 y Año.
- Miguel O’Reilly </entry>
-
-</folio><folio>
-<entry> 126
+</entry>
+</image>
+<image id="1132" type="JPG">
+<entry id="1">
 Yuana
 Paula
 Fish
@@ -5548,8 +5545,8 @@ Meyz y Yuana Paredez Vecinos de esta Ciudad.
 Les adverti el Parentesco espiritual y demas
 obligaciones y lo firme en dicho Dia, Mez, y
 Año.
- Miguel O’Reilly </entry>
-<entry> 259
+</entry>
+<entry id="2">
 Yosef
 Antonio
 de Oliva
@@ -5570,10 +5567,10 @@ Moreno Esclavo de Dn Francisco Sanchez Ve
 cino de esta Ciudad a quien adverti el Parentesco
 espiritual y demás obligaciones y lo firme en
 dicho dia, mez, y año.
- Miguel O’Reilly </entry>
-
-</folio><folio>
-<entry> 260
+</entry>
+</image>
+<image id="1133" type="JPG">
+<entry id="1">
 Maria
 Felicitas
 Sanchez
@@ -5596,8 +5593,8 @@ drina Maria del Rosario Morena esclava de Dn
 Francisco Sanchez Vecino de esta Ciudad a la que
 advertí el Parentesco espiritual y demás Obliga
 ciones y lo firme en dicho dia, mez, y año.
- Miguel O’Reilly </entry>
-<entry> 261
+</entry>
+<entry id="2">
 Pedro
 Agustin
 Matanza
@@ -5617,10 +5614,10 @@ iz Agustin Yose de Ayala Vecino de esta
 Ciudad le adverti el Parentesco espiritual
 y demás Obligaciones y lo firme en di
 cho Dia, mez, y año.
- Miguel O’Reilly </entry>
-
-</folio><folio>
-<entry> 128
+</entry>
+</image>
+<image id="1134" type="JPG">
+<entry id="1">
 Maria
 Rosa
 Gutierres
@@ -5642,8 +5639,8 @@ Yustis Morena esclava del Sor Governador Dn
 Enrique White, les adverti el Parentesco espi
 ritual y demás obligaciones y lo firme en di
 cho dia, mez, y año.
- Miguel O’Reilly </entry>
-<entry> 263
+</entry>
+<entry id="2">
 Bonifacio
 Miranda
  Domingo dia deiz y nuebe de Mayo de Mil
@@ -5663,10 +5660,10 @@ Francisco Sanchez y Maria morena esclava
 de Dn Yuan de los Remedios les advertí el
 Parentesco espiritual y demás Obligaciones
 y lo firme en dicho dia, mez, y año.
- Miguel O’Reilly </entry>
-
-</folio><folio>
-<entry> 129
+</entry>
+</image>
+<image id="1135" type="JPG">
+<entry id="1">
 264
 Domingo
 Phelipe
@@ -5684,9 +5681,8 @@ puse por nombre Domingo Felipe Mamerto fueron sus Padri
 nos Felipe Sanchez y Ramona Jacobo ambos morenos libres
 les adverti el Parentesco espiritual y demás obligaciones y lo firme
 en dicho dia, mez, y año.
- Miguel O’Reilly </entry>
-
-<entry>
+</entry>
+<entry id="2">
 265
 Yosé
 Bizil
@@ -5706,10 +5702,10 @@ dicha Plaza y Ysabel Hudson morena libre Ve
 cina de esta Ciudad les adverti el Parentesco espi
 ritual y demás obligaciones y lo firme en dicho
 dia, mez, y año.
- Miguel O’Reilly </entry>
-
-</folio><folio>
-<entry> 266
+</entry>
+</image>
+<image id="1136" type="JPG">
+<entry id="1">
 Yuan
 Cayetano
 Ortega
@@ -5725,9 +5721,8 @@ por Nombre Juan Calletano fueron sus Padrinos Ber
 nardo Segui y Ana Cherez Vecinos de esta Ciudad,
 les advertí el parentesco espiritual y demás obligacio
 nes y lo firme en dicho dia, mez, y año.
- Miguel O’Reilly </entry>
-
-<entry> 267
+</entry>
+<entry id="2">
 Yosef
 Marceli
 no Yorge
@@ -5745,10 +5740,10 @@ Marcelino Jorge fueron sus Padrinos Juan Jorge Jacobo y Ma
 Rafaela Huiten ambos morenos libres y vecinos de esta Ciu
 dad les adverti el parentesco espiritual y demás obligaciones y lo
 firme en dicho dia, mez, y año.
- Miguel Crosby </entry>
-
-</folio><folio>
-<entry> 131
+</entry>
+</image>
+<image id="1137" type="JPG">
+<entry id="1">
 Año de San Pablo
 268
 María
@@ -5765,8 +5760,8 @@ monias y Preces de nuestra santa madre Yglesia y la puse
 por nombre Susana Maria fue su Padrino Jose Joaneda
 Vecino de esta Ciudad le advertí el parentesco espiritual y
 demás obligaciones y lo firme en dicho dia, mez, y año.
- Miguel O’Reilly </entry>
-<entry> 269
+</entry>
+<entry id="2">
 Yuan
 Mac Queen;
  Miercoles dia doce de Junio de mil setecientos noventa y nueve
@@ -5779,10 +5774,10 @@ Mc Queen, y en el exerci las sacras ceremonias y preces
 de nuestra santa madre Yglesia y le puse por Nombre Juan
 fue su Padrino Jose Joaneda le adverti el parentesco espiritual
 y demás obligaciones y lo firme en dicho dia, mez, y año.
- Miguel O’Reilly </entry>
-
-</folio><folio>
-<entry> 132
+</entry>
+</image>
+<image id="1138" type="JPG">
+<entry id="1">
 270
 Yose San
 tiago
@@ -5798,8 +5793,8 @@ cras ceremonias y preces de nuestra santa madre Yglesia
 y le puse por Nombre Jose Santiago fue su Padrino Jose
 Joaneda le adverti el parentesco espiritual y demás obli
 gaciones y lo firme en dicho dia, mez, y año.
- Miguel O’Reilly </entry>
-<entry> 271
+</entry>
+<entry id="2">
 Francisco
 Mac Queen
  Miercoles dia doce de Junio de mil setecientos noventa y nue
@@ -5813,10 +5808,10 @@ monias y preces de nuestra santa madre Yglesia y le puse
 por nombre Francisco fue su Padrino Jose Joaneda le ad
 verti el parentesco espiritual y demás obligaciones y lo firmé
 en dicho dia, mez, y año.
- Miguel O’Reilly </entry>
-
-</folio><folio>
-<entry> 133
+</entry>
+</image>
+<image id="1139" type="JPG">
+<entry id="1">
 272
 Miguel
 Antonio
@@ -5832,8 +5827,8 @@ nias y preces de nuestra santa madre Yglesia y le puse por
 Nombre Miguel Antonio fue su Padrino Dn Lorenzo Llanes,
  le adverti el parentesco espiritual y demás obligaciones y
 lo firme en dicho dia, mez, y año.
- Miguel O’Reilly </entry>
-<entry> 273
+</entry>
+<entry id="2">
 Lorenzo
 Mac
 Queen
@@ -5848,10 +5843,10 @@ ceremonias y preces de nuestra santa madre Yglesia y le puse
 por Nombre Lorenzo fue su Padrino Dn Lorenzo Llanes le ad
 verti el parentesco espiritual y demás obligaciones y lo firme en
 dicho dia, mez, y año.
- Miguel O’Reilly </entry>
-
-</folio><folio>
-<entry> 134
+</entry>
+</image>
+<image id="1140" type="JPG">
+<entry id="1">
 274
 Maria
 Ysabel
@@ -5866,8 +5861,8 @@ an Mc Queen, y en el exerci las sacras Ceremonias y Preces de nues
 tra santa madre Yglesia y le puse por Nombre Maria Ysabel
 fue su Padrino Dn Lorenzo Llanes le adverti el parentesco espi
 ritual y demás obligaciones y lo firme en dicho dia, mez, y año.
- Miguel O’Reilly </entry>
-<entry> 275
+</entry>
+<entry id="2">
 María
 Bibiana
 Mac
@@ -5883,10 +5878,10 @@ tra santa madre Yglesia y le puse por Nombre Maria Bi
 biana, fue su Padrino Dn Lorenzo Llanes le adverti el paren
 tesco espiritual y demás obligaciones y lo firme en dicho dia,
 mez, y año.
- Miguel O’Reilly </entry>
-
-</folio><folio>
-<entry> 276
+</entry>
+</image>
+<image id="1141" type="JPG">
+<entry id="1">
 Estevan
 Mac
 Queen;
@@ -5900,8 +5895,8 @@ San Agustin de la Florida Ol. Baptizé y puse los santos oleos
  le puse por Nombre Estevan
  Joaaneda le adverti el parentesco
  gaciones y lo firme en dicho dia, mez, y año.
- Miguel O’Reilly </entry>
-<entry>
+</entry>
+<entry id="2">
  de mil setecientos noventa y nue
  ra beneficiado, Vicario, Juez Ecle
  rroquial, Plaza, y Provincia de San
@@ -5913,10 +5908,10 @@ y preces de nuestra Santa madre Yglesia y la puse por
 nombre Maria Rosa, fue su Padrino Dn Jose Joaneda, le
 adverti el Parentesco espiritual y demás obligaciones y lo fir
 mé en dicho día, mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 276
+</entry>
+</image>
+<image id="1142" type="JPG">
+<entry id="1">
 Estevan
 Mac
 Queen
@@ -5931,8 +5926,8 @@ santa madre Yglesia y le puse por nombre Estevan
 fue su Padrino Dn Jose Joaneda, le adverti el parentesco
 espiritual y demás obligaciones y lo firme en dicho dia,
 mez, y año.
- Miguel O’Reilly </entry>
-<entry> 277
+</entry>
+<entry id="2">
 Maria
 Rosa
 Mac
@@ -5948,10 +5943,10 @@ y preces de nuestra santa madre Yglesia y le puse por
 nombre Maria Rosa, fue su Padrino Dn Jose Joaneda le
 adverti el parentesco espiritual y demás obligaciones y lo fir
 me en dicho dia, mez, y año.
- Miguel O’Reilly </entry>
-
-</folio><folio>
-<entry> 276
+</entry>
+</image>
+<image id="1143" type="JPG">
+<entry id="1">
 Ricarda
 Mac Queen;
  Miercoles dia doce de Junio de mil setecientos noventa y nueve
@@ -5965,8 +5960,8 @@ nuestra santa madre Yglesia y le puse por Nombre Ricar
 da fue su Padrino Dn Jose Joaneda le adverti el Paren
 tesco espiritual y demás obligaciones y lo firme en dicho
 dia, mez, y año.
- Miguel O’Reilly </entry>
-<entry> 279
+</entry>
+<entry id="2">
 Yuana
 Chickens
  Miercoles dia doce de Junio de mil setecientos noventa y nue
@@ -5980,10 +5975,10 @@ y Preces de nuestra santa madre Yglesia y le puse por nom
 bre Juana fue su Padrino Dn Jose Joaneda le adverti el pa
 rentesco espiritual y demás obligaciones y lo firme en dicho dia,
 mez, y año.
- Miguel O’Reilly </entry>
-
-</folio><folio>
-<entry> 280
+</entry>
+</image>
+<image id="1144" type="JPG">
+<entry id="1">
 Edwardo
 Chickens
  Miercoles dia doce de Junio de mil setecientos noventa y
@@ -5997,8 +5992,8 @@ nias y preces de nuestra santa madre Yglesia y le puse
 por nombre Eduardo fue su Padrino Dn Jose Joaneda, le
 adverti el parentesco espiritual y demás obligaciones y
 lo firme en dicho dia, mez, y año.
- Miguel O’Reilly </entry>
-<entry> 281
+</entry>
+<entry id="2">
 María
 Chickens
  Miercoles dia doce de Junio de mil setecientos noventa y nueve
@@ -6012,8 +6007,8 @@ ceremonias y preces de nuestra santa madre Yglesia y la
 puse por nombre Maria fue su Padrino Dn Jose Joaneda
 le adverti el parentesco espiritual y demás obligaciones y lo fir
 me en dicho dia, mez, y año.
- Miguel O’Reilly </entry>
-<entry> 136
+</entry>
+<entry id="3">
 282
 Manuel
 Chickens
@@ -6028,8 +6023,8 @@ ceremonias y preces de nuestra santa madre Yglesia y le puse por
 nombre Manuel fue su Padrino Dn Jose Joaneda le adverti
 el parentesco espiritual y demás obligaciones y lo firme en di
 cho dia, mez, y año.
- Miguel O’Reilly </entry>
-<entry> 283
+</entry>
+<entry id="4">
 Catalina
 Chickens
  Miercoles dia doce de Junio de mil setecientos noventa y nueve
@@ -6043,11 +6038,10 @@ nuestra santa madre Yglesia y la puse por nombre, Cata
 lina, fue su Padrino Dn Jose Joaneda le adverti el par
 entesco espiritual y demás obligaciones y lo firme en di
 cho dia, mez, y año.
- Miguel O’Reilly </entry>
-
-
-</folio><folio>
-<entry> 137
+</entry>
+</image>
+<image id="1145" type="JPG">
+<entry id="1">
 284.
 Carlos
 Chickens
@@ -6062,8 +6056,8 @@ monias y preces de nuestra santa madre Yglesia y le
 puse por nombre Carlos fue su Padrino Dn Jose Joaneda
 le adverti el parentesco espiritual y demás obligaciones y lo
 firme en dicho dia, mez, y año.
- Miguel O’Reilly </entry>
-<entry> 285
+</entry>
+<entry id="2">
 Yuan
 Chickens
  Miercoles dia doce de Junio de mil setecientos noventa y nue
@@ -6077,10 +6071,10 @@ ci las sacras ceremonias y Preces de nuestra santa ma
 dre Yglesia y le puse por nombre, Juan, fue su Padri
 no Dn Jose Joaneda le adverti el parentesco espiritual y de
 más obligaciones y lo firme en dicho dia, mez, y año.
- Miguel O’Reilly </entry>
-
-</folio><folio>
-<entry> 286
+</entry>
+</image>
+<image id="1146" type="JPG">
+<entry id="1">
 María
 Sofía
 Mac Queen;
@@ -6095,8 +6089,8 @@ as y preces de nuestra santa madre Yglesia y la puse por nom
 bre Maria Sofia fue su Padrino Nicolas Gomez le adverti el pa
 rentesco espiritual y demás obligaciones y lo firme en dicho dia,
 mes, y año.
- Miguel O’Reilly </entry>
-<entry> 287
+</entry>
+<entry id="2">
 Maria
 Yosefa
 Mac Queen
@@ -6111,10 +6105,10 @@ tra santa madre Yglesia y la puse por nombre Maria Josefa
 fue su Padrino, Nicolas Gomez, le adverti el parentesco espiri
 tual y demás obligaciones y lo firme en dicho dia, mes,
 y año.
- Miguel O’Reilly </entry>
-
-</folio><folio>
-<entry> 139
+</entry>
+</image>
+<image id="1147" type="JPG">
+<entry id="1">
 288.
 Marcos
 Mac Queen;
@@ -6130,8 +6124,8 @@ y preces de nuestra santa madre Yglesia y le puse por nom
 bre, Marcos, su Padrino Nicolas Gomez, le adverti el Paren
 tesco espiritual y demás obligaciones y lo firme en dicho dia,
 mes, y año.
- Miguel O’Reilly </entry>
-<entry> 189
+</entry>
+<entry id="2">
 Mariana
 Mac
 Queen
@@ -6145,10 +6139,10 @@ cras Ceremonias y preces de nuestra santa madre Ygle
 sia y la puse por nombre Mariana fue su Padrino
 Nicolas Gomez, le adverti el Parentesco espiritual y demás
 obligaciones y lo firme en dicho dia, mes, y año.
- Miguel O’Reilly </entry>
-
-</folio><folio>
-<entry> 141
+</entry>
+</image>
+<image id="1148" type="JPG">
+<entry id="1">
 290.
 Santiago
 Mac Queen;
@@ -6163,8 +6157,8 @@ las sacras Ceremonias y preces de nuestra santa madre Ygle
 sia y le puse por nombre Santiago, fue su Padrino Nicolas
 Gomez, le adverti el parentesco espiritual y demás obligaciones
 y lo firme en dicho dia, mes, y año.
- Miguel O’Reilly </entry>
-<entry> 291
+</entry>
+<entry id="2">
 Ysabel
 Mac Queen
  Sabado dia quince de Junio de mil setecientos noventa y nueve
@@ -6178,10 +6172,10 @@ preces de nuestra santa madre Yglesia y la puse por nombre Ysa
 bel, fue su Padrino, Nicolas Gomez, le adverti el parentesco es
 piritual y demás obligaciones y lo firme en dicho dia, mes,
 y año.
- Miguel O’Reilly </entry>
-
-</folio><folio>
-<entry> 141
+</entry>
+</image>
+<image id="1149" type="JPG">
+<entry id="1">
 292
 Pablo
 Mac Queen
@@ -6195,8 +6189,8 @@ an Mc Queen y en ella exerci las sacras ceremonias y preces
 de nuestra santa madre Yglesia y le puse por nombre, Paulo,
 fue su Padrino, Nicolas Gomez, le adverti el parentesco espiri
 tual y demás obligaciones y lo firme en dicho dia, mes, y año.
- Miguel O’Reilly </entry>
-<entry> 293
+</entry>
+<entry id="2">
 María
 Mac
 Queen
@@ -6211,10 +6205,10 @@ ces de nuestra santa madre Yglesia y la puse por nombre,
 Maria, fue su Padrino Nicolas Gomez, le adverti el pa
 rentesco espiritual y demás obligaciones y lo firme en di
 cho dia, mes, y año.
- Miguel O’Reilly </entry>
-
-</folio><folio>
-<entry> 142
+</entry>
+</image>
+<image id="1150" type="JPG">
+<entry id="1">
 294
 Ana
 Mac Queen
@@ -6229,8 +6223,8 @@ preces de nuestra santa madre Yglesia y la puse por nom
 bre, Ana, fue su Padrino, Nicolas Gomez, le adverti el paren
 tesco espiritual y demás obligaciones y lo firme en dicho dia,
 mes, y año.
- Miguel O’Reilly </entry>
-<entry> 295
+</entry>
+<entry id="2">
 Carlos
 Mac
 Queen
@@ -6245,10 +6239,10 @@ nias y preces de nuestra santa madre Yglesia y le puse por
 nombre, Carlos, fue su Padrino, Nicolas Gomez, le adverti el paren
 tesco espiritual y demás obligaciones y lo firme en dicho dia,
 mes, y año.
- Miguel O’Reilly </entry>
-
-</folio><folio>
-<entry> 143
+</entry>
+</image>
+<image id="1151" type="JPG">
+<entry id="1">
 296
 Yuana
 María
@@ -6268,8 +6262,8 @@ Juana, María Francisca fueron sus Padrinos Francisco Wi
 ten y Maria Francisca Facho morenos libres Vecinos de
 esta Ciudad les advertí el Parentesco espiritual y demás
 obligaciones y lo firme en dicho dia mes y año.
- Miguel Crosby </entry>
-<entry> 297
+</entry>
+<entry id="2">
 Miguel
 Martinou
 y Semar
@@ -6285,8 +6279,9 @@ fueron sus Padrinos Miguel Ortega moreno esclavo de Dn José Or
 tega, y Ramona Jacobo morena libre Vecinos de esta Ciudad les adver
 ti el parentesco espiritual y demás obligaciones y lo firmeen dicho dia mes y año.
 </entry>
-</folio><folio>
-<entry> 144
+</image>
+<image id="1152" type="JPG">
+<entry id="1">
 298
 Pedro Yosé
 Forrester
@@ -6303,8 +6298,8 @@ sia; y le puse por Pedro Jose, fue su Padrino Marcos Jose
 Espolle moreno libre, Vecino de esta Ciudad le adverti
 el Parentesco espiritual y demás obligaciones y lo firme en dicho
 dia mes y año.
- Miguel Crosby </entry>
-<entry> 299
+</entry>
+<entry id="2">
 Rafaela
 Juana
 Fernandez
@@ -6321,10 +6316,10 @@ la Juana fueron sus Padrinos Dn Juan Salas y DaTeresa Ro
 driguez, Vecinos de esta Ciudad les adverti el parentesco es
 piritual y demás obligaciones y lo firme en dicho dia mes
 y año.
- Miguel Crosby </entry>
-
-</folio><folio>
-<entry> 149
+</entry>
+</image>
+<image id="1153" type="JPG">
+<entry id="1">
 300.
  Martes dia diez y ocho de Junio de mil setecientos noventa y
 nueve
@@ -6342,10 +6337,10 @@ ces de nuestra santa madre Yglesia; y le puse por nombre
 Jose Carlos fue su Padrino Nicolás Gomez le adverti el pa
 rentesco espiritual y demás obligaciones y lo firme en dicho
 dia mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 146
+</entry>
+</image>
+<image id="1154" type="JPG">
+<entry id="1">
 Mareia
 Fitz
 Patrick:
@@ -6360,8 +6355,8 @@ ambos morenos esclavos de Dn Guillermo Fitz Patrick y en
 ta madre Yglesia; y le puse por nombre Maria fue su
 Padrino, Nicolás Gomez, le adverti el parentesco espíritu
 al y demás obligaciones y lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-<entry> 303
+</entry>
+<entry id="2">
 Maria de
 los Dolores
 Atkinson
@@ -6376,10 +6371,10 @@ cras ceremonias y preces de nuestra santa madre Yglesia
 y la puse por nombre, Maria Dolores fue su Padrino
 Dn Juan Mc Queen le adverti el parentesco espiritual y de
 más obligaciones y lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 304
+</entry>
+</image>
+<image id="1155" type="JPG">
+<entry id="1">
 Bibiana
 Atkinson
  Viernes dia veinte y uno de Junio de mil setecientos noventa y nueve
@@ -6393,8 +6388,8 @@ nuestra santa madre Yglesia; y la puse por nombre Bibiana,
 fue su Padrino Dn Juan Mc Queen  le adverti el parentes
 co espiritual y demás obligaciones y lo firme en dicho dia
 mes y año.
- Miguel OReilly </entry>
-<entry> 305
+</entry>
+<entry id="2">
 Simon
 Mac Queen
  Sabado dia veinte y dos de Junio de mil setecientos noventa
@@ -6408,10 +6403,10 @@ ceremonias y preces de nuestra santa madre Yglesia, y
 le puse por nombre Simón, fue su Padrino Nicolás Gomez
 le adverti el parentesco espiritual y demás obligaciones y
 lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 148
+</entry>
+</image>
+<image id="1156" type="JPG">
+<entry id="1">
 306
 Maria
 Mac Queen
@@ -6426,8 +6421,8 @@ ceremonias y preces de nuestra santa madre Yglesia, y la
 puse por nombre Maria, fue su Padrino Nicolás Gomez
 le adverti el parentesco espiritual y demás obligaciones y lo
 firme en dicho dia mes y año.
- Miguel OReilly </entry>
-<entry> 307
+</entry>
+<entry id="2">
 Santiago
 Mac Queen
  Sabado dia veinte y dos de Junio de mil setecientos noventa
@@ -6441,10 +6436,10 @@ de nuestra santa madre Yglesia, y le puse por nombre Santia
 go, fue su Padrino Nicolás Gomez le adverti el parentesco
 espiritual y demás obligaciones y lo firme en dicho dia mes
 y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 149
+</entry>
+</image>
+<image id="1157" type="JPG">
+<entry id="1">
 308
 Nicolas
 Mac Queen;
@@ -6459,8 +6454,8 @@ nias y preces de nuestra santa madre Yglesia, y le puse
 por nombre, Nicolas, fue su Padrino Nicolás Gomez le
 adverti el parentesco espiritual y demás obligaciones y lo fir
 me en dicho dia mes y año.
- Miguel OReilly </entry>
-<entry> 309
+</entry>
+<entry id="2">
 Henrique
 Mac Queen
  Sabado dia veinte y dos de Junio de mil setecientos
@@ -6474,10 +6469,10 @@ ceremonias y preces de nuestra santa madre Yglesia, y le
 puse por nombre Henrique, fue su Padrino Nicolas Gomez
 le adverti el parentesco espiritual y demás obligaciones y
 lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 150
+</entry>
+</image>
+<image id="1158" type="JPG">
+<entry id="1">
 400
 Marcos
 Mac Queen
@@ -6492,8 +6487,8 @@ nuestra santa madre Yglesia, y le puse por nombre Marcos,
 fue su Padrino Nicolás Gomez le adverti el parentesco espiri
 tual y demás obligaciones y lo firme en dicho dia mes y
 año.
- Miguel OReilly </entry>
-<entry> 401
+</entry>
+<entry id="2">
 Rosa
 Mac Queen
  Sabado dia veinte y dos de Junio de mil setecientos noventa y nueve
@@ -6506,10 +6501,10 @@ en ella exerci las sacras ceremonias y preces de nuestra san
 ta madre Yglesia, y le puse por nombre, Rosa, fue su Padri
 no Nicolás Gomez le adverti el parentesco espiritual y demás
 obligaciones y lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 151
+</entry>
+</image>
+<image id="1159" type="JPG">
+<entry id="1">
 402
 Mariana
 Mac Queen
@@ -6524,8 +6519,8 @@ y preces de nuestra santa madre Yglesia, y la puse por
 nombre, Mariana, fue su Padrino Nicolás Gomez le ad
 verti el parentesco espiritual y demás obligaciones y lo firme
 en dicho dia mes y año.
- Miguel OReilly </entry>
-<entry> 403
+</entry>
+<entry id="2">
 Yorge
 Hall
  Sabado dia veinte y dos de Junio de mil setecientos noventa y nue
@@ -6538,10 +6533,10 @@ taniel Hall, y en ella exerci las sacras ceremonias y preces de
 nuestra santa madre Yglesia, y le puse por nombre, Jorge,
 fue su Padrino Nicolás Gomez le adverti el parentesco espiri
 tual y demás obligaciones y lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 152
+</entry>
+</image>
+<image id="1160" type="JPG">
+<entry id="1">
 404
 Francisco
 Hall
@@ -6557,8 +6552,8 @@ sia, y le puse por nombre, Francisco, fue su Padri
 no Nicolás Gomez le adverti el parentesco espiritual y
 demás obligaciones y lo firme en dicho dia mes y año.
 Entre _ Renglón _de Edad _Vale
- Miguel OReilly </entry>
-<entry> 405
+</entry>
+<entry id="2">
 Susana
 Hall
  Sabado dia veinte y dos de Junio de mil setecientos noventa y
@@ -6572,10 +6567,10 @@ cras ceremonias y preces de nuestra santa madre Yglesia,
 y le puse por nombre, Susana, fue su Padrino Nicolas
 Gomez le adverti el parentesco espiritual y demás obliga
 ciones y lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 406
+</entry>
+</image>
+<image id="1161" type="JPG">
+<entry id="1">
 Marga
 rita Hall
  Sabado dia veinte y dos de Junio de mil setecientos noventa
@@ -6589,8 +6584,8 @@ exerci las sacras ceremonias y preces de nuestra Santa
 madre Yglesia, y la puse por nombre, Margarita, fue su
 Padrino Nicolás Gomez le adverti el parentesco espiritual
 y demás obligaciones y lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-<entry> 407
+</entry>
+<entry id="2">
 Tomas
 Hall
  Sabado dia veinte y dos de Junio de mil setecientos noventa
@@ -6604,10 +6599,10 @@ ceremonias y preces de nuestra santa madre Yglesia, y le puse
 por nombre, Tomas, fue su Padrino Nicolás Gomez le
 adverti el parentesco espiritual y demás obligaciones y lo fir
 me en dicho dia mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 154
+</entry>
+</image>
+<image id="1162" type="JPG">
+<entry id="1">
 400
 Ruperto
 Hall
@@ -6621,8 +6616,8 @@ el Hall, y en ella exerci las sacras ceremonias y preces de un
 estra santa madre Yglesia, y le puse por nombre, Ruperto,
 fue su Padrino Nicolás Gomez le adverti el parentesco espiri
 tual y demás obligaciones y lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-<entry> 409
+</entry>
+<entry id="2">
 Simon
 Mac Queen
  Sabado dia veinte y dos de Junio de mil setecientos noven
@@ -6636,10 +6631,10 @@ de nuestra santa madre Yglesia, y le puse por nombre, Ci
 mon, fue su Padrino Nicolás Gomez le adverti el paren
 tesco espiritual y demás obligaciones y lo firme en dicho dia
 mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 410
+</entry>
+</image>
+<image id="1163" type="JPG">
+<entry id="1">
 Catalina
 Mac Queen
  Domingo dia veinte y dos de Junio de mil setecientos noventa
@@ -6653,8 +6648,8 @@ ci las sacras ceremonias y preces de nuestra santa ma
 dre Yglesia, y le puse por nombre, Catarina, fue su Pa
 drino Nicolás Gomez le adverti el parentesco espiritual y
 demás obligaciones y lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-<entry> 411
+</entry>
+<entry id="2">
 Estevan
 Mac Queen
  Domingo dia veinte y dos de Junio de mil setecientos no
@@ -6667,10 +6662,10 @@ y en el exerci las sacras ceremonias y preces de nuestra Santa
 madre Yglesia, y le puse por nombre, Estevan, fue su Padri
 no Nicolás Gomez le adverti el parentesco espiritual y de
 más obligaciones y lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 156
+</entry>
+</image>
+<image id="1164" type="JPG">
+<entry id="1">
 412
 Maria
 Carlota
@@ -6686,8 +6681,8 @@ ces de nuestra santa madre Yglesia, y le puse por nombre,
 Maria Carlota, fue su Padrino, Nicolas Gomez, le adverti el
 parentesco espiritual y demás obligaciones y lo firme en dicho
 dia mes y año.
- Miguel OReilly </entry>
-<entry> 413
+</entry>
+<entry id="2">
 Simon
 Mac Queen
  Domingo dia veinte y tres de Junio de mil setecientos noventa y
@@ -6701,10 +6696,10 @@ de nuestra santa madre Yglesia, y le puse por nombre,
 Cimon fue su Padrino Nicolás Gomez le adverti el paren
 tesco espiritual y demás obligaciones y lo firme en dicho dia
 mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 157
+</entry>
+</image>
+<image id="1165" type="JPG">
+<entry id="1">
 414
 María
 Wins
@@ -6719,8 +6714,8 @@ monias y preces de nuestra santa madre Yglesia, y la
 puse por nombre, Maria, fue su Padrino Nicolás Gomez
 le adverti el parentesco espiritual y demás obligaciones y lo
 firme en dicho dia mes y año.
- Miguel OReilly </entry>
-<entry> 415
+</entry>
+<entry id="2">
 Antonio
 Wins
  Domingo dia veinte y tres de Junio de mil setecientos noventa
@@ -6734,10 +6729,10 @@ ces de nuestra santa madre Yglesia, y le puse por nombre, An
 tonio fue su Padrino Bartolome Estacholy le adverti
 el parentesco espiritual y demás obligaciones y lo firme en dicho
 dia mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 158
+</entry>
+</image>
+<image id="1166" type="JPG">
+<entry id="1">
 416
 Manela
 Yuins
@@ -6752,8 +6747,8 @@ ceremonias y preces de nuestra santa madre Yglesia, y la pu
 se por nombre, Manuela fue su Padrino Bartolome Esta
 choly le adverti el parentesco espiritual y demás obligaciones
 y lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-<entry> 417
+</entry>
+<entry id="2">
 Catalina
 Maria
 Wins
@@ -6768,10 +6763,10 @@ ces de nuestra santa madre Yglesia, y la puse por nombre, Cata
 rina Maria, fue su Padrino Bartolome Estacholy le adver
 ti el parentesco espiritual y demás obligaciones y lo firme en
 dicho dia mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 159
+</entry>
+</image>
+<image id="1167" type="JPG">
+<entry id="1">
 418
 Catarina
 wins
@@ -6786,8 +6781,8 @@ ceremonias y preces de nuestra santa madre Yglesia, y la pu
 se por nombre, Catarina, fue su Padrino Bartolome Esta
 choly le adverti el parentesco espiritual y demás obligaciones
 y lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-<entry> 419
+</entry>
+<entry id="2">
 Susana
 Richard
  Domingo dia veinte y tres de Junio de mil setecientos noventa y
@@ -6802,10 +6797,10 @@ por nombre, Susana, fueron sus Padrinos Nicolas Gomez y Pe
 tronila morena esclava del dicho Richard, les advertí el paren
 tesco espiritual y demás obligaciones y lo firme en dicho dia
 mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 160
+</entry>
+</image>
+<image id="1168" type="JPG">
+<entry id="1">
 418
 Catarina
 Wins
@@ -6820,8 +6815,8 @@ ceremonias y preces de nuestra santa madre Yglesia, y la pu
 se por nombre, Catarina fue su Padrino Bartolome Esta
 choly le adverti el parentesco espiritual y demás obligaciones
 y lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-<entry> 419
+</entry>
+<entry id="2">
 Susana
 Richard
  Domingo dia veinte y tres de Junio de mil setecientos noventa y
@@ -6836,10 +6831,10 @@ por nombre, Susana fueron sus Padrinos Nicolas Gómez, y Pe
 tronila morena esclava del dicho Richard, les adverti el paren
 el tesco espiritual y demás obligaciones y lo firme en dicho dia
 mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 160
+</entry>
+</image>
+<image id="1169" type="JPG">
+<entry id="1">
 420
 Geronimo
 Richard
@@ -6855,8 +6850,8 @@ y la puse por nombre, Geronimo, fueron sus Padrinos Ni
 colas Gomez y Petronila, morena esclava de dicho Richard  Bartolome Esta
 choly le adverti el parentesco espiritual y demás obligaciones
 y lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-<entry> 421
+</entry>
+<entry id="2">
 Lucía
 Richard
  Domingo dia veinte y tres de Junio de mil setecientos noventa y
@@ -6869,10 +6864,10 @@ de Da Jose Luiz Richard y en ella exerci las sacras ceremonias y preces
 de nuestra santa madre Yglesia, y la puse por nombre, Lucia fue su
 Padrino Nicolas Gómez, le adverti el parentesco espiritual y demás obli
 gaciones y lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 161
+</entry>
+</image>
+<image id="1170" type="JPG">
+<entry id="1">
 422
 Agustín
 Richard
@@ -6886,8 +6881,8 @@ Richard y en el exerci las sacras ceremonias y preces de nues
 tra santa madre Yglesia, y le puse por nombre Agustin,
 fue su Padrino Nicolas Gómez, le adverti el parentesco espi
 ritual y demás obligaciones y lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-<entry> 423
+</entry>
+<entry id="2">
 Yuan
 Richard
  Domingo dia veinte y tres de Junio de mil setecientos noventa y
@@ -6901,10 +6896,10 @@ estra santa madre Yglesia, y le puse por nombre,
 Juan, fue su Padrino Nicolas Gómez, le adverti el pa
 rentesco espiritual y demás obligaciones y lo firme en dicho
 dia mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 162
+</entry>
+</image>
+<image id="1171" type="JPG">
+<entry id="1">
 424
 Teodoro
 Howgens
@@ -6920,8 +6915,8 @@ y le puse por nombre Teodoro, fue su Padrino Bartolomé
 Estacholy Vecino de la rivera de San Juan, le adverti el
 parentesco espiritual y demás obligaciones y lo firme en dicho
 dia mes y año.
- Miguel OReilly </entry>
-<entry> 425
+</entry>
+<entry id="2">
 Yosef
 Creeten
  Domingo dia veinte y tres de Junio de mil setecientos noven
@@ -6935,10 +6930,10 @@ ceremonias y preces de nuestra santa madre Yglesia, y le puse por
 nombre Jose, fue su Padrino Nicolas Gómez, Vecino de esta Ciudad le
 adverti el parentesco espiritual y demás obligaciones y lo firme
 en dicho dia mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 163
+</entry>
+</image>
+<image id="1172" type="JPG">
+<entry id="1">
 426
 Nicolasa
 Creeten
@@ -6953,8 +6948,8 @@ de nuestra santa madre Yglesia, y la puse por nombre, Nicolasa
 fue su Padrino Nicolas Gómez, Vecino de esta Ciudad le ad
 verti el parentesco espiritual y demás obligaciones y lo firme
 en dicho dia mes y año.
- Miguel OReilly </entry>
-<entry> 427
+</entry>
+<entry id="2">
 Francisca
 de Sales
 Creeton
@@ -6969,10 +6964,10 @@ nias y preces de nuestra santa madre Yglesia, y la puse por
 nombre, Francisca de Sales, fue su Padrino Nicolas Gómez,
 Vecino de esta Ciudad le adverti el parentesco espiritual y de
 más obligaciones y lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 164
+</entry>
+</image>
+<image id="1173" type="JPG">
+<entry id="1">
 428
 Ana
 Creeten
@@ -6987,8 +6982,8 @@ preces de nuestra santa madre Yglesia, y la puse por nombre, Ana
 fue su Padrino Nicolas Gómez, Vecino de esta Ciudad le adverti el
 parentesco espiritual y demás obligaciones y lo firme en dicho dia
 mes y año.
- Miguel OReilly </entry>
-<entry> 429
+</entry>
+<entry id="2">
 María
 Creeten
  Domingo, dia veinte y tres de Junio de mil setecientos noventa
@@ -7001,10 +6996,10 @@ dro Creeten y en ella exerci las sacras ceremonias y preces de nues
 tra santa madre Yglesia, y la puse por nombre, Maria fue su Pa
 drino Nicolas Gómez, Vecino de esta Ciudad le adverti el parentesco
 espiritual y demás obligaciones y lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 169
+</entry>
+</image>
+<image id="1174" type="JPG">
+<entry id="1">
 430
 Patricio
 Creeten
@@ -7019,8 +7014,8 @@ de nuestra santa madre Yglesia, y le puse por nombre, Pa
 tricio fue su Padrino Nicolas Gómez, Vecino de esta Ciudad le
 adverti el parentesco espiritual y demás obligaciones y lo fir
 me en dicho dia mes y ano.
- Miguel OReilly </entry>
-<entry> 431
+</entry>
+<entry id="2">
 Henrica
 Creeten
  Domingo, dia veinte y tres de Junio de mil setecientos no
@@ -7034,10 +7029,10 @@ sacras ceremonias y preces de nuestra santa madre Yglesia,
 y la puse por nombre, Henrrica fue su Padrino Nicolas Góm z,
 Vecino de esta Ciudad le adverti el parentesco espiritual y de
 más obligaciones y lo firme en dicho dia mes y ano.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 166
+</entry>
+</image>
+<image id="1175" type="JPG">
+<entry id="1">
 432
 Antonio
 Creeten
@@ -7053,8 +7048,8 @@ Yglesia, y le puse por nombre, Antonio fue su Padrino
 Nicolas Gómez, Vecino de esta Ciudad le adverti el parentesco
 espiritual y demás obligaciones y lo firme en dicho dia mes
 y año.
- Miguel OReilly </entry>
-<entry> 433
+</entry>
+<entry id="2">
 Roberto
 Creaghton
  Domingo, dia veinte y tres de Junio de mil setecientos no
@@ -7068,10 +7063,10 @@ remonias y preces de nuestra santa madre Yglesia, y le puse por
 nombre, Roberto fue su Padrino Nicolas Gómez, Vecino de esta
 Ciudad le adverti el parentesco espiritual y demás obligaciones y lo
 firme en dicho dia mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 167
+</entry>
+</image>
+<image id="1176" type="JPG">
+<entry id="1">
 434
 María
 Yosefa
@@ -7086,8 +7081,8 @@ en ella exerci las sacras ceremonias y preces de nuestra santa ma
 dre Yglesia, y la puse por nombre Maria Josefa fue su Padrino
 Nicolas Gomez, le adverti el parentesco espiritual y demás obliga
 ciones y lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-<entry> 435
+</entry>
+<entry id="2">
 María
 Welsh
  Domingo, dia veinte y tres de Junio de mil setecientos noventa y nueve
@@ -7100,10 +7095,10 @@ y en ella exerci las sacras ceremonias y preces de nuestra santa
 madre Yglesia, y la puse por nombre Maria fue su Padrino
 Nicolas Gomez, le adverti el parentesco espiritual y demás obligacio
 nes y lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 168
+</entry>
+</image>
+<image id="1177" type="JPG">
+<entry id="1">
 436
 Miguel
 Welsh
@@ -7118,8 +7113,8 @@ madre Yglesia, y le puse por nombre, Miguel fue su Padrino
 Dn Juan Mc Queen Vecino de la rivera de San Juan le ad
 verti el parentesco espiritual y demás obligaciones y lo firme
 en dicho dia mes y año.
- Miguel OReilly </entry>
-<entry> 437
+</entry>
+<entry id="2">
 Yorge
 Welsh
  Domingo, dia veinte y tres de Junio de mil setecientos noven
@@ -7133,10 +7128,10 @@ de nuestra santa madre Yglesia, y le puse por nombre, Jorge
 fue su Padrino Nicolas Gomez, Vecino de esta Ciudad le ad
 verti el parentesco espiritual y demás obligaciones y lo firme
 en dicho dia mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 169
+</entry>
+</image>
+<image id="1178" type="JPG">
+<entry id="1">
 Lorenzo
 Welsh
  Domingo, dia veinte y tres de Junio de mil setecientos noventa y
@@ -7150,8 +7145,8 @@ de nuestra santa madre Yglesia, y le puse por nombre, Loren
 zo, fue su Padrino Nicolas Gomez, Vecino de esta Ciudad le adver
 ti el parentesco espiritual y demás obligaciones y lo firme en
 dicho dia mes y año.
- Miguel OReilly </entry>
-<entry> 439
+</entry>
+<entry id="2">
 Simon
 Welsh
  Domingo, dia veinte y tres de Junio de mil setecientos noven
@@ -7165,10 +7160,10 @@ de nuestra santa madre Yglesia, y le puse por nombre, Simon
 fue su Padrino Nicolas Gomez, Vecino de esta Ciudad le
 adverti el parentesco espiritual y demás obligaciones y lo fir
 me en dicho dia mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 170
+</entry>
+</image>
+<image id="1179" type="JPG">
+<entry id="1">
 440
 Ricardo
 welsh
@@ -7183,8 +7178,8 @@ monias y preces de nuestra santa madre Yglesia, y le puse por
 nombre, Ricardo, fue su Padrino Nicolas Gomez, Vecino de
 esta Ciudad le adverti el parentesco espiritual y demás obli
 gaciones y lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-<entry> 441
+</entry>
+<entry id="2">
 Rosalia
 Welsh
  Domingo, dia veinte y tres de Junio de mil setecientos noven
@@ -7198,10 +7193,10 @@ ceremonias y preces de nuestra santa madre Yglesia, y la puse
 por nombre, Rosalia, fue su Padrino Nicolas Gomez, Vecino de
 esta Ciudad le adverti el parentesco espiritual y demás obliga
 ciones y lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 442
+</entry>
+</image>
+<image id="1180" type="JPG">
+<entry id="1">
 Felicia
 Welsh
  Domingo, dia veinte y tres de Junio de mil setecientos noventa
@@ -7215,8 +7210,8 @@ nuestra santa madre Yglesia, y la puse por nombre, Felicia
 fue su Padrino Nicolas Gomez, Vecino de esta Ciudad le adverti
 el parentesco espiritual y demás obligaciones y lo firme
 en dicho dia mes y año.
- Miguel OReilly </entry>
-<entry> 443
+</entry>
+<entry id="2">
 Raymundo
 Welsh
  Domingo, dia veinte y tres de Junio de mil setecientos noven
@@ -7230,11 +7225,10 @@ remonias y preces de nuestra santa madre Yglesia, y le
 puse por nombre, Raymundo, fue su Padrino Nicolas Go
 mez, le adverti el parentesco espiritual y demás obligacio
 nes y lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-
-<entry> 173
+</entry>
+</image>
+<image id="1181" type="JPG">
+<entry id="1">
 446
 Simon
 Fatio
@@ -7249,8 +7243,8 @@ ces de nuestra santa madre Yglesia, y le puse por nombre,
 Simon, fue su Padrino Nicolas Gomez, Vecino de esta Ciudad,
 le adverti el parentesco espiritual y demás obligaciones y lo
 firme en dicho dia mes y año.
- Miguel OReilly </entry>
-<entry> 447
+</entry>
+<entry id="2">
 Carlos
 Fatio
  Lunes, dia veinte y quatro de Junio de mil setecientos no
@@ -7264,10 +7258,10 @@ ceremonias y preces de nuestra santa madre Yglesia, y le pu
 se por nombre, Carlos fue su Padrino Nicolas Gomez, Vecino
 de esta Ciudad le adverti el parentesco espiritual y demás
 obligaciones y lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 174
+</entry>
+</image>
+<image id="1182" type="JPG">
+<entry id="1">
 448
 Ana
 Fatio
@@ -7282,8 +7276,8 @@ cras ceremonias y preces de nuestra santa madre Yglesia, y
 le puse por nombre, Ana, fue su Padrino Nicolas Gomez,
 Vecino de esta Ciudad le adverti el parentesco espiritual y de
 más obligaciones y lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-<entry> 449
+</entry>
+<entry id="2">
 Luiz
 Fatio
  Lunes, dia veinte y quatro de Junio de mil setecientos
@@ -7297,10 +7291,10 @@ cras ceremonias y preces de nuestra santa madre Yglesia, y le pu
 se por nombre, Luiz, fue su Padrino Nicolas Gomez, Vecino de es
 ta Ciudad le adverti el parentesco espiritual y demás obligacio s
 y lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 179
+</entry>
+</image>
+<image id="1183" type="JPG">
+<entry id="1">
 450
 Francisco
 Fatio
@@ -7315,8 +7309,8 @@ nias y preces de nuestra santa madre Yglesia, y le puse por
 nombre, Francisco, fue su Padrino Nicolas Gomez, Vecino de esta
 Ciudad le adverti el parentesco espiritual y demás obligaciones
 y lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-<entry> 451
+</entry>
+<entry id="2">
 Antonio
 Fatio
  Lunes, dia veinte y quatro de Junio de mil setecientos no
@@ -7330,10 +7324,10 @@ de nuestra santa madre Yglesia, y le puse por nombre, Antonio,
 fue su Padrino Nicolas Gomez, Vecino de esta Ciudad le adverti
 el parentesco espiritual y demás obligaciones y lo firme en dicho
 dia mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 176
+</entry>
+</image>
+<image id="1184" type="JPG">
+<entry id="1">
 Ynes
 Fatio
  Lunes, dia veinte y quatro de Junio de mil setecientos noven
@@ -7348,8 +7342,8 @@ Yglesia, y le puse por nombre, Ynes, fue su Padrino Nico
 las Gomez, Vecino de esta Ciudad le adverti el parentesco
 espiritual y demás obligaciones y lo firme en dicho dia mes
 y año.
- Miguel OReilly </entry>
-<entry> 453
+</entry>
+<entry id="2">
 Florencia
 Fatio
  Lunes, dia veinte y quatro de Junio de mil setecientos noven
@@ -7363,10 +7357,10 @@ nias y preces de nuestra santa madre Yglesia, y le puse por
 nombre, Francisco, fue su Padrino Nicolas Gomez, vecino
 de esta Ciudad le adverti el parentesco espiritual y demás
 obligaciones y lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 177
+</entry>
+</image>
+<image id="1185" type="JPG">
+<entry id="1">
 Ysabel Fatio
  Lunes, dia veinte y quatro de Junio de mil setecientos noventa
 y nueve Yo Dn Miguel OReilly Cura beneficiado, Vicario
@@ -7379,8 +7373,8 @@ preces de nuestra santa madre Yglesia, y le puse por nom
 bre, Ysabel, fue su Padrino Nicolas Gomez, Vecino de esta
 Ciudad le adverti el parentesco espiritual y demás obligacio
 nes y lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-<entry> 455
+</entry>
+<entry id="2">
 Francisco
 Fatio
  Lunes, dia veinte y quatro de Junio de mil setecientos
@@ -7395,10 +7389,10 @@ sia, y le puse por nombre, Francisco, fue su Padrino Ni
 colas Gomez, Vecino de esta Ciudad le adverti el parentesco
 espiritual y demás obligaciones y lo firme en dicho dia mes
 y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 178
+</entry>
+</image>
+<image id="1186" type="JPG">
+<entry id="1">
 456
 Yuana
 Maria
@@ -7416,8 +7410,8 @@ Padriunos Antonio moreno esclavo de Dn Antonio Matanza y Maria
 Rita morena esclava de Dn Pedro Dias Berrio, Vecinos de esta Ciudad
 les adverti el parentesco espiritual y demás obligaciones y lo firme
 en dicho dia mes y año.
- Miguel OReilly </entry>
-<entry> 457
+</entry>
+<entry id="2">
 Yuan
 Antonio
 Tomas
@@ -7434,10 +7428,10 @@ santa madre Yglesia, y le puse por nombre, Juan Antonio Tomas, fueron sus Pa
 drinos Dn Antonio Montes de Oca, y Da Paubla Torres vecinos de esta Ciu
 dad les adverti el parentesco espiritual y demás obligaciones y lo firme en dicho
 dia mes y año. = Entre renglones = sacras = Sale
- Miguel Crosby </entry>
-
-</folio><folio>
-<entry> 179
+</entry>
+</image>
+<image id="1187" type="JPG">
+<entry id="1">
 458
 Yorge
 Forraster
@@ -7451,8 +7445,8 @@ monias y preces de nuestra santa madre Yglesia, y le puse por
 nombre, Jorge fue su Padrino Nicolas Gomez, Vecinos de esta Ciu
 dad le adverti el parentesco espiritual y demás obligaciones y lo
 firme en dicho dia mes y año.
- Miguel OReilly </entry>
-<entry> 459
+</entry>
+<entry id="2">
 Santiago
 Forraster
  Miercoles, dia tres de Julio de mil setecientos noventa y nueve.
@@ -7465,10 +7459,10 @@ remonias y preces de nuestra santa madre Yglesia, y le puse por nom
 bre, Jorge fue su Padrino Nicolas Gomez, Vecino de esta Ciudad
 le adverti el parentesco espiritual y demás obligaciones
 y lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 180
+</entry>
+</image>
+<image id="1188" type="JPG">
+<entry id="1">
 460
 Alexandro
 Forraster
@@ -7482,8 +7476,8 @@ Alejandro, fue su Padrino Nicolas Gomez, Vecino de esta Ciudad
 le adverti el parentesco espiritual y demás obligaciones y lo firme
 en dicho dia mes y año.  =Entre renglones = ambos morenos =
 Esclavos de Don Juan Forraster = sale =
- Miguel OReilly </entry>
-<entry> 461
+</entry>
+<entry id="2">
 Carlos
 Forraster
  Miercoles, dia tres de Julio de mil setecientos noventa y nueve. Yo
@@ -7496,10 +7490,10 @@ cras ceremonias y preces de nuestra santa madre Yglesia, y le pu
 se por nombre, Carlos fue su Padrino Nicolas Gomez, Vecino
 de esta Ciudad le adverti el parentesco espiritual y demás obli
 gaciones y lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 462
+</entry>
+</image>
+<image id="1189" type="JPG">
+<entry id="1">
 Patricio
 Forraster
  Miercoles, dia tres de Julio de mil setecientos noventa y nueve. Yo
@@ -7512,8 +7506,8 @@ las sacras ceremonias y preces de nuestra santa madre Ygle
 sia, y le puse por nombre Patricio fue su Padrino Nicolas Go
 mez, Vecinos de esta Ciudad le adverti el parentesco espiritual
 y demás obligaciones y lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-<entry> 463
+</entry>
+<entry id="2">
 Ana
 Forraster
  Miercoles, dia tres de Julio de mil setecientos noventa y nueve.
@@ -7527,10 +7521,10 @@ estra santa madre Yglesia, y la puse por nombre Ana, fue su Pa
 drino Nicolas Gomez, Vecinos de esta Ciudad le adverti el paren
 tesco espiritual y demás obligaciones y lo firme en dicho dia mes
 y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 182
+</entry>
+</image>
+<image id="1190" type="JPG">
+<entry id="1">
 Antonio
 Forraster
  Miercoles, dia tres de Julio de mil setecientos noventa y nue
@@ -7544,8 +7538,8 @@ nuestra santa madre Yglesia, y le puse por nombre, Antonio
 Jorge fue su Padrino Nicolas Gomez, Vecino de esta Ciudad le adver
 ti el parentesco espiritual y demás obligaciones y lo firme en di
 cho dia mes y año.
- Miguel OReilly </entry>
-<entry> 465
+</entry>
+<entry id="2">
 María
 Forraster
  Miercoles, dia tres de Julio de mil setecientos noventa y nueve. Yo
@@ -7559,10 +7553,10 @@ dre Yglesia, y la puse por nombre, Maria fue su Padrino
 Nicolas Gomez, Vecino de esta Ciudad le adverti el parentesco
 espiritual y demás obligaciones y lo firme en dicho dia mes
 y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 466
+</entry>
+</image>
+<image id="1191" type="JPG">
+<entry id="1">
 Yuan
 Forraster
  Miercoles, dia tres de Julio de mil setecientos noventa y nueve. Yo
@@ -7576,8 +7570,8 @@ ces de nuestra santa madre Yglesia, y la puse por nombre,
 Juan, fue su Padrino Nicolas Gomez, Vecino de esta Ciu
 dad le adverti el parentesco espiritual y demás obligación
 y lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-<entry> 467
+</entry>
+<entry id="2">
 Santiago
 Forraster
  Miercoles, dia tres de Julio de mil setecientos noventa y nueve.
@@ -7591,9 +7585,10 @@ tra santa madre Yglesia, y la puse por nombre, Santiago, fue
 su Padrino Nicolas Gomez, Vecino de esta Ciudad, le adverti
 el parentesco espiritual y demás obligaciones y lo firme en dicho
 dia mes y año.
- Miguel OReilly </entry>
-</folio><folio>
-<entry> 184
+</entry>
+</image>
+<image id="1192" type="JPG">
+<entry id="1">
 Ricardo
 Forraster
  Miercoles, dia tres de Julio de mil setecientos noventa y nueve
@@ -7607,8 +7602,8 @@ nias y preces de nuestra santa madre Yglesia, y la puse pr
 nombre, Ricardo, fue su Padrino Nicolas Gomez, vecino
 de esta Ciudad le adverti el parentesco espiritual y demás
 obligaciones y lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-<entry> 469
+</entry>
+<entry id="2">
 Tomas
 Forraster
  Miercoles, dia tres de Julio de mil setecientos noventa
@@ -7623,10 +7618,10 @@ y le puse por nombre, Tomas, fue su Padrino Nicolas
 Gomez, Vecino de esta Ciudad le adverti el parentesco espi
 ritual y demás obligaciones y lo firme en dicho dia mes
 y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 185
+</entry>
+</image>
+<image id="1193" type="JPG">
+<entry id="1">
 470
 Bibíana
 Forraster
@@ -7643,8 +7638,8 @@ dre Yglesia, y la puse por nombre, Bibiana,  fue su Padri
 no Nicolas Gomez, Vecino de esta Ciudad le adverti el paren
 tesco espiritual y demás obligaciones y lo firme en dicho dia
 mes y año.
- Miguel OReilly </entry>
-<entry> 471
+</entry>
+<entry id="2">
 Maria
 Clorinda
 Forraster
@@ -7659,10 +7654,10 @@ cras ceremonias y preces de nuestra santa madre Yglesia, y la
 puse por nombre, Clorinda, fue su Padrino Nicolas Gomez,
 Vecino de esta Ciudad le adverti el parentesco espiritual
 y demás obligaciones y lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 186
+</entry>
+</image>
+<image id="1194" type="JPG">
+<entry id="1">
 472
 Pedro
 Domingo
@@ -7680,8 +7675,8 @@ por Pedro Domingo fueron sus Padrinos, Pedro y María
 ambos morenos esclavos de dicho Dn Juan Santiago Tomas, les
 adverti el parentesco espiritual y demás obligaciones y lo firme
 en dicho dia mes y año.
- Miguel Crosby </entry>
-<entry> 473
+</entry>
+<entry id="2">
 Miguel
 Du Pont
  Domingo, dia quatro de Agosto de mil setecientos noventa
@@ -7697,10 +7692,10 @@ ces de nuestra santa madre Yglesia, y le puse por nombre, Miguel, fue
 ron sus padrinos Migl moreno esclavo de Dn Jose Ortega, y de María Leste morena libre
 vecina de esta Ciudad les adverti el parentesco espiritual y demás obligaciones y lo fir
 me en dicho dia mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 187
+</entry>
+</image>
+<image id="1195" type="JPG">
+<entry id="1">
 474
 María
 Eusebia
@@ -7716,8 +7711,8 @@ nuestra santa madre Yglesia, y la puse por nombre, Maria Eucebia,
 fue su Madrina, Ysabel Atson, vecina de esta Ciudad, le ad
 verti el parentesco espiritual y demás obligaciones y lo firme en di
 cho dia mes y año.
- Miguel OReilly </entry>
-<entry> 475
+</entry>
+<entry id="2">
 María
 Ysabel
 Rafaela
@@ -7734,10 +7729,10 @@ santa madre Yglesia, y la puse por nombre, Maria Ysabel Rafaela, fue
 ron sus Padrinos Francisco Witen, y Maria Francisco Facio, ambos more
 nos libres vecinos de esta Ciudad les adverti el parentesco espiritual
 y demás obligaciones y lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 188
+</entry>
+</image>
+<image id="1196" type="JPG">
+<entry id="1">
 476
 María
 Rosalía
@@ -7754,8 +7749,8 @@ madre Yglesia, y la puse por nombre, Maria Rosalía, fue su Ma
 drina Josefa de Justiz esclava del Señor Gobernador Dn Henrique
 Withe, vecina de esta Ciudad le adverti el parentesco espiritual
 y demás obligaciones y lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-<entry> 477
+</entry>
+<entry id="2">
 Santiago
 Yosé Magino
 Paredes
@@ -7770,10 +7765,10 @@ preces de nuestra santa madre Yglesia, y la puse por nombre, Santiago
 José Magino, fueron sus Padrinos Jose Vicente Hill y Margarita
 Paredes, Vecinos de esta Ciudad les adverti el parentesco espíritu
 al y demás obligaciones y lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 189
+</entry>
+</image>
+<image id="1197" type="JPG">
+<entry id="1">
 478
 Francisca
 de Sales
@@ -7791,8 +7786,8 @@ nuestra santa madre Yglesia, y la puse por nombre, Francisca de Sa
 les, fueron sus Padrinos Juan Bautista Witen, y Maria Rafaela
 Quenty, ambos morenos libres, vecinos de esta Ciudad, les adverti el pa
 rentesco espiritual y demás obligaciones y lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-<entry> 479
+</entry>
+<entry id="2">
 Nicolas de
 Tolentino
 Sanchez
@@ -7808,10 +7803,10 @@ ron sus Padrinos Jose moreno esclavo del Señor Gobernador Dn Hen
 rique Wihte y Henrrica, morena esclava del Señor Dn Jose Ortega Ve
 cinos de esta Ciudad, les adverti el parentesco espiritual y demás obli
 gaciones y lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 480
+</entry>
+</image>
+<image id="1198" type="JPG">
+<entry id="1">
 Damiana Maria
 Rosa Yosefa
 Fernandez
@@ -7826,8 +7821,8 @@ ces de nuestra santa madre Yglesia, y la puse por nombre, Damiana
 Maria Rosa Josefa, fueron sus Padrinos Jose Sanchez y Catarina
 Sanchez, vecinos de esta Ciudad, les adverti el parentesco espíritu
 al y demás obligaciones y lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-<entry> 481
+</entry>
+<entry id="2">
 Maria Teresa de
 Yesus Fernandez
 Bendicho
@@ -7843,10 +7838,10 @@ exerci las peculiares sacras ceremonias y preces de nuestra Santa ma
 dre Yglesia, y la puse por nombre, Maria Teresa de Jesus, fue su Madrina
 Doña Teresa Rodriguez, Vecina de esta Ciudad, le adverti el parentesco espi
 ritual y demás obligaciones y lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 191
+</entry>
+</image>
+<image id="1199" type="JPG">
+<entry id="1">
 482
 Ana
 Yosefa
@@ -7862,8 +7857,8 @@ santa madre Yglesia, y la puse por nombre, Ana Josefa, fueron sus Pa
 drinos Don José Antonio  y Doña Maria Dolores Solana
 vecinos de esta Ciudad, les adverti el parentesco espiritual y demás obli
 gaciones y lo firme en dicho dia mes y año.
- Miguel Crosby </entry>
-<entry> 483
+</entry>
+<entry id="2">
 Gregoria
 Francisca
 Sanchez
@@ -7878,10 +7873,10 @@ se por nombre, Gregoria Francisca, fueron sus Padrinos Francisco Witen
 moreno libre, y Teresa morena esclava de Dn Farncisco Sanchez vecinos
 de esta Ciudad, les adverti el parentesco espiritual y demás obligaciones y
 lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 192
+</entry>
+</image>
+<image id="1200" type="JPG">
+<entry id="1">
 Francisco
 Xavier
 Perez
@@ -7897,8 +7892,8 @@ de nuestra santa madre Yglesia, y la puse por nombre, Francisco Xa
 vier, fueron sus Padrinos D. Francisco sanchez y D. Maria del Car
 men Hill, vecinos de esta Ciudad, les adverti el parentesco espiritual
 y demás obligaciones y lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-<entry> 485
+</entry>
+<entry id="2">
 Teresa de
 Yesus
 Rodriguez
@@ -7913,10 +7908,10 @@ de nuestra santa madre Yglesia, y la puse por nombre, Teresa de Je
 sus, fue su madrina Da Teresa Rodriguez, vecina de esta Ciudad, le adverti
 el parentesco espiritual y demás obligaciones y lo firme en dicho dia
 mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 193
+</entry>
+</image>
+<image id="1201" type="JPG">
+<entry id="1">
 Yuan
 Antonio
 Sanchez
@@ -7931,8 +7926,8 @@ nombre Jose Antonio, fueron sus Padrinos Juan Jose y Maria del Rosa
 rio ambos morenos esclavos del dicho D. Francisco Sanchez, vecino de esta
 Ciudad, les adverti el parentesco espiritual y demás obligaciones y lo fir
 me en dicho dia mes y año.
- Miguel OReilly </entry>
-<entry> 487
+</entry>
+<entry id="2">
 Manuel
 Yosé
 Llegui
@@ -7946,10 +7941,10 @@ Chua y en el exerci las sacras ceremonias y preces de nuestra santa madre
 Yglesia, y la puse por nombre  Manuel Jose, fue su Padrino Jose Maria Anni
 val, para libre vecino de esta Ciudad, le adverti el parentesco espiritual y
 demás obligaciones y lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 193
+</entry>
+</image>
+<image id="1202" type="JPG">
+<entry id="1">
 Año de 1800
 488
 Domingo
@@ -7966,8 +7961,8 @@ ta madre Yglesia, y la puse por nombre Domingo Francisco, fue su Pa
 drino D. Francisco Rubiza, vecino de esta Ciudad, le adverti el pa
 rentesco espiritual y demás obligaciones y lo firme en dicho dia mes
 y año.
- Miguel OReilly </entry>
-<entry> 489
+</entry>
+<entry id="2">
 Yose
 Simeon
 Dias Berrio;
@@ -7981,10 +7976,10 @@ madre Yglesia, y le puse por nombre Simeon, fue su Madrina Gua
 dalupe Rubio, quarterona libre, vecina de esta Ciudad, la adverti el
 parentesco espiritual y demás obligaciones y lo firme en dicho dia
 mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 195
+</entry>
+</image>
+<image id="1203" type="JPG">
+<entry id="1">
 490
 Samuel
 Guilgo
@@ -8002,8 +7997,8 @@ Yglesia, y le puse por nombre Samuel: fue su madrina
 Doña Clara de Entralgo, vecina de esta Ciudad, la adver
 ti el parentesco espiritual y demás obligaciones y lo fir
 me en dicho dia mes y año.
- Miguel OReilly </entry>
-<entry> 491
+</entry>
+<entry id="2">
 Catalina
 Sleioh
  Domingo dia veinte y seis de Enero de mil ochoci
@@ -8021,10 +8016,10 @@ esclavo de Pedro Lefebure; y Catalina, esclava de Don
 Miguel Ysnardy: les adverti el parentesco espiritual,
 y demás obligaciones y lo firme en dicho dia mes y
 año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 196
+</entry>
+</image>
+<image id="1204" type="JPG">
+<entry id="1">
 492
 Juana
 Manuela
@@ -8043,8 +8038,8 @@ de Nuestra Santa Madre Yglesia, y le puse por nombre
 Juana Manuela: fue su madrina Juana morena esclava
 de Don Juan Leslie: la adverti el parentesco espiritual,
 y demás obligaciones y lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-<entry> 493
+</entry>
+<entry id="2">
 Francis
 ca Sanchez
  Domingo dia nueve de Febrero de mil ochocientos.
@@ -8061,10 +8056,10 @@ vo del dho Dno Francisco Sanchez, y Lucia, esclava de Don
 Mariano de Lazaga: les adverti el parentesco espiritual
 y demás obligaciones y lo firme en dicho dia mes
 y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 197
+</entry>
+</image>
+<image id="1205" type="JPG">
+<entry id="1">
 494
 Vicente
 Manuel
@@ -8081,8 +8076,8 @@ Madre Yglesia, y le puse por nombre Vicente Manuel:
 fueron sus padrinos Carlos Gomez e Ysabel Hudson
 morena libre: les adverti el parentesco espiritual y demás
 obligaciones y lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-<entry> 495
+</entry>
+<entry id="2">
 Anto
 nia Felici
 tas Berta
@@ -8101,10 +8096,10 @@ citas Ferrreira, parda esclava del Capitan del tercero Bata
 llon de Cuba Don Manuel de Castilla: leas advertí el pa
 rentesco espiritual y demás obligaciones y lo firme en dicho
 dia mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 198
+</entry>
+</image>
+<image id="1206" type="JPG">
+<entry id="1">
 496
 Maria
 Petrona
@@ -8125,8 +8120,8 @@ na: fue su madrina Doña María Aniceta de Belen Val
 des, vecina de esta Ciudad: la adverti el parentesco es
 piritual y demás obligaciones y lo firme en dicho dia
 mes y año.
- Miguel OReilly </entry>
-<entry> 497
+</entry>
+<entry id="2">
 Carlos
 Marcial
  Lunes dia tres de Marzo de mil ochocientos. Yo
@@ -8143,10 +8138,10 @@ fueron sus padrinos Don Bartolomé de Castro y Fe
 rrer, y Doña Antonia Segui, vecinos de esta Ciudad
 les adverti el parentesco espiritual y demás obliga
 ciones y lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-</folio><folio>
-
-<entry> 498
+</entry>
+</image>
+<image id="1207" type="JPG">
+<entry id="1">
 Ysabel
 Antonia
 Marcial
@@ -8163,8 +8158,8 @@ Yglesia, y le puse por nombre Ysabel Antonia: fueron
 sus padrinos Lorenzo Capi y Antonia Andreu, vecinos
 de esta Ciudad: les adverti el parentezco espiritual y de
 más obligaciones y lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-<entry> 499
+</entry>
+<entry id="2">
 Josefa
 Ysabel
 Busquet
@@ -8184,10 +8179,10 @@ bre Josefa Ysabel: fue su madrina Doña Agustina
 Bousquet, vecina de esta Ciudad, la advertí el parentesco
 espiritual y demas obligaciones y lo fir
 me en dicho dia mes y año.
- Miguel OReilly </entry>
-</folio><folio>
-
-<entry> 200
+</entry>
+</image>
+<image id="1208" type="JPG">
+<entry id="1">
 500
 Maria
 de los Dolores
@@ -8206,8 +8201,8 @@ de los Dolores: fue su madrina Lucia, morena esclava de
 Don Mariano de Lazaga: la advertí el parentesco es
 piritual y demás obligaciones y lo firme en dicho dia
 mes y año.
- Miguel OReilly </entry>
-<entry> 501
+</entry>
+<entry id="2">
 Juan An
 tonio Carter
  Viernes dia veinte y uno de Marzo de mil y ocho
@@ -8224,10 +8219,10 @@ nio: fue su padrino Antonio, moreno esclavo de Don
 Mariano de Lazaga: le advertí el parentesco espiri
 tual y demás obligaciones y lo firme en dicho dia mes
 y año.
- Miguel OReilly </entry>
-</folio><folio>
-
-<entry> 502
+</entry>
+</image>
+<image id="1209" type="JPG">
+<entry id="1">
 Miguel
 Zamorano
  Viernes dia veinte y uno de Marzo de mil y ocho
@@ -8243,8 +8238,8 @@ y la puse por nombre Miguel: fue su madrina Lu
 cia, morena esclava de Don Mariano de Lazaga: la
 advertí el parentesco espiritual y demás obligaciones y
 lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-<entry> 503
+</entry>
+<entry id="2">
 Victoria
 Maria de
 los Dolores
@@ -8262,10 +8257,10 @@ nombre Victoria María de los Dolores: fueron sus padrinos
 Santiago Hambly, y María de los Dolores Solana: les ad
 vertí el parentesco espiritual y demás obligaciones y yo lo
 firme en dicho dia mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 504
+</entry>
+</image>
+<image id="1210" type="JPG">
+<entry id="1">
 Maria de los
 Dolores Guar
 darrama
@@ -8284,8 +8279,8 @@ María de los Dolores: fue su madrina D. Elena Ma
 ria Arteaga, vecina de esta Ciudad: la advertí el paren
 tesco espiritual y demás obligaciones y yo lo firme en dicho
 dia mes y año.
- Miguel OReilly </entry>
-<entry> 505
+</entry>
+<entry id="2">
 Doroteo
 Marcos
 Aston
@@ -8303,10 +8298,10 @@ fueron sus padrinos Doroteo Gutierrez, Cabo segundo de
 la primera Compañia del tercer Batallon de Cuba y Ma
 ria Solana: les advertí el parentesco espiritual y demas
 obligaciones y yo lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 506
+</entry>
+</image>
+<image id="1211" type="JPG">
+<entry id="1">
 Antonio
 Francisco
 Escalona
@@ -8324,8 +8319,8 @@ Antonio Francisco: fue su madrina Margarita Friay,
 vecina de esta Ciudad: la advertí el parentesco espiritual
 y demas obligaciones y yo lo firme en dicho dia mes
 y año.
- Miguel OReilly </entry>
-<entry> 507
+</entry>
+<entry id="2">
 Pedro
 Pasqual
 Gianopoly
@@ -8342,10 +8337,10 @@ Pasqual: fue su madrina Maria Teresa, morena es
 clava de D. Juan de los Remedios: la advertí el paren
 tesco espiritual y demas obligaciones y yo lo firme en di
 cho dia mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 508
+</entry>
+</image>
+<image id="1212" type="JPG">
+<entry id="1">
 Maria
 Ylaria Mi
 randa
@@ -8364,8 +8359,8 @@ la puse por nombre María Ylaria: fue su madrina
 Maria de la Luz Blanco, morena libre: la advertí
 el parentesco espiritual y demas obligaciones y yo lo fir
 me en dicho dia mes y año.
- Miguel OReilly </entry>
-<entry> 509
+</entry>
+<entry id="2">
 Felicitas
 Antonia
 Herrera
@@ -8381,10 +8376,10 @@ de Nuestra Santa Madre Yglesia; y la puse por nombre
 Felicitas Antonia: fue su madrina Antonia Pellicer, ve
 cina de esta Ciudad: la advertí el parentesco espiritual y
 demas obligaciones y yo lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 205
+</entry>
+</image>
+<image id="1213" type="JPG">
+<entry id="1">
 510
 Pedro
 Leante
@@ -8400,8 +8395,8 @@ y le puse por nombre Pedro: fueron sus padrinos Francis
 co, moreno esclavo de D. Francisco Sanchez, y Ysabel
 Vison, morena libre: les advertí el parentesco espiritual y
 demas obligaciones y yo lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-<entry> 511
+</entry>
+<entry id="2">
 Juan An
 tonio Parck
  Domingo dia seis de Julio de mil y ochocientos. Yo
@@ -8416,10 +8411,10 @@ Madre Yglesia; y la puse por nombre Juan Antonio
 fue su padrino D Juan leonardy, vecino de esta Ciudad
 le advertí el parentesco espiritual y demas obligaciones y yo lo
 firme en dicho dia mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 206
+</entry>
+</image>
+<image id="1214" type="JPG">
+<entry id="1">
 512
 Ana
 Felicitas
@@ -8436,8 +8431,8 @@ nombre Ana Felicitas. fueron sus padrinos Santiago more
 no esclavo de Pedro Leffebre; y Felicitas esclava de D. Ma
 nuel de Castilla: leas advertí el parentesco espiritual y demas
 obligaciones y yo lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-<entry> 513
+</entry>
+<entry id="2">
 Joseph
 Agustin
 Gilbert
@@ -8454,10 +8449,10 @@ tin: fueron sus padrinos Josef Escibar cabo de segunda
 clase del tercer Batallon de Cuba, y Juana Morena escla
 va de D Ana Sanders: la advertí el parentesco espiritual
 y demas obligaciones y yo lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 514
+</entry>
+</image>
+<image id="1215" type="JPG">
+<entry id="1">
 Juan
 de Dios
 Gilbert
@@ -8474,8 +8469,8 @@ fueron sus padrinos Josef Escobar, cabo segundo del tercer Bata
 llon de Cuba, y Juana morena esclava de D Ana Saunders les
 advertí el parentesco espiritual y demas obligaciones y yo lo firme
 en dicho dia mes y año.
- Miguel OReilly </entry>
-<entry> 515
+</entry>
+<entry id="2">
 Maria
 Margarita
 Sanchez
@@ -8491,10 +8486,10 @@ Margarita: fueron sus padrinos Miguel, moreno esclavo de D
 Josef de Ortega, y Juana, esclava del mismo Sanchez: les
 advertí el parentesco espiritual y demas obligaciones y lo
 firme en dicho dia mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 516
+</entry>
+</image>
+<image id="1216" type="JPG">
+<entry id="1">
 Juana
 Maria
 Sanchez
@@ -8510,8 +8505,8 @@ Juana Maria: fueron sus padrinos Miguel moreno esclavo de
 D Josef de Ortega, y Juana morena esclava del referido San
 chez: les advertí el parentesco espiritual y demas obligaciones
 y yo lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-<entry> 517
+</entry>
+<entry id="2">
 Pedro
 Casaly
  Viernes dia cinco de Septiembre de mil y ochocientos. Yo
@@ -8528,10 +8523,10 @@ Madre Yglesia; y la puse por nombre Pedro: fueron sus
 padrinos Lorenzo Solana y Juana Pellicer, vecinos de
 esta Ciudad: les adverti el parentesco espiritual y demas
 obligaciones y yo lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 518
+</entry>
+</image>
+<image id="1217" type="JPG">
+<entry id="1">
 Tomas
 Josef
 Felipe
@@ -8550,8 +8545,8 @@ remonias y preces de Nuestra Santa Madre Yglesia; y le
 puse por nombre Tomas Josef Felipe: fueron sus padrinos
 les advertí el parentesco espiritual y demas obligaciones
 y yo lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-<entry> 519
+</entry>
+<entry id="2">
 Susana
 Agueda
 Margarita
@@ -8568,10 +8563,10 @@ de Nuestra Santa Madre Yglesia; y la puse por nombre
 Felicitas Antonia: fue su madrina Antonia Pellicer, ve
 cina de esta Ciudad: la advertí el parentesco espiritual y
 demas obligaciones y yo lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 520
+</entry>
+</image>
+<image id="1218" type="JPG">
+<entry id="1">
 Juan To
 mas Blont
  Miercoles treinta de Septiembre de mil y ochoci
@@ -8588,8 +8583,8 @@ Tomás: fueron sus padrinos Tomas Paneti y Juana
 Paredes, vecinos de esta Ciudad, les advirtió el parentesco
 espiritual y demas obligaciones y yo lo firme en dicho
 dia mes y año.
- Miguel OReilly </entry>
-<entry> 524
+</entry>
+<entry id="2">
 Enrique
 Mac-Queen
  Jueves dia primero de Octubre de mil y ochocientos. Yo Don
@@ -8604,10 +8599,10 @@ Santa Madre Yglesia; y la puse por nombre Enrique
 fue sus padrinos Francisco Salon, vecino de esta Ciudad:
 le advertí el parentesco espiritual y demas obligaciones
 y yo lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 209
+</entry>
+</image>
+<image id="1219" type="JPG">
+<entry id="1">
 522
 Francis
 ca Mac-
@@ -8625,8 +8620,8 @@ por nombre Francisca: fue su padrino Francisco Sa
 lont, vecino de esta Ciudad: le advertí el parentesco es
 piritual y demas obligaciones y yo lo firme en dicho dia,
 mes y año.
- Miguel OReilly </entry>
-<entry> 523
+</entry>
+<entry id="2">
 Carlos
 Mac
 Queen
@@ -8642,10 +8637,10 @@ y preces de Nuestra Santa Madre Yglesia; y le puse
 por nombre Carlos: fue su padrino Francisco Salons,
 vecino de esta Ciudad, le advertí el parentesco espiritual
 y demas obligaciones y yo lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 524
+</entry>
+</image>
+<image id="1220" type="JPG">
+<entry id="1">
 Margarita
 Mac-Queen
  Jueves dia primero de Octubre de mil y ochocientos. Yo
@@ -8661,8 +8656,8 @@ de Nuestra Santa Madre Yglesia; y le puse por nom
 bre Margarita: fue su padrino Francisco Salons, veci
 no de esta Ciudad, le advertí el parentesco espiritual y de
 mas obligaciones y yo lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-<entry> 525
+</entry>
+<entry id="2">
 Brigida
 Mac-Queen
  Jueves dia primero de Octubre de mil y ochocientos.
@@ -8679,10 +8674,10 @@ Santa Madre Yglesia: y la puse por nombre Brigida. fue
 su padrino Francisco Salons, vecino de esta Ciudad, le adver
 tí el parentesco espiritual y demas obligaciones y yo lo firme
 en dicho dia mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 526
+</entry>
+</image>
+<image id="1221" type="JPG">
+<entry id="1">
 Tomas
 Lorenzo
 Chickens
@@ -8701,8 +8696,8 @@ por nombre Tomas Lorenzo: fueron sus padrinosLoren
 zo Solana é Ysabel Saunders, vecinos de esta Ciudad: les
 advertí el parentesco espiritual y demas obligaciones y yo lo fir
 me en dicho dia mes y año.
- Miguel OReilly </entry>
-<entry> 527
+</entry>
+<entry id="2">
 Teresa
 de Jesus
 Ysnardy
@@ -8720,10 +8715,10 @@ Buenaventura, y de María, esclavos del Coronel D Barto
 lomé de Morales: les advertí el parentesco espíritu
 al y demas obligaciones y yo lo firme en dicho dia,
  mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 212
+</entry>
+</image>
+<image id="1222" type="JPG">
+<entry id="1">
 528
 Catalina
 Mariana
@@ -8743,8 +8738,8 @@ Yglesia; y la puso por nombre Catalina Mariana: fue
 su madrina D. Mariana Cabedo vecina de esata Ciudad
 le advirtió el parentesco espiritual y demas obligacio
 nes y yo lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-<entry> 529
+</entry>
+<entry id="2">
 Martina
 Eugenia
 Castro y
@@ -8762,10 +8757,10 @@ bre Martina Eugenia: fue su madrina Donisia Ro
 driguez, vecina de esta Ciudad: la advertí el parentesco
 espiritual y demas obligaciones y yo lo firme en dicho
  dia, mes, y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 213
+</entry>
+</image>
+<image id="1223" type="JPG">
+<entry id="1">
 530
 Bernar
 do Josef
@@ -8783,8 +8778,8 @@ Bernardo Josef: fueron sus padrinos Josef Roca, y
 Catalina Nichols, vecinos de esta Ciudad, les advertí el
 parentesco espiritual, y demás obligaciones, y lo firmé
 en dicho dia mes y año.
- Miguel OReilly </entry>
-<entry> 531
+</entry>
+<entry id="2">
 Maria
 Luisa
 Baez
@@ -8802,10 +8797,10 @@ ron sus padrinos Benjamin Guilery, y Maria Luisa,
 pardos libres, vecinos de esta Ciudad: les adverti el
 parentesco espiritual y demas obligaciones, y lo firmé
 en dicho día, mes y año
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry>
+</entry>
+</image>
+<image id="1224" type="JPG">
+<entry id="1">
 214
 532
 Eugenia
@@ -8823,8 +8818,8 @@ Yglesia; y le puse por nombre Eugenia Maria: fue su
 madrina D. ynes Cabedo, vecina de esta Ciudad, la advertí
 el parentesco espiritual y demas obligaciones y yo lo firmé
 en dicho dia, mes y año.
- Miguel OReilly </entry>
-<entry>
+</entry>
+<entry id="2">
 533
 Secilia Jo
 sefa Antonia
@@ -8843,10 +8838,10 @@ Yglesia; y le puse por nombre Cesilia Josefa Antonia: fue
 ron sus padrinos D. Santiago Gonzales, y D. Ana Saunders,
 vecinos de esta Ciudad, les advertí el parentesco espiritual y
 demas obligaciones; y lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 215
+</entry>
+</image>
+<image id="1225" type="JPG">
+<entry id="1">
 534
 Juan
 Gregorio
@@ -8866,8 +8861,8 @@ renos Juan de Dios, esclavo de D. Francisco Cato, y En
 rica, esclava de D. Josef de Ortega: les advertí el parentes
 co espiritual y demas obligaciones; y lo firme en dicho dia,
 mes y año.
- Miguel OReilly </entry>
-<entry> 535
+</entry>
+<entry id="2">
 Pedro
 Tomp
 son
@@ -8886,10 +8881,10 @@ dre Yglesia; y le puse por nombre Pedro: fue su madri
 na D. Francisca Zamorano, vecina de esta Ciudad: la
 advertí el parentesco espiritual y demas obligaciones,
  y lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 216
+</entry>
+</image>
+<image id="1226" type="JPG">
+<entry id="1">
 536
 Francisco
 Tompson
@@ -8908,8 +8903,8 @@ Madre Yglesia; y le puse por nombre Pedro: fue
 su madrina D. Francisca Zamorano, vecina de esta
 Ciudad: la advertí el parentesco espiritual y demas
 obligaciones, y lo firme en dicho dia mes y año.
- Miguel OReilly </entry>
-<entry> 537
+</entry>
+<entry id="2">
 Catali
 na Andreu
  Sabado dia veinte de Diciembre de mil y ochocientos.
@@ -8925,10 +8920,10 @@ se por nombre Catalina: fue su madrina Catalina Pa
 pi, vecina de esta Ciudad: la advertí el parentesco es
 piritual y demas obligaciones, y lo firme en dicho
 dia, mes y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 538
+</entry>
+</image>
+<image id="1227" type="JPG">
+<entry id="1">
 Silvestre
 Josef
 Garcia
@@ -8945,8 +8940,8 @@ Silvestre Josef: fue su madrina Ana Cherez, veci
 na de esta Ciudad: la adverti el parentesco espiritual,
 y demas obligaciones, y lo firme en dicho dia, mes,
 y año.
- Miguel OReilly </entry>
-<entry> 532
+</entry>
+<entry id="2">
 María
 Ysabel
 Wanton
@@ -8965,10 +8960,10 @@ bre Maria Ysabel: fueron sus padrinos D.  Manuel So
 lana, y D Maria Mestre: les adverti el parentesco espi
 ritual, y demas obligaciones, y lo firme en dicho dia
 mes, y año.  entre reng: =libre = v. e
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 218
+</entry>
+</image>
+<image id="1228" type="JPG">
+<entry id="1">
 Año de 1801
 540
 Maria
@@ -8987,8 +8982,8 @@ bre Maria Margarita Rafaela: fueron sus padrinos los morenos
 esclavos Marcelino Espinosa, y Rafaela Saunders; les  adverti el
 parentesco espiritual, y demas obligaciones, y lo firme en dicho
 dia, mes, y año.
- Miguel OReilly </entry>
-<entry> 541
+</entry>
+<entry id="2">
 Marga
 rita Sanchez
 Adulta
@@ -9005,10 +9000,10 @@ se por nombre Margarita: fueron sus padrinos los morenos
 libres Felipe, y Felicitas Sanche; les adverti el parentesco
 espiritual, y demas obligaciones, y lo firme en dicho dia,
 mes, y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 219
+</entry>
+</image>
+<image id="1229" type="JPG">
+<entry id="1">
 542
 Luciana
 Cayetana
@@ -9027,8 +9022,8 @@ Luciana Cayetana Ana: fue su madrina Luciana Ana
 Cherez, vecina de esta Ciudad: la adverti el parentesco espi
 ritual, y demas obligaciones, y lo firme en dicho dia, mes,
 y año.
- Miguel OReilly </entry>
-<entry> 543
+</entry>
+<entry id="2">
 Ana
 Crosby
 Adulta
@@ -9047,10 +9042,10 @@ fueron sus padrinos D. Eusebio Gómez, y D. Maria Gra
 cia Perpal, vecinos de esta Ciudad: les adverti el paren
 tesco espiritual, y demas obligaciones, y lo firme en dicho
 dia, mes, y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 220
+</entry>
+</image>
+<image id="1230" type="JPG">
+<entry id="1">
 544
 Juana
 Bautista
@@ -9070,8 +9065,8 @@ fueron sus padrinos Juan Bautista Ferreira, y Juana Es
 tefanopoly, vecinos de esta Ciudad: les adverti el parentesco
 espiritual, y demas obligaciones, y lo firme en dicho dia,
 mes, y año.
- Miguel OReilly </entry>
-<entry> 545
+</entry>
+<entry id="2">
 Andrea
 Maria
 Llerena
@@ -9087,10 +9082,10 @@ ta Madre Yglesia; y le puse por nombre Andrea Maria
 fue su madrina Felicitas Mila, parda esclava de D
 Manuel de Castilla: la advertí el parentesco espiritual, y
 demas obligaciones, y lo firme en dicho dia, mes, y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 221
+</entry>
+</image>
+<image id="1231" type="JPG">
+<entry id="1">
 546
 Juan
 Francisco
@@ -9108,8 +9103,8 @@ Juan Francisco: fueron sus padrinos Juan Francisco Chi
 quens, pardo libre Rafaela parda esclava de D Ana
 Saunders: les advertí el parentesco espiritual, y demas obliga
 ciones, y lo firme en dicho dia, mes, y año.
- Miguel OReilly </entry>
-<entry> 547
+</entry>
+<entry id="2">
 Andrés
 Manuel
 Bei
@@ -9127,10 +9122,10 @@ ron sus padrinos Manuel Gonzalez, soldado de la Segunda
 Compañía del tercer Batallon de Cuba, y Ana Maria Teresa
 Fel, vecina de esta Ciudad, les advertí el parentesco espiritual,
 y demas obligaciones, y lo firme en dicho dia, mes, y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 222
+</entry>
+</image>
+<image id="1232" type="JPG">
+<entry id="1">
 548
 Maria
 Pastora
@@ -9150,8 +9145,8 @@ ra: fueron sus padrinos D. n Ramon Sanchez y D. Maria
 Josefa Welsh, vecinos de esta Ciudad: les advertí el parentesco
 espiritual, y demas obligaciones, y lo firme en dicho dia, mes,
 y año.
- Miguel OReilly </entry>
-<entry>
+</entry>
+<entry id="2">
 549
 Luis
 Peso de
@@ -9169,10 +9164,10 @@ Luis: fueron sus padrinos los morenos Luis, esclavo de Da
 Luisa Perez, y Maria Juana, esclava de Juan Fayak
 les advertí el parentesco espiritual y demas obligaciones,
 y lo firme en dicho dia, mes, y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 223
+</entry>
+</image>
+<image id="1233" type="JPG">
+<entry id="1">
 550
 Maria
 de Jesus
@@ -9191,8 +9186,8 @@ ria de Jesus Eusebia: fueron sus padrinos Josef Rivas
 pardo libre, y Maria de la Luz Ruiz, morena tambien
 libre: les advertí el parentesco espiritual, y demas obliga
 ciones, y lo firme en dicho dia, mes, y año.
- Miguel OReilly </entry>
-<entry> 551
+</entry>
+<entry id="2">
 Gregorio
 Joseph
 Berta
@@ -9208,9 +9203,10 @@ sia; y le puse por nombre Gregorio Josef: fue su madri
 na Maria de la Luz Ruiz, morena libre: la advertí
 el parentesco espiritual, y demas obligaciones, y lo fir
 me en dicho dia, mes, y año.
- Miguel OReilly </entry>
-</folio><folio>
-<entry>552
+</entry>
+</image>
+<image id="1234" type="JPG">
+<entry id="1">
 Pedro
 Joseph de
  Ysnardy
@@ -9229,8 +9225,8 @@ le puse por nombre Pedro Josef: fue su padrino el cita
 do D. Miguel de Ysnardy: le advertí el parentesco espiri
 tual, y demas obligaciones, y lo firme en dicho dia, mes, y
 año.
- Miguel OReilly </entry>
-<entry> 553
+</entry>
+<entry id="2">
 Maria
 Rafaela
 Leslie
@@ -9249,8 +9245,9 @@ nos Vicente Valencia y Francisco Galloso, vecinos de
 esta Ciudad, les adverti el parentesco espiritual, y demas
 obligaciones, y lo firme en dicho dia, mes, y año.
 </entry>
-</folio><folio>
-<entry> 225
+</image>
+<image id="1235" type="JPG">
+<entry id="1">
 554
 Maria
 Josefa
@@ -9267,8 +9264,8 @@ sia; y la puse por nombre Maria Josefa: fue su madrina
 Maria de la Luz Ruiz, morena libre: la advertí el paren
 tesco espiritual, y demas obligaciones, y lo firme en dicho dia,
 mes, y año.
- Miguel OReilly </entry>
-<entry> 555
+</entry>
+<entry id="2">
 Ma
 nuela
 Leffebure
@@ -9285,10 +9282,10 @@ la puse por nombre Manuela: fue su madrina Juana
 Estefanopoly, vecina de esta Ciudad: la adverti  el parentesco
 espiritual, y demas obligaciones, y lo firme en dicho dia,
 mes, y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 556
+</entry>
+</image>
+<image id="1236" type="JPG">
+<entry id="1">
 Juan
 Joseph
 Fish
@@ -9305,8 +9302,8 @@ puse por nombre Juan Joseph Valentin: fueron sus pa
 drinos Juan Paredes y su esposa Ysabel Ruidaverts, veci
 nos de esta Ciudad: les adverti el parentesco espiritual, y de
 mas obligaciones, y lo firme en dicho dia, mes, y año.
- Miguel OReilly </entry>
-<entry> 557
+</entry>
+<entry id="2">
 Luiz
 Lorenzo
 Capella
@@ -9322,10 +9319,10 @@ bre Luiz Lorenzo: fueron sus padrinos Lorenzo Solana, y
 Antonia Pons, vecinos de esta Ciudad: les advertí el parentes
 co espiritual, y demas obligaciones, y lo firme en dicho dia,
 mes, y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 227
+</entry>
+</image>
+<image id="1237" type="JPG">
+<entry id="1">
 558
 Santiago
 Cheves
@@ -9342,8 +9339,8 @@ Yglesia; y le puse por nombre Santiago: fueron sus padrinos
 los morenos Josef, esclavo de Don Pedro Diaz Berrio, y Jo
 sefa, esclava de D Juan Bousquett: les adverti el parentesco es
 piritual, y demas obligaciones, y lo firme en dicho dia, mes, y año.
- Miguel OReilly </entry>
-<entry> 559
+</entry>
+<entry id="2">
 Agustin
 Anselmo
 Menocal
@@ -9360,10 +9357,10 @@ Manuel Perez, Subteniente del dicho Batallón, y de Francisca
 de Sale Honeillchut, vecina de esta Ciudad: les advertí el paren
 tesco espiritual, y demas obligaciones, y lo firme en dicho dia,
 mes, y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry>228
+</entry>
+</image>
+<image id="1238" type="JPG">
+<entry id="1">
 Maria
 Ysabel
 Hernandez
@@ -9378,8 +9375,8 @@ exercí las sacras ceremonias y preces de Nuestra Santa Ma
 dre Yglesia; y la puse por nombre Maria Ysabel: fue su ma
 drina Ysabel Hudson, morena libre: la adverti el parentesco espi
 ritual, y demas obligaciones, y lo firme en dicho dia, mes, y año.
- Miguel OReilly </entry>
-<entry> 561
+</entry>
+<entry id="2">
 Josef Agus
 tin Carter
  Domingo dia treinta y uno de Mayo de mil ochoci
@@ -9395,10 +9392,10 @@ Yglesia; y le puse por nombre Josef Agustin: fue su madrina D.
 Maria Rita Bravo, vecina de esta Ciudad: la adverti el
 parentesco espiritual, y demas obligaciones, y lo firme en di
 cho dia, mes, y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry>Maria
+</entry>
+</image>
+<image id="1239" type="JPG">
+<entry id="1">
 Beatris
 Sanchez
  Domingo dia catorce de Junio de mil ochocientos uno Yo
@@ -9414,8 +9411,8 @@ res, moreno, esclavo, de D Sebastian de Espinoza; y Maria Victo
 ria, morena, esclava de D. Juan de los Remedios: les adverti el
 parentesco espiritual, y demas obligaciones, y lo firme en di
 cho dia, mes, y año.
- Miguel OReilly </entry>
-<entry> 563
+</entry>
+<entry id="2">
 Julian
 Santiago
 Jacobo
@@ -9433,10 +9430,10 @@ Yglesia; y la puse por nombre Julian Santiago: fueron sus pa
 drinos Francisco Witten y Barbara Jacobo, morenos libres:
 les adverti el parentesco espiritual, y demas obligaciones, y lo
 firme en dicho dia, mes, y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 230
+</entry>
+</image>
+<image id="1240" type="JPG">
+<entry id="1">
 564
 Esteban
 Mac-Queen
@@ -9451,8 +9448,8 @@ de Nuestra Santa Madre Yglesia; y la puse por nombre Es
 teban: fue su padrino Luis de Almanza; moreno esclavo de Da
 Luisa Perez le adverti el parentesco espiritual, y demas obligacio
 nes, y lo firme en dicho dia, mes, y año.
- Miguel OReilly </entry>
-<entry> 565
+</entry>
+<entry id="2">
 Catalina
 Agueda
 Paxeti
@@ -9468,10 +9465,10 @@ Madre Yglesia; y la puse por nombre Catalina Agueda
 fueron sus padrinos Andrés paxeti, y Agueda Paxeti, ve
 cinos de esta ciudad: les adverti el parentesco espiritual, y
 demas obligaciones, y lo firme en dicho dia, mes, y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 231
+</entry>
+</image>
+<image id="1241" type="JPG">
+<entry id="1">
 566
 Ysabel
 Bengol
@@ -9489,8 +9486,8 @@ so por nombre Ysabel: fueron sus padrinos Juan Huertas, y
 Catalina papi; vecinos de esta Ciudad: les advirtió el parentesco
 espiritual, y demas obligaciones, y lo firme en dicho dia,
 mes, y año.
- Miguel OReilly </entry>
-<entry> 567
+</entry>
+<entry id="2">
 Jorge
 Manuel
 Falani
@@ -9507,10 +9504,10 @@ Manuel Gonzalez, soldado de la segunda compañía del
 tercero batallón de Cuba que guarnece esta Plaza, y ysabel
 Hudson, morena libre: les adverti el parentesco espiritual,
 y demas obligaciones, y lo firme en dicho dia, mes, y año.
- Miguel OReilly </entry>
-
-</folio><folio>233
-<entry> 232
+</entry>
+</image>
+<image id="1242" type="JPG">
+<entry id="1">
 568
 Juana
 Margarita
@@ -9530,8 +9527,8 @@ soldado de la segubda compañía l del tercero Batallon de Cuba
 que guarnece esta Plaza, y Juana Margarita Sanchez
 morena libre: les adverti el parentesco espiritual, y demas
 obligaciones, y lo firme en dicho dia, mes, y año.
- Miguel OReilly </entry>
-<entry> 569
+</entry>
+<entry id="2">
 Bernardo
 Josef Sanchez
  Lunes dia veinte y quatro de Agosto de mil ochocientos y
@@ -9544,10 +9541,10 @@ exerci las sacras ceremonias y preces de Nuestra Santa Madre
 Yglesia; y le puse por nombre Bernardo Josef: fue su madrina
 Maria de la Luz Ruiz, morena libre: la adverti el parentesco
 espiritual, y demas obligaciones, y lo firme en dicho dia, mes, y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 570
+</entry>
+</image>
+<image id="1243" type="JPG">
+<entry id="1">
 Luisa
 Agustina
 Rosa
@@ -9564,8 +9561,8 @@ y la puse por nombre Luisa Agustina Rosa: fue su
 madrina Rafaela Witen, morena libre, la adverti el paren
 tesco espiritual, y demas obligaciones, y lo firme en dicho
 dia, mes, y año.
- Miguel OReilly </entry>
-<entry> 571
+</entry>
+<entry id="2">
 Juan
 Witten
  Miercoles dia dos de Septiembre de mil ochocien
@@ -9580,10 +9577,10 @@ y le puse por nombre Juan: fue su madrina la morena
 Francisca esclava de D. Josef de Ortega: la adverti el parentes
 co espiritual, y demas obligaciones, y lo firme en dicho dia,
 mes, y año.
- Miguel OReilly </entry>
-
-</folio><folio>
-<entry> 234
+</entry>
+</image>
+<image id="1244" type="JPG">
+<entry id="1">
 572
 Miguel
 Tomas
@@ -9601,7 +9598,7 @@ mas: fueron sus padrinos D. Tomas Travers, y D Ysabel
 Saunders, vecinos de esta Ciudad: les adverti el parentesco es
 piritual, y demas obligaciones, y lo firme en dicho dia,
 mes, y año.
- Miguel OReilly </entry>
-</folio>
+</entry>
+</image>
 </volume>
 </ssda>
