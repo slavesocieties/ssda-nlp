@@ -4,6 +4,7 @@ __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
 index = {"parse_xml": "12-ssda-xml-parser.ipynb",
          "parse_xml_v2": "12-ssda-xml-parser.ipynb",
+         "retrieve_volume_metadata": "12-ssda-xml-parser.ipynb",
          "genAltEnts": "31-collate-xml-entities-spans.ipynb",
          "generateSpans": "31-collate-xml-entities-spans.ipynb",
          "parseEntities": "31-collate-xml-entities-spans.ipynb",
@@ -29,8 +30,14 @@ index = {"parse_xml": "12-ssda-xml-parser.ipynb",
          "parse_annotation": "51-data-preprocessing.ipynb",
          "prodigy_output_to_collated_df": "51-data-preprocessing.ipynb",
          "universal_markup_converter": "52-unstructured-to-markup.ipynb",
-         "writeHeader": "53-markup-to-spacy.ipynb",
-         "writeFooter": "53-markup-to-spacy.ipynb",
+         "writeHeader": "53-markup-to-spatial-historian.ipynb",
+         "writeFooter": "53-markup-to-spatial-historian.ipynb",
+         "id_unique_individuals": "71-relationship-builder.ipynb",
+         "determine_principals": "71-relationship-builder.ipynb",
+         "determine_event_date": "71-relationship-builder.ipynb",
+         "determine_event_location": "71-relationship-builder.ipynb",
+         "identify_cleric": "71-relationship-builder.ipynb",
+         "build_event": "71-relationship-builder.ipynb",
          "build_relationships": "71-relationship-builder.ipynb"}
 
 modules = ["xml_parser.py",
@@ -40,7 +47,7 @@ modules = ["xml_parser.py",
            "model_performance_utils.py",
            "preprocessing.py",
            "unstructured2markup.py",
-           "markup2spacy.py",
+           "markup2sh.py",
            "relationships.py"]
 
 doc_url = "https://d-genk.github.io/ssda_nlp/"

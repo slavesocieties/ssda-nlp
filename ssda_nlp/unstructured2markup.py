@@ -6,7 +6,7 @@ __all__ = ['universal_markup_converter']
 
 def universal_markup_converter(path_to_transcription, transcription_type):
 
-    if transcription_type == "markup v1":
+    if transcription_type == "spatial_historian":
         inp = open(path_to_transcription,'r',encoding="utf-8")
         transcription = ''
         for line in inp:
