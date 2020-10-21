@@ -4,17 +4,9 @@ __all__ = ['universal_markup_converter']
 
 # Cell
 
-from .markup2sh import *
-
-# Cell
-
 def universal_markup_converter(path_to_transcription, transcription_type):
-
-    #this is configured for a specific folio naming convention in SH, so isn't really unviersal
-    #but should probably be deprecated regardless since we don't want to be dealing in SH transcription format
     if transcription_type == "spatial historian":
         inp = open(path_to_transcription,'r',encoding="utf-8")
-        #also wtf is this
         transcription = ''
         for line in inp:
             transcription += line
@@ -32,6 +24,7 @@ def universal_markup_converter(path_to_transcription, transcription_type):
         curr_image_id = int(input("Enter first transcribed image file name: "))
         inp.close()
         inp = open(path_to_transcription,'r',encoding="utf-8")
+        number_flag = input("Does the transcription contain meaningful folio numbers? (Y/N): ")
 
         output = open(output_dir,'w',encoding="utf-8")
         output.write("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n")
@@ -42,8 +35,13 @@ def universal_markup_converter(path_to_transcription, transcription_type):
         for line in inp:
             if "<itemTitle>" in line:
                 folio_start = line.find(' ')
-                curr_image_number = line[folio_start + 1:line.find('.', folio_start)]
-                output.write("<image id=\"" + str(curr_image_id) + "\" type=\"" + img_type + "\" number=\"" + curr_image_number + "\">\n")
+                if number_flag == 'Y':
+                    curr_image_number = line[line.find('>') + 1:line.find('<', line.find('<') + 1)]
+                    if curr_image_number[:4] == "Fol_":
+                        curr_image_number = curr_image_number[4:]
+                    output.write("<image id=\"" + str(curr_image_id) + "\" type=\"" + img_type + "\" number=\"" + curr_image_number + "\">\n")
+                else:
+                    output.write("<image id=\"" + str(curr_image_id) + "\" type=\"" + img_type + "\">\n")
                 curr_image_id += 1
                 curr_entry = 1
             elif "<entry>" in line:
@@ -64,7 +62,6 @@ def universal_markup_converter(path_to_transcription, transcription_type):
         inp.close()
         output.close()
 
-    #this works
     elif transcription_type == "markup v1":
         inp = open(path_to_transcription,'r',encoding="utf-8")
         typ = input("Enter record type: ")
