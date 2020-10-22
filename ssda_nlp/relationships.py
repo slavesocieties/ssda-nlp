@@ -25,7 +25,7 @@ def id_unique_individuals(entry_text, entities, record_type):
 
 # Cell
 
-def find_sus(entry_text, entities, sus_df, i):
+def find_sus(entry_text, entities, sus_df, index):
     '''
     identifies corner cases: all entries where there are multiple entities that 1) have the same first name appearing
         multiple times, 2) have compound names and then a segment of that name appearing, and 3) have a full name with
@@ -38,22 +38,57 @@ def find_sus(entry_text, entities, sus_df, i):
         sus_df: either the empty df body or the df from previously loop iterations
         i: current row that the loop is on in DEMO_DF
 
-    returns: df of all the entries that may be corner cases, in the same form demo_df
+    returns: df of all the entries that may be corner cases, in the same form demo_df, but with two added id columns
     '''
-
+    #Set up
     people_df = entities.loc[entities['pred_label'] == 'PER']
     people_df.reset_index(inplace=True)
     people_df = people_df.drop('index',axis=1)
 
-    if people_df['pred_entity'].duplicated().any(): #ie if there are duplicate names
+    my_rows = len(people_df.index)
+    hold = my_rows * [0]
+    people_df['name_status'] = hold
+    first_names = []
+    check_against = []
+    dups = 0
+    sus = 0
+
+    #Get a list of all the first names that appear in the entities/people_df
+    #  This is definitely not the most computationally efficient way to do this
+    for i in range(my_rows):
+        #Separate people based on whether it is a first name or a full/compound name
+        if (" " in people_df.iloc[i,1]) or ("-" in people_df.iloc[i,1]):
+            check_against.append(people_df.iloc[i,1])
+        elif ~(" " in people_df.iloc[i,1]): #No spaces thus we are assuming it is a first name
+            first_names.append(people_df.iloc[i,1])
+    #Check to see whether they are subsets of full/compound names
+    if len(first_names)>0 and len(check_against)>0:
+        for j in range(len(first_names)):
+            for k in range(len(check_against)):
+                if first_names[j] in check_against[k]:
+                    #Mark this entire entry as sus
+                    sus = 1
+    #Generally check to see if there are any duplicate entities (same name) in the entry
+    if people_df['pred_entity'].duplicated().any():
+        dups = 1;
+    #Set the status column
+    if sus and dups:
+        status = 11 #ie both sus and dups are true
+    elif sus:
+        status = 10 #ie sus true, dups false
+    elif dups:
+        status = 0.01 #ie sus false, dups true
+    else:
+        status = 0
+    #ie if the entry is suspect or has duplicates, then add it to sus_df
+    if status>0:
         if len(sus_df.index)<1:
-            #display(people_df.head(20))
-            data = [{'vol_titl':demo_df.iloc[i,0], 'vol_id':demo_df.iloc[i,1], 'fol_id':demo_df.iloc[i,2],
-                    'text':demo_df.iloc[i,3],'entry_no':entry_no}]
+            data = [{'vol_titl':demo_df.iloc[index,0], 'vol_id':demo_df.iloc[index,1], 'fol_id':demo_df.iloc[index,2],
+                    'text':demo_df.iloc[index,3],'entry_no':entry_no,'suspect':status}]
             sus_df = pd.DataFrame(data)
         else:
-            sus_df = sus_df.append({'vol_titl':demo_df.iloc[i,0], 'vol_id':demo_df.iloc[i,1], 'fol_id':demo_df.iloc[i,2],
-                    'text':demo_df.iloc[i,3],'entry_no':entry_no},ignore_index=True)
+            sus_df = sus_df.append({'vol_titl':demo_df.iloc[index,0], 'vol_id':demo_df.iloc[index,1], 'fol_id':demo_df.iloc[index,2],
+                    'text':demo_df.iloc[index,3],'entry_no':entry_no,'suspect':status},ignore_index=True)
     return sus_df
 
 # Cell
@@ -83,26 +118,27 @@ def split_name_col(people_df):
 
     print("DF of first names")
     display(first_n.head())
-    print("DF of ful names")
+    print("DF of full names")
     display(full_n.head())
     print("DF of compound names")
     display(cmpd_n.head())
+    print("---------------------")
 
     return first_n, full_n, cmpd_n
 
 # Cell
 
-def disambiguate(sus_df):
+def disambiguate():
     '''
     goes through the problem cases previously identified and then applies split_name_col to break the entities down into
         the ones that may be
     '''
-
     people_df = entities.loc[entities['pred_label'] == 'PER']
     people_df.reset_index(inplace=True)
     people_df = people_df.drop('index',axis=1)
 
-    split_name_col(people_df)
+    first_n, full_n, cmpd_n = split_name_col(people_df)
+
 
 # Cell
 
