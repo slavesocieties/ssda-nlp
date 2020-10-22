@@ -43,7 +43,9 @@ index = {"parse_xml": "12-ssda-xml-parser.ipynb",
          "determine_event_location": "71-relationship-builder.ipynb",
          "identify_cleric": "71-relationship-builder.ipynb",
          "build_event": "71-relationship-builder.ipynb",
-         "build_relationships": "71-relationship-builder.ipynb"}
+         "drop_obvious_duplicates": "71-relationship-builder.ipynb",
+         "assign_unique_ids": "71-relationship-builder.ipynb",
+         "build_entry_metadata": "71-relationship-builder.ipynb"}
 
 modules = ["xml_parser.py",
            "collate.py",

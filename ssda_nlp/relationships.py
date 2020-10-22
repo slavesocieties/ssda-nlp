@@ -2,7 +2,7 @@
 
 __all__ = ['assign_characteristics', 'id_unique_individuals', 'find_sus', 'split_name_col', 'disambiguate',
            'determine_principals', 'determine_event_date', 'determine_event_location', 'identify_cleric', 'build_event',
-           'build_relationships']
+           'drop_obvious_duplicates', 'assign_unique_ids', 'build_entry_metadata']
 
 # Cell
 #dependencies
@@ -14,6 +14,7 @@ from spacy.util import minibatch, compounding
 #manipulation of tables/arrays
 import pandas as pd
 import numpy as np
+import copy
 
 #internal imports
 from .collate import *
@@ -32,10 +33,14 @@ def assign_characteristics(entry_text, entities, unique_individuals):
         entities: entities of all kinds extracted from that entry by an NER model
         unique_individuals: as determined by id_unique_individuals and/or meta-function of disambig pipeline
 
-        returns: structured representation
+        returns: structured representation (a list of dictionaries)
     '''
+    people = []
 
-    return
+    for i in range(len(unique_individuals[0])):
+        people.append({"id": unique_individuals[1][i], "name": unique_individuals[0][i]})
+
+    return people
 
 # Cell
 
@@ -351,23 +356,68 @@ def build_event(entry_text, entities, event_type, principals, volume_metadata, n
 
 # Cell
 
-def build_relationships(entry_text, cpd_identifier, entities, path_to_volume_xml):
+def drop_obvious_duplicates(people, principals):
+    '''
+    first-pass disambiguation that drops multiple mentions of principal(s)
+        people: df containing all entities labeled as people in the entry
+        principals: as indicated by determine_principals
+
+        returns: people df with obvious duplicates dropped
+    '''
+    found_principal = False
+    indices_to_drop = []
+
+    if len(principals) == 1:
+        for index, person in people.iterrows():
+            if (person['pred_entity'] == principals[0]) and (found_principal == False):
+                found_principal = True
+            elif person['pred_entity'] == principals[0]:
+                people.drop(index, inplace=True)
+
+    people.reset_index(inplace=True)
+
+    return people
+
+# Cell
+
+def assign_unique_ids(people, volume_metadata):
+    '''
+    assigns unique ids to each person in an entry
+        people: df containing all entities labeled as people in the entry that has received first-pass disambiguation
+        volume_metadata: metadata for the volume that the entry comes from, built by retrieve_volume_metadata
+
+        returns: people df with column containing unique ids appended
+    '''
+    size = len(people.index)
+    unique_ids = []
+    entry_id = volume_metadata["id"] + '-' + people.iloc[0]['entry_no']
+
+    for i in range(size):
+        unique_ids.append(entry_id + '-P' + str(i+1))
+
+    people['unique_id'] = unique_ids
+
+    return people
+
+# Cell
+
+def build_entry_metadata(entry_text, entities, path_to_volume_xml):
     '''
     Master function that will combine all helper functions built above
         entry_text: the full text of a single entry, ported directly from spaCy to ensure congruity
-        cpd_identifier: compound id containing volume id, image id, and entry id
         entities: entities of all kinds extracted from that entry by an NER model
-        record_type: simple flag indicating whether records are baptisms, marriages, burials, etc. (this can also be determined
-        programmatically and may be deprecated later)
 
-        returns: structured data (specific format to be named later) containing all relationships extracted
+        returns: paths to three JSON files containg, respectively,
+        metadata re people, places, and events that appear in the entry
     '''
-    #unique_individuals = id_unique_indviduals(entry_text, entities, record_type)
 
     volume_metadata = retrieve_metadata(path_to_volume_xml)
+    people_df = copy.deepcopy(entities.loc[entities['pred_label'] == 'PER'])
+    people_df.reset_index(inplace=True)
 
     if volume_metadata["type"] == "baptism":
-        principals = determine_principals(entry_text, entities, 1)
+        principal = determine_principals(entry_text, entities, 1)
+        people_df = assign_unique_ids(drop_obvious_duplicates(people_df, principal), volume_metadata)
         #event_relationships = build_event(entry_text, entities, "baptism", principals)
         #interpersonal_relationships = process_interpersonal(entry_text, entities)
         #characteristics = process_characteristics(entry_text, entities, interpersonal_relationships)
