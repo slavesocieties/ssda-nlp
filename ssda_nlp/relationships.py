@@ -334,7 +334,7 @@ def build_event(entry_text, entities, event_type, principals, volume_metadata, n
         returns: structured representation of these relationships, including (but not necessarily limited to)
         the event's principal, the date of the event, the location of the event, and the associated cleric
     '''
-    event_id = volume_metadata["id"] + '-' + entities.iloc[0]['entry_no'] + '-' + str(n_event_within_entry)
+    event_id = volume_metadata["id"] + '-' + entities.iloc[0]['entry_no'] + '-E' + str(n_event_within_entry)
     #it's possible that this function should also be returning an event iterator,
     #but for now I'm planning to do that in build_relationships
 
@@ -413,6 +413,7 @@ def build_entry_metadata(entry_text, entities, path_to_volume_xml):
     Master function that will combine all helper functions built above
         entry_text: the full text of a single entry, ported directly from spaCy to ensure congruity
         entities: entities of all kinds extracted from that entry by an NER model
+        path_to_volume_xml: path to xml file containing full volume transcription and volume-level metadata
 
         returns: paths to three JSON files containg, respectively,
         metadata re people, places, and events that appear in the entry
