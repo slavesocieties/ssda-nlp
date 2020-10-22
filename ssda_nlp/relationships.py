@@ -179,10 +179,11 @@ def build_event(entry_text, entities, event_type, principals):
 
 # Cell
 
-def build_relationships(entry_text, entities, path_to_volume_xml):
+def build_relationships(entry_text, cpd_identifier, entities, path_to_volume_xml):
     '''
     Master function that will combine all helper functions built above
         entry_text: the full text of a single entry, ported directly from spaCy to ensure congruity
+        cpd_identifier: compound id containing volume id, image id, and entry id
         entities: entities of all kinds extracted from that entry by an NER model
         record_type: simple flag indicating whether records are baptisms, marriages, burials, etc. (this can also be determined
         programmatically and may be deprecated later)
