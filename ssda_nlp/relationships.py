@@ -4,6 +4,25 @@ __all__ = ['id_unique_individuals', 'find_sus', 'split_name_col', 'disambiguate'
            'determine_event_date', 'determine_event_location', 'identify_cleric', 'build_event', 'build_relationships']
 
 # Cell
+#dependencies
+
+#nlp packages
+import spacy
+from spacy.util import minibatch, compounding
+
+#manipulation of tables/arrays
+import pandas as pd
+import numpy as np
+
+#internal imports
+from .collate import *
+from .split_data import *
+from .modeling import *
+from .model_performance_utils import *
+from .xml_parser import *
+from .unstructured2markup import *
+
+# Cell
 
 def id_unique_individuals(entry_text, entities, record_type):
     '''
@@ -153,27 +172,27 @@ def determine_principals(entry_text, entities, n_principals):
     '''
 
     entry_text = entry_text.lower()
+    principals = []
 
     if n_principals == 1:
-        principals = None
 
         for index, entity in entities.iterrows():
             if entity['pred_label'] == 'PER' and entity['pred_start'] <= 20:
-                principals = entity['pred_entity']
+                principals.append(entity['pred_entity'])
 
-        if principals == None:
+        if len(principals) == 0:
             prox = entry_text.find('oleos')
             if prox != -1:
                 for index, entity in entities.iterrows():
                     if entity['pred_label'] == 'PER' and (abs(entity['pred_start'] - prox) <= 10):
-                        principals = entity['pred_entity']
+                        principals.append(entity['pred_entity'])
 
-        if principals == None:
+        if len(principals) == 0:
             prox = entry_text.find('nombre')
             if prox != -1:
                 for index, entity in entities.iterrows():
                     if entity['pred_label'] == 'PER' and (abs(entity['pred_start'] - prox) <= 10):
-                        principals = entity['pred_entity']
+                        principals.append(entity['pred_entity'])
 
     elif n_principals == 2:
         print("That number of principals is not supported yet.")
@@ -202,14 +221,14 @@ def determine_event_date(entry_text, entities, event_type, volume_metadata):
     if event_type != volume_metadata["type"]:
         primary_event_date = determine_event_date(entry_text, entities, event_type, volume_metadata)
         for index, entity in entities.iterrows():
-            if entity['pred_label'] == 'DATE' and entity['pred_entity'] != primary_event_date:
+            if (entity['pred_label'] == 'DATE') and (entity['pred_entity'] != primary_event_date):
                 date = entity['pred_entity']
 
     elif volume_metadata["type"] == "baptism":
         entry_length = len(entry_text)
 
         for index, entity in entities.iterrows():
-            if entity['pred_label'] == 'DATE' and entity['pred_start'] <= (entry_length / 3):
+            if (entity['pred_label'] == 'DATE') and (entity['pred_start'] <= (entry_length / 3)):
                 date = entity['pred_entity']
 
     else:
@@ -277,20 +296,37 @@ def identify_cleric(entry_text, entities):
 
 # Cell
 
-def build_event(entry_text, entities, event_type, principals):
+def build_event(entry_text, entities, event_type, principals, volume_metadata, n_event_within_entry):
     '''
     builds out relationships related to a baptism or burial event
         entry_text: the full text of a single entry, ported directly from spaCy to ensure congruity
         entities: entities of all kinds extracted from that entry by an NER model
         event_type: this could be either a valid record_type OR a secondary event like a birth
+        principals: the principal(s) of the event, as indicated by determine_principals
+        volume_metadata: metadata for the volume that the entry comes from, built by retrieve_volume_metadata
+
+        n_event_within_entry: event number within entry
 
         returns: structured representation of these relationships, including (but not necessarily limited to)
         the event's principal, the date of the event, the location of the event, and the associated cleric
     '''
+    event_id = volume_metadata["id"] + '-' + entities.iloc[0]['entry_no'] + '-' + str(n_event_within_entry)
+    #it's possible that this function should also be returning an event iterator,
+    #but for now I'm planning to do that in build_relationships
 
-    date = determine_event_date(entry_text, entities, event_type)
-    location = determine_event_location(entry_text, entities, event_type)
-    cleric = identify_cleric(entry_text, entities)
+    if event_type == "baptism":
+        if len(principals) == 0:
+            principal = None
+        else:
+            principal = principals[0]
+        date = determine_event_date(entry_text, entities, event_type, volume_metadata)
+        location = determine_event_location(entry_text, entities, event_type, volume_metadata)
+        cleric = identify_cleric(entry_text, entities)
+    else:
+        print("That event type can't be built yet.")
+        return
+
+    event_relationships = {"id": event_id, "type": event_type, "principal": principal, "date": date, "location": location, "cleric": cleric}
 
     return event_relationships
 
