@@ -356,15 +356,16 @@ def build_event(entry_text, entities, event_type, principals, volume_metadata, n
 
 # Cell
 
-def drop_obvious_duplicates(people, principals):
+def drop_obvious_duplicates(people, principals, cleric):
     '''
-    first-pass disambiguation that drops multiple mentions of principal(s)
+    first-pass disambiguation that drops multiple mentions of cleric and principal(s)
         people: df containing all entities labeled as people in the entry
         principals: as indicated by determine_principals
 
         returns: people df with obvious duplicates dropped
     '''
     found_principal = False
+    found_cleric = False
     indices_to_drop = []
 
     if len(principals) == 1:
@@ -373,6 +374,12 @@ def drop_obvious_duplicates(people, principals):
                 found_principal = True
             elif person['pred_entity'] == principals[0]:
                 people.drop(index, inplace=True)
+
+            if cleric != None:
+                if (person['pred_entity'] == cleric) and (found_cleric == False):
+                    found_cleric = True
+                elif person['pred_entity'] == cleric:
+                    people.drop(index, inplace=True)
 
     people.reset_index(inplace=True)
 
@@ -417,7 +424,8 @@ def build_entry_metadata(entry_text, entities, path_to_volume_xml):
 
     if volume_metadata["type"] == "baptism":
         principal = determine_principals(entry_text, entities, 1)
-        people_df = assign_unique_ids(drop_obvious_duplicates(people_df, principal), volume_metadata)
+        cleric = identify_cleric(entry_text, entities)
+        people_df = assign_unique_ids(drop_obvious_duplicates(people_df, principal, cleric), volume_metadata)
         #event_relationships = build_event(entry_text, entities, "baptism", principals)
         #interpersonal_relationships = process_interpersonal(entry_text, entities)
         #characteristics = process_characteristics(entry_text, entities, interpersonal_relationships)
