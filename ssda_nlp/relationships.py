@@ -64,8 +64,6 @@ def assign_relationships(entry_text, entities, unique_individuals):
     #print(unique_individuals)
     #print("------------")
 
-entities.head(100)
-
 # Cell
 
 def id_unique_individuals(entry_text, entities, volume_metadata):
