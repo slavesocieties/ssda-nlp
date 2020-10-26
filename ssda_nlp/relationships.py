@@ -47,22 +47,67 @@ def assign_characteristics(entry_text, entities, unique_individuals):
 def assign_relationships(entry_text, entities, unique_individuals):
     '''
     Relationship types:
-        parent/child
-        godparents/godchildren
+        parent/child --> P. and P.s are parents
+        godparents/godchildren --> P.P and p.s are godparents
         slaveholders/enslaved
         spouses
         grandparents
-
-    Identify typical relationship words/phrases:
-    1. eslava --> slave --> typically appears as NAME1 esclava de NAME2
-
-    Process
-    1. Manually check entry_text for substrings such as "eslava de"
         '''
-    pass
-    #print(entry_text)
-    #print(unique_individuals)
-    #print("------------")
+    #display(entities.head(15))
+    rel_df = entities.loc[entities['pred_label'] == 'REL']
+    rel_df.reset_index(inplace=True)
+    rel_df = rel_df.drop('index',axis=1)
+    #display(rel_df.head()) #Comment this out in final function, this is just for quick verification
+
+    rel = 0 #Varibale telling us later whether or not this entry has any identified relationships
+    previous = 0 #Variable telling us whether or not the previous REL combined two entities (i.e. P. and P. into P.P. and thus can skip the second P. entity)
+    event_id = volume_metadata["id"] + '-' + entities.iloc[0]['entry_no']
+    my_relations = []
+    m,n = entities.shape
+    for i in range(m):
+        if (entities.iloc[i,2]=='REL'):
+            rel = 1 #Relationship present
+            #We must check to make sure the first entity isn't a REL or it breaks the func due to positional index error
+            if i==0 or i==(m-1):
+                print("First/last entity is a REL, this functionality is not yet supported.")
+            #We must treat this differently because we can typically extract both padrinos instead of
+            #just a single relationship
+            elif entities.iloc[i,1]=='P.P.':
+                try:
+                    #This gathers the first name, probably the padrino
+                    my_triple = (entities.iloc[i-1,1],(entities.iloc[i,1]),(entities.iloc[i+1,1]))
+                    my_relations.append(my_triple)
+                    #This should be the second name, probably the madrina
+                    my_triple = (entities.iloc[i-1,1],(entities.iloc[i,1]),(entities.iloc[i+2,1]))
+                    my_relations.append(my_triple)
+                except:
+                    print("Exception: had last entity in DF as a REL and thus out of bounds in current form of function")
+            elif (entities.iloc[i-1,2]=='PER') and (entities.iloc[i+1,2]=='PER'):
+                try:
+                    my_triple = (entities.iloc[i-1,1],(entities.iloc[i,1]),(entities.iloc[i+1,1]))
+                    my_relations.append(my_triple)
+                except:
+                    print("Exception: had last entity in DF as a REL and thus out of bounds in current form of function")
+            #Checking if we have back-to-back entities in the form of 'P.' followed by 'P.'
+            elif((entities.iloc[i-1,2]=='PER') and ('P' in entities.iloc[i+1,1])):
+                print("Please manually check me at ", index)
+                previous = 1
+                if (entities.iloc[i+2,2]=='PER'):
+                    my_triple = (entities.iloc[i-1,1],'P. P.',(entities.iloc[i+2,1]))
+                    my_relations.append(my_triple)
+            #Skipping the second entity from the above case in the next iteration
+            elif previous:
+                previous = 0
+            else:
+                print("Relationship found, but not between adjacent people")
+    if rel:
+        #print(entry_text) #Uncomment this for verification
+        #print()
+        print(my_relations)
+        #print("------------")
+        #print()
+
+    #Currently does not return the relationship triples... need to build out some functionality to deal with that as they're returned
 
 # Cell
 
