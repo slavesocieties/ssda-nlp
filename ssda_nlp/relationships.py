@@ -90,7 +90,7 @@ def assign_relationships(entry_text, entities, unique_individuals):
                     print("Exception: had last entity in DF as a REL and thus out of bounds in current form of function")
             #Checking if we have back-to-back entities in the form of 'P.' followed by 'P.'
             elif((entities.iloc[i-1,2]=='PER') and ('P' in entities.iloc[i+1,1])):
-                print("Please manually check me at ", index)
+                print("Please manually check me at index = ", index)
                 previous = 1
                 if (entities.iloc[i+2,2]=='PER'):
                     my_triple = (entities.iloc[i-1,1],'P. P.',(entities.iloc[i+2,1]))
