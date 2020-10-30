@@ -151,14 +151,33 @@ def assign_characteristics(entry_text, characteristics_df, unique_individuals, v
     display(categorized_characteristics)
 
     for i in range(len(unique_individuals.index)):
-        ethnicity = None
+
+        characteristics = {"ethnicities":[], "age":None, "legitimacy":None,"occupation":[], "phenotype":[], "status":None}
+
         for eth in ethnicities:
             if eth in unique_individuals["pred_entity"][i].lower():
-                ethnicity = eth[0].upper() + eth[1:]
+                characteristics["ethnicities"].append(eth[0].upper() + eth[1:])
+
+        for j in range(len(categorized_characteristics.index)):
+            if (categorized_characteristics["assignment"][j] == None):
+                continue
+            if unique_individuals["unique_id"][i] in categorized_characteristics["assignment"][j]:
+                if (categorized_characteristics["category"][j] == "age") or (categorized_characteristics["category"][j] == "legitimacy") or (categorized_characteristics["category"][j] == "status"):
+                    characteristics[categorized_characteristics["category"][j]] = categorized_characteristics["pred_entity"][j]
+                else:
+                    characteristics[categorized_characteristics["category"][j]].append(categorized_characteristics["pred_entity"][j])
 
         person_record = {"id": unique_individuals["unique_id"][i], "name": unique_individuals["pred_entity"][i]}
-        if ethnicity != None:
-            person_record["ethnicity"] = ethnicity
+
+        for key in characteristics:
+            if ((key=="ethnicities") or (key == "occupation") or (key == "phenotype")) and (len(characteristics[key]) > 0):
+                person_record[key] = characteristics[key][0]
+                if (len(characteristics[key]) > 1):
+                    for char in range(1,len(characteristics[key]) + 1):
+                        person_record[key] += ';' + characteristics[key][char]
+            elif (characteristics[key] != None) and (characteristics[key] != []):
+                person_record[key] = characteristics[key]
+
         people.append(person_record)
 
     return people
