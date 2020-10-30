@@ -41,7 +41,7 @@ def retrieve_controlled_vocabularies():
     ranks = ["capitan", "capitam"]
     ethnicities = ["ganga", "español", "espanol", "caravali", "ingles", "yngles", "angola", "carabalí", "carabali", "carabaly", "congo", "conga", "mandinga", "mina", "temo", "malagas", "arara", "manga"]
     status = ["clavo", "clava", "escl", "clabo", "claba", "esc.va", "esc.ba", "esc.vo", "escvo", "escva", "esc.bo", "esc.a", "esc.o", "libre", "esc.s", "esco", "esca"]
-    legitimacy = ["h.", "lexma", "lexmo", "legitima", "legitimo", "h l", "natural", "nral", "lexitima", "lexitimo", "nat.l"]
+    legitimacy = ["lexma", "lexmo", "legitima", "legitimo", "h l", "natural", "nral", "lexitima", "lexitimo", "nat.l"]
     relationships = ["hijo", "hija", "esposo", "esposa", "viudo", "viuda", "padrino", "soltera", "soltero"]
 
     vocabs = {"legitimacy": legitimacy, "age": age, "occupation": occupation, "phenotype": phenotype, "titles": titles, "ranks": ranks, "ethnicities": ethnicities, "status": status, "relationships": relationships}
@@ -64,7 +64,7 @@ def categorize_characteristics(characteristics_df):
     for index, characteristic in characteristics_df.iterrows():
         category = None
         for cat in vocabs:
-            if characteristic['pred_entity'] == 'h':
+            if (characteristic['pred_entity'] == 'h') or (characteristic['pred_entity'] == "h."):
                 category = "relationships"
             if category != None:
                 break
@@ -82,25 +82,81 @@ def categorize_characteristics(characteristics_df):
 
 # Cell
 
-def assign_characteristics(entry_text, entities, unique_individuals):
+def assign_characteristics(entry_text, characteristics_df, unique_individuals, volume_metadata):
     '''
     matches all labeled characteristics to the correct individual(s) and builds triples
         entry_text: the full text of a single entry, ported directly from spaCy to ensure congruity
-        entities: entities of all kinds extracted from that entry by an NER model
+        characteristics_df: entities given the label "CHAR" from a single entry by an NER model
         unique_individuals: as determined by id_unique_individuals and/or meta-function of disambig pipeline
+        volume_metadata: metadata for the volume that the entry comes from, built by retrieve_volume_metadata
 
         returns: structured representation (a list of dictionaries)
     '''
     people = []
     ethnicities = retrieve_controlled_vocabularies()["ethnicities"]
+    categorized_characteristics = categorize_characteristics(characteristics_df)
+    assignments = [None] * len(characteristics_df.index)
+    categorized_characteristics.reset_index(inplace=True)
+    unique_individuals.reset_index(inplace=True)
 
-    for i in range(len(unique_individuals[0])):
+    for index in range(len(categorized_characteristics)):
+        if ((categorized_characteristics["category"][index] == "age") or (categorized_characteristics["category"][index] == "legitimacy")) and (volume_metadata["type"] == "baptism"):
+            principal = determine_principals(entry_text, unique_individuals, 1)[0]
+            princ_loc = unique_individuals.index[unique_individuals["pred_entity"] == principal].tolist()
+            for loc in princ_loc:
+                if assignments[index] == None:
+                    assignments[index] = unique_individuals["unique_id"][loc]
+                else:
+                    assignments[index] += ';' + unique_individuals["unique_id"][loc]
+        elif (categorized_characteristics["category"][index] == "occupation") or (categorized_characteristics["category"][index] == "phenotype") or (categorized_characteristics["category"][index] == "ethnicities") or ((categorized_characteristics["category"][index] == "status") and (categorized_characteristics["pred_entity"][index].lower()[-1] != 's')):
+            char_start = categorized_characteristics["pred_start"][index]
+            lowest_diff = 50
+            assign = None
+            for i, person in unique_individuals.iterrows():
+                person_start = person["pred_start"]
+                diff = char_start - person_start
+                if (diff > 0) and (diff < lowest_diff):
+                    lowest_diff = diff
+                    assign = i
+            if assign != None:
+                assignments[index] = unique_individuals["unique_id"][assign]
+        elif categorized_characteristics["category"][index] == "status":
+            char_start = categorized_characteristics["pred_start"][index]
+            lowest_diff = 30
+            second_lowest_diff = 50
+            assign = [None, None]
+            for i, person in unique_individuals.iterrows():
+                person_start = person["pred_start"]
+                diff = char_start - person_start
+                if (diff > 0) and (diff < lowest_diff):
+                    lowest_diff = diff
+                    if assign[0] != None:
+                        assign[1] = assign[0]
+                        second_lowest_diff = lowest_diff
+                    assign[0] = i
+                elif (diff > 0) and (diff < second_lowest_diff) and (assign[0] != None):
+                    second_lowest_diff = diff
+                    assign[1] = i
+            ids = []
+            for a in assign:
+                if a != None:
+                    ids.append(unique_individuals["unique_id"][a])
+            if len(ids) == 2:
+                assignments[index] = ids[0] + ';' + ids[1]
+            elif len(ids) == 1:
+                assignments[index] = ids[0]
+
+    categorized_characteristics["assignment"] = assignments
+
+    display(categorized_characteristics)
+
+    for i in range(len(unique_individuals.index)):
         ethnicity = None
         for eth in ethnicities:
-            if eth in unique_individuals[0][i].lower():
+            if eth in unique_individuals["pred_entity"][i].lower():
                 ethnicity = eth[0].upper() + eth[1:]
 
-        person_record = {"id": unique_individuals[1][i], "name": unique_individuals[0][i]}
+        person_record = {"id": unique_individuals["unique_id"][i], "name": unique_individuals["pred_entity"][i]}
         if ethnicity != None:
             person_record["ethnicity"] = ethnicity
         people.append(person_record)
