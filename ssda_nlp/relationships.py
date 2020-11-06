@@ -3,7 +3,8 @@
 __all__ = ['retrieve_controlled_vocabularies', 'categorize_characteristics', 'assign_characteristics',
            'assign_relationships', 'id_unique_individuals', 'find_sus', 'split_name_col', 'disambiguate',
            'determine_principals', 'determine_event_date', 'determine_event_location', 'identify_cleric', 'build_event',
-           'drop_obvious_duplicates', 'assign_unique_ids', 'build_entry_metadata']
+           'drop_obvious_duplicates', 'id_obvious_duplicates', 'assign_unique_ids', 'merge_records', 'merge_duplicates',
+           'build_entry_metadata']
 
 # Cell
 #dependencies
@@ -24,6 +25,7 @@ from .modeling import *
 from .model_performance_utils import *
 from .xml_parser import *
 from .unstructured2markup import *
+from .utility import *
 
 # Cell
 #ideally this function will eventually query the database live, but for now we'll use static snapshots
@@ -148,7 +150,7 @@ def assign_characteristics(entry_text, characteristics_df, unique_individuals, v
 
     categorized_characteristics["assignment"] = assignments
 
-    display(categorized_characteristics)
+    #display(categorized_characteristics)
 
     for i in range(len(unique_individuals.index)):
 
@@ -439,23 +441,33 @@ def determine_principals(entry_text, entities, n_principals):
 
 # Cell
 
-def determine_event_date(entry_text, entities, event_type, volume_metadata):
+def determine_event_date(entry_text, entities, event_type, volume_metadata, event_ref_pos=None):
     '''
     determines the date of a specific event
         entry_text: the full text of a single entry, ported directly from spaCy to ensure congruity
         entities: entities of all kinds extracted from that entry by an NER model
         event_type: this could be either a valid record_type OR a secondary event like a birth
         volume_metadata: metadata for the volume that the entry comes from, built by retrieve_volume_metadata
+        event_ref_pos: optional index for reference to secondary event (to determine most likely date by proximity)
 
         returns: the date of the event in question, or None if no date can be identified
     '''
     date = None
+    date_start = None
 
     if event_type != volume_metadata["type"]:
-        primary_event_date = determine_event_date(entry_text, entities, event_type, volume_metadata)
+        primary_event_date = determine_event_date(entry_text, entities, volume_metadata["type"], volume_metadata)
         for index, entity in entities.iterrows():
-            if (entity['pred_label'] == 'DATE') and (entity['pred_entity'] != primary_event_date):
+            if (entity['pred_label'] == 'DATE') and (entity['pred_entity'] != primary_event_date) and (date == None):
                 date = entity['pred_entity']
+                date_start = entity['pred_start']
+            elif (entity['pred_label'] == 'DATE') and (entity['pred_entity'] != primary_event_date):
+                if event_ref_pos == None:
+                    date = entity['pred_entity']
+                else:
+                    if (abs(event_ref_pos - entity['pred_start']) < abs(event_ref_pos - date_start)):
+                        date = entity['pred_entity']
+                        date_start = entity['pred_start']
 
     elif volume_metadata["type"] == "baptism":
         entry_length = len(entry_text)
@@ -471,13 +483,14 @@ def determine_event_date(entry_text, entities, event_type, volume_metadata):
 
 # Cell
 
-def determine_event_location(entry_text, entities, event_type, volume_metadata):
+def determine_event_location(entry_text, entities, event_type, volume_metadata, event_ref_pos=None):
     '''
     determines the location of a specific event
         entry_text: the full text of a single entry, ported directly from spaCy to ensure congruity
         entities: entities of all kinds extracted from that entry by an NER model
         event_type: this could be either a valid record_type OR a secondary event like a birth
         volume_metadata: metadata for the volume that the entry comes from, built by retrieve_volume_metadata
+        event_ref_pos: optional index for reference to secondary event (to determine most likely date by proximity)
 
         returns: the location of the event in question, or None if no date can be identified
     '''
@@ -485,8 +498,6 @@ def determine_event_location(entry_text, entities, event_type, volume_metadata):
 
     if event_type == volume_metadata["type"]:
         location = volume_metadata["institution"]
-    else:
-        location = "That event type is not supported yet."
 
     return location
 
@@ -572,6 +583,14 @@ def build_event(entry_text, entities, event_type, principals, volume_metadata, n
             principal = None
         if (cleric != None) and (found_cleric_id == False):
             cleric = None
+    elif event_type == "birth":
+        if len(principals) == 0:
+            principal = None
+        else:
+            principal = principals[0]
+        date = determine_event_date(entry_text, entities, event_type, volume_metadata)
+        location = determine_event_location(entry_text, entities, event_type, volume_metadata)
+        cleric = None
     else:
         print("That event type can't be built yet.")
         return
@@ -592,7 +611,6 @@ def drop_obvious_duplicates(people, principals, cleric):
     '''
     found_principal = False
     found_cleric = False
-    indices_to_drop = []
 
     if len(principals) == 1:
         for index, person in people.iterrows():
@@ -610,6 +628,31 @@ def drop_obvious_duplicates(people, principals, cleric):
     people.reset_index(inplace=True)
 
     return people
+
+# Cell
+
+def id_obvious_duplicates(people, principals, cleric):
+    '''
+    first-pass disambiguation that identifies multiple mentions of cleric and principal(s)
+        people: df containing all entities labeled as people in the entry with unique ids
+        principals: as indicated by determine_principals
+
+        returns: dictionary with two keys, each containing list of ids corresponding to each mention of individual in question
+    '''
+
+    obv_dups = {"principal":[], "cleric":[]}
+
+    if len(principals) == 1:
+
+        for index, person in people.iterrows():
+
+            if (person['pred_entity'] == principals[0]):
+                obv_dups["principal"].append(person["unique_id"])
+
+            if (person['pred_entity'] == cleric):
+                    obv_dups["cleric"].append(person["unique_id"])
+
+    return obv_dups
 
 # Cell
 
@@ -638,6 +681,54 @@ def assign_unique_ids(people, volume_metadata):
 
 # Cell
 
+def merge_records(records_to_merge):
+    '''
+    merge two or more dictionaries with some (but possibly not all) shared keys
+        records_to_merge: list containing two or more dictionaries to merge
+
+        returns: single, merged dictionary
+    '''
+    merged_record = records_to_merge[0]
+
+    for i in range(1, len(records_to_merge)):
+        record = records_to_merge[i]
+        for key in record:
+            if key in merged_record:
+                values = record[key].split(';')
+                for value in values:
+                    if value in merged_record[key]:
+                        continue
+                    else:
+                        merged_record[key] += ';' + value
+            else:
+                merged_record[key] = record[key]
+
+    return merged_record
+
+# Cell
+
+def merge_duplicates(people, duplicates):
+
+    if (len(duplicates["principal"]) > 1):
+        dups = []
+        for person in people:
+            if (person['id'] in duplicates["principal"]):
+                dups.append(person)
+                del people[people.index(person)]
+        people.append(merge_records(dups))
+
+    if (len(duplicates["cleric"]) > 1):
+        dups = []
+        for person in people:
+            if (person['id'] in duplicates["cleric"]):
+                dups.append(person)
+                del people[people.index(person)]
+        people.append(merge_records(dups))
+
+    return people
+
+# Cell
+
 def build_entry_metadata(entry_text, entities, path_to_volume_xml):
     '''
     Master function that will combine all helper functions built above
@@ -649,17 +740,40 @@ def build_entry_metadata(entry_text, entities, path_to_volume_xml):
         metadata re people, places, and events that appear in the entry
     '''
 
-    volume_metadata = retrieve_metadata(path_to_volume_xml)
+    people = []
+    places = []
+    events = []
+
+    volume_metadata = retrieve_volume_metadata(path_to_volume_xml)
     people_df = copy.deepcopy(entities.loc[entities['pred_label'] == 'PER'])
     people_df.reset_index(inplace=True)
+    people_df = assign_unique_ids(people_df, volume_metadata)
+    characteristics_df = copy.deepcopy(entities.loc[entities['pred_label'] == 'CHAR'])
+    characteristics_df.reset_index(inplace=True)
+    dates_df = copy.deepcopy(entities.loc[entities['pred_label'] == 'DATE'])
+    dates_df.reset_index(inplace=True)
 
     if volume_metadata["type"] == "baptism":
         principal = determine_principals(entry_text, entities, 1)
         cleric = identify_cleric(entry_text, entities)
-        people_df = assign_unique_ids(drop_obvious_duplicates(people_df, principal, cleric), volume_metadata)
-        #event_relationships = build_event(entry_text, entities, "baptism", principals)
-        #interpersonal_relationships = process_interpersonal(entry_text, entities)
-        #characteristics = process_characteristics(entry_text, entities, interpersonal_relationships)
+        events.append(build_event(entry_text, entities, "baptism", principal, volume_metadata, 1, people_df))
+        if (len(dates_df.index) > 1):
+            events.append(build_event(entry_text, entities, "birth", principal, volume_metadata, 2, people_df))
+
+        #assign interpersonal relationships to people
+
+        characteristics_df = categorize_characteristics(characteristics_df)
+        people = assign_characteristics(entry_text, characteristics_df, people_df, volume_metadata)
+
+        obvious_duplicates = id_obvious_duplicates(people_df, principal, cleric)
+        people = merge_duplicates(people, obvious_duplicates)
+
+        #perform more sophisticated disambiguation
+
+        for event in events:
+            if (event["location"] != None) and (not (event["location"] in places)):
+                places.append(event["location"])
+
     elif volume_metadata["type"] == "marriage":
         #process marriage record
         print("That record type is not supported yet.")
@@ -674,4 +788,4 @@ def build_entry_metadata(entry_text, entities, path_to_volume_xml):
 
     #code that turns pieces defined above into well-formed relationships
 
-    return relationships
+    return people, places, events
