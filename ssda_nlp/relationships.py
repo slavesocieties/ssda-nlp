@@ -83,6 +83,7 @@ def categorize_characteristics(characteristics_df):
     return characteristics_df
 
 # Cell
+#this is currently configured specifically for baptisms/burials
 
 def assign_characteristics(entry_text, characteristics_df, unique_individuals, volume_metadata):
     '''
@@ -103,13 +104,14 @@ def assign_characteristics(entry_text, characteristics_df, unique_individuals, v
 
     for index in range(len(categorized_characteristics)):
         if ((categorized_characteristics["category"][index] == "age") or (categorized_characteristics["category"][index] == "legitimacy")) and (volume_metadata["type"] == "baptism"):
-            principal = determine_principals(entry_text, unique_individuals, 1)[0]
-            princ_loc = unique_individuals.index[unique_individuals["pred_entity"] == principal].tolist()
-            for loc in princ_loc:
-                if assignments[index] == None:
-                    assignments[index] = unique_individuals["unique_id"][loc]
-                else:
-                    assignments[index] += ';' + unique_individuals["unique_id"][loc]
+            if len(determine_principals(entry_text, unique_individuals, 1)) > 0:
+                principal = determine_principals(entry_text, unique_individuals, 1)[0]
+                princ_loc = unique_individuals.index[unique_individuals["pred_entity"] == principal].tolist()
+                for loc in princ_loc:
+                    if assignments[index] == None:
+                        assignments[index] = unique_individuals["unique_id"][loc]
+                    else:
+                        assignments[index] += ';' + unique_individuals["unique_id"][loc]
         elif (categorized_characteristics["category"][index] == "occupation") or (categorized_characteristics["category"][index] == "phenotype") or (categorized_characteristics["category"][index] == "ethnicities") or ((categorized_characteristics["category"][index] == "status") and (categorized_characteristics["pred_entity"][index].lower()[-1] != 's')):
             char_start = categorized_characteristics["pred_start"][index]
             lowest_diff = 50
@@ -175,7 +177,7 @@ def assign_characteristics(entry_text, characteristics_df, unique_individuals, v
             if ((key=="ethnicities") or (key == "occupation") or (key == "phenotype")) and (len(characteristics[key]) > 0):
                 person_record[key] = characteristics[key][0]
                 if (len(characteristics[key]) > 1):
-                    for char in range(1,len(characteristics[key]) + 1):
+                    for char in range(1,len(characteristics[key])):
                         person_record[key] += ';' + characteristics[key][char]
             elif (characteristics[key] != None) and (characteristics[key] != []):
                 person_record[key] = characteristics[key]
