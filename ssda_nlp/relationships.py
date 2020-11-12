@@ -39,8 +39,8 @@ def retrieve_controlled_vocabularies():
     age = ["parv", "adul", "niño", "niña", "nino", "nina", "dulto", "dulta"]
     occupation = ["religioso", "ingen.o", "sacristan", "sac.", "sachristan", "cura", "vicario", "eclesiastico", "clerigo", "estudiante"]
     phenotype = ["negro", "negra", "preto", "moreno", "morena", "indio", "india", "pardo", "parda", "mestizo", "mestiza", "mulato", "mulata", "blanco", "blanca", "criollo", "criolla", "branco", "branca"]
-    titles = ["don", "doña", "padre"]
-    ranks = ["capitan", "capitam"]
+    titles = ["doctor", "d.r", "dor", "dr", "d.or", "br", "ber", "don", "doña", "da", "padre", "pe", "predicador", "fray", "d.n", "d.", "d,n", "d;n", "p.e", "p", "dn", "fr.", "fr", "f", "regidor", "rex.or", "alg.l m.or", "ldo", "licenciado", "d", "alg.l", "alcalde"]
+    ranks = ["capitan", "capitam", "cap.n", "capn", "sarg.to may.r", "sarg.to", "sargento", "sarjento mayor", "sarjento", "sargto mayor", "theniente", "teniente", "thente"]
     ethnicities = ["ganga", "español", "espanol", "caravali", "ingles", "yngles", "angola", "carabalí", "carabali", "carabaly", "congo", "conga", "mandinga", "mina", "temo", "malagas", "arara", "manga"]
     status = ["clavo", "clava", "escl", "clabo", "claba", "esc.va", "esc.ba", "esc.vo", "escvo", "escva", "esc.bo", "esc.a", "esc.o", "libre", "esc.s", "esco", "esca"]
     legitimacy = ["lexma", "lexmo", "legitima", "legitimo", "h l", "natural", "nral", "lexitima", "lexitimo", "nat.l"]
@@ -733,13 +733,12 @@ def merge_duplicates(people, duplicates):
 
 def build_entry_metadata(entry_text, entities, path_to_volume_xml):
     '''
-    Master function that will combine all helper functions built above
+    applies rules-based engine for relationship linking to the transcription of a single entry
         entry_text: the full text of a single entry, ported directly from spaCy to ensure congruity
         entities: entities of all kinds extracted from that entry by an NER model
         path_to_volume_xml: path to xml file containing full volume transcription and volume-level metadata
 
-        returns: paths to three JSON files containg, respectively,
-        metadata re people, places, and events that appear in the entry
+        returns: three lists containing structured data about the people, places, and events that appear in the entry
     '''
 
     people = []
