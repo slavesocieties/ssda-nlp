@@ -36,7 +36,7 @@ def retrieve_controlled_vocabularies():
     '''
     returns a dictionary containing current version of controlled vocabularies for characteristics
     '''
-    age = ["parv", "adul", "niño", "niña", "nino", "nina", "dulto", "dulta"]
+    age = ["parvulo", "parvula", "parv", "adulto", "adulta", "adul", "niño", "niña", "nino", "nina", "dulto", "dulta"]
     occupation = ["religioso", "ingen.o", "sacristan", "sac.", "sachristan", "cura", "vicario", "eclesiastico", "clerigo", "estudiante"]
     phenotype = ["negro", "negra", "preto", "moreno", "morena", "indio", "india", "pardo", "parda", "mestizo", "mestiza", "mulato", "mulata", "blanco", "blanca", "criollo", "criolla", "branco", "branca"]
     titles = ["doctor", "d.r", "dor", "dr", "d.or", "br", "ber", "don", "doña", "da", "padre", "pe", "predicador", "fray", "d.n", "d.", "d,n", "d;n", "p.e", "p", "dn", "fr.", "fr", "f", "regidor", "rex.or", "alg.l m.or", "ldo", "licenciado", "d", "alg.l", "alcalde"]
@@ -156,7 +156,7 @@ def assign_characteristics(entry_text, characteristics_df, unique_individuals, v
 
     for i in range(len(unique_individuals.index)):
 
-        characteristics = {"ethnicities":[], "age":None, "legitimacy":None,"occupation":[], "phenotype":[], "status":None}
+        characteristics = {"ethnicities":[], "age":None, "legitimacy":None,"occupation":[], "phenotype":[], "status":None, "titles":None, "ranks":None}
 
         for eth in ethnicities:
             if eth in unique_individuals["pred_entity"][i].lower():
@@ -181,6 +181,8 @@ def assign_characteristics(entry_text, characteristics_df, unique_individuals, v
                         person_record[key] += ';' + characteristics[key][char]
             elif (characteristics[key] != None) and (characteristics[key] != []):
                 person_record[key] = characteristics[key]
+            else:
+                person_record[key] = None
 
         people.append(person_record)
 
@@ -581,10 +583,11 @@ def build_event(entry_text, entities, event_type, principals, volume_metadata, n
                 cleric = entity['unique_id']
                 found_cleric_id = True
 
-        if (principal != None) and (found_cleric_id == False):
+        if (principal != None) and (found_principal_id == False):
             principal = None
         if (cleric != None) and (found_cleric_id == False):
             cleric = None
+
     elif event_type == "birth":
         if len(principals) == 0:
             principal = None
@@ -593,6 +596,17 @@ def build_event(entry_text, entities, event_type, principals, volume_metadata, n
         date = determine_event_date(entry_text, entities, event_type, volume_metadata)
         location = determine_event_location(entry_text, entities, event_type, volume_metadata)
         cleric = None
+
+        found_principal_id = False
+        for index, entity in unique_individuals.iterrows():
+            if entity['pred_entity'] == principal:
+                principal = entity['unique_id']
+                found_principal_id = True
+                break
+
+        if (principal != None) and (found_principal_id == False):
+            principal = None
+
     else:
         print("That event type can't be built yet.")
         return
@@ -638,6 +652,7 @@ def id_obvious_duplicates(people, principals, cleric):
     first-pass disambiguation that identifies multiple mentions of cleric and principal(s)
         people: df containing all entities labeled as people in the entry with unique ids
         principals: as indicated by determine_principals
+        cleric: as identified by identify_cleric
 
         returns: dictionary with two keys, each containing list of ids corresponding to each mention of individual in question
     '''
@@ -695,21 +710,31 @@ def merge_records(records_to_merge):
     for i in range(1, len(records_to_merge)):
         record = records_to_merge[i]
         for key in record:
-            if key in merged_record:
-                values = record[key].split(';')
-                for value in values:
-                    if value in merged_record[key]:
-                        continue
-                    else:
-                        merged_record[key] += ';' + value
-            else:
-                merged_record[key] = record[key]
+            if record[key] != None:
+                if merged_record[key] == None:
+                    merged_record[key] = record[key]
+                else:
+                    values = record[key].split(';')
+                    for value in values:
+                        if value.lower() in merged_record[key].lower():
+                            continue
+                        else:
+                            merged_record[key] += ';' + value
 
     return merged_record
 
 # Cell
 
 def merge_duplicates(people, duplicates):
+    '''
+    merge two or more dictionaries with some (but possibly not all) shared keys
+        people: dataframe in which each row is a person
+        duplicates: dictionary containing keys "principal" and "cleric";
+        the value of each key is a list containing unique ids for each
+        mention of the appropriate individual
+
+        returns: dataframe with duplicate mentions of each individual type merged
+    '''
 
     if (len(duplicates["principal"]) > 1):
         dups = []

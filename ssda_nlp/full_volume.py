@@ -122,12 +122,12 @@ def process_volume(path_to_transcription, path_to_model):
                             person["name"] += ' ' + name_parts[i]
 
                     if (name_parts[0].lower() + ' ' + name_parts[1].lower()) in vocabularies["titles"]:
-                        if "titles" in person:
+                        if person["titles"] != None:
                             person["titles"] += ';' + name_parts[0] + ' ' + name_parts[1]
                         else:
                             person["titles"] = name_parts[0] + ' ' + name_parts[1]
                     else:
-                        if "ranks" in person:
+                        if person["ranks"] != None:
                             person["ranks"] += ';' + name_parts[0] + ' ' + name_parts[1]
                         else:
                             person["ranks"] = name_parts[0] + ' ' + name_parts[1]
@@ -148,12 +148,12 @@ def process_volume(path_to_transcription, path_to_model):
                             person["name"] += ' ' + name_parts[i]
 
                     if name_parts[0].lower() in vocabularies["titles"]:
-                        if "titles" in person:
+                        if person["titles"] != None:
                             person["titles"] += ';' + name_parts[0]
                         else:
                             person["titles"] = name_parts[0]
                     else:
-                        if "ranks" in person:
+                        if person["ranks"] != None:
                             person["ranks"] += ';' + name_parts[0]
                         else:
                             person["ranks"] = name_parts[0]
