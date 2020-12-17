@@ -378,6 +378,7 @@ def determine_principals(entry_text, entities, n_principals):
     return principals
 
 # Cell
+
 #export
 
 def assign_relationships(entry_text, entities, unique_individuals):
