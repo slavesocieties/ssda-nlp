@@ -86,39 +86,39 @@ def build_reciprocal_relationship(people, from_person, to_person, relationship_t
     if relationship_type == "godparent":
         if not no_from:
             if null_from:
-                people[from_loc]['relationships'] = [[to_person, "godchild"]]
+                people[from_loc]['relationships'] = [{"related_person": to_person, "relationship_type": "godchild"}]
             else:
-                people[from_loc]['relationships'].append([to_person, "godchild"])
+                people[from_loc]['relationships'].append({"related_person": to_person, "relationship_type": "godchild"})
 
         if not no_to:
             if null_to:
-                people[to_loc]['relationships'] = [[from_person, "godparent"]]
+                people[to_loc]['relationships'] = [{"related_person": from_person, "relationship_type": "godparent"}]
             else:
-                people[to_loc]['relationships'].append([from_person, "godparent"])
+                people[to_loc]['relationships'].append({"related_person": from_person, "relationship_type": "godparent"})
     elif relationship_type == "parent":
         if not no_from:
             if null_from:
-                people[from_loc]['relationships'] = [[to_person, "child"]]
+                people[from_loc]['relationships'] = [{"related_person": to_person, "relationship_type": "child"}]
             else:
-                people[from_loc]['relationships'].append([to_person, "child"])
+                people[from_loc]['relationships'].append({"related_person": to_person, "relationship_type": "child"})
 
         if not no_to:
             if null_to:
-                people[to_loc]['relationships'] = [[from_person, "parent"]]
+                people[to_loc]['relationships'] = [{"related_person": from_person, "relationship_type": "parent"}]
             else:
-                people[to_loc]['relationships'].append([from_person, "parent"])
+                people[to_loc]['relationships'].append({"related_person": from_person, "relationship_type": "parent"})
     elif relationship_type == "enslaver":
         if not no_from:
             if null_from:
-                people[from_loc]['relationships'] = [[to_person, "slave"]]
+                people[from_loc]['relationships'] = [{"related_person": to_person, "relationship_type": "slave"}]
             else:
-                people[from_loc]['relationships'].append([to_person, "slave"])
+                people[from_loc]['relationships'].append({"related_person": to_person, "relationship_type": "slave"})
 
         if not no_to:
             if null_to:
-                people[to_loc]['relationships'] = [[from_person, "enslaver"]]
+                people[to_loc]['relationships'] = [{"related_person": from_person, "relationship_type": "enslaver"}]
             else:
-                people[to_loc]['relationships'].append([from_person, "enslaver"])
+                people[to_loc]['relationships'].append({"related_person": from_person, "relationship_type": "enslaver"})
 
     return people
 
