@@ -4,7 +4,8 @@ __all__ = ['retrieve_controlled_vocabularies', 'build_reciprocal_relationship', 
            'categorize_characteristics', 'assign_characteristics', 'id_unique_individuals', 'find_sus',
            'split_name_col', 'disambiguate', 'determine_principals', 'assign_relationships', 'determine_event_date',
            'determine_event_location', 'identify_cleric', 'build_event', 'drop_obvious_duplicates',
-           'id_obvious_duplicates', 'assign_unique_ids', 'merge_records', 'merge_duplicates', 'build_entry_metadata']
+           'id_obvious_duplicates', 'assign_unique_ids', 'merge_records', 'merge_duplicates', 'build_new_person',
+           'build_entry_metadata']
 
 # Cell
 #dependencies
@@ -63,8 +64,8 @@ def build_reciprocal_relationship(people, from_person, to_person, relationship_t
         returns: updated version of people with interpersonal relationship added
     '''
 
-    null_from = False
-    null_to = False
+    empty_from = False
+    empty_to = False
     no_to = False
     no_from = False
 
@@ -77,45 +78,47 @@ def build_reciprocal_relationship(people, from_person, to_person, relationship_t
         if people[i]['id'] == from_person:
             from_loc = i
             if people[i]['relationships'] == None:
-                null_from = True
+                empty_from = True
         elif people[i]['id'] == to_person:
             to_loc = i
             if people[i]['relationships'] == None:
-                null_to = True
+                empty_to = True
 
     if relationship_type == "godparent":
         if not no_from:
-            if null_from:
+            if empty_from:
                 people[from_loc]['relationships'] = [{"related_person": to_person, "relationship_type": "godchild"}]
             else:
                 people[from_loc]['relationships'].append({"related_person": to_person, "relationship_type": "godchild"})
 
         if not no_to:
-            if null_to:
+            if empty_to:
                 people[to_loc]['relationships'] = [{"related_person": from_person, "relationship_type": "godparent"}]
             else:
                 people[to_loc]['relationships'].append({"related_person": from_person, "relationship_type": "godparent"})
+
     elif relationship_type == "parent":
         if not no_from:
-            if null_from:
+            if empty_from:
                 people[from_loc]['relationships'] = [{"related_person": to_person, "relationship_type": "child"}]
             else:
                 people[from_loc]['relationships'].append({"related_person": to_person, "relationship_type": "child"})
 
         if not no_to:
-            if null_to:
+            if empty_to:
                 people[to_loc]['relationships'] = [{"related_person": from_person, "relationship_type": "parent"}]
             else:
                 people[to_loc]['relationships'].append({"related_person": from_person, "relationship_type": "parent"})
+
     elif relationship_type == "enslaver":
         if not no_from:
-            if null_from:
+            if empty_from:
                 people[from_loc]['relationships'] = [{"related_person": to_person, "relationship_type": "slave"}]
             else:
                 people[from_loc]['relationships'].append({"related_person": to_person, "relationship_type": "slave"})
 
         if not no_to:
-            if null_to:
+            if empty_to:
                 people[to_loc]['relationships'] = [{"related_person": from_person, "relationship_type": "enslaver"}]
             else:
                 people[to_loc]['relationships'].append({"related_person": from_person, "relationship_type": "enslaver"})
@@ -149,8 +152,11 @@ def alt_assign_relationships(entry_text, entities, people_df, people, volume_met
                 principal_id = people[i]['id']
                 break
     else:
-        principal = None
-        principal_id = None
+        principal = "Unknown principal"
+        for i in range(len(people)):
+            if people[i]["name"] == principal:
+                principal_id = people[i]['id']
+                break
 
     found_parents = False
     found_godparents = False
@@ -263,12 +269,14 @@ def assign_characteristics(entry_text, characteristics_df, unique_individuals, v
             principal = determine_principals(entry_text, unique_individuals, 1)
             if principal != None:
                 principal = determine_principals(entry_text, unique_individuals, 1)[0]
-                princ_loc = unique_individuals.index[unique_individuals["pred_entity"] == principal].tolist()
-                for loc in princ_loc:
-                    if assignments[index] == None:
-                        assignments[index] = unique_individuals["unique_id"][loc]
-                    else:
-                        assignments[index] += ';' + unique_individuals["unique_id"][loc]
+            else:
+                principal = "Unknown principal"
+            princ_loc = unique_individuals.index[unique_individuals["pred_entity"] == principal].tolist()
+            for loc in princ_loc:
+                if assignments[index] == None:
+                    assignments[index] = unique_individuals["unique_id"][loc]
+                else:
+                    assignments[index] += ';' + unique_individuals["unique_id"][loc]
         elif (categorized_characteristics["category"][index] == "occupation") or (categorized_characteristics["category"][index] == "phenotype") or (categorized_characteristics["category"][index] == "ethnicities") or ((categorized_characteristics["category"][index] == "status") and (categorized_characteristics["pred_entity"][index].lower()[-1] != 's')):
             char_start = categorized_characteristics["pred_start"][index]
             lowest_diff = 50
@@ -848,18 +856,19 @@ def id_obvious_duplicates(people, principals, cleric):
 
 # Cell
 
-def assign_unique_ids(people, volume_metadata):
+def assign_unique_ids(people, volume_metadata, entry_number=None):
     '''
     assigns unique ids to each person in an entry
         people: df containing all entities labeled as people in the entry that has received first-pass disambiguation
         volume_metadata: metadata for the volume that the entry comes from, built by retrieve_volume_metadata
+        entry_number: compound id containing folio and folio-specific entry ids
 
-        returns: people df with column containing unique ids appended
+        returns: people df with column containing unique ids appended, next available id
     '''
     size = len(people.index)
 
     if size == 0:
-        return people
+        return people, volume_metadata["id"] + '-' + entry_number + "-P1"
 
     unique_ids = []
     entry_id = volume_metadata["id"] + '-' + people.iloc[0]['entry_no']
@@ -868,8 +877,9 @@ def assign_unique_ids(people, volume_metadata):
         unique_ids.append(entry_id + '-P' + str(i+1))
 
     people['unique_id'] = unique_ids
+    next_id = entry_id + '-P' + str(i+2)
 
-    return people
+    return people, next_id
 
 # Cell
 
@@ -938,12 +948,36 @@ def merge_duplicates(people, duplicates):
 
 # Cell
 
-def build_entry_metadata(entry_text, entities, path_to_volume_xml):
+def build_new_person(people_df, next_id, person_type):
+    '''
+    appends a row representing a new person to an existing people df
+        people_df: df containing all entities labeled as people in the entry with unique ids
+        volume_metadata: metadata for the volume that the entry comes from, built by retrieve_volume_metadata
+        person_type: type of person being added, e.g. "principal" or "cleric"
+
+        returns: updated df with new person added and updated next available id
+    '''
+
+    curr_entry = next_id[next_id.find('-') + 1:next_id.find('P') - 1]
+    person_name = "Unknown " + person_type
+    person_number = next_id[next_id.find('P') + 1:]
+    person_number = int(person_number)
+
+    people_df = people_df.append({"entry_no": curr_entry, "pred_entity": person_name, "pred_label": "PER", "unique_id": next_id}, ignore_index=True)
+
+    next_id = next_id[:next_id.find('P') + 1] + str(person_number + 1)
+
+    return people_df, next_id
+
+# Cell
+
+def build_entry_metadata(entry_text, entities, path_to_volume_xml, entry_number=None):
     '''
     applies rules-based engine for relationship linking to the transcription of a single entry
         entry_text: the full text of a single entry, ported directly from spaCy to ensure congruity
         entities: entities of all kinds extracted from that entry by an NER model
         path_to_volume_xml: path to xml file containing full volume transcription and volume-level metadata
+        entry_number: entry number, also from spaCy
 
         returns: three lists containing structured data about the people, places, and events that appear in the entry
     '''
@@ -955,7 +989,7 @@ def build_entry_metadata(entry_text, entities, path_to_volume_xml):
     volume_metadata = retrieve_volume_metadata(path_to_volume_xml)
     people_df = copy.deepcopy(entities.loc[entities['pred_label'] == 'PER'])
     people_df.reset_index(inplace=True)
-    people_df = assign_unique_ids(people_df, volume_metadata)
+    people_df, next_id = assign_unique_ids(people_df, volume_metadata, entry_number)
     characteristics_df = copy.deepcopy(entities.loc[entities['pred_label'] == 'CHAR'])
     characteristics_df.reset_index(inplace=True)
     dates_df = copy.deepcopy(entities.loc[entities['pred_label'] == 'DATE'])
@@ -963,8 +997,15 @@ def build_entry_metadata(entry_text, entities, path_to_volume_xml):
 
     if volume_metadata["type"] == "baptism":
         principal = determine_principals(entry_text, entities, 1)
+
+        if principal == None:
+            people_df, next_id = build_new_person(people_df, next_id, "principal")
+            principal = ["Unknown principal"]
+
         cleric = identify_cleric(entry_text, entities)
+
         events.append(build_event(entry_text, entities, "baptism", principal, volume_metadata, 1, people_df))
+
         if (len(dates_df.index) > 1):
             events.append(build_event(entry_text, entities, "birth", principal, volume_metadata, 2, people_df))
 

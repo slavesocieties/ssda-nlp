@@ -70,7 +70,7 @@ def process_volume(path_to_transcription, path_to_model):
 
         entities = ent_preds_df.loc[ent_preds_df['entry_no'] == entry_no]
 
-        entry_people, entry_places, entry_events = build_entry_metadata(entry_text, entities, path_to_transcription)
+        entry_people, entry_places, entry_events = build_entry_metadata(entry_text, entities, path_to_transcription, entry_no)
 
         people += entry_people
         places += entry_places

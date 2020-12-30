@@ -55,6 +55,7 @@ index = {"parse_xml": "12-ssda-xml-parser.ipynb",
          "assign_unique_ids": "71-relationship-builder.ipynb",
          "merge_records": "71-relationship-builder.ipynb",
          "merge_duplicates": "71-relationship-builder.ipynb",
+         "build_new_person": "71-relationship-builder.ipynb",
          "build_entry_metadata": "71-relationship-builder.ipynb",
          "process_volume": "72-full-volume-processor.ipynb"}
 
