@@ -41,6 +41,7 @@ def process_volume(path_to_transcription, path_to_model):
     #retrieve volume metadata and controlled vocabularies
 
     volume_metadata = retrieve_volume_metadata(path_to_transcription)
+    images = xml_v2_to_json(path_to_transcription)
     vocabularies = retrieve_controlled_vocabularies()
 
     if volume_metadata["country"] == "Brazil":
@@ -174,6 +175,15 @@ def process_volume(path_to_transcription, path_to_model):
         outfile.write('{\n\"volume\": \n')
         json.dump(volume_metadata, outfile)
         outfile.write(',')
+        outfile.write('\n\"images\": [\n')
+        first_img = True
+        for image in images:
+            if first_img:
+                first_img = False
+            else:
+                outfile.write(",\n")
+            json.dump(image, outfile)
+        outfile.write("\n],\n")
         outfile.write('\n\"people\": [\n')
         first_person = True
         for person in people:
