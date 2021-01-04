@@ -43,7 +43,7 @@ def retrieve_controlled_vocabularies():
     titles = ["doctor", "d.r", "dor", "dr", "d.or", "br", "ber", "don", "doña", "da", "padre", "pe", "predicador", "fray", "d.n", "d.", "d,n", "d;n", "p.e", "p", "dn", "fr.", "fr", "f", "regidor", "rex.or", "alg.l m.or", "ldo", "licenciado", "d", "alg.l", "alcalde"]
     ranks = ["capitan", "capitam", "cap.n", "capn", "sarg.to may.r", "sarg.to", "sargento", "sarjento mayor", "sarjento", "sargto mayor", "theniente", "teniente", "thente"]
     ethnicities = ["ganga", "español", "espanol", "caravali", "ingles", "yngles", "angola", "carabalí", "carabali", "carabaly", "congo", "conga", "mandinga", "mina", "temo", "malagas", "arara", "manga"]
-    status = ["clavo", "clava", "escl", "clabo", "claba", "esc.va", "esc.ba", "esc.vo", "escvo", "esclava", "escva", "esc.bo", "esc.a", "esc.o", "libre", "esc.s", "esco", "esca"]
+    status = ["esclabo", "esclaba", "escl.a", "escl.o", "clavo", "clava", "escl", "escl.", "escl.s", "clabo", "claba", "esc.va", "esc.ba", "esc.vo", "escvo", "esclavo", "esclava", "escva", "esc.bo", "esclabos", "esclavos", "esc.os", "esc.a", "esc.o", "libre", "esc.s", "esco", "esca"]
     legitimacy = ["lexma", "lexmo", "legitima", "legitimo", "h l", "natural", "nral", "lexitima", "lexitimo", "nat.l"]
     relationships = ["hermano", "hijo", "hija", "esposo", "esposa", "viudo", "viuda", "padrinos", "padrino", "padryno", "soltera", "soltero", "madrina", "padre", "p.p.", "p. ", "p."]
 
@@ -123,6 +123,19 @@ def build_reciprocal_relationship(people, from_person, to_person, relationship_t
             else:
                 people[to_loc]['relationships'].append({"related_person": from_person, "relationship_type": "enslaver"})
 
+    elif relationship_type == "spouse":
+        if not no_from:
+            if empty_from:
+                people[from_loc]['relationships'] = [{"related_person": to_person, "relationship_type": "spouse"}]
+            else:
+                people[from_loc]['relationships'].append({"related_person": to_person, "relationship_type": "spouse"})
+
+        if not no_to:
+            if empty_to:
+                people[to_loc]['relationships'] = [{"related_person": from_person, "relationship_type": "spouse"}]
+            else:
+                people[to_loc]['relationships'].append({"related_person": from_person, "relationship_type": "spouse"})
+
     return people
 
 # Cell
@@ -143,6 +156,9 @@ def alt_assign_relationships(entry_text, entities, people_df, people, volume_met
     rel_types = retrieve_controlled_vocabularies()["relationships"]
     relationships = copy.deepcopy(entities.loc[entities['pred_label'] == 'REL'])
     relationships.reset_index(inplace=True)
+    characteristics = copy.deepcopy(entities.loc[entities['pred_label'] == 'CHAR'])
+    characteristics.reset_index(inplace=True)
+    cat_char = categorize_characteristics(characteristics)
     entities.reset_index(inplace=True)
 
     if determine_principals(entry_text, entities, 1) != None:
@@ -161,9 +177,7 @@ def alt_assign_relationships(entry_text, entities, people_df, people, volume_met
     found_parents = False
     found_godparents = False
 
-    #address master/slave and parents
-
-    #build godparent relationships
+    #build godparent/godchild relationships
     #future improvement: add logic to look for spousal relationship between godparents
     if (len(entities) != 0) and (len(relationships) != 0):
         for index in range(len(entities)):
@@ -209,6 +223,94 @@ def alt_assign_relationships(entry_text, entities, people_df, people, volume_met
                                     from_person = people_df['unique_id'][j]
                             people = build_reciprocal_relationship(people, from_person, principal_id, "godparent")
                             found_godparents = True
+
+    for i in range(len(cat_char)):
+        #build enslaver/enslaved person relationships
+        if cat_char["category"][i] == "status":
+            #skip if associated with first mention of principal
+            char_start = cat_char['pred_start'][i]
+            if char_start <= 25:
+                continue
+
+            #match enslaved couple to owner
+            if (cat_char["pred_entity"][i].lower()[len(cat_char["pred_entity"][i]) - 1] == 's'):
+                close_ep = -1
+                far_ep = -1
+                ens = -1
+                for j in range(len(people_df)):
+                    pers_start = people_df["pred_start"][j]
+                    poss_diff = char_start - pers_start
+                    if (ens == -1) and (poss_diff < 0) and (abs(poss_diff) < 25):
+                        ens = j
+                    elif (ens != -1) and (poss_diff < 0) and (abs(poss_diff) < abs(char_start - people_df["pred_start"][ens])):
+                        ens = j
+                    elif (close_ep == -1) and (poss_diff > 0) and (poss_diff < 50):
+                        close_ep = j
+                    elif (close_ep != -1) and (far_ep == -1) and (poss_diff > 0) and (poss_diff < char_start - people_df["pred_start"][close_ep]):
+                        far_ep = close_ep
+                        close_ep = j
+                    elif (close_ep != -1) and (far_ep == -1) and (poss_diff > 0) and (poss_diff < 50):
+                        far_ep = j
+                    elif (close_ep != -1) and (far_ep != -1) and (poss_diff > 0) and (poss_diff < char_start - people_df["pred_start"][close_ep]):
+                        far_ep = close_ep
+                        close_ep = j
+                    elif (close_ep != -1) and (far_ep != -1) and (poss_diff > 0) and (poss_diff < char_start - people_df["pred_start"][far_ep]):
+                        far_ep = j
+                if (ens != -1) and (close_ep != -1) and (far_ep != -1):
+                    people = build_reciprocal_relationship(people, people_df["unique_id"][ens], people_df["unique_id"][close_ep], "enslaver")
+                    people = build_reciprocal_relationship(people, people_df["unique_id"][ens], people_df["unique_id"][far_ep], "enslaver")
+                elif (ens != -1) and (close_ep != -1):
+                    people = build_reciprocal_relationship(people, people_df["unique_id"][ens], people_df["unique_id"][close_ep], "enslaver")
+            #match enslaved person to owner
+            else:
+                ep = -1
+                ens = -1
+                for k in range(len(people_df)):
+                    pers_start = people_df["pred_start"][k]
+                    poss_diff = char_start - pers_start
+                    if (ep == -1) and (poss_diff > 0) and (poss_diff < 50):
+                        ep = k
+                    elif (ens == -1) and (poss_diff < 0) and (abs(poss_diff) < 25):
+                        ens = k
+                    elif (ep != -1) and (poss_diff > 0) and (poss_diff < char_start - people_df["pred_start"][ep]):
+                        ep = k
+                    elif (ens != -1) and (poss_diff < 0) and (abs(poss_diff) < abs(char_start - people_df["pred_start"][ens])):
+                        ens = k
+                if (ep != -1) and (ens != -1):
+                    people = build_reciprocal_relationship(people, people_df["unique_id"][ens], people_df["unique_id"][ep], "enslaver")
+        #build parent/child relationships
+        elif (((cat_char["category"][i] == "relationships") and ((cat_char["pred_entity"][i] == "hijo") or (cat_char["pred_entity"][i] == "hija") or (cat_char["pred_entity"][i] == "h") or (cat_char["pred_entity"][i] == "h."))) or (cat_char["category"][i] == "legitimacy")) and (found_parents == False):
+            rel_start = cat_char["pred_start"][i]
+            close_parent = -1
+            far_parent = -1
+            for l in range(len(people_df)):
+                pers_start = people_df["pred_start"][l]
+                poss_diff = rel_start - pers_start
+                if (close_parent == -1) and (poss_diff < 0) and (abs(poss_diff) < 25):
+                    close_parent = l
+                elif (close_parent != -1) and (far_parent == -1) and (poss_diff < 0) and (abs(poss_diff) < abs(rel_start - people_df["pred_start"][close_parent])):
+                    far_parent = close_parent
+                    close_parent = l
+                elif (close_parent != -1) and (far_parent == -1) and (poss_diff < 0) and ((pers_start - people_df["pred_end"][close_parent]) < 10):
+                    far_parent = l
+                elif (close_parent != -1) and (far_parent != -1) and (poss_diff > 0) and (abs(poss_diff) < abs(rel_start - people_df["pred_start"][close_parent])):
+                    far_parent = close_parent
+                    close_parent = l
+                elif (close_parent != -1) and (far_parent != -1) and (poss_diff > 0) and (abs(poss_diff) < abs(rel_start - people_df["pred_start"][far_parent])):
+                    far_parent = l
+            if (close_parent != -1) and (far_parent != -1):
+                people = build_reciprocal_relationship(people, people_df["unique_id"][close_parent], principal_id, "parent")
+                people = build_reciprocal_relationship(people, people_df["unique_id"][far_parent], principal_id, "parent")
+                if ((cat_char["category"][i] == "legitimacy") and ('r' not in cat_char["pred_entity"][i])) or ((cat_char["category"][i] == "relationships") and ((cat_char['pred_entity'][i] == 'h') or (cat_char['pred_entity'][i] == 'h.')) and ((entry_text[cat_char["pred_end"][i]] == 'l') or (entry_text[cat_char["pred_end"][i] + 1] == 'l'))):
+                    people = build_reciprocal_relationship(people, people_df["unique_id"][close_parent], people_df["unique_id"][far_parent], "spouse")
+                #future improvement (after normalization) if both parents enslaved and child not free, make sure child's status is enslaved
+                #future improvement (after normalization) if child is enslaved, make sure reciprocal enslaver/enslaved person relationship exists with mother's enslaver
+                found_parents = True
+            elif (close_parent != -1):
+                people = build_reciprocal_relationship(people, people_df["unique_id"][close_parent], principal_id, "parent")
+                #future improvement (after normalization) if single parent is mother and she is enslaved and child not free, make sure child's status is enslaved
+                #future improvement (after normalization) if child is enslaved, make sure reciprocal enslaver/enslaved person relationship exists with mother's enslaver
+                found_parents = True
 
     return people
 
