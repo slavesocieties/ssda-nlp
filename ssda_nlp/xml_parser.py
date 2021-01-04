@@ -186,7 +186,8 @@ def xml_v2_to_json(path_to_xml):
             entry_txts.append(curr_entry)
             entry_ids.append(curr_img_id + '-' + str(entry_id))
             curr_img_dict["entries"].append({"id": entry_id, "text": curr_entry})
-
+        elif "</ssda" in line:
+            images.append(curr_img_dict)
 
     master_xml.close()
     return images
