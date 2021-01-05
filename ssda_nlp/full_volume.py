@@ -108,6 +108,8 @@ def process_volume(path_to_transcription, path_to_model):
         else:
             event["location"] = loc_id
 
+    names = []
+    name_counts = []
     for person in people:
         #strip titles and/or ranks from names
         if person["name"] != None:
@@ -165,7 +167,29 @@ def process_volume(path_to_transcription, path_to_model):
 
             #expand abbreviations in remaining parts of name
 
-            #disambiguate and merge people across the volume
+            #count name frequency
+            if person["name"] in names:
+                name_counts[names.index(person['name'])] += 1
+            else:
+                names.append(person["name"])
+                name_counts.append(1)
+
+
+    #disambiguate and merge people across the volume
+    redundant_indices = []
+    for i in range(len(name_counts)):
+        if (name_counts[i] > .1 * len(images)) and (len(names[i].split(' ')) > 1) and (names[i] != "Unknown principal"):
+            records_to_merge = []
+            for j in range(len(people)):
+                if people[j]["name"] == names[i]:
+                    redundant_indices.append(j)
+                    records_to_merge.append(people[j])
+            people.append(merge_records(records_to_merge))
+            print("Records for " + names[i] + " merged.")
+    indices_deleted = 0
+    for index in redundant_indices:
+        del people[index - indices_deleted]
+        indices_deleted += 1
 
     print("People records enhanced and disambiguated.")
 
