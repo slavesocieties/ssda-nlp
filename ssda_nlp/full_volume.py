@@ -176,20 +176,20 @@ def process_volume(path_to_transcription, path_to_model):
 
 
     #disambiguate and merge people across the volume
-    redundant_indices = []
+    redundant_records = []
+    merged_records = []
     for i in range(len(name_counts)):
         if (name_counts[i] > .1 * len(images)) and (len(names[i].split(' ')) > 1) and (names[i] != "Unknown principal"):
             records_to_merge = []
             for j in range(len(people)):
                 if people[j]["name"] == names[i]:
-                    redundant_indices.append(j)
+                    redundant_records.append(people[j])
                     records_to_merge.append(people[j])
-            people.append(merge_records(records_to_merge))
+            merged_records.append(merge_records(records_to_merge))
             print("Records for " + names[i] + " merged.")
-    indices_deleted = 0
-    for index in redundant_indices:
-        del people[index - indices_deleted]
-        indices_deleted += 1
+    people = [person for person in people if person not in redundant_records]
+    for person in merged_records:
+        people.append(person)
 
     print("People records enhanced and disambiguated.")
 
