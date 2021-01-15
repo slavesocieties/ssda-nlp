@@ -108,6 +108,107 @@ def process_volume(path_to_transcription, path_to_model):
         else:
             event["location"] = loc_id
 
+    #bracket missing or incomplete event dates
+
+    incomplete_dates = []
+    last_year = None
+    last_month = None
+    last_day = None
+
+    for e in range(len(events)):
+        curr_year = events[e]["date"][:4]
+        curr_month = events[e]["date"][5:7]
+        curr_day = events[e]["date"][8:]
+
+        #clumsy fix for incorrectly normalized years
+        if curr_year.isdigit() and (last_year != None) and (int(curr_year) < int(last_year)) and curr_month.isdigit() and (int(last_month) + 12 - int(curr_month) > 3):
+            events[e]["date"] = last_year + '-' + events[e]["date"][5:7] + '-' + events[e]["date"][8:]
+
+        if (curr_year == "????") or (curr_month == "??") or (curr_day == "??"):
+            #separate logic to assign dates for birth events based on associated baptism
+            if events[e]["type"] == "birth":
+                if (events[e]["id"][:events[e]["id"].find('E')] == events[e - 1]["id"][:events[e - 1]["id"].find('E')]) and (events[e - 1]["type"] == "baptism") and ('?' not in events[e - 1]["date"]):
+                        if (curr_month != "??") and (curr_day != "??"):
+                            if (curr_month == "12") and (last_month == "01"):
+                                curr_year = str(int(last_year) - 1)
+                            elif (30 * int(last_month) + int(last_day) - 30 * int(curr_month) - int(curr_day)) < 21:
+                                curr_year = last_year
+                            events[e]["date"] = curr_year + '-' + events[e]["date"][5:7] + '-' + events[e]["date"][8:]
+                        elif curr_month != "??":
+                            if (curr_month == "12"):
+                                curr_day = "01"
+                                curr_year = str(int(last_year) - 1)
+                                events[e]["date"] = curr_year + '-' + curr_month + '-' + curr_day + '/' + last_year + '-01-01'
+                            elif (curr_month == last_month):
+                                curr_day = "01"
+                                curr_year = last_year
+                                events[e]["date"] = curr_year + '-' + curr_month + '-' + curr_day + '/' + last_year + '-' + last_month + '-' + last_day
+                            elif int(curr_month) == (int(last_month) - 1):
+                                curr_day = "01"
+                                curr_year = last_year
+                                events[e]["date"] = curr_year + '-' + curr_month + '-' + curr_day + '/' + last_year + '-' + last_month + '-01'
+                        elif curr_day != "??":
+                            if curr_day <= last_day:
+                                curr_year = last_year
+                                curr_month = last_month
+                            else:
+                                if last_month == "01":
+                                    curr_month = "12"
+                                    curr_year = str(int(last_year) - 1)
+                                else:
+                                    curr_month = str(int(last_month) - 1)
+                                    if len(curr_month) < 2:
+                                        curr_month = '0' + curr_month
+                                    curr_year = last_year
+                            events[e]["date"] = curr_year + '-' + curr_month + '-' + curr_day
+                        else:
+                            if (last_month == '01') and (int(last_day) < 21):
+                                curr_year = str(int(last_year) - 1)
+                                curr_month = "12"
+                                curr_day = str(int(last_day) + 9)
+                            elif int(last_day) < 21:
+                                curr_year = last_year
+                                curr_month = str(int(last_month) - 1)
+                                if len(curr_month) < 2:
+                                    curr_month = '0' + curr_month
+                                curr_day = str(int(last_day) + 9)
+                            else:
+                                curr_year = last_year
+                                curr_month = last_month
+                                curr_day = str(int(last_day) - 20)
+                                if len(curr_day) < 2:
+                                    curr_day = '0' + curr_day
+                            events[e]["date"] = curr_year + '-' + curr_month + '-' + curr_day + '/' + last_year + '-' + last_month + '-' + last_day
+
+            if (curr_year == "????") or (curr_month == "??") or (curr_day == "??"):
+                incomplete_dates.append(e)
+        elif last_year == None:
+            for date in incomplete_dates:
+                events[date]["date"] = complete_date(events[date]["date"], None, curr_year + '-' + curr_month + '-' + curr_day)
+
+            incomplete_dates = []
+            last_year = curr_year
+            last_month = curr_month
+            last_day = curr_day
+        elif (compare_dates(curr_year, curr_month, curr_day, last_year, last_month, last_day) == '>') or (compare_dates(curr_year, curr_month, curr_day, last_year, last_month, last_day) == '='):
+            for date in incomplete_dates:
+                events[date]["date"] = complete_date(events[date]["date"], last_year + '-' + last_month + '-' + last_day, curr_year + '-' + curr_month + '-' + curr_day)
+
+            incomplete_dates = []
+            last_year = curr_year
+            last_month = curr_month
+            last_day = curr_day
+
+    for date in incomplete_dates:
+        events[date]["date"] = complete_date(events[date]["date"], last_year + '-' + last_month + '-' + last_day, None)
+
+    for event in events:
+        interval = event["date"].split('/')
+        if (len(interval) == 2) and (interval[0] == interval[1]):
+            event["date"] == interval[0]
+
+    print("Events configured.")
+
     names = []
     name_counts = []
     for person in people:
@@ -186,7 +287,6 @@ def process_volume(path_to_transcription, path_to_model):
                     redundant_records.append(people[j])
                     records_to_merge.append(people[j])
             merged_records.append(merge_records(records_to_merge))
-            print("Records for " + names[i] + " merged.")
     people = [person for person in people if person not in redundant_records]
     for person in merged_records:
         people.append(person)

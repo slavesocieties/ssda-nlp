@@ -1,0 +1,37 @@
+<ssda xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <volume type="baptism" country="Cuba" state="La Habana" city="Havana" institution="Catedral de La Habana" id="6490" title="Libro de Barajas: Bautismos, 1590-1600">
+    <image id="1001" type="JPG" number="1r">
+      <entry id="1">
+        <margin>
+          f
+        </margin>
+        <body>
+          g
+        </body>
+      </entry>
+      <entry id="2">
+        <margin>
+          Mateo
+          negro
+        </margin>
+        <body>
+          Savado que se contaron veynte de henero del dho ano
+          de [1590 yo] el cura [Juan] Ponce Roman [bautizo a Mateo]
+          hijo de Mateo Criollo y de Ysabel Criolla su
+          muger negros de Alonso Cuares de Toledo fue-
+          ron sus padrinos [Francisco] de Bihera y Leonor de
+          Avellaneda negra de Baltasar Surdebica
+          Juan Ponce Roman
+        </body>
+      </entry>
+      <entry id="3">
+        <margin>
+          h
+        </margin>
+        <body>
+          i
+        </body>
+      </entry>
+    </image>
+  </volume>
+</ssda>

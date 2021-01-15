@@ -2,10 +2,10 @@
 
 __all__ = ['retrieve_controlled_vocabularies', 'build_reciprocal_relationship', 'alt_assign_relationships',
            'categorize_characteristics', 'assign_characteristics', 'id_unique_individuals', 'find_sus',
-           'split_name_col', 'disambiguate', 'determine_principals', 'assign_relationships', 'determine_event_date',
-           'determine_event_location', 'identify_cleric', 'build_event', 'drop_obvious_duplicates',
-           'id_obvious_duplicates', 'assign_unique_ids', 'merge_records', 'merge_duplicates', 'build_new_person',
-           'build_entry_metadata']
+           'split_name_col', 'disambiguate', 'determine_principals', 'assign_relationships', 'normalize_date',
+           'determine_event_date', 'determine_event_location', 'identify_cleric', 'build_event',
+           'drop_obvious_duplicates', 'id_obvious_duplicates', 'assign_unique_ids', 'merge_records', 'merge_duplicates',
+           'build_new_person', 'build_entry_metadata']
 
 # Cell
 #dependencies
@@ -730,6 +730,113 @@ def assign_relationships(entry_text, entities, unique_individuals):
 
 # Cell
 
+def normalize_date(date):
+    '''
+    converts a string date to its numerical equivalent
+        date: string identified by model as a date
+
+        returns: date in the format YYYY-MM-DD (ISO 8601)'''
+
+    if date == None:
+        return "????", "??", "??"
+
+    date = date.replace('.', '')
+    date = date.replace(',', '')
+    date = date.replace(';', '')
+    date = normalize_text(date.lower(), "synonyms.json", context = "date")
+
+    date = date.replace(',', '')
+    day = None
+    month = None
+    month_pos = None
+    year = None
+    years = ["un", "dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve"]
+    decades = ["diez", "veinte", "treinta", "cuarenta", "cincuenta", "sesenta", "setenta", "ochenta", "noventa"]
+    month_days = ["primero", "dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve", "diez", "once", "doce", "trece", "catorce", "quince", "diez y seis", "diez y siete", "diez y ocho", "diez y nueve", "veinte", "veinte y uno", "veinte y dos", "veinte y tres", "veinte y cuatro", "veinte y cinco", "veinte y seis", "veinte y siete", "veinte y ocho", "veinte y nueve", "treinta", "treinta y uno"]
+    months = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
+
+    for word in (date.split(' ')):
+        if word.lower() in months:
+            month = '0' * (2 - len(str(months.index(word.lower()) + 1))) + str(months.index(word.lower()) + 1)
+            month_pos = date.index(word)
+
+    for n in month_days:
+        if (month_pos != None):
+            if (n in date) and (date.index(n) < month_pos):
+                day = '0' * (2 - len(str(month_days.index(n) + 1))) + str(month_days.index(n) + 1)
+        else:
+            if (n in date) and (date.index(n) < 15):
+                day = '0' * (2 - len(str(month_days.index(n) + 1))) + str(month_days.index(n) + 1)
+
+    if day == None:
+        if (month != None):
+            month_ind = date.split(' ').index(months[int(month) - 1])
+            for i in range(0, month_ind):
+                if date.split(' ')[i].isdigit():
+                    day = date.split(' ')[i]
+        else:
+            for i in range(0, 3):
+                if len(date.split(' ')) <= i:
+                    break
+                if date.split(' ')[i].isdigit():
+                    day = date.split(' ')[i]
+
+    if (day != None) and (len(day) < 2):
+        day = '0' + day
+
+    centuries = ["seiscientos", "setecientos", "ochocientos", "novecientos"]
+    century = None
+    cent_pos = None
+    for cent in centuries:
+        if date.find(cent) != -1:
+            if cent_pos == None:
+                century = cent
+                cent_pos = date.find(century)
+            elif date.find(cent) < cent_pos:
+                century = cent
+                cent_pos = date.find(century)
+    if century != None:
+        year_str = None
+        dec_str = None
+        for yr in years:
+            if date.find(yr, cent_pos + 1) != -1:
+                if year_str == None:
+                    year_str = yr
+                else:
+                    if date.find(yr, cent_pos) < date.find(year_str, cent_pos):
+                        year_str = yr
+        for decade in decades:
+            if date.find(decade, cent_pos) != -1:
+                dec_str = decade
+                break
+        if (year_str != None) and (dec_str != None):
+            year = 1000 + 100 * (centuries.index(century) + 6) + 10 * (decades.index(dec_str) + 1) + years.index(year_str) + 1
+            year = str(year)
+        elif (year_str == None) and (dec_str != None):
+            year = 1000 + 100 * (centuries.index(century) + 6) + 10 * (decades.index(dec_str) + 1)
+            year = str(year)
+        elif (year_str != None) and (dec_str == None):
+            year = 1000 + 100 * (centuries.index(century) + 6) + years.index(year_str) + 1
+            year = str(year)
+        else:
+            year = str(1000 + 100 * (centuries.index(century) + 6))
+
+    if year == None:
+        for token in date.split(' '):
+            if token.isdigit() and (int(token) > 1000) and (int(token) < 2000):
+                year = token
+
+    if year == None:
+        year = "????"
+    if month == None:
+        month = "??"
+    if day == None:
+        day = "??"
+
+    return year, month, day
+
+# Cell
+
 def determine_event_date(entry_text, entities, event_type, volume_metadata, event_ref_pos=None):
     '''
     determines the date of a specific event
@@ -766,9 +873,11 @@ def determine_event_date(entry_text, entities, event_type, volume_metadata, even
                 date = entity['pred_entity']
 
     else:
-        date = "That event type is not supported yet."
+        print("That event type is not supported yet.")
 
-    return date
+    year, month, day = normalize_date(date)
+
+    return year + '-' + month + '-' + day
 
 # Cell
 
