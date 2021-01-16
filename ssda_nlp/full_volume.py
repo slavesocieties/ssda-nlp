@@ -120,10 +120,6 @@ def process_volume(path_to_transcription, path_to_model):
         curr_month = events[e]["date"][5:7]
         curr_day = events[e]["date"][8:]
 
-        #clumsy fix for incorrectly normalized years
-        if curr_year.isdigit() and (last_year != None) and (int(curr_year) < int(last_year)) and curr_month.isdigit() and (int(last_month) + 12 - int(curr_month) > 3):
-            events[e]["date"] = last_year + '-' + events[e]["date"][5:7] + '-' + events[e]["date"][8:]
-
         if (curr_year == "????") or (curr_month == "??") or (curr_day == "??"):
             #separate logic to assign dates for birth events based on associated baptism
             if events[e]["type"] == "birth":
@@ -190,7 +186,7 @@ def process_volume(path_to_transcription, path_to_model):
             last_year = curr_year
             last_month = curr_month
             last_day = curr_day
-        elif (compare_dates(curr_year, curr_month, curr_day, last_year, last_month, last_day) == '>') or (compare_dates(curr_year, curr_month, curr_day, last_year, last_month, last_day) == '='):
+        elif (compare_dates(int(curr_year), int(curr_month), int(curr_day), int(last_year), int(last_month), int(last_day)) == '>') or (compare_dates(int(curr_year), int(curr_month), int(curr_day), int(last_year), int(last_month), int(last_day)) == '='):
             for date in incomplete_dates:
                 events[date]["date"] = complete_date(events[date]["date"], last_year + '-' + last_month + '-' + last_day, curr_year + '-' + curr_month + '-' + curr_day)
 

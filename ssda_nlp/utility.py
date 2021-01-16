@@ -161,9 +161,12 @@ def complete_date(date, pvs_date, subs_date):
                         subs_year = str(int(subs_year) - 1)
                     return pvs_year + '-' + pvs_month + '-' + day + '/' + subs_year + '-' + subs_month + '-' + day
                 elif (int(day) <= int(subs_day)):
-                    pvs_month = str(int(subs_month) + 1)
+                    pvs_month = str(int(pvs_month) + 1)
                     if len(pvs_month) == 1:
                         pvs_month = '0' + pvs_month
+                    if pvs_month == "13":
+                        pvs_month = "01"
+                        pvs_year = str(int(pvs_year) + 1)
                     return pvs_year + '-' + pvs_month + '-' + day + '/' + subs_year + '-' + subs_month + '-' + day
                 else:
                     subs_month = str(int(subs_month) - 1)
@@ -172,7 +175,12 @@ def complete_date(date, pvs_date, subs_date):
                     if subs_month == "00":
                         subs_month = "12"
                     subs_year = str(int(subs_year) - 1)
-                    pvs_month = str(int(subs_month) + 1)
+                    pvs_month = str(int(pvs_month) + 1)
+                    if len(pvs_month) == 1:
+                        pvs_month = '0' + pvs_month
+                    if pvs_month == "13":
+                        pvs_month = "01"
+                        pvs_year = str(int(pvs_year) + 1)
                     if len(pvs_month) == 1:
                         pvs_month = '0' + pvs_month
                     return pvs_year + '-' + pvs_month + '-' + day + '/' + subs_year + '-' + subs_month + '-' + day
@@ -181,16 +189,23 @@ def complete_date(date, pvs_date, subs_date):
                     next_month = str(int(month) + 1)
                     if len(next_month) == 1:
                         next_month = '0' + next_month
-                    if pvs_year == subs_year:
-                        return pvs_year + '-' + month + '-01/' + subs_year + '-' + next_month + '-01'
-                    elif (int(month) >= int(pvs_month)) and (int(month) <= int(subs_month)):
-                        return pvs_year + '-' + month + '-01/' + subs_year + '-' + next_month + '-01'
+                    if (pvs_year == subs_year) or ((int(month) >= int(pvs_month)) and (int(month) <= int(subs_month))):
+                        if next_month == "13":
+                            return pvs_year + '-' + month + '-01/' + str(int(subs_year) + 1) + '-01-01'
+                        else:
+                            return pvs_year + '-' + month + '-01/' + subs_year + '-' + next_month + '-01'
                     elif (int(month) >= int(pvs_month)):
                         subs_year = int(subs_year) - 1
-                        return pvs_year + '-' + month + '-01/' + subs_year + '-' + next_month + '-01'
+                        if next_month == "13":
+                            return pvs_year + '-' + month + '-01/' + str(int(subs_year) + 1) + '-01-01'
+                        else:
+                            return pvs_year + '-' + month + '-01/' + subs_year + '-' + next_month + '-01'
                     elif (int(month) <= int(subs_month)):
                         pvs_year = int(pvs_year) + 1
-                        return pvs_year + '-' + month + '-01/' + subs_year + '-' + next_month + '-01'
+                        if next_month == "13":
+                            return pvs_year + '-' + month + '-01/' + str(int(subs_year) + 1) + '-01-01'
+                        else:
+                            return pvs_year + '-' + month + '-01/' + subs_year + '-' + next_month + '-01'
                 else:
                     if pvs_year == subs_year:
                         return pvs_year + '-' + month + '-' + day
@@ -218,6 +233,8 @@ def complete_date(date, pvs_date, subs_date):
                         next_month = str(int(month) + 1)
                         if len(next_month) == 1:
                             next_month = '0' + next_month
+                        if next_month == "13":
+                            next_month == "12"
                         return year + '-' + next_month + '-' + day + '/' + year + '-12-' + day
                     elif (subs_year == year) and (subs_day >= day):
                         return year + '-01-' + day + '/' + year + '-' + subs_month + '-' + day
@@ -238,8 +255,14 @@ def complete_date(date, pvs_date, subs_date):
                 if (pvs_year == year) and (pvs_month == month) and (subs_year == year) and (subs_month == month):
                     return year + '-' + month + '-' + pvs_day + '/' + year + '-' + month + '-' + subs_day
                 elif (pvs_year == year) and (pvs_month == month):
-                    return year + '-' + month + '-' + pvs_day + '/' + year + '-' + next_month + '-01'
+                    if next_month == "13":
+                        return year + '-' + month + '-' + pvs_day + '/' + str(int(year) + 1) + '-01-01'
+                    else:
+                        return year + '-' + month + '-' + pvs_day + '/' + year + '-' + next_month + '-01'
                 elif (subs_year == year) and (subs_month == month):
                     return year + '-' + month + '-01/' + year + '-' + month + '-' + subs_day
                 else:
-                    return year + '-' + month + '-01/' + year + '-' + next_month + '-01'
+                    if next_month == "13":
+                        return year + '-' + month + '-01/' + str(int(year) + 1) + '-01-01'
+                    else:
+                        return year + '-' + month + '-01/' + year + '-' + next_month + '-01'
