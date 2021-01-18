@@ -120,8 +120,18 @@ def process_volume(path_to_transcription, path_to_model):
         curr_month = events[e]["date"][5:7]
         curr_day = events[e]["date"][8:]
 
+        #fix incompletely extracted years
+        if (curr_year != "????") and (last_year != None) and (abs(int(curr_year) - int(last_year)) > 1):
+            if (curr_year[3] == last_year[3]):
+                curr_year = last_year
+            elif (curr_month == "01") and (last_month == "12"):
+                curr_year = str(int(last_year) + 1)
+            else:
+                curr_year = last_year
+            events[e]["date"] = curr_year + '-' + curr_month + '-' + curr_day
+
         if (curr_year == "????") or (curr_month == "??") or (curr_day == "??"):
-            #separate logic to assign dates for birth events based on associated baptism
+            #logic to assign dates for birth events based on associated baptism
             if events[e]["type"] == "birth":
                 if (events[e]["id"][:events[e]["id"].find('E')] == events[e - 1]["id"][:events[e - 1]["id"].find('E')]) and (events[e - 1]["type"] == "baptism") and ('?' not in events[e - 1]["date"]):
                         if (curr_month != "??") and (curr_day != "??"):
@@ -198,6 +208,7 @@ def process_volume(path_to_transcription, path_to_model):
     for date in incomplete_dates:
         events[date]["date"] = complete_date(events[date]["date"], last_year + '-' + last_month + '-' + last_day, None)
 
+    #merging any date brackets with equal endpoints
     for event in events:
         interval = event["date"].split('/')
         if (len(interval) == 2) and (interval[0] == interval[1]):
