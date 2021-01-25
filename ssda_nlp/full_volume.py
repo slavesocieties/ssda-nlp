@@ -108,6 +108,9 @@ def process_volume(path_to_transcription, path_to_model):
         else:
             event["location"] = loc_id
 
+        if event["location"] == "unknown":
+            event["location"] = None
+
     #bracket missing or incomplete event dates
 
     incomplete_dates = []
@@ -205,8 +208,9 @@ def process_volume(path_to_transcription, path_to_model):
             last_month = curr_month
             last_day = curr_day
 
-    for date in incomplete_dates:
-        events[date]["date"] = complete_date(events[date]["date"], last_year + '-' + last_month + '-' + last_day, None)
+    if last_year != None:
+        for date in incomplete_dates:
+            events[date]["date"] = complete_date(events[date]["date"], last_year + '-' + last_month + '-' + last_day, None)
 
     #merging any date brackets with equal endpoints
     for event in events:
@@ -216,8 +220,6 @@ def process_volume(path_to_transcription, path_to_model):
 
     print("Events configured.")
 
-    names = []
-    name_counts = []
     for person in people:
         #strip titles and/or ranks from names
         if person["name"] != None:
@@ -273,15 +275,29 @@ def process_volume(path_to_transcription, path_to_model):
                         break
                     name_parts = person["name"].split(' ')
 
-            #expand abbreviations in remaining parts of name
+    #normalize names and all characteristics
+    names = []
+    name_counts = []
+    chars = []
 
-            #count name frequency
+    for person in people:
+        if (not (person["titles"] in chars)) and (person["titles"] != None):
+            chars.append(person["titles"])
+        #normalize characteristics
+        #strip out duplicate characteristics
+        #translate characteristics to English
+        #future improvement: find additional references for plural characteristics
+
+        #count name frequency
+        if person["name"] != None:
             if person["name"] in names:
                 name_counts[names.index(person['name'])] += 1
             else:
                 names.append(person["name"])
                 name_counts.append(1)
 
+    chars.sort()
+    print(chars)
 
     #disambiguate and merge people across the volume
     redundant_records = []

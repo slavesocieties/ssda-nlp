@@ -43,7 +43,7 @@ def retrieve_controlled_vocabularies():
     titles = ["doctor", "d.r", "dor", "dr", "d.or", "br", "ber", "don", "doña", "da", "padre", "pe", "predicador", "fray", "d.n", "d.", "d,n", "d;n", "p.e", "p", "dn", "fr.", "fr", "f", "regidor", "rex.or", "alg.l m.or", "ldo", "licenciado", "d", "alg.l", "alcalde"]
     ranks = ["capitan", "capitam", "cap.n", "capn", "sarg.to may.r", "sarg.to", "sargento", "sarjento mayor", "sarjento", "sargto mayor", "theniente", "teniente", "thente"]
     ethnicities = ["ganga", "español", "espanol", "caravali", "ingles", "yngles", "angola", "carabalí", "carabali", "carabaly", "congo", "conga", "mandinga", "mina", "temo", "malagas", "arara", "manga"]
-    status = ["esclabo", "esclaba", "escl.a", "escl.o", "clavo", "clava", "escl", "escl.", "escl.s", "clabo", "claba", "esc.va", "esc.ba", "esc.vo", "escvo", "esclavo", "esclava", "escva", "esc.bo", "esclabos", "esclavos", "esc.os", "esc.a", "esc.o", "libre", "esc.s", "esco", "esca"]
+    status = ["escrava", "escravos", "esclabo", "esclaba", "escl.a", "escl.o", "clavo", "clava", "escl", "escl.", "escl.s", "clabo", "claba", "esc.va", "esc.ba", "esc.vo", "escvo", "esclavo", "esclava", "escva", "esc.bo", "esclabos", "esclavos", "esc.os", "esc.a", "esc.o", "libre", "esc.s", "esco", "esca"]
     legitimacy = ["lexma", "lexmo", "legitima", "legitimo", "h l", "natural", "nral", "lexitima", "lexitimo", "nat.l"]
     relationships = ["hermano", "hijo", "hija", "esposo", "esposa", "viudo", "viuda", "padrinos", "padrino", "padryno", "soltera", "soltero", "madrina", "padre", "p.p.", "p. ", "p."]
 
@@ -622,6 +622,8 @@ def determine_principals(entry_text, entities, n_principals):
 
         if principals == None:
             prox = entry_text.find('oleos')
+            if prox == -1:
+                prox = entry_text.find('óleos')
             if prox != -1:
                 for index, entity in entities.iterrows():
                     if (entity['pred_label'] == 'PER') and (abs(entity['pred_start'] - prox) <= 10):

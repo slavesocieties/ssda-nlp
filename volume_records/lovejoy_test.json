@@ -1,0 +1,130 @@
+{
+  "volume": {
+    "type": "baptism",
+    "country": "Brazil",
+    "state": "unknown",
+    "city": "unknown",
+    "institution": "Nossa Senhora da Conceição",
+    "id": "0",
+    "title": "Lovejoy Test"
+  },
+  "images": [
+    {
+      "id": "1001",
+      "type": "JPG",
+      "number": "1r",
+      "entries": [
+        {
+          "id": 1,
+          "text": "Aos 13 dias do mês de Setembro deste presente ano de 1789 batizou [ilegível] o Reverendo Frei José de Santa Rita na Capela de Nossa Senhora da Conceição [ilegível] batizou com licença minha e pôs os santos óleos a Clara filha natural de [ilegível] de nação mina escrava de Rita Soares viúva de Fausto Domingos Alves. Foram padrinhos Antônio e sua mulher Rosa escravos de João e de que para constar fiz este assento, em que nesta assinou. Assinatura O Vigário Manoel Moreira da Silva"
+        }
+      ]
+    }
+  ],
+  "people": [
+    {
+      "id": "0-1001-1-P5",
+      "name": "Rosa",
+      "ethnicities": null,
+      "age": null,
+      "legitimacy": null,
+      "occupation": null,
+      "phenotype": null,
+      "status": "escravos",
+      "titles": null,
+      "ranks": null,
+      "relationships": null
+    },
+    {
+      "id": "0-1001-1-P1",
+      "name": "Reverendo Frei José de Santa Rita na Capela",
+      "ethnicities": null,
+      "age": null,
+      "legitimacy": null,
+      "occupation": null,
+      "phenotype": null,
+      "status": null,
+      "titles": null,
+      "ranks": null,
+      "relationships": null
+    },
+    {
+      "id": "0-1001-1-P2",
+      "name": "Clara filha",
+      "ethnicities": null,
+      "age": null,
+      "legitimacy": null,
+      "occupation": null,
+      "phenotype": null,
+      "status": "escrava",
+      "titles": null,
+      "ranks": null,
+      "relationships": [
+        {
+          "related_person": "0-1001-1-P3",
+          "relationship_type": "enslaver"
+        }
+      ]
+    },
+    {
+      "id": "0-1001-1-P3",
+      "name": "Rita Soares",
+      "ethnicities": null,
+      "age": null,
+      "legitimacy": null,
+      "occupation": null,
+      "phenotype": null,
+      "status": null,
+      "titles": null,
+      "ranks": null,
+      "relationships": [
+        {
+          "related_person": "0-1001-1-P2",
+          "relationship_type": "slave"
+        }
+      ]
+    },
+    {
+      "id": "0-1001-1-P4",
+      "name": "Fausto Domingos Alves. Foram padrinhos Antônio",
+      "ethnicities": null,
+      "age": null,
+      "legitimacy": null,
+      "occupation": null,
+      "phenotype": null,
+      "status": null,
+      "titles": null,
+      "ranks": null,
+      "relationships": null
+    },
+    {
+      "id": "0-1001-1-P6",
+      "name": "Vigário Manoel Moreira da Silva",
+      "ethnicities": null,
+      "age": null,
+      "legitimacy": null,
+      "occupation": null,
+      "phenotype": null,
+      "status": null,
+      "titles": null,
+      "ranks": null,
+      "relationships": null
+    }
+  ],
+  "places": [
+    {
+      "id": "0-L1",
+      "location": "Nossa Senhora da Conceição"
+    }
+  ],
+  "events": [
+    {
+      "id": "0-1001-1-E1",
+      "type": "baptism",
+      "principal": "0-1001-1-P2",
+      "date": "????-??-??",
+      "location": "0-L1",
+      "cleric": "0-1001-1-P6"
+    }
+  ]
+}

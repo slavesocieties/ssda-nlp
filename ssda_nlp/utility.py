@@ -33,7 +33,6 @@ def normalize_text(text, path_to_dict, context=None):
 
     for word in synonyms["words"]:
         if (context != None) and ("context" in word) and (context != word["context"]):
-            print("skipping out of context word " + word["baseword"])
             continue
         for synonym in word["synonyms"]:
             text = (' ' + text + ' ').replace(' ' + synonym + ' ', ' ' + word["baseword"] + ' ')

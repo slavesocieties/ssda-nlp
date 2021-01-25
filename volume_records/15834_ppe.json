@@ -85590,7 +85590,7 @@
       "type": "birth",
       "principal": "15834-1038-3-P1",
       "date": "1719-10-14",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -85622,7 +85622,7 @@
       "type": "birth",
       "principal": "15834-1039-2-P1",
       "date": "1719-10-19/1719-11-19",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -85670,7 +85670,7 @@
       "type": "birth",
       "principal": "15834-1040-3-P1",
       "date": "1719-12-30",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -85686,7 +85686,7 @@
       "type": "birth",
       "principal": "15834-1040-4-P1",
       "date": "1719-12-31",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -85726,7 +85726,7 @@
       "type": "birth",
       "principal": "15834-1041-4-P1",
       "date": "1720-01-28",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -85830,7 +85830,7 @@
       "type": "birth",
       "principal": "15834-1044-3-P1",
       "date": "1721-01-01",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -85918,7 +85918,7 @@
       "type": "birth",
       "principal": "15834-1046-3-P1",
       "date": "1721-09-10",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -85934,7 +85934,7 @@
       "type": "birth",
       "principal": "15834-1046-4-P1",
       "date": "1721-10-09",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -86030,7 +86030,7 @@
       "type": "birth",
       "principal": "15834-1049-3-P1",
       "date": "1722-04-19",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -86070,7 +86070,7 @@
       "type": "birth",
       "principal": "15834-1050-3-P1",
       "date": "1722-07-26",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -86086,7 +86086,7 @@
       "type": "birth",
       "principal": "15834-1051-1-P1",
       "date": "1722-08-05/1722-12-05",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -86150,7 +86150,7 @@
       "type": "birth",
       "principal": "15834-1053-2-P1",
       "date": "1723-08-27",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -86182,7 +86182,7 @@
       "type": "birth",
       "principal": "15834-1054-2-P1",
       "date": "1723-11-22",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -86198,7 +86198,7 @@
       "type": "birth",
       "principal": "15834-1054-3-P1",
       "date": "1723-12-03",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -86214,7 +86214,7 @@
       "type": "birth",
       "principal": "15834-1055-1-P1",
       "date": "1723-12-28/1724-12-28",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -86270,7 +86270,7 @@
       "type": "birth",
       "principal": "15834-1056-3-P1",
       "date": "1724-06-06/1724-06-26",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -86334,7 +86334,7 @@
       "type": "birth",
       "principal": "15834-1058-3-P1",
       "date": "1725-07-15",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -86478,7 +86478,7 @@
       "type": "birth",
       "principal": "15834-1065-2-P1",
       "date": "1726-04-28",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -86534,7 +86534,7 @@
       "type": "birth",
       "principal": "15834-1067-1-P1",
       "date": "1726-04-20",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -86566,7 +86566,7 @@
       "type": "birth",
       "principal": "15834-1068-1-P5",
       "date": "1726-07-02/1726-08-02",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -86590,7 +86590,7 @@
       "type": "birth",
       "principal": "15834-1068-3-P1",
       "date": "1726-08-16",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -86606,7 +86606,7 @@
       "type": "birth",
       "principal": "15834-1069-1-P1",
       "date": "1726-08-25/1726-08-25",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -86622,7 +86622,7 @@
       "type": "birth",
       "principal": "15834-1069-2-P1",
       "date": "1726-09-14",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -86638,7 +86638,7 @@
       "type": "birth",
       "principal": "15834-1070-1-P1",
       "date": "1726-09-24/1726-11-24",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -86654,7 +86654,7 @@
       "type": "birth",
       "principal": "15834-1070-2-P1",
       "date": "1726-12-16",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -86670,7 +86670,7 @@
       "type": "birth",
       "principal": "15834-1070-3-P1",
       "date": "1726-12-21",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -86718,7 +86718,7 @@
       "type": "birth",
       "principal": "15834-1072-2-P1",
       "date": "1727-02-24",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -86758,7 +86758,7 @@
       "type": "birth",
       "principal": "15834-1074-1-P1",
       "date": "1727-04-13",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -86790,7 +86790,7 @@
       "type": "birth",
       "principal": "15834-1075-1-P1",
       "date": "1727-07-19/1727-11-19",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -86814,7 +86814,7 @@
       "type": "birth",
       "principal": "15834-1075-3-P1",
       "date": "1727-12-01",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -86854,7 +86854,7 @@
       "type": "birth",
       "principal": "15834-1077-1-P1",
       "date": "1728-02-24",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -86870,7 +86870,7 @@
       "type": "birth",
       "principal": "15834-1077-2-P1",
       "date": "1728-03-26",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -86886,7 +86886,7 @@
       "type": "birth",
       "principal": "15834-1077-3-P1",
       "date": "1728-04-20",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -86902,7 +86902,7 @@
       "type": "birth",
       "principal": "15834-1078-1-P1",
       "date": "1728-05-08/1728-05-08",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -86918,7 +86918,7 @@
       "type": "birth",
       "principal": "15834-1078-2-P1",
       "date": "1728-05-17",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -86942,7 +86942,7 @@
       "type": "birth",
       "principal": "15834-1079-1-P1",
       "date": "1728-10-06/1729-01-06",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -86958,7 +86958,7 @@
       "type": "birth",
       "principal": "15834-1079-2-P1",
       "date": "1729-01-17",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -86974,7 +86974,7 @@
       "type": "birth",
       "principal": "15834-1079-3-P1",
       "date": "1729-01-28",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -86998,7 +86998,7 @@
       "type": "birth",
       "principal": "15834-1080-2-P1",
       "date": "1729-02-11",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -87070,7 +87070,7 @@
       "type": "birth",
       "principal": "15834-1083-2-P1",
       "date": "1729-07-07",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -87118,7 +87118,7 @@
       "type": "birth",
       "principal": "15834-1085-1-P1",
       "date": "1729-09-15",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -87134,7 +87134,7 @@
       "type": "birth",
       "principal": "15834-1085-2-P1",
       "date": "1729-10-26",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -87166,7 +87166,7 @@
       "type": "birth",
       "principal": "15834-1086-2-P1",
       "date": "1729-12-20/1729-11-20",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -87198,7 +87198,7 @@
       "type": "birth",
       "principal": "15834-1087-2-P1",
       "date": "1729-12-20/1729-02-20",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -87278,7 +87278,7 @@
       "type": "birth",
       "principal": "15834-1090-1-P1",
       "date": "1730-03-20/1730-04-23",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -87318,7 +87318,7 @@
       "type": "birth",
       "principal": "15834-1091-2-P1",
       "date": "1730-06-24",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -87390,7 +87390,7 @@
       "type": "birth",
       "principal": "15834-1094-1-P1",
       "date": "1730-07-30/1730-11-30",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -87542,7 +87542,7 @@
       "type": "birth",
       "principal": "15834-1098-4-P1",
       "date": "1731-01-01",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -87566,7 +87566,7 @@
       "type": "birth",
       "principal": "15834-1099-2-P1",
       "date": "1731-01-27",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -87622,7 +87622,7 @@
       "type": "birth",
       "principal": "15834-1101-1-P1",
       "date": "1731-02-24",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -87686,7 +87686,7 @@
       "type": "birth",
       "principal": "15834-1103-1-P1",
       "date": "1731-05-21/1731-06-21",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -87702,7 +87702,7 @@
       "type": "birth",
       "principal": "15834-1103-2-P1",
       "date": "1731-06-29",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -87734,7 +87734,7 @@
       "type": "birth",
       "principal": "15834-1104-3-P1",
       "date": "1731-08-11",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -87750,7 +87750,7 @@
       "type": "birth",
       "principal": "15834-1105-1-P1",
       "date": "1731-09-06/1731-10-06",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -87766,7 +87766,7 @@
       "type": "birth",
       "principal": "15834-1105-2-P1",
       "date": "1731-09-13/1731-10-13",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -87790,7 +87790,7 @@
       "type": "birth",
       "principal": "15834-1106-1-P1",
       "date": "1731-10-20",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -88022,7 +88022,7 @@
       "type": "birth",
       "principal": "15834-1116-2-P1",
       "date": "1732-09-26",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -88038,7 +88038,7 @@
       "type": "birth",
       "principal": "15834-1117-1-P1",
       "date": "1732-09-25",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -88054,7 +88054,7 @@
       "type": "birth",
       "principal": "15834-1117-2-P1",
       "date": "1732-05-15",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -88078,7 +88078,7 @@
       "type": "birth",
       "principal": "15834-1118-2-P1",
       "date": "1732-10-14",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -88094,7 +88094,7 @@
       "type": "birth",
       "principal": "15834-1118-3-P1",
       "date": "1732-11-09",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -88174,7 +88174,7 @@
       "type": "birth",
       "principal": "15834-1122-1-P1",
       "date": "1733-02-24",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -88270,7 +88270,7 @@
       "type": "birth",
       "principal": "15834-1125-3-P1",
       "date": "1733-05-04",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -88366,7 +88366,7 @@
       "type": "birth",
       "principal": "15834-1129-1-P1",
       "date": "1733-06-23",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -88382,7 +88382,7 @@
       "type": "birth",
       "principal": "15834-1129-2-P1",
       "date": "1733-07-05",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -88398,7 +88398,7 @@
       "type": "birth",
       "principal": "15834-1130-1-P1",
       "date": "1733-07-20",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -88422,7 +88422,7 @@
       "type": "birth",
       "principal": "15834-1130-3-P1",
       "date": "1733-07-27",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -88486,7 +88486,7 @@
       "type": "birth",
       "principal": "15834-1133-2-P1",
       "date": "1733-11-02",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -88502,7 +88502,7 @@
       "type": "birth",
       "principal": "15834-1133-3-P1",
       "date": "1733-10-30",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -88534,7 +88534,7 @@
       "type": "birth",
       "principal": "15834-1134-3-P1",
       "date": "1733-12-04",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -88550,7 +88550,7 @@
       "type": "birth",
       "principal": "15834-1135-1-P1",
       "date": "1733-12-17/1733-12-17",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -88566,7 +88566,7 @@
       "type": "birth",
       "principal": "15834-1135-2-P1",
       "date": "1733-12-19",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -88598,7 +88598,7 @@
       "type": "birth",
       "principal": "15834-1136-2-P1",
       "date": "1734-01-22",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -88614,7 +88614,7 @@
       "type": "birth",
       "principal": "15834-1136-3-P1",
       "date": "1734-01-20",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -88630,7 +88630,7 @@
       "type": "birth",
       "principal": "15834-1137-1-P1",
       "date": "1734-02-01/1734-02-01",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -88646,7 +88646,7 @@
       "type": "birth",
       "principal": "15834-1137-2-P1",
       "date": "1734-02-20",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -88662,7 +88662,7 @@
       "type": "birth",
       "principal": "15834-1137-3-P1",
       "date": "1734-02-22",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -88686,7 +88686,7 @@
       "type": "birth",
       "principal": "15834-1138-2-P1",
       "date": "1734-03-20",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -88758,7 +88758,7 @@
       "type": "birth",
       "principal": "15834-1141-1-P1",
       "date": "1734-04-23",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -88790,7 +88790,7 @@
       "type": "birth",
       "principal": "15834-1142-1-P1",
       "date": "1734-05-14/1734-05-14",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -88806,7 +88806,7 @@
       "type": "birth",
       "principal": "15834-1142-2-P1",
       "date": "1734-05-18",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -88830,7 +88830,7 @@
       "type": "birth",
       "principal": "15834-1143-1-P1",
       "date": "1734-07-05/1734-07-05",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -88854,7 +88854,7 @@
       "type": "birth",
       "principal": "15834-1143-3-P1",
       "date": "1734-07-25",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -88878,7 +88878,7 @@
       "type": "birth",
       "principal": "15834-1144-2-P1",
       "date": "1734-08-22",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -88910,7 +88910,7 @@
       "type": "birth",
       "principal": "15834-1145-2-P1",
       "date": "1734-08-20",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -88934,7 +88934,7 @@
       "type": "birth",
       "principal": "15834-1145-4-P1",
       "date": "1734-09-02/1734-10-02",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -88966,7 +88966,7 @@
       "type": "birth",
       "principal": "15834-1146-3-P1",
       "date": "1734-10-03",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -88982,7 +88982,7 @@
       "type": "birth",
       "principal": "15834-1147-1-P1",
       "date": "1734-10-12/1734-10-12",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -89006,7 +89006,7 @@
       "type": "birth",
       "principal": "15834-1148-1-P1",
       "date": "1734-11-20/1733-10-20",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -89022,7 +89022,7 @@
       "type": "birth",
       "principal": "15834-1148-2-P1",
       "date": "1734-11-01",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -89038,7 +89038,7 @@
       "type": "birth",
       "principal": "15834-1148-3-P1",
       "date": "1734-11-20",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -89054,7 +89054,7 @@
       "type": "birth",
       "principal": "15834-1149-1-P1",
       "date": "1734-12-08/1734-12-08",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -89070,7 +89070,7 @@
       "type": "birth",
       "principal": "15834-1149-2-P1",
       "date": "1734-12-18",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -89094,7 +89094,7 @@
       "type": "birth",
       "principal": "15834-1150-1-P1",
       "date": "1734-12-20/1735-12-20",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -89118,7 +89118,7 @@
       "type": "birth",
       "principal": "15834-1150-3-P1",
       "date": "1735-01-14",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -89182,7 +89182,7 @@
       "type": "birth",
       "principal": "15834-1153-2-P1",
       "date": "1735-11-10",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -89222,7 +89222,7 @@
       "type": "birth",
       "principal": "15834-1154-3-P1",
       "date": "1735-05-04",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -89238,7 +89238,7 @@
       "type": "birth",
       "principal": "15834-1155-1-P1",
       "date": "1735-06-23",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -89262,7 +89262,7 @@
       "type": "birth",
       "principal": "15834-1155-3-P1",
       "date": "1735-11-10",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -89286,7 +89286,7 @@
       "type": "birth",
       "principal": "15834-1156-2-P1",
       "date": "1735-11-20",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -89302,7 +89302,7 @@
       "type": "birth",
       "principal": "15834-1156-3-P2",
       "date": "1735-08-28",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -89318,7 +89318,7 @@
       "type": "birth",
       "principal": "15834-1157-1-P1",
       "date": "1735-09-23",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -89334,7 +89334,7 @@
       "type": "birth",
       "principal": "15834-1157-2-P1",
       "date": "1735-11-10",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -89350,7 +89350,7 @@
       "type": "birth",
       "principal": "15834-1157-3-P1",
       "date": "1735-11-11",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -89382,7 +89382,7 @@
       "type": "birth",
       "principal": "15834-1158-3-P1",
       "date": "1735-11-27",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -89438,7 +89438,7 @@
       "type": "birth",
       "principal": "15834-1160-3-P1",
       "date": "1735-12-27",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -89502,7 +89502,7 @@
       "type": "birth",
       "principal": "15834-1163-2-P1",
       "date": "1736-03-27",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -89518,7 +89518,7 @@
       "type": "birth",
       "principal": "15834-1163-3-P1",
       "date": "1736-04-03",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -89550,7 +89550,7 @@
       "type": "birth",
       "principal": "15834-1164-2-P1",
       "date": "1736-05-04",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -89566,7 +89566,7 @@
       "type": "birth",
       "principal": "15834-1164-3-P1",
       "date": "1736-05-12",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -89590,7 +89590,7 @@
       "type": "birth",
       "principal": "15834-1165-2-P1",
       "date": "1736-05-27",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -89614,7 +89614,7 @@
       "type": "birth",
       "principal": "15834-1165-4-P1",
       "date": "1736-08-01",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -89638,7 +89638,7 @@
       "type": "birth",
       "principal": "15834-1166-2-P1",
       "date": "1736-07-13",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -89654,7 +89654,7 @@
       "type": "birth",
       "principal": "15834-1166-3-P1",
       "date": "1736-08-07",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -89678,7 +89678,7 @@
       "type": "birth",
       "principal": "15834-1167-2-P1",
       "date": "1736-08-19",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -89694,7 +89694,7 @@
       "type": "birth",
       "principal": "15834-1167-3-P1",
       "date": "1736-09-14",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -89718,7 +89718,7 @@
       "type": "birth",
       "principal": "15834-1168-2-P1",
       "date": "1736-09-25",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -89734,7 +89734,7 @@
       "type": "birth",
       "principal": "15834-1168-3-P1",
       "date": "1736-09-30",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -89782,7 +89782,7 @@
       "type": "birth",
       "principal": "15834-1170-2-P1",
       "date": "1736-11-28",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -89822,7 +89822,7 @@
       "type": "birth",
       "principal": "15834-1171-3-P1",
       "date": "1737-02-02",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -89854,7 +89854,7 @@
       "type": "birth",
       "principal": "15834-1172-3-P1",
       "date": "1737-04-06",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -89878,7 +89878,7 @@
       "type": "birth",
       "principal": "15834-1173-2-P1",
       "date": "1737-05-01",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -89894,7 +89894,7 @@
       "type": "birth",
       "principal": "15834-1173-3-P1",
       "date": "1737-05-15",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -89918,7 +89918,7 @@
       "type": "birth",
       "principal": "15834-1174-2-P1",
       "date": "1737-06-03",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -89934,7 +89934,7 @@
       "type": "birth",
       "principal": "15834-1174-3-P1",
       "date": "1737-07-07",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -89958,7 +89958,7 @@
       "type": "birth",
       "principal": "15834-1175-2-P1",
       "date": "1737-09-03",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -89974,7 +89974,7 @@
       "type": "birth",
       "principal": "15834-1175-3-P1",
       "date": "1737-09-09",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -89998,7 +89998,7 @@
       "type": "birth",
       "principal": "15834-1176-2-P1",
       "date": "1738-01-24",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -90014,7 +90014,7 @@
       "type": "birth",
       "principal": "15834-1176-3-P1",
       "date": "1738-01-30",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -90038,7 +90038,7 @@
       "type": "birth",
       "principal": "15834-1177-2-P1",
       "date": "1738-05-29",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -90054,7 +90054,7 @@
       "type": "birth",
       "principal": "15834-1177-3-P1",
       "date": "1738-05-30",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -90070,7 +90070,7 @@
       "type": "birth",
       "principal": "15834-1177-4-P1",
       "date": "1738-06-13",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -90094,7 +90094,7 @@
       "type": "birth",
       "principal": "15834-1178-2-P1",
       "date": "1738-07-01",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -90110,7 +90110,7 @@
       "type": "birth",
       "principal": "15834-1178-3-P1",
       "date": "1738-07-24",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -90126,7 +90126,7 @@
       "type": "birth",
       "principal": "15834-1178-4-P1",
       "date": "1738-10-01",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -90150,7 +90150,7 @@
       "type": "birth",
       "principal": "15834-1179-2-P1",
       "date": "1738-11-24",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -90166,7 +90166,7 @@
       "type": "birth",
       "principal": "15834-1179-3-P1",
       "date": "1738-12-02",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -90182,7 +90182,7 @@
       "type": "birth",
       "principal": "15834-1179-4-P1",
       "date": "1738-12-17/1738-12-17",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -90246,7 +90246,7 @@
       "type": "birth",
       "principal": "15834-1181-3-P1",
       "date": "1738-12-25",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -90262,7 +90262,7 @@
       "type": "birth",
       "principal": "15834-1181-4-P1",
       "date": "1738-12-27",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -90286,7 +90286,7 @@
       "type": "birth",
       "principal": "15834-1182-2-P1",
       "date": "1739-01-09",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -90302,7 +90302,7 @@
       "type": "birth",
       "principal": "15834-1182-3-P1",
       "date": "1739-01-07",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -90326,7 +90326,7 @@
       "type": "birth",
       "principal": "15834-1183-2-P1",
       "date": "1739-02-15",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -90342,7 +90342,7 @@
       "type": "birth",
       "principal": "15834-1183-3-P1",
       "date": "1739-02-17",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -90366,7 +90366,7 @@
       "type": "birth",
       "principal": "15834-1184-2-P1",
       "date": "1739-03-10",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -90382,7 +90382,7 @@
       "type": "birth",
       "principal": "15834-1184-3-P1",
       "date": "1739-03-13",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -90398,7 +90398,7 @@
       "type": "birth",
       "principal": "15834-1185-1-P1",
       "date": "1739-04-07/1739-05-07",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -90414,7 +90414,7 @@
       "type": "birth",
       "principal": "15834-1185-2-P1",
       "date": "1739-05-16",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -90430,7 +90430,7 @@
       "type": "birth",
       "principal": "15834-1185-3-P1",
       "date": "1739-05-22",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -90454,7 +90454,7 @@
       "type": "birth",
       "principal": "15834-1186-2-P1",
       "date": "1739-06-13",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -90470,7 +90470,7 @@
       "type": "birth",
       "principal": "15834-1186-3-P1",
       "date": "1739-06-04",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -90494,7 +90494,7 @@
       "type": "birth",
       "principal": "15834-1187-1-P1",
       "date": "1739-06-23/1739-10-19",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -90510,7 +90510,7 @@
       "type": "birth",
       "principal": "15834-1187-2-P1",
       "date": "1739-10-11",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -90542,7 +90542,7 @@
       "type": "birth",
       "principal": "15834-1188-2-P1",
       "date": "1739-11-20",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -90558,7 +90558,7 @@
       "type": "birth",
       "principal": "15834-1188-3-P1",
       "date": "1739-12-06",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -90574,7 +90574,7 @@
       "type": "birth",
       "principal": "15834-1189-1-P1",
       "date": "1739-12-29/1739-12-29",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -90590,7 +90590,7 @@
       "type": "birth",
       "principal": "15834-1189-2-P1",
       "date": "1739-12-24",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -90622,7 +90622,7 @@
       "type": "birth",
       "principal": "15834-1190-2-P1",
       "date": "1740-01-18",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -90654,7 +90654,7 @@
       "type": "birth",
       "principal": "15834-1191-2-P1",
       "date": "1740-04-06",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -90670,7 +90670,7 @@
       "type": "birth",
       "principal": "15834-1191-3-P1",
       "date": "1740-04-02",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -90702,7 +90702,7 @@
       "type": "birth",
       "principal": "15834-1192-3-P1",
       "date": "1740-05-04",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -90718,7 +90718,7 @@
       "type": "birth",
       "principal": "15834-1193-1-P1",
       "date": "1740-05-13/1740-07-05",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -90734,7 +90734,7 @@
       "type": "birth",
       "principal": "15834-1193-2-P1",
       "date": "1740-06-29",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -90766,7 +90766,7 @@
       "type": "birth",
       "principal": "15834-1194-2-P1",
       "date": "1740-09-16",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -90782,7 +90782,7 @@
       "type": "birth",
       "principal": "15834-1194-3-P1",
       "date": "1740-11-06",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -90798,7 +90798,7 @@
       "type": "birth",
       "principal": "15834-1195-1-P1",
       "date": "1740-12-03/1740-12-03",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -90814,7 +90814,7 @@
       "type": "birth",
       "principal": "15834-1195-2-P1",
       "date": "1740-12-03",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -90830,7 +90830,7 @@
       "type": "birth",
       "principal": "15834-1195-3-P1",
       "date": "1740-12-23",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -90854,7 +90854,7 @@
       "type": "birth",
       "principal": "15834-1196-2-P1",
       "date": "1741-01-22",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -90870,7 +90870,7 @@
       "type": "birth",
       "principal": "15834-1196-3-P1",
       "date": "1741-02-02",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -90902,7 +90902,7 @@
       "type": "birth",
       "principal": "15834-1197-3-P1",
       "date": "1741-03-17",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -90926,7 +90926,7 @@
       "type": "birth",
       "principal": "15834-1198-2-P1",
       "date": "1741-04-23",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -90942,7 +90942,7 @@
       "type": "birth",
       "principal": "15834-1198-3-P1",
       "date": "1741-05-06",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -90966,7 +90966,7 @@
       "type": "birth",
       "principal": "15834-1199-2-P1",
       "date": "1741-06-26",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -90982,7 +90982,7 @@
       "type": "birth",
       "principal": "15834-1199-3-P1",
       "date": "1741-07-14",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -91006,7 +91006,7 @@
       "type": "birth",
       "principal": "15834-1200-2-P1",
       "date": "1741-07-16",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -91022,7 +91022,7 @@
       "type": "birth",
       "principal": "15834-1200-3-P1",
       "date": "1741-07-20",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -91046,7 +91046,7 @@
       "type": "birth",
       "principal": "15834-1201-2-P1",
       "date": "1741-11-10",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -91094,7 +91094,7 @@
       "type": "birth",
       "principal": "15834-1203-1-P1",
       "date": "1741-12-04/1741-01-04",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -91110,7 +91110,7 @@
       "type": "birth",
       "principal": "15834-1203-2-P1",
       "date": "1742-01-15",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -91126,7 +91126,7 @@
       "type": "birth",
       "principal": "15834-1203-3-P1",
       "date": "1742-01-23",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -91142,7 +91142,7 @@
       "type": "birth",
       "principal": "15834-1203-4-P1",
       "date": "1742-01-30",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -91174,7 +91174,7 @@
       "type": "birth",
       "principal": "15834-1206-2-P1",
       "date": "1742-04-13",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -91190,7 +91190,7 @@
       "type": "birth",
       "principal": "15834-1206-3-P1",
       "date": "1742-04-27",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -91222,7 +91222,7 @@
       "type": "birth",
       "principal": "15834-1207-2-P1",
       "date": "1742-07-02",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -91238,7 +91238,7 @@
       "type": "birth",
       "principal": "15834-1207-3-P1",
       "date": "1742-07-20",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -91254,7 +91254,7 @@
       "type": "birth",
       "principal": "15834-1207-4-P1",
       "date": "1742-08-03",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -91278,7 +91278,7 @@
       "type": "birth",
       "principal": "15834-1208-2-P1",
       "date": "1742-09-24",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -91294,7 +91294,7 @@
       "type": "birth",
       "principal": "15834-1208-3-P1",
       "date": "1742-10-20",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -91310,7 +91310,7 @@
       "type": "birth",
       "principal": "15834-1208-4-P1",
       "date": "1742-10-20",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -91366,7 +91366,7 @@
       "type": "birth",
       "principal": "15834-1210-2-P1",
       "date": "1742-12-28/1743-01-19",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -91390,7 +91390,7 @@
       "type": "birth",
       "principal": "15834-1211-2-P1",
       "date": "1743-01-25/1743-02-16",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -91406,7 +91406,7 @@
       "type": "birth",
       "principal": "15834-1211-3-P1",
       "date": "1743-03-27",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -91430,7 +91430,7 @@
       "type": "birth",
       "principal": "15834-1212-2-P1",
       "date": "1743-05-23",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -91470,7 +91470,7 @@
       "type": "birth",
       "principal": "15834-1213-2-P1",
       "date": "1743-07-10",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -91486,7 +91486,7 @@
       "type": "birth",
       "principal": "15834-1213-3-P1",
       "date": "1743-07-18",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -91502,7 +91502,7 @@
       "type": "birth",
       "principal": "15834-1213-4-P1",
       "date": "1743-07-28",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -91526,7 +91526,7 @@
       "type": "birth",
       "principal": "15834-1214-2-P1",
       "date": "1743-08-28",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -91542,7 +91542,7 @@
       "type": "birth",
       "principal": "15834-1214-3-P1",
       "date": "1743-10-17",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -91558,7 +91558,7 @@
       "type": "birth",
       "principal": "15834-1214-4-P1",
       "date": "1743-11-03",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -91582,7 +91582,7 @@
       "type": "birth",
       "principal": "15834-1215-2-P1",
       "date": "1743-11-11",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -91646,7 +91646,7 @@
       "type": "birth",
       "principal": "15834-1217-3-P1",
       "date": "1744-01-31",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -91670,7 +91670,7 @@
       "type": "birth",
       "principal": "15834-1217-5-P1",
       "date": "1744-02-26",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -91694,7 +91694,7 @@
       "type": "birth",
       "principal": "15834-1219-1-P1",
       "date": "1744-03-15/1744-08-15",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -91774,7 +91774,7 @@
       "type": "birth",
       "principal": "15834-1222-3-P1",
       "date": "1744-08-20",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -91798,7 +91798,7 @@
       "type": "birth",
       "principal": "15834-1223-2-P1",
       "date": "1744-03-20/1744-08-20",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -91902,7 +91902,7 @@
       "type": "birth",
       "principal": "15834-1227-3-P1",
       "date": "1744-03-06/1744-08-26",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -92150,7 +92150,7 @@
       "type": "birth",
       "principal": "15834-1236-2-P1",
       "date": "1744-08-19",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -92166,7 +92166,7 @@
       "type": "birth",
       "principal": "15834-1236-3-P1",
       "date": "1744-09-20",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -92190,7 +92190,7 @@
       "type": "birth",
       "principal": "15834-1237-2-P1",
       "date": "1744-10-02",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -92222,7 +92222,7 @@
       "type": "birth",
       "principal": "15834-1238-2-P1",
       "date": "1744-12-07",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -92254,7 +92254,7 @@
       "type": "birth",
       "principal": "15834-1239-3-P1",
       "date": "1744-12-13",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -92278,7 +92278,7 @@
       "type": "birth",
       "principal": "15834-1240-2-P1",
       "date": "1744-11-26/1744-12-17",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -92294,7 +92294,7 @@
       "type": "birth",
       "principal": "15834-1240-3-P1",
       "date": "1744-12-01",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -92318,7 +92318,7 @@
       "type": "birth",
       "principal": "15834-1241-2-P1",
       "date": "1744-11-19",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -92334,7 +92334,7 @@
       "type": "birth",
       "principal": "15834-1241-3-P1",
       "date": "1744-11-29",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -92470,7 +92470,7 @@
       "type": "birth",
       "principal": "15834-1246-4-P1",
       "date": "1744-11-23",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -92518,7 +92518,7 @@
       "type": "birth",
       "principal": "15834-1248-2-P1",
       "date": "1744-12-16",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -92566,7 +92566,7 @@
       "type": "birth",
       "principal": "15834-1250-1-P1",
       "date": "1744-10-23/1745-10-23",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -92686,7 +92686,7 @@
       "type": "birth",
       "principal": "15834-1254-3-P1",
       "date": "1745-01-17",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -92806,7 +92806,7 @@
       "type": "birth",
       "principal": "15834-1259-2-P1",
       "date": "1745-02-10",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -92846,7 +92846,7 @@
       "type": "birth",
       "principal": "15834-1260-3-P1",
       "date": "1745-02-15",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -92870,7 +92870,7 @@
       "type": "birth",
       "principal": "15834-1261-2-P1",
       "date": "1745-02-22",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -92910,7 +92910,7 @@
       "type": "birth",
       "principal": "15834-1262-3-P1",
       "date": "1745-03-16",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -92934,7 +92934,7 @@
       "type": "birth",
       "principal": "15834-1263-2-P1",
       "date": "1745-03-27",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -93086,7 +93086,7 @@
       "type": "birth",
       "principal": "15834-1268-2-P1",
       "date": "1745-04-14",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -93190,7 +93190,7 @@
       "type": "birth",
       "principal": "15834-1271-2-P1",
       "date": "1745-05-30",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -93246,7 +93246,7 @@
       "type": "birth",
       "principal": "15834-1272-4-P1",
       "date": "1745-06-16",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -93262,7 +93262,7 @@
       "type": "birth",
       "principal": "15834-1273-1-P1",
       "date": "1745-06-24/1745-06-24",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -93286,7 +93286,7 @@
       "type": "birth",
       "principal": "15834-1273-3-P1",
       "date": "1745-06-26",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -93310,7 +93310,7 @@
       "type": "birth",
       "principal": "15834-1274-2-P1",
       "date": "1745-07-10",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -93366,7 +93366,7 @@
       "type": "birth",
       "principal": "15834-1276-2-P1",
       "date": "1745-07-30",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -93382,7 +93382,7 @@
       "type": "birth",
       "principal": "15834-1276-3-P1",
       "date": "1745-07-29",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -93422,7 +93422,7 @@
       "type": "birth",
       "principal": "15834-1277-4-P1",
       "date": "1745-07-27/1745-08-18",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -93510,7 +93510,7 @@
       "type": "birth",
       "principal": "15834-1280-2-P1",
       "date": "1745-08-20",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -93534,7 +93534,7 @@
       "type": "birth",
       "principal": "15834-1280-4-P1",
       "date": "1745-08-20",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -93550,7 +93550,7 @@
       "type": "birth",
       "principal": "15834-1281-1-P1",
       "date": "1745-09-13/1745-09-13",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -93566,7 +93566,7 @@
       "type": "birth",
       "principal": "15834-1281-2-P1",
       "date": "1745-09-17",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -93582,7 +93582,7 @@
       "type": "birth",
       "principal": "15834-1281-3-P1",
       "date": "1745-10-03",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -93630,7 +93630,7 @@
       "type": "birth",
       "principal": "15834-1282-4-P1",
       "date": "1745-10-23",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -93646,7 +93646,7 @@
       "type": "birth",
       "principal": "15834-1283-1-P1",
       "date": "1745-10-01/1745-11-01",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -93670,7 +93670,7 @@
       "type": "birth",
       "principal": "15834-1283-3-P1",
       "date": "1745-11-02",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -93694,7 +93694,7 @@
       "type": "birth",
       "principal": "15834-1284-1-P1",
       "date": "1745-11-08",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -93710,7 +93710,7 @@
       "type": "birth",
       "principal": "15834-1284-2-P1",
       "date": "1745-11-02",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -93726,7 +93726,7 @@
       "type": "birth",
       "principal": "15834-1284-3-P1",
       "date": "1745-11-06",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -93742,7 +93742,7 @@
       "type": "birth",
       "principal": "15834-1285-1-P1",
       "date": "1745-12-10/1745-11-10",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -93758,7 +93758,7 @@
       "type": "birth",
       "principal": "15834-1285-2-P1",
       "date": "1745-11-24",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -93790,7 +93790,7 @@
       "type": "birth",
       "principal": "15834-1286-3-P1",
       "date": "1746-12-29",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -93806,7 +93806,7 @@
       "type": "birth",
       "principal": "15834-1287-1-P1",
       "date": "1747-01-09/1746-12-09",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -93822,7 +93822,7 @@
       "type": "birth",
       "principal": "15834-1287-2-P1",
       "date": "1747-01-21/1746-12-21",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -93838,7 +93838,7 @@
       "type": "birth",
       "principal": "15834-1287-3-P1",
       "date": "1746-01-31",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -93854,7 +93854,7 @@
       "type": "birth",
       "principal": "15834-1288-1-P1",
       "date": "1746-12-06",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -93870,7 +93870,7 @@
       "type": "birth",
       "principal": "15834-1288-2-P1",
       "date": "1746-12-06",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -93886,7 +93886,7 @@
       "type": "birth",
       "principal": "15834-1288-3-P1",
       "date": "1746-12-03",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -93910,7 +93910,7 @@
       "type": "birth",
       "principal": "15834-1289-2-P1",
       "date": "1746-02-20",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -93942,7 +93942,7 @@
       "type": "birth",
       "principal": "15834-1290-2-P1",
       "date": "1746-12-25",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -93958,7 +93958,7 @@
       "type": "birth",
       "principal": "15834-1290-3-P1",
       "date": "1746-12-22",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -93974,7 +93974,7 @@
       "type": "birth",
       "principal": "15834-1291-1-P1",
       "date": "1746-12-01",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -93990,7 +93990,7 @@
       "type": "birth",
       "principal": "15834-1291-2-P1",
       "date": "1746-12-06",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -94054,7 +94054,7 @@
       "type": "birth",
       "principal": "15834-1293-1-P1",
       "date": "1746-05-20",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -94070,7 +94070,7 @@
       "type": "birth",
       "principal": "15834-1293-2-P1",
       "date": "1746-05-07",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -94086,7 +94086,7 @@
       "type": "birth",
       "principal": "15834-1293-3-P1",
       "date": "1746-12-01",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -94102,7 +94102,7 @@
       "type": "birth",
       "principal": "15834-1293-4-P1",
       "date": "1746-05-16",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -94166,7 +94166,7 @@
       "type": "birth",
       "principal": "15834-1295-3-P1",
       "date": "1746-12-08",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -94190,7 +94190,7 @@
       "type": "birth",
       "principal": "15834-1296-1-P1",
       "date": "1746-07-22",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -94206,7 +94206,7 @@
       "type": "birth",
       "principal": "15834-1296-2-P1",
       "date": "1746-12-18",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -94222,7 +94222,7 @@
       "type": "birth",
       "principal": "15834-1296-3-P1",
       "date": "1746-12-10",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -94254,7 +94254,7 @@
       "type": "birth",
       "principal": "15834-1297-3-P1",
       "date": "1746-11-30",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -94270,7 +94270,7 @@
       "type": "birth",
       "principal": "15834-1297-4-P1",
       "date": "1746-10-20",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -94286,7 +94286,7 @@
       "type": "birth",
       "principal": "15834-1298-1-P1",
       "date": "1746-12-27",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -94302,7 +94302,7 @@
       "type": "birth",
       "principal": "15834-1298-2-P1",
       "date": "1746-12-26",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -94318,7 +94318,7 @@
       "type": "birth",
       "principal": "15834-1298-3-P1",
       "date": "1746-12-15",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -94334,7 +94334,7 @@
       "type": "birth",
       "principal": "15834-1298-4-P1",
       "date": "1746-12-15",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -94350,7 +94350,7 @@
       "type": "birth",
       "principal": "15834-1299-1-P1",
       "date": "1746-12-05/1747-12-05",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -94374,7 +94374,7 @@
       "type": "birth",
       "principal": "15834-1299-3-P1",
       "date": "1747-01-12",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -94390,7 +94390,7 @@
       "type": "birth",
       "principal": "15834-1299-4-P1",
       "date": "1747-01-10",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -94406,7 +94406,7 @@
       "type": "birth",
       "principal": "15834-1300-1-P1",
       "date": "1747-01-09",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -94430,7 +94430,7 @@
       "type": "birth",
       "principal": "15834-1300-3-P1",
       "date": "1747-01-18",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -94446,7 +94446,7 @@
       "type": "birth",
       "principal": "15834-1301-1-P1",
       "date": "1747-02-10",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -94462,7 +94462,7 @@
       "type": "birth",
       "principal": "15834-1301-2-P1",
       "date": "1747-02-17",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -94478,7 +94478,7 @@
       "type": "birth",
       "principal": "15834-1301-3-P1",
       "date": "1747-02-16",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -94494,7 +94494,7 @@
       "type": "birth",
       "principal": "15834-1302-1-P1",
       "date": "1747-02-18",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -94510,7 +94510,7 @@
       "type": "birth",
       "principal": "15834-1302-2-P1",
       "date": "1747-02-22",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -94526,7 +94526,7 @@
       "type": "birth",
       "principal": "15834-1302-3-P1",
       "date": "1747-02-21",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -94542,7 +94542,7 @@
       "type": "birth",
       "principal": "15834-1303-1-P1",
       "date": "1747-03-14/1747-03-14",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -94566,7 +94566,7 @@
       "type": "birth",
       "principal": "15834-1303-3-P1",
       "date": "1747-03-24",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -94590,7 +94590,7 @@
       "type": "birth",
       "principal": "15834-1304-2-P1",
       "date": "1747-04-12",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -94606,7 +94606,7 @@
       "type": "birth",
       "principal": "15834-1304-3-P1",
       "date": "1747-04-06",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -94622,7 +94622,7 @@
       "type": "birth",
       "principal": "15834-1305-1-P1",
       "date": "1747-05-14/1746-04-14",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -94646,7 +94646,7 @@
       "type": "birth",
       "principal": "15834-1305-3-P1",
       "date": "1747-05-02",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -94678,7 +94678,7 @@
       "type": "birth",
       "principal": "15834-1306-3-P1",
       "date": "1747-05-29",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -94694,7 +94694,7 @@
       "type": "birth",
       "principal": "15834-1307-1-P1",
       "date": "1747-06-07/1747-06-07",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -94710,7 +94710,7 @@
       "type": "birth",
       "principal": "15834-1307-2-P1",
       "date": "1747-06-14",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -94726,7 +94726,7 @@
       "type": "birth",
       "principal": "15834-1307-3-P1",
       "date": "1747-06-23",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -94742,7 +94742,7 @@
       "type": "birth",
       "principal": "15834-1308-1-P1",
       "date": "1747-06-22",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -94766,7 +94766,7 @@
       "type": "birth",
       "principal": "15834-1308-3-P1",
       "date": "1747-06-24",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -94782,7 +94782,7 @@
       "type": "birth",
       "principal": "15834-1309-1-P1",
       "date": "1747-07-04",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -94798,7 +94798,7 @@
       "type": "birth",
       "principal": "15834-1309-2-P1",
       "date": "1747-07-23",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -94814,7 +94814,7 @@
       "type": "birth",
       "principal": "15834-1309-3-P1",
       "date": "1747-07-25",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -94830,7 +94830,7 @@
       "type": "birth",
       "principal": "15834-1310-1-P1",
       "date": "1747-08-09",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -94846,7 +94846,7 @@
       "type": "birth",
       "principal": "15834-1310-2-P1",
       "date": "1747-08-01",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -94862,7 +94862,7 @@
       "type": "birth",
       "principal": "15834-1310-3-P1",
       "date": "1747-08-17",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -94886,7 +94886,7 @@
       "type": "birth",
       "principal": "15834-1311-2-P1",
       "date": "1747-08-17",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -94910,7 +94910,7 @@
       "type": "birth",
       "principal": "15834-1312-1-P1",
       "date": "1747-08-28",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -94926,7 +94926,7 @@
       "type": "birth",
       "principal": "15834-1312-2-P1",
       "date": "1747-08-24",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -94942,7 +94942,7 @@
       "type": "birth",
       "principal": "15834-1312-3-P1",
       "date": "1747-08-30",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -94958,7 +94958,7 @@
       "type": "birth",
       "principal": "15834-1313-1-P1",
       "date": "1747-08-26",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -94974,7 +94974,7 @@
       "type": "birth",
       "principal": "15834-1313-2-P1",
       "date": "1747-09-01",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -94990,7 +94990,7 @@
       "type": "birth",
       "principal": "15834-1313-3-P1",
       "date": "1747-09-30",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -95006,7 +95006,7 @@
       "type": "birth",
       "principal": "15834-1314-1-P1",
       "date": "1747-10-03",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -95022,7 +95022,7 @@
       "type": "birth",
       "principal": "15834-1314-2-P1",
       "date": "1747-09-30",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -95038,7 +95038,7 @@
       "type": "birth",
       "principal": "15834-1314-3-P1",
       "date": "1747-10-01",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -95054,7 +95054,7 @@
       "type": "birth",
       "principal": "15834-1315-1-P1",
       "date": "1747-10-13/1747-10-13",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -95086,7 +95086,7 @@
       "type": "birth",
       "principal": "15834-1316-1-P1",
       "date": "1747-10-31",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -95110,7 +95110,7 @@
       "type": "birth",
       "principal": "15834-1316-3-P1",
       "date": "1747-12-10/1746-11-10",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -95134,7 +95134,7 @@
       "type": "birth",
       "principal": "15834-1317-2-P1",
       "date": "1747-11-27",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -95150,7 +95150,7 @@
       "type": "birth",
       "principal": "15834-1317-3-P1",
       "date": "1747-12-08",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -95166,7 +95166,7 @@
       "type": "birth",
       "principal": "15834-1318-1-P1",
       "date": "1747-12-13",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -95182,7 +95182,7 @@
       "type": "birth",
       "principal": "15834-1318-2-P1",
       "date": "1747-11-29",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -95198,7 +95198,7 @@
       "type": "birth",
       "principal": "15834-1318-3-P1",
       "date": "1747-12-14",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -95214,7 +95214,7 @@
       "type": "birth",
       "principal": "15834-1319-1-P1",
       "date": "1747-12-23/1748-01-17",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -95238,7 +95238,7 @@
       "type": "birth",
       "principal": "15834-1319-3-P1",
       "date": "1748-01-16",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -95270,7 +95270,7 @@
       "type": "birth",
       "principal": "15834-1320-3-P1",
       "date": "1748-01-29",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -95294,7 +95294,7 @@
       "type": "birth",
       "principal": "15834-1321-2-P1",
       "date": "1748-01-20",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -95310,7 +95310,7 @@
       "type": "birth",
       "principal": "15834-1321-3-P1",
       "date": "1748-02-06",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -95326,7 +95326,7 @@
       "type": "birth",
       "principal": "15834-1322-1-P1",
       "date": "1748-02-07",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -95342,7 +95342,7 @@
       "type": "birth",
       "principal": "15834-1322-2-P1",
       "date": "1748-02-11",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -95358,7 +95358,7 @@
       "type": "birth",
       "principal": "15834-1322-3-P1",
       "date": "1748-03-02",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -95382,7 +95382,7 @@
       "type": "birth",
       "principal": "15834-1323-2-P1",
       "date": "1748-03-08",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -95398,7 +95398,7 @@
       "type": "birth",
       "principal": "15834-1323-3-P1",
       "date": "1748-03-21",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -95422,7 +95422,7 @@
       "type": "birth",
       "principal": "15834-1324-2-P1",
       "date": "1748-03-29",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -95454,7 +95454,7 @@
       "type": "birth",
       "principal": "15834-1325-2-P1",
       "date": "1748-06-16",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -95478,7 +95478,7 @@
       "type": "birth",
       "principal": "15834-1326-1-P1",
       "date": "1748-07-24/1747-06-24",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -95494,7 +95494,7 @@
       "type": "birth",
       "principal": "15834-1326-2-P1",
       "date": "1748-06-24",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -95510,7 +95510,7 @@
       "type": "birth",
       "principal": "15834-1326-3-P1",
       "date": "1748-06-27",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -95550,7 +95550,7 @@
       "type": "birth",
       "principal": "15834-1328-1-P1",
       "date": "1748-08-11/1747-07-11",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -95566,7 +95566,7 @@
       "type": "birth",
       "principal": "15834-1328-2-P1",
       "date": "1748-07-20",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -95582,7 +95582,7 @@
       "type": "birth",
       "principal": "15834-1328-3-P1",
       "date": "1748-07-31/1748-07-31",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -95606,7 +95606,7 @@
       "type": "birth",
       "principal": "15834-1329-2-P1",
       "date": "1748-08-02",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -95622,7 +95622,7 @@
       "type": "birth",
       "principal": "15834-1329-3-P1",
       "date": "1748-08-06",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -95638,7 +95638,7 @@
       "type": "birth",
       "principal": "15834-1330-1-P1",
       "date": "1748-09-13/1748-09-13",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -95678,7 +95678,7 @@
       "type": "birth",
       "principal": "15834-1331-2-P1",
       "date": "1748-09-15",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -95694,7 +95694,7 @@
       "type": "birth",
       "principal": "15834-1331-3-P1",
       "date": "1748-09-20",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -95710,7 +95710,7 @@
       "type": "birth",
       "principal": "15834-1332-1-P1",
       "date": "1748-10-05/1748-10-05",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -95734,7 +95734,7 @@
       "type": "birth",
       "principal": "15834-1332-3-P1",
       "date": "1748-10-10/1748-10-30",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -95774,7 +95774,7 @@
       "type": "birth",
       "principal": "15834-1334-1-P1",
       "date": "1748-11-20",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -95790,7 +95790,7 @@
       "type": "birth",
       "principal": "15834-1334-2-P1",
       "date": "1748-12-08",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -95806,7 +95806,7 @@
       "type": "birth",
       "principal": "15834-1334-3-P1",
       "date": "1748-12-05",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -95822,7 +95822,7 @@
       "type": "birth",
       "principal": "15834-1335-1-P1",
       "date": "1748-12-17/1748-12-17",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -95838,7 +95838,7 @@
       "type": "birth",
       "principal": "15834-1335-2-P1",
       "date": "1749-01-11",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -95862,7 +95862,7 @@
       "type": "birth",
       "principal": "15834-1336-1-P1",
       "date": "1749-01-17",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -95878,7 +95878,7 @@
       "type": "birth",
       "principal": "15834-1336-2-P1",
       "date": "1749-01-23",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -95894,7 +95894,7 @@
       "type": "birth",
       "principal": "15834-1336-3-P1",
       "date": "1749-01-20",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -95918,7 +95918,7 @@
       "type": "birth",
       "principal": "15834-1337-2-P1",
       "date": "1749-02-15",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -95950,7 +95950,7 @@
       "type": "birth",
       "principal": "15834-1338-2-P1",
       "date": "1749-03-28",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -95966,7 +95966,7 @@
       "type": "birth",
       "principal": "15834-1338-3-P1",
       "date": "1749-03-25",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -95990,7 +95990,7 @@
       "type": "birth",
       "principal": "15834-1339-2-P1",
       "date": "1749-04-13/1749-05-13",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -96022,7 +96022,7 @@
       "type": "birth",
       "principal": "15834-1340-2-P1",
       "date": "1749-05-26",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -96054,7 +96054,7 @@
       "type": "birth",
       "principal": "15834-1341-2-P1",
       "date": "1749-07-10",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -96070,7 +96070,7 @@
       "type": "birth",
       "principal": "15834-1341-3-P1",
       "date": "1749-07-17/1749-08-08",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     },
     {
@@ -96086,7 +96086,7 @@
       "type": "birth",
       "principal": "15834-1342-1-P1",
       "date": "1749-08-02",
-      "location": "unknown",
+      "location": null,
       "cleric": null
     }
   ]
