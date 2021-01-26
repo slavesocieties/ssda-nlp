@@ -278,13 +278,31 @@ def process_volume(path_to_transcription, path_to_model):
     #normalize names and all characteristics
     names = []
     name_counts = []
-    chars = []
 
     for person in people:
-        if (not (person["titles"] in chars)) and (person["titles"] != None):
-            chars.append(person["titles"])
         #normalize characteristics
-        #strip out duplicate characteristics
+        for key in person:
+            if person[key] == None:
+                continue
+            if key == "name":
+                person[key] = normalize_text(person[key], "synonyms.json", context="name")
+            elif key == "ethnicities":
+                person[key] = normalize_text(person[key], "synonyms.json", context="ethnonym")
+            elif (key != "id") and (key != "relationships"):
+                if person[key].find(';') == -1:
+                    person[key] = normalize_text(person[key], "synonyms.json", context="characteristic")
+                else:
+                    char_comp = person[key].split(';')
+                    person[key] = ""
+                    #strip out duplicate characteristics
+                    for char in char_comp:
+                        char = normalize_text(char, "synonyms.json", context="characteristic")
+                        if not (char in person[key]):
+                            if person[key] == "":
+                                person[key] = char
+                            else:
+                                person[key] = person[key] + ';' + char
+
         #translate characteristics to English
         #future improvement: find additional references for plural characteristics
 
@@ -295,9 +313,6 @@ def process_volume(path_to_transcription, path_to_model):
             else:
                 names.append(person["name"])
                 name_counts.append(1)
-
-    chars.sort()
-    print(chars)
 
     #disambiguate and merge people across the volume
     redundant_records = []

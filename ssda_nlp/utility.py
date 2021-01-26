@@ -28,11 +28,11 @@ def normalize_text(text, path_to_dict, context=None):
 
         returns: normalized text, as a string
     '''
-    with open(path_to_dict) as infile:
+    with open(path_to_dict, encoding="utf-8") as infile:
         synonyms = json.load(infile)
 
     for word in synonyms["words"]:
-        if (context != None) and ("context" in word) and (context != word["context"]):
+        if (context != None) and ("context" in word) and (context not in word["context"]):
             continue
         for synonym in word["synonyms"]:
             text = (' ' + text + ' ').replace(' ' + synonym + ' ', ' ' + word["baseword"] + ' ')
