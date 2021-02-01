@@ -319,7 +319,20 @@ def process_volume(path_to_transcription, path_to_model):
                                 if normalize_text(token, "synonyms.json", context="characteristic") == phenotype:
                                     person["name"] = person["name"].replace(' ' + token, '')
             elif key == "ethnicities":
-                person[key] = normalize_text(person[key], "synonyms.json", context="ethnonym")
+                if person[key].find(';') == -1:
+                    person[key] = normalize_text(person[key], "synonyms.json", context="ethnonym")
+                else:
+                    char_comp = person[key].split(';')
+                    person[key] = ""
+                    #strip out duplicate characteristics
+                    for char in char_comp:
+                        char = normalize_text(char, "synonyms.json", context="ethnonym")
+
+                        if not (char in person[key]):
+                            if person[key] == "":
+                                person[key] = char
+                            else:
+                                person[key] = person[key] + ';' + char
             elif (key != "id") and (key != "relationships"):
                 if person[key].find(';') == -1:
                     person[key] = normalize_text(person[key], "synonyms.json", context="characteristic")
