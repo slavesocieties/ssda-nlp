@@ -46,8 +46,10 @@ def process_volume(path_to_transcription, path_to_model):
 
     if volume_metadata["country"] == "Brazil":
         lang = "pt"
+        language = "portuguese"
     else:
         lang = "es"
+        language = "spanish"
 
     #load and apply trained model
 
@@ -278,32 +280,63 @@ def process_volume(path_to_transcription, path_to_model):
     #normalize names and all characteristics
     names = []
     name_counts = []
+    ethnonym_vocab = retrieve_json_vocab("synonyms.json", "ethnonyms")
+    phenotype_vocab = retrieve_json_vocab("synonyms.json", "phenotypes", language="spanish")
 
     for person in people:
-        #normalize characteristics
+        #normalize characteristics and translate to English
         for key in person:
             if person[key] == None:
                 continue
             if key == "name":
                 person[key] = normalize_text(person[key], "synonyms.json", context="name")
+                #check extracted name for ethnonyms and/or attributed phenotypes
+                if (person["name"] != None) and (person["name"] != normalize_text(person["name"], "synonyms.json", context="ethnonym")):
+                    for token in person["name"].split(' '):
+                        eth_norm = normalize_text(token, "synonyms.json", context="ethnonym")
+                        if token != eth_norm:
+                            if (person["ethnicities"] == None) or (not (eth_norm in person["ethnicities"])):
+                                if person["ethnicities"] == None:
+                                    person["ethnicities"] = eth_norm
+                                else:
+                                    person["ethnicities"] = person["ethnicities"] + ';' + eth_norm
+                    person["name"] = normalize_text(person["name"], "synonyms.json", context="ethnonym")
+                else:
+                    for ethnonym in ethnonym_vocab:
+                        if ethnonym in person["name"]:
+                            if person["ethnicities"] == None:
+                                person["ethnicities"] = ethnonym
+                            else:
+                                person["ethnicities"] = person["ethnicities"] + ';' + ethnonym
+                for phenotype in phenotype_vocab:
+                    if phenotype in normalize_text(person[key], "synonyms.json", context="characteristic"):
+                        if person["phenotype"] == None:
+                            person["phenotype"] = phenotype
+                        else:
+                            person["phenotype"] = person["phenotype"] + ';' + phenotype
+                        if phenotype[-1] == 's':
+                            for token in person["name"].split(' '):
+                                if normalize_text(token, "synonyms.json", context="characteristic") == phenotype:
+                                    person["name"] = person["name"].replace(' ' + token, '')
             elif key == "ethnicities":
                 person[key] = normalize_text(person[key], "synonyms.json", context="ethnonym")
             elif (key != "id") and (key != "relationships"):
                 if person[key].find(';') == -1:
                     person[key] = normalize_text(person[key], "synonyms.json", context="characteristic")
+                    person[key] = translate_characteristic(person[key], "synonyms.json", language)
                 else:
                     char_comp = person[key].split(';')
                     person[key] = ""
                     #strip out duplicate characteristics
                     for char in char_comp:
                         char = normalize_text(char, "synonyms.json", context="characteristic")
+                        char = translate_characteristic(char, "synonyms.json", language)
                         if not (char in person[key]):
                             if person[key] == "":
                                 person[key] = char
                             else:
                                 person[key] = person[key] + ';' + char
 
-        #translate characteristics to English
         #future improvement: find additional references for plural characteristics
 
         #count name frequency
