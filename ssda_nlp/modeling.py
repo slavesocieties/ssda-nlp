@@ -10,6 +10,7 @@ __all__ = ['load_model', 'train_model', 'save_model', 'test_model']
 import nltk
 import spacy
 from spacy.util import minibatch, compounding
+from spacy.training import Example
 
 #ssda modules for testing
 from .collate import genSpaCyInput
@@ -70,9 +71,10 @@ def train_model(nlp, training_data, n_iter=100, dropout=0.5, compound_params=Non
     # use ner_init for blank models whose ner weights will need to be initialized later
     ner_init = False
     if "ner" not in nlp.pipe_names:
-        ner = nlp.create_pipe("ner")
-        nlp.add_pipe(ner, last=True)
+        #ner = nlp.create_pipe("ner")
+        nlp.add_pipe("ner", last=True)
         ner_init = True
+        ner = nlp.get_pipe("ner")
     # otherwise, get it so we can add labels
     else:
         ner = nlp.get_pipe("ner")
@@ -118,18 +120,21 @@ def train_model(nlp, training_data, n_iter=100, dropout=0.5, compound_params=Non
         losses_df = pd.DataFrame(np.zeros(shape=(n_iter, 1)), columns=['epoch_loss'])
 
         # train batches of data for n_iter iterations
+        examples = []
+        for text, annots in training_data:
+            examples.append(Example.from_dict(nlp.make_doc(text), annots))
+            #nlp.initialize(lambda: examples)
+
         for itn in range(n_iter):
-            random.shuffle(training_data)
+            random.shuffle(examples)
             losses = {}
 
             # Create variable size minibatch
-            batches = minibatch(training_data, size=compounding(cp_params['start'], cp_params['end'], cp_params['cp_rate']))
+            batches = minibatch(examples, size=compounding(cp_params['start'], cp_params['end'], cp_params['cp_rate']))
             for batch in batches:
-                texts, annotations = zip(*batch)
                 #implement dropout decay?
                 nlp.update(
-                    texts,
-                    annotations,
+                    batch,
                     drop = dropout,
                     losses = losses,
                 )
@@ -229,14 +234,19 @@ def test_model(nlp_model, testing_df, id_colname, text_colname, score_model=True
 
     if score_model:
         spacy_test_data = genSpaCyInput(testing_df)
-        nlp_scorer = nlp_model.evaluate(spacy_test_data)
+
+        examples = []
+        for text, annots in spacy_test_data:
+            examples.append(Example.from_dict(nlp_model.make_doc(text), annots))
+
+        nlp_scorer = nlp_model.evaluate(examples)
 
         # Build dataframe of results
-        pred_metrics = pd.DataFrame({'precision': [nlp_scorer.ents_p],
-                                     'recall': [nlp_scorer.ents_r],
-                                     'f_score': [nlp_scorer.ents_f],
+        pred_metrics = pd.DataFrame({'precision': [nlp_scorer['ents_p'] * 100],
+                                     'recall': [nlp_scorer['ents_r'] * 100],
+                                     'f_score': [nlp_scorer['ents_f'] * 100],
                                     })
 
-        per_ent_metrics = pd.DataFrame({**nlp_scorer.ents_per_type})
+        per_ent_metrics = pd.DataFrame({**nlp_scorer['ents_per_type']})
 
     return preds_df, pred_metrics, per_ent_metrics
