@@ -277,7 +277,7 @@ def complete_date(date, pvs_date, subs_date):
                     elif (pvs_year == year) and (pvs_day <= day):
                         return year + '-' + pvs_month + '-' + day + '/' + year + '-12-' + day
                     elif (pvs_year == year):
-                        next_month = str(int(month) + 1)
+                        next_month = str(int(pvs_month) + 1)
                         if len(next_month) == 1:
                             next_month = '0' + next_month
                         if next_month == "13":
