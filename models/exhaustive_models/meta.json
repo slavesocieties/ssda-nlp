@@ -18,10 +18,14 @@
   "labels":{
     "ner":[
       "CHAR",
+      "CHARACTERISTICS",
       "DATE",
       "LOC",
+      "LOCATION",
       "PER",
-      "REL"
+      "PERSON",
+      "REL",
+      "RELATIONSHIPS"
     ]
   },
   "pipeline":[
