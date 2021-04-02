@@ -303,13 +303,13 @@ def complete_date(date, pvs_date, subs_date):
                         else:
                             return pvs_year + '-' + month + '-01/' + subs_year + '-' + next_month + '-01'
                     elif (int(month) >= int(pvs_month)):
-                        subs_year = int(subs_year) - 1
+                        subs_year = str(int(subs_year) - 1)
                         if next_month == "13":
                             return pvs_year + '-' + month + '-01/' + str(int(subs_year) + 1) + '-01-01'
                         else:
                             return pvs_year + '-' + month + '-01/' + subs_year + '-' + next_month + '-01'
                     elif (int(month) <= int(subs_month)):
-                        pvs_year = int(pvs_year) + 1
+                        pvs_year = str(int(pvs_year) + 1)
                         if next_month == "13":
                             return pvs_year + '-' + month + '-01/' + str(int(subs_year) + 1) + '-01-01'
                         else:
