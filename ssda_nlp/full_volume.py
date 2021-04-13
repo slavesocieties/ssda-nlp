@@ -377,8 +377,12 @@ def process_volume(path_to_transcription, path_to_model):
 
     print("People records enhanced and disambiguated.")
 
+    #reduce compound person IDs to single ID, add references field
+    people, events = compact_references(people, events)
+
+    print("Single ID generated for each individual.")
+
     #convert dictionaries into JSON
-    json_path = volume_metadata["id"] + ".json"
     with open("volume_records\\" + volume_metadata["id"] + ".json", "w") as outfile:
         outfile.write('{\n\"volume\": \n')
         json.dump(volume_metadata, outfile)
