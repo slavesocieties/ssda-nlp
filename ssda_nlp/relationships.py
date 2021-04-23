@@ -158,7 +158,7 @@ def alt_assign_relationships(entry_text, entities, people_df, people, volume_met
     relationships.reset_index(inplace=True)
     characteristics = copy.deepcopy(entities.loc[entities['pred_label'] == 'CHAR'])
     characteristics.reset_index(inplace=True)
-    cat_char = categorize_characteristics(characteristics)
+    cat_char = categorize_characteristics(entities, characteristics)
     entities.reset_index(inplace=True)
 
     if determine_principals(entry_text, entities, 1) != None:
@@ -316,7 +316,7 @@ def alt_assign_relationships(entry_text, entities, people_df, people, volume_met
 
 # Cell
 
-def categorize_characteristics(characteristics_df):
+def categorize_characteristics(entities_df, characteristics_df):
     '''
     determines which category each labeled characteristic belongs to
         characteristics_df: entities given the label "CHAR" from a single entry by an NER model
@@ -327,8 +327,20 @@ def categorize_characteristics(characteristics_df):
     vocabs = retrieve_controlled_vocabularies()
     categories = []
 
-    for index, characteristic in characteristics_df.iterrows():
+    for index, characteristic in entities_df.iterrows():
+        if characteristic["pred_label"] != "CHAR":
+            continue
         category = None
+        if characteristic["pred_entity"] in ["Natural", "nral", "Nat.l", "N.l", "nat.l", "natural"]:
+            loc_indices = []
+            for i, entity in entities_df.iterrows():
+                if entity["pred_label"] == "LOC":
+                    loc_indices.append(i)
+            for loc_index in loc_indices:
+                if ((loc_index - index) == 1):
+                    category = "origin"
+            if category == None:
+                category = "legitimacy"
         for cat in vocabs:
             if (characteristic['pred_entity'] == 'h') or (characteristic['pred_entity'] == "h."):
                 category = "relationships"
@@ -349,7 +361,7 @@ def categorize_characteristics(characteristics_df):
 # Cell
 #this is currently configured specifically for baptisms/burials
 
-def assign_characteristics(entry_text, characteristics_df, unique_individuals, volume_metadata):
+def assign_characteristics(entry_text, entities_df, characteristics_df, unique_individuals, volume_metadata):
     '''
     matches all labeled characteristics to the correct individual(s) and builds triples
         entry_text: the full text of a single entry, ported directly from spaCy to ensure congruity
@@ -361,7 +373,7 @@ def assign_characteristics(entry_text, characteristics_df, unique_individuals, v
     '''
     people = []
     ethnicities = retrieve_controlled_vocabularies()["ethnicities"]
-    categorized_characteristics = categorize_characteristics(characteristics_df)
+    categorized_characteristics = categorize_characteristics(entities_df, characteristics_df)
     assignments = [None] * len(characteristics_df.index)
     categorized_characteristics.reset_index(inplace=True)
     unique_individuals.reset_index(inplace=True)
@@ -1103,6 +1115,10 @@ def merge_records(records_to_merge):
 
         returns: single, merged dictionary
     '''
+    #why is this necessary?
+    if len(records_to_merge) <= 1:
+        return records_to_merge
+
     merged_record = records_to_merge[0]
 
     for i in range(1, len(records_to_merge)):
@@ -1143,18 +1159,30 @@ def merge_duplicates(people, duplicates):
 
     if (len(duplicates["principal"]) > 1):
         dups = []
+        del_indices = []
         for person in people:
             if (person['id'] in duplicates["principal"]):
                 dups.append(person)
-                del people[people.index(person)]
+                del_indices.append(people.index(person))
+        minus = 0
+        del_indices.sort()
+        for index in del_indices:
+            del people[index - minus]
+            minus += 1
         people.append(merge_records(dups))
 
     if (len(duplicates["cleric"]) > 1):
         dups = []
+        del_indices = []
         for person in people:
             if (person['id'] in duplicates["cleric"]):
                 dups.append(person)
-                del people[people.index(person)]
+                del_indices.append(people.index(person))
+        minus = 0
+        del_indices.sort()
+        for index in del_indices:
+            del people[index - minus]
+            minus += 1
         people.append(merge_records(dups))
 
     return people
@@ -1222,8 +1250,8 @@ def build_entry_metadata(entry_text, entities, path_to_volume_xml, entry_number=
         if (len(dates_df.index) > 1):
             events.append(build_event(entry_text, entities, "birth", principal, volume_metadata, 2, people_df))
 
-        characteristics_df = categorize_characteristics(characteristics_df)
-        people = assign_characteristics(entry_text, characteristics_df, people_df, volume_metadata)
+        characteristics_df = categorize_characteristics(entities, characteristics_df)
+        people = assign_characteristics(entry_text, entities, characteristics_df, people_df, volume_metadata)
 
         people = alt_assign_relationships(entry_text, entities, people_df, people, volume_metadata)
 

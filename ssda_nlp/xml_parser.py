@@ -76,6 +76,7 @@ def parse_xml_v2(path_to_xml):
     curr_entry = ""
 
     in_entry = False
+    in_partial_entry = False
 
     for line in master_xml:
         if "<volume" in line:
@@ -90,19 +91,27 @@ def parse_xml_v2(path_to_xml):
             id_start = line.find('\"', line.find("id=")) + 1
             id_end = line.find('\"', id_start)
             curr_fol_id = line[id_start:id_end]
+        elif ("<entry" in line) and in_partial_entry:
+            in_partial_entry = False
+            vol_titls.append(curr_vol_titl)
+            vol_ids.append(curr_vol_id)
+            fol_ids.append(str(int(curr_fol_id) - 1))
+            entry_txts.append(curr_entry)
+            entry_ids.append(str(int(curr_fol_id) - 1) + '-' + str(partial_id))
+            curr_entry = ''
+            in_entry = True
+            entry_id += 1
         elif "<entry" in line:
             entry_id += 1
             in_entry = True
             curr_entry = ""
-        elif in_entry and (not "</entry>" in line):
-            if (len(curr_entry) > 0) and (curr_entry[-1] == '-'):
-                curr_entry = curr_entry[:-1]
-                curr_entry += line
-            elif len(curr_entry) > 0:
-                curr_entry += ' ' + line
-            else:
-                curr_entry += line
-            curr_entry = curr_entry[:-1]
+        elif "<partial id" in line:
+            in_partial_entry = True
+            entry_id += 1
+            partial_id = entry_id
+            curr_entry = ''
+        elif in_partial_entry and ("image" in line) or ("partial" in line):
+            continue
         elif in_entry and ("</entry>" in line):
             in_entry = False
             vol_titls.append(curr_vol_titl)
@@ -110,6 +119,21 @@ def parse_xml_v2(path_to_xml):
             fol_ids.append(curr_fol_id)
             entry_txts.append(curr_entry)
             entry_ids.append(curr_fol_id + '-' + str(entry_id))
+        elif in_entry or in_partial_entry:
+            while line[0] == ' ':
+                line = line[1:]
+            if ((line[len(line) - 1] == '\n') or (line[len(line) - 1] == '\n')) and (line[len(line) - 2] == '-'):
+                curr_entry += line[:len(line) - 2]
+            elif line[len(line) - 1] == '-':
+                curr_entry += line[:len(line) - 1]
+            elif (line == '\n') or (line == '\n'):
+                continue
+            elif (line[len(line) - 1] == '\n') or (line[len(line) - 1] == '\n'):
+                curr_entry += line[:len(line) - 1] + ' '
+            else:
+                while line[len(line) - 1] == ' ':
+                    line = line[:-1]
+                curr_entry += line
 
     columns = {'vol_titl':vol_titls, 'vol_id':vol_ids, 'fol_id':fol_ids, 'text':entry_txts, 'entry_no':entry_ids}
 
@@ -136,6 +160,7 @@ def xml_v2_to_json(path_to_xml):
     curr_img_num = ""
 
     in_entry = False
+    in_partial_entry = False
 
     images = []
     curr_img_dict = None
@@ -165,19 +190,28 @@ def xml_v2_to_json(path_to_xml):
                 num_end = line.find('\"', num_start)
                 curr_img_num = line[num_start:num_end]
             curr_img_dict = {"id": curr_img_id, "type": curr_img_type, "number": curr_img_num, "entries": []}
+        elif ("<entry" in line) and in_partial_entry:
+            in_partial_entry = False
+            vol_titls.append(curr_vol_titl)
+            vol_ids.append(curr_vol_id)
+            img_ids.append(str(int(curr_img_id) - 1))
+            entry_txts.append(curr_entry)
+            entry_ids.append(str(int(curr_img_id) - 1) + '-' + str(partial_id))
+            curr_img_dict["entries"].append({"id": entry_id, "text": curr_entry})
+            curr_entry = ''
+            in_entry = True
+            entry_id += 1
         elif "<entry" in line:
             entry_id += 1
             in_entry = True
             curr_entry = ""
-        elif in_entry and (not "</entry>" in line):
-            if (len(curr_entry) > 0) and (curr_entry[-1] == '-'):
-                curr_entry = curr_entry[:-1]
-                curr_entry += line
-            elif len(curr_entry) > 0:
-                curr_entry += ' ' + line
-            else:
-                curr_entry += line
-            curr_entry = curr_entry[:-1]
+        elif "<partial id" in line:
+            in_partial_entry = True
+            entry_id += 1
+            partial_id = entry_id
+            curr_entry = ''
+        elif in_partial_entry and ("image" in line) or ("partial" in line):
+            continue
         elif in_entry and ("</entry>" in line):
             in_entry = False
             vol_titls.append(curr_vol_titl)
@@ -186,6 +220,21 @@ def xml_v2_to_json(path_to_xml):
             entry_txts.append(curr_entry)
             entry_ids.append(curr_img_id + '-' + str(entry_id))
             curr_img_dict["entries"].append({"id": entry_id, "text": curr_entry})
+        elif in_entry or in_partial_entry:
+            while line[0] == ' ':
+                line = line[1:]
+            if ((line[len(line) - 1] == '\n') or (line[len(line) - 1] == '\n')) and (line[len(line) - 2] == '-'):
+                curr_entry += line[:len(line) - 2]
+            elif line[len(line) - 1] == '-':
+                curr_entry += line[:len(line) - 1]
+            elif (line == '\n') or (line == '\n'):
+                continue
+            elif (line[len(line) - 1] == '\n') or (line[len(line) - 1] == '\n'):
+                curr_entry += line[:len(line) - 1] + ' '
+            else:
+                while line[len(line) - 1] == ' ':
+                    line = line[:-1]
+                curr_entry += line
         elif "</ssda" in line:
             images.append(curr_img_dict)
 
