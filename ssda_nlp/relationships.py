@@ -110,6 +110,19 @@ def build_reciprocal_relationship(people, from_person, to_person, relationship_t
             else:
                 people[to_loc]['relationships'].append({"related_person": from_person, "relationship_type": "parent"})
 
+    elif relationship_type == "grandparent":
+        if not no_from:
+            if empty_from:
+                people[from_loc]['relationships'] = [{"related_person": to_person, "relationship_type": "grandchild"}]
+            else:
+                people[from_loc]['relationships'].append({"related_person": to_person, "relationship_type": "grandchild"})
+
+        if not no_to:
+            if empty_to:
+                people[to_loc]['relationships'] = [{"related_person": from_person, "relationship_type": "grandparent"}]
+            else:
+                people[to_loc]['relationships'].append({"related_person": from_person, "relationship_type": "grandparent"})
+
     elif relationship_type == "enslaver":
         if not no_from:
             if empty_from:
@@ -158,7 +171,7 @@ def alt_assign_relationships(entry_text, entities, people_df, people, volume_met
     relationships.reset_index(inplace=True)
     characteristics = copy.deepcopy(entities.loc[entities['pred_label'] == 'CHAR'])
     characteristics.reset_index(inplace=True)
-    cat_char = categorize_characteristics(characteristics)
+    cat_char = categorize_characteristics(entities, characteristics)
     entities.reset_index(inplace=True)
 
     if determine_principals(entry_text, entities, 1) != None:
@@ -176,6 +189,8 @@ def alt_assign_relationships(entry_text, entities, people_df, people, volume_met
 
     found_parents = False
     found_godparents = False
+    found_paternal_grandparents = False
+    found_maternal_grandparents = False
 
     #build godparent/godchild relationships
     #future improvement: add logic to look for spousal relationship between godparents
@@ -223,6 +238,134 @@ def alt_assign_relationships(entry_text, entities, people_df, people, volume_met
                                     from_person = people_df['unique_id'][j]
                             people = build_reciprocal_relationship(people, from_person, principal_id, "godparent")
                             found_godparents = True
+                #build grandparents
+                elif ("abuelos" in entities["pred_entity"][index].lower()):
+                    if ("paternos" in entities["pred_entity"][index].lower()) and (found_paternal_grandparents == False):
+                        paternal_grandfather = ''
+                        paternal_grandmother = ''
+                        if entities["pred_label"][index + 1] == "PER":
+                            for j in range(len(people_df)):
+                                if people_df['pred_start'][j] == entities['pred_start'][index + 1]:
+                                    grandparent_id = people_df['unique_id'][j]
+                                    break
+                            if determine_sex(entities["pred_entity"][index + 1].split(' ')[0], name_list="names.json") == "male":
+                                paternal_grandfather = grandparent_id
+                                paternal_grandfather_index = j
+                            elif determine_sex(entities["pred_entity"][index + 1].split(' ')[0], name_list="names.json") == "female":
+                                paternal_grandmother = grandparent_id
+                                paternal_grandmother_index = j
+                            else:
+                                paternal_grandmother = grandparent_id
+                                paternal_grandmother_index = j
+                            if entities["pred_label"][index + 2] == "PER":
+                                for j in range(len(people_df)):
+                                    if people_df['pred_start'][j] == entities['pred_start'][index + 2]:
+                                        grandparent_id = people_df['unique_id'][j]
+                                        break
+                                if (determine_sex(entities["pred_entity"][index + 2].split(' ')[0], name_list="names.json") == "male") and (paternal_grandfather == ''):
+                                    paternal_grandfather = grandparent_id
+                                    paternal_grandfather_index = j
+                                elif (determine_sex(entities["pred_entity"][index + 2].split(' ')[0], name_list="names.json") == "female") and (paternal_grandmother == ''):
+                                    paternal_grandmother = grandparent_id
+                                    paternal_grandmother_index = j
+                                elif paternal_grandmother == '':
+                                    paternal_grandmother = grandparent_id
+                                    paternal_grandmother_index = j
+                                else:
+                                    paternal_grandfather = grandparent_id
+                                    paternal_grandfather_index = j
+                        if paternal_grandfather != '':
+                            found_paternal_grandparents = True
+                            people = build_reciprocal_relationship(people, paternal_grandfather, principal_id, "grandparent")
+                        if paternal_grandmother != '':
+                            found_paternal_grandparents = True
+                            people = build_reciprocal_relationship(people, paternal_grandmother, principal_id, "grandparent")
+                        if (paternal_grandfather != '') and (paternal_grandmother != ''):
+                            people = build_reciprocal_relationship(people, paternal_grandfather, paternal_grandmother, "spouse")
+                    elif ("maternos" in entities["pred_entity"][index].lower()) and (found_paternal_grandparents == False):
+                        maternal_grandfather = ''
+                        maternal_grandmother = ''
+                        if entities["pred_label"][index + 1] == "PER":
+                            for j in range(len(people_df)):
+                                if people_df['pred_start'][j] == entities['pred_start'][index + 1]:
+                                    grandparent_id = people_df['unique_id'][j]
+                                    break
+                            if determine_sex(entities["pred_entity"][index + 1].split(' ')[0], name_list="names.json") == "male":
+                                maternal_grandfather = grandparent_id
+                                maternal_grandfather_index = j
+                            elif determine_sex(entities["pred_entity"][index + 1].split(' ')[0], name_list="names.json") == "female":
+                                maternal_grandmother = grandparent_id
+                                maternal_grandmother_index = j
+                            else:
+                                maternal_grandmother = grandparent_id
+                                maternal_grandmother_index = j
+                            if entities["pred_label"][index + 2] == "PER":
+                                for j in range(len(people_df)):
+                                    if people_df['pred_start'][j] == entities['pred_start'][index + 2]:
+                                        grandparent_id = people_df['unique_id'][j]
+                                        break
+                                if (determine_sex(entities["pred_entity"][index + 2].split(' ')[0], name_list="names.json") == "male") and (maternal_grandfather == ''):
+                                    maternal_grandfather = grandparent_id
+                                    maternal_grandfather_index = j
+                                elif (determine_sex(entities["pred_entity"][index + 2].split(' ')[0], name_list="names.json") == "female") and (maternal_grandmother == ''):
+                                    maternal_grandmother = grandparent_id
+                                    maternal_grandmother_index = j
+                                elif maternal_grandmother == '':
+                                    maternal_grandmother = grandparent_id
+                                    maternal_grandmother_index = j
+                                else:
+                                    maternal_grandfather = grandparent_id
+                                    maternal_grandfather_index = j
+                        if maternal_grandfather != '':
+                            found_maternal_grandparents = True
+                            people = build_reciprocal_relationship(people, maternal_grandfather, principal_id, "grandparent")
+                        if maternal_grandmother != '':
+                            found_maternal_grandparents = True
+                            people = build_reciprocal_relationship(people, maternal_grandmother, principal_id, "grandparent")
+                        if (maternal_grandfather != '') and (maternal_grandmother != ''):
+                            people = build_reciprocal_relationship(people, maternal_grandfather, maternal_grandmother, "spouse")
+                elif ("maternos" in entities["pred_entity"][index].lower()) and found_paternal_grandparents and (found_maternal_grandparents == False):
+                    maternal_grandfather = ''
+                    maternal_grandmother = ''
+                    if entities["pred_label"][index + 1] == "PER":
+                        for j in range(len(people_df)):
+                            if people_df['pred_start'][j] == entities['pred_start'][index + 1]:
+                                grandparent_id = people_df['unique_id'][j]
+                                break
+                        if determine_sex(entities["pred_entity"][index + 1].split(' ')[0], name_list="names.json") == "male":
+                            maternal_grandfather = grandparent_id
+                            maternal_grandfather_index = j
+                        elif determine_sex(entities["pred_entity"][index + 1].split(' ')[0], name_list="names.json") == "female":
+                            maternal_grandmother = grandparent_id
+                            maternal_grandmother_index = j
+                        else:
+                            maternal_grandmother = grandparent_id
+                            maternal_grandmother_index = j
+                        if entities["pred_label"][index + 2] == "PER":
+                            for j in range(len(people_df)):
+                                if people_df['pred_start'][j] == entities['pred_start'][index + 2]:
+                                    grandparent_id = people_df['unique_id'][j]
+                                    break
+                            if (determine_sex(entities["pred_entity"][index + 2].split(' ')[0], name_list="names.json") == "male") and (maternal_grandfather == ''):
+                                maternal_grandfather = grandparent_id
+                                maternal_grandfather_index = j
+                            elif (determine_sex(entities["pred_entity"][index + 2].split(' ')[0], name_list="names.json") == "female") and (maternal_grandmother == ''):
+                                maternal_grandmother = grandparent_id
+                                maternal_grandmother_index = j
+                            elif maternal_grandmother == '':
+                                maternal_grandmother = grandparent_id
+                                maternal_grandmother_index = j
+                            else:
+                                maternal_grandfather = grandparent_id
+                                maternal_grandfather_index = j
+                    if maternal_grandfather != '':
+                        found_maternal_grandparents = True
+                        people = build_reciprocal_relationship(people, maternal_grandfather, principal_id, "grandparent")
+                    if maternal_grandmother != '':
+                        found_maternal_grandparents = True
+                        people = build_reciprocal_relationship(people, maternal_grandmother, principal_id, "grandparent")
+                    if (maternal_grandfather != '') and (maternal_grandmother != ''):
+                            people = build_reciprocal_relationship(people, maternal_grandfather, maternal_grandmother, "spouse")
 
     for i in range(len(cat_char)):
         #build enslaver/enslaved person relationships
@@ -312,11 +455,55 @@ def alt_assign_relationships(entry_text, entities, people_df, people, volume_met
                 #future improvement (after normalization) if child is enslaved, make sure reciprocal enslaver/enslaved person relationship exists with mother's enslaver
                 found_parents = True
 
+    #build parent-child relationships between parents and grandparents
+    if found_parents and found_paternal_grandparents:
+        if (far_parent != -1) and (determine_sex(people_df["pred_entity"][far_parent].split(' ')[0]) == "male"):
+            if (paternal_grandmother != '') and (paternal_grandfather != ''):
+                people = build_reciprocal_relationship(people, people_df["unique_id"][paternal_grandmother_index], people_df["unique_id"][far_parent], "parent")
+                people = build_reciprocal_relationship(people, people_df["unique_id"][paternal_grandfather_index], people_df["unique_id"][far_parent], "parent")
+            elif paternal_grandmother != '':
+                people = build_reciprocal_relationship(people, people_df["unique_id"][paternal_grandmother_index], people_df["unique_id"][far_parent], "parent")
+            else:
+                people = build_reciprocal_relationship(people, people_df["unique_id"][paternal_grandfather_index], people_df["unique_id"][far_parent], "parent")
+        elif (close_parent != -1) and (determine_sex(people_df["pred_entity"][close_parent].split(' ')[0]) == "male"):
+            if (paternal_grandmother != '') and (paternal_grandfather != ''):
+                people = build_reciprocal_relationship(people, people_df["unique_id"][paternal_grandmother_index], people_df["unique_id"][close_parent], "parent")
+                people = build_reciprocal_relationship(people, people_df["unique_id"][paternal_grandfather_index], people_df["unique_id"][close_parent], "parent")
+            elif paternal_grandmother != '':
+                people = build_reciprocal_relationship(people, people_df["unique_id"][paternal_grandmother_index], people_df["unique_id"][close_parent], "parent")
+            else:
+                people = build_reciprocal_relationship(people, people_df["unique_id"][paternal_grandfather_index], people_df["unique_id"][close_parent], "parent")
+    if found_parents and found_maternal_grandparents:
+        if (close_parent != -1)  and (determine_sex(people_df["pred_entity"][close_parent].split(' ')[0]) == "female"):
+            if (maternal_grandmother != '') and (maternal_grandfather != ''):
+                people = build_reciprocal_relationship(people, people_df["unique_id"][maternal_grandmother_index], people_df["unique_id"][close_parent], "parent")
+                people = build_reciprocal_relationship(people, people_df["unique_id"][maternal_grandfather_index], people_df["unique_id"][close_parent], "parent")
+            elif maternal_grandmother != '':
+                people = build_reciprocal_relationship(people, people_df["unique_id"][maternal_grandmother_index], people_df["unique_id"][close_parent], "parent")
+            else:
+                people = build_reciprocal_relationship(people, people_df["unique_id"][maternal_grandfather_index], people_df["unique_id"][close_parent], "parent")
+        elif (far_parent != -1) and (determine_sex(people_df["pred_entity"][far_parent].split(' ')[0]) == "female"):
+            if (maternal_grandmother != '') and (maternal_grandfather != ''):
+                people = build_reciprocal_relationship(people, people_df["unique_id"][maternal_grandmother_index], people_df["unique_id"][far_parent], "parent")
+                people = build_reciprocal_relationship(people, people_df["unique_id"][maternal_grandfather_index], people_df["unique_id"][far_parent], "parent")
+            elif maternal_grandmother != '':
+                people = build_reciprocal_relationship(people, people_df["unique_id"][maternal_grandmother_index], people_df["unique_id"][far_parent], "parent")
+            else:
+                people = build_reciprocal_relationship(people, people_df["unique_id"][maternal_grandfather_index], people_df["unique_id"][far_parent], "parent")
+        elif (close_parent != -1) and (far_parent == -1):
+            if (maternal_grandmother != '') and (maternal_grandfather != ''):
+                people = build_reciprocal_relationship(people, people_df["unique_id"][maternal_grandmother_index], people_df["unique_id"][close_parent], "parent")
+                people = build_reciprocal_relationship(people, people_df["unique_id"][maternal_grandfather_index], people_df["unique_id"][close_parent], "parent")
+            elif maternal_grandmother != '':
+                people = build_reciprocal_relationship(people, people_df["unique_id"][maternal_grandmother_index], people_df["unique_id"][close_parent], "parent")
+            else:
+                people = build_reciprocal_relationship(people, people_df["unique_id"][maternal_grandfather_index], people_df["unique_id"][close_parent], "parent")
+
     return people
 
 # Cell
 
-def categorize_characteristics(characteristics_df):
+def categorize_characteristics(entities_df, characteristics_df):
     '''
     determines which category each labeled characteristic belongs to
         characteristics_df: entities given the label "CHAR" from a single entry by an NER model
@@ -327,8 +514,20 @@ def categorize_characteristics(characteristics_df):
     vocabs = retrieve_controlled_vocabularies()
     categories = []
 
-    for index, characteristic in characteristics_df.iterrows():
+    for index, characteristic in entities_df.iterrows():
+        if characteristic["pred_label"] != "CHAR":
+            continue
         category = None
+        if characteristic["pred_entity"] in ["Natural", "nral", "Nat.l", "N.l", "nat.l", "natural"]:
+            loc_indices = []
+            for i, entity in entities_df.iterrows():
+                if entity["pred_label"] == "LOC":
+                    loc_indices.append(i)
+            for loc_index in loc_indices:
+                if ((loc_index - index) == 1):
+                    category = "origin"
+            if category == None:
+                category = "legitimacy"
         for cat in vocabs:
             if (characteristic['pred_entity'] == 'h') or (characteristic['pred_entity'] == "h."):
                 category = "relationships"
@@ -349,7 +548,7 @@ def categorize_characteristics(characteristics_df):
 # Cell
 #this is currently configured specifically for baptisms/burials
 
-def assign_characteristics(entry_text, characteristics_df, unique_individuals, volume_metadata):
+def assign_characteristics(entry_text, entities_df, characteristics_df, unique_individuals, volume_metadata):
     '''
     matches all labeled characteristics to the correct individual(s) and builds triples
         entry_text: the full text of a single entry, ported directly from spaCy to ensure congruity
@@ -361,7 +560,7 @@ def assign_characteristics(entry_text, characteristics_df, unique_individuals, v
     '''
     people = []
     ethnicities = retrieve_controlled_vocabularies()["ethnicities"]
-    categorized_characteristics = categorize_characteristics(characteristics_df)
+    categorized_characteristics = categorize_characteristics(entities_df, characteristics_df)
     assignments = [None] * len(characteristics_df.index)
     categorized_characteristics.reset_index(inplace=True)
     unique_individuals.reset_index(inplace=True)
@@ -1103,6 +1302,10 @@ def merge_records(records_to_merge):
 
         returns: single, merged dictionary
     '''
+    #why is this necessary?
+    if len(records_to_merge) <= 1:
+        return records_to_merge
+
     merged_record = records_to_merge[0]
 
     for i in range(1, len(records_to_merge)):
@@ -1143,18 +1346,30 @@ def merge_duplicates(people, duplicates):
 
     if (len(duplicates["principal"]) > 1):
         dups = []
+        del_indices = []
         for person in people:
             if (person['id'] in duplicates["principal"]):
                 dups.append(person)
-                del people[people.index(person)]
+                del_indices.append(people.index(person))
+        minus = 0
+        del_indices.sort()
+        for index in del_indices:
+            del people[index - minus]
+            minus += 1
         people.append(merge_records(dups))
 
     if (len(duplicates["cleric"]) > 1):
         dups = []
+        del_indices = []
         for person in people:
             if (person['id'] in duplicates["cleric"]):
                 dups.append(person)
-                del people[people.index(person)]
+                del_indices.append(people.index(person))
+        minus = 0
+        del_indices.sort()
+        for index in del_indices:
+            del people[index - minus]
+            minus += 1
         people.append(merge_records(dups))
 
     return people
@@ -1222,8 +1437,8 @@ def build_entry_metadata(entry_text, entities, path_to_volume_xml, entry_number=
         if (len(dates_df.index) > 1):
             events.append(build_event(entry_text, entities, "birth", principal, volume_metadata, 2, people_df))
 
-        characteristics_df = categorize_characteristics(characteristics_df)
-        people = assign_characteristics(entry_text, characteristics_df, people_df, volume_metadata)
+        characteristics_df = categorize_characteristics(entities, characteristics_df)
+        people = assign_characteristics(entry_text, entities, characteristics_df, people_df, volume_metadata)
 
         people = alt_assign_relationships(entry_text, entities, people_df, people, volume_metadata)
 
