@@ -959,7 +959,16 @@
       "status": null,
       "titles": null,
       "ranks": null,
-      "relationships": null,
+      "relationships": [
+        {
+          "related_person": "166470-P00018",
+          "relationship_type": "grandchild"
+        },
+        {
+          "related_person": "166470-P00014",
+          "relationship_type": "spouse"
+        }
+      ],
       "references": [
         "166470-1002-4"
       ]
@@ -975,7 +984,16 @@
       "status": null,
       "titles": null,
       "ranks": null,
-      "relationships": null,
+      "relationships": [
+        {
+          "related_person": "166470-P00018",
+          "relationship_type": "grandchild"
+        },
+        {
+          "related_person": "166470-P00013",
+          "relationship_type": "spouse"
+        }
+      ],
       "references": [
         "166470-1002-4"
       ]
@@ -1042,14 +1060,22 @@
       "id": "166470-P00018",
       "name": "Toribio de Caridad",
       "ethnicities": null,
-      "age": "parvulo",
-      "legitimacy": "hijo legitimo",
+      "age": "infant",
+      "legitimacy": "legitimate",
       "occupation": null,
       "phenotype": null,
       "status": null,
       "titles": null,
       "ranks": null,
       "relationships": [
+        {
+          "related_person": "166470-P00013",
+          "relationship_type": "grandparent"
+        },
+        {
+          "related_person": "166470-P00014",
+          "relationship_type": "grandparent"
+        },
         {
           "related_person": "166470-P00015",
           "relationship_type": "godparent"
@@ -1194,14 +1220,22 @@
       "id": "166470-P00026",
       "name": "Alejandro",
       "ethnicities": null,
-      "age": "parvulo",
-      "legitimacy": "hijo legitimo",
+      "age": "infant",
+      "legitimacy": "legitimate",
       "occupation": null,
       "phenotype": null,
       "status": null,
       "titles": null,
       "ranks": null,
       "relationships": [
+        {
+          "related_person": "166470-P00029",
+          "relationship_type": "grandparent"
+        },
+        {
+          "related_person": "166470-P00030",
+          "relationship_type": "grandparent"
+        },
         {
           "related_person": "166470-P00032",
           "relationship_type": "godparent"
@@ -1234,6 +1268,14 @@
         {
           "related_person": "166470-P00026",
           "relationship_type": "child"
+        },
+        {
+          "related_person": "166470-P00029",
+          "relationship_type": "parent"
+        },
+        {
+          "related_person": "166470-P00030",
+          "relationship_type": "parent"
         }
       ],
       "references": [
@@ -1267,7 +1309,16 @@
       "status": null,
       "titles": null,
       "ranks": null,
-      "relationships": null,
+      "relationships": [
+        {
+          "related_person": "166470-P00026",
+          "relationship_type": "grandchild"
+        },
+        {
+          "related_person": "166470-P00027",
+          "relationship_type": "child"
+        }
+      ],
       "references": [
         "166470-1003-4"
       ]
@@ -1283,7 +1334,16 @@
       "status": null,
       "titles": null,
       "ranks": null,
-      "relationships": null,
+      "relationships": [
+        {
+          "related_person": "166470-P00026",
+          "relationship_type": "grandchild"
+        },
+        {
+          "related_person": "166470-P00027",
+          "relationship_type": "child"
+        }
+      ],
       "references": [
         "166470-1003-4"
       ]
@@ -1350,7 +1410,7 @@
       "id": "166470-P00034",
       "name": "Flores Pedro Tomas",
       "ethnicities": null,
-      "age": "parvulo",
+      "age": "infant",
       "legitimacy": null,
       "occupation": null,
       "phenotype": null,
@@ -1581,7 +1641,7 @@
       "id": "166470-P00046",
       "name": "Fransisco Bautista Guerrero",
       "ethnicities": null,
-      "age": "parvulo",
+      "age": "infant",
       "legitimacy": "hijo ilegítimo",
       "occupation": null,
       "phenotype": null,
@@ -1774,7 +1834,7 @@
       "id": "166470-P00056",
       "name": "Juan Raucio",
       "ethnicities": null,
-      "age": "parvulo",
+      "age": "infant",
       "legitimacy": "hijo ilegítimo",
       "occupation": null,
       "phenotype": null,
@@ -1795,14 +1855,30 @@
       "id": "166470-P00057",
       "name": "Pedro Jose De la Caridad",
       "ethnicities": null,
-      "age": "parvulo",
-      "legitimacy": "hijo legitimo",
+      "age": "infant",
+      "legitimacy": "legitimate",
       "occupation": null,
       "phenotype": null,
       "status": null,
       "titles": null,
       "ranks": null,
       "relationships": [
+        {
+          "related_person": "166470-P00060",
+          "relationship_type": "grandparent"
+        },
+        {
+          "related_person": "166470-P00061",
+          "relationship_type": "grandparent"
+        },
+        {
+          "related_person": "166470-P00062",
+          "relationship_type": "grandparent"
+        },
+        {
+          "related_person": "166470-P00063",
+          "relationship_type": "grandparent"
+        },
         {
           "related_person": "166470-P00065",
           "relationship_type": "godparent"
@@ -1843,6 +1919,14 @@
         {
           "related_person": "166470-P00059",
           "relationship_type": "spouse"
+        },
+        {
+          "related_person": "166470-P00061",
+          "relationship_type": "parent"
+        },
+        {
+          "related_person": "166470-P00060",
+          "relationship_type": "parent"
         }
       ],
       "references": [
@@ -1885,7 +1969,20 @@
       "status": null,
       "titles": null,
       "ranks": null,
-      "relationships": null,
+      "relationships": [
+        {
+          "related_person": "166470-P00057",
+          "relationship_type": "grandchild"
+        },
+        {
+          "related_person": "166470-P00061",
+          "relationship_type": "spouse"
+        },
+        {
+          "related_person": "166470-P00058",
+          "relationship_type": "child"
+        }
+      ],
       "references": [
         "166470-1004-2"
       ]
@@ -1901,7 +1998,20 @@
       "status": null,
       "titles": null,
       "ranks": null,
-      "relationships": null,
+      "relationships": [
+        {
+          "related_person": "166470-P00057",
+          "relationship_type": "grandchild"
+        },
+        {
+          "related_person": "166470-P00060",
+          "relationship_type": "spouse"
+        },
+        {
+          "related_person": "166470-P00058",
+          "relationship_type": "child"
+        }
+      ],
       "references": [
         "166470-1004-2"
       ]
@@ -1917,7 +2027,16 @@
       "status": null,
       "titles": null,
       "ranks": null,
-      "relationships": null,
+      "relationships": [
+        {
+          "related_person": "166470-P00057",
+          "relationship_type": "grandchild"
+        },
+        {
+          "related_person": "166470-P00063",
+          "relationship_type": "spouse"
+        }
+      ],
       "references": [
         "166470-1004-2"
       ]
@@ -1933,7 +2052,16 @@
       "status": null,
       "titles": null,
       "ranks": null,
-      "relationships": null,
+      "relationships": [
+        {
+          "related_person": "166470-P00057",
+          "relationship_type": "grandchild"
+        },
+        {
+          "related_person": "166470-P00062",
+          "relationship_type": "spouse"
+        }
+      ],
       "references": [
         "166470-1004-2"
       ]
@@ -2042,7 +2170,7 @@
       "id": "166470-P00069",
       "name": "Seferineo Callazo",
       "ethnicities": null,
-      "age": "parvulo",
+      "age": "infant",
       "legitimacy": "hijo ilegítimo",
       "occupation": null,
       "phenotype": null,
@@ -2213,7 +2341,7 @@
       "id": "166470-P00077",
       "name": "Jose Calazan",
       "ethnicities": null,
-      "age": "parvulo",
+      "age": "infant",
       "legitimacy": "hijo ilegítimo",
       "occupation": null,
       "phenotype": null,
@@ -2242,7 +2370,7 @@
       "id": "166470-P00078",
       "name": "Maria Dominga",
       "ethnicities": null,
-      "age": "parvula",
+      "age": "infant",
       "legitimacy": "hija ilegítimo",
       "occupation": null,
       "phenotype": null,
@@ -2250,6 +2378,14 @@
       "titles": null,
       "ranks": null,
       "relationships": [
+        {
+          "related_person": "166470-P00081",
+          "relationship_type": "grandparent"
+        },
+        {
+          "related_person": "166470-P00082",
+          "relationship_type": "grandparent"
+        },
         {
           "related_person": "166470-P00086",
           "relationship_type": "godparent"
@@ -2324,7 +2460,16 @@
       "status": null,
       "titles": null,
       "ranks": null,
-      "relationships": null,
+      "relationships": [
+        {
+          "related_person": "166470-P00078",
+          "relationship_type": "grandchild"
+        },
+        {
+          "related_person": "166470-P00082",
+          "relationship_type": "spouse"
+        }
+      ],
       "references": [
         "166470-1004-6"
       ]
@@ -2340,7 +2485,16 @@
       "status": null,
       "titles": null,
       "ranks": null,
-      "relationships": null,
+      "relationships": [
+        {
+          "related_person": "166470-P00078",
+          "relationship_type": "grandchild"
+        },
+        {
+          "related_person": "166470-P00081",
+          "relationship_type": "spouse"
+        }
+      ],
       "references": [
         "166470-1004-6"
       ]
@@ -2439,7 +2593,7 @@
       "id": "166470-P00088",
       "name": "Maria Vericitada Perez",
       "ethnicities": null,
-      "age": "parvula",
+      "age": "infant",
       "legitimacy": "naturales",
       "occupation": null,
       "phenotype": null,
@@ -2447,6 +2601,22 @@
       "titles": null,
       "ranks": null,
       "relationships": [
+        {
+          "related_person": "166470-P00092",
+          "relationship_type": "grandparent"
+        },
+        {
+          "related_person": "166470-P00091",
+          "relationship_type": "grandparent"
+        },
+        {
+          "related_person": "166470-P00093",
+          "relationship_type": "grandparent"
+        },
+        {
+          "related_person": "166470-P00094",
+          "relationship_type": "grandparent"
+        },
         {
           "related_person": "166470-P00096",
           "relationship_type": "godparent"
@@ -2487,6 +2657,14 @@
         {
           "related_person": "166470-P00090",
           "relationship_type": "spouse"
+        },
+        {
+          "related_person": "166470-P00094",
+          "relationship_type": "parent"
+        },
+        {
+          "related_person": "166470-P00093",
+          "relationship_type": "parent"
         }
       ],
       "references": [
@@ -2529,7 +2707,16 @@
       "status": null,
       "titles": null,
       "ranks": null,
-      "relationships": null,
+      "relationships": [
+        {
+          "related_person": "166470-P00088",
+          "relationship_type": "grandchild"
+        },
+        {
+          "related_person": "166470-P00092",
+          "relationship_type": "spouse"
+        }
+      ],
       "references": [
         "166470-1004-7"
       ]
@@ -2545,7 +2732,16 @@
       "status": null,
       "titles": null,
       "ranks": null,
-      "relationships": null,
+      "relationships": [
+        {
+          "related_person": "166470-P00088",
+          "relationship_type": "grandchild"
+        },
+        {
+          "related_person": "166470-P00091",
+          "relationship_type": "spouse"
+        }
+      ],
       "references": [
         "166470-1004-7"
       ]
@@ -2561,7 +2757,20 @@
       "status": null,
       "titles": null,
       "ranks": null,
-      "relationships": null,
+      "relationships": [
+        {
+          "related_person": "166470-P00088",
+          "relationship_type": "grandchild"
+        },
+        {
+          "related_person": "166470-P00094",
+          "relationship_type": "spouse"
+        },
+        {
+          "related_person": "166470-P00089",
+          "relationship_type": "child"
+        }
+      ],
       "references": [
         "166470-1004-7"
       ]
@@ -2577,7 +2786,20 @@
       "status": null,
       "titles": null,
       "ranks": null,
-      "relationships": null,
+      "relationships": [
+        {
+          "related_person": "166470-P00088",
+          "relationship_type": "grandchild"
+        },
+        {
+          "related_person": "166470-P00093",
+          "relationship_type": "spouse"
+        },
+        {
+          "related_person": "166470-P00089",
+          "relationship_type": "child"
+        }
+      ],
       "references": [
         "166470-1004-7"
       ]
@@ -2659,6 +2881,14 @@
         {
           "related_person": "166470-P00099",
           "relationship_type": "spouse"
+        },
+        {
+          "related_person": "166470-P00101",
+          "relationship_type": "parent"
+        },
+        {
+          "related_person": "166470-P00100",
+          "relationship_type": "parent"
         }
       ],
       "references": [
@@ -2701,7 +2931,20 @@
       "status": null,
       "titles": null,
       "ranks": null,
-      "relationships": null,
+      "relationships": [
+        {
+          "related_person": "166470-P00105",
+          "relationship_type": "grandchild"
+        },
+        {
+          "related_person": "166470-P00101",
+          "relationship_type": "spouse"
+        },
+        {
+          "related_person": "166470-P00098",
+          "relationship_type": "child"
+        }
+      ],
       "references": [
         "166470-1005-1"
       ]
@@ -2717,7 +2960,20 @@
       "status": null,
       "titles": null,
       "ranks": null,
-      "relationships": null,
+      "relationships": [
+        {
+          "related_person": "166470-P00105",
+          "relationship_type": "grandchild"
+        },
+        {
+          "related_person": "166470-P00100",
+          "relationship_type": "spouse"
+        },
+        {
+          "related_person": "166470-P00098",
+          "relationship_type": "child"
+        }
+      ],
       "references": [
         "166470-1005-1"
       ]
@@ -2779,7 +3035,7 @@
       "id": "166470-P00105",
       "name": "Marcial de la Caridad",
       "ethnicities": null,
-      "age": "parvula",
+      "age": "infant",
       "legitimacy": "naturales",
       "occupation": null,
       "phenotype": null,
@@ -2787,6 +3043,14 @@
       "titles": null,
       "ranks": null,
       "relationships": [
+        {
+          "related_person": "166470-P00100",
+          "relationship_type": "grandparent"
+        },
+        {
+          "related_person": "166470-P00101",
+          "relationship_type": "grandparent"
+        },
         {
           "related_person": "166470-P00104",
           "relationship_type": "godparent"
@@ -2916,8 +3180,8 @@
       "id": "166470-P00110",
       "name": "Jose Isidoro",
       "ethnicities": null,
-      "age": "parvulo",
-      "legitimacy": "hijo legitimo",
+      "age": "infant",
+      "legitimacy": "legitimate",
       "occupation": null,
       "phenotype": null,
       "status": null,
@@ -3029,7 +3293,7 @@
       "id": "166470-P00115",
       "name": "Jose Fereso Hernandez",
       "ethnicities": null,
-      "age": "parvulo",
+      "age": "infant",
       "legitimacy": "naturales",
       "occupation": null,
       "phenotype": null,
@@ -3128,7 +3392,7 @@
       "id": "166470-P00120",
       "name": "Jose Serafin Gonzalez",
       "ethnicities": null,
-      "age": "parvulo",
+      "age": "infant",
       "legitimacy": "illegitimate",
       "occupation": null,
       "phenotype": "mixed-race",
@@ -3136,6 +3400,14 @@
       "titles": null,
       "ranks": null,
       "relationships": [
+        {
+          "related_person": "166470-P00123",
+          "relationship_type": "grandparent"
+        },
+        {
+          "related_person": "166470-P00124",
+          "relationship_type": "grandparent"
+        },
         {
           "related_person": "166470-P00127",
           "relationship_type": "godparent"
@@ -3168,6 +3440,14 @@
         {
           "related_person": "166470-P00120",
           "relationship_type": "child"
+        },
+        {
+          "related_person": "166470-P00124",
+          "relationship_type": "parent"
+        },
+        {
+          "related_person": "166470-P00123",
+          "relationship_type": "parent"
         }
       ],
       "references": [
@@ -3201,7 +3481,20 @@
       "status": null,
       "titles": null,
       "ranks": null,
-      "relationships": null,
+      "relationships": [
+        {
+          "related_person": "166470-P00120",
+          "relationship_type": "grandchild"
+        },
+        {
+          "related_person": "166470-P00124",
+          "relationship_type": "spouse"
+        },
+        {
+          "related_person": "166470-P00121",
+          "relationship_type": "child"
+        }
+      ],
       "references": [
         "166470-1005-5"
       ]
@@ -3217,7 +3510,20 @@
       "status": null,
       "titles": null,
       "ranks": null,
-      "relationships": null,
+      "relationships": [
+        {
+          "related_person": "166470-P00120",
+          "relationship_type": "grandchild"
+        },
+        {
+          "related_person": "166470-P00123",
+          "relationship_type": "spouse"
+        },
+        {
+          "related_person": "166470-P00121",
+          "relationship_type": "child"
+        }
+      ],
       "references": [
         "166470-1005-5"
       ]
@@ -3480,6 +3786,14 @@
         {
           "related_person": "166470-P00147",
           "relationship_type": "child"
+        },
+        {
+          "related_person": "166470-P00142",
+          "relationship_type": "parent"
+        },
+        {
+          "related_person": "166470-P00141",
+          "relationship_type": "parent"
         }
       ],
       "references": [
@@ -3501,6 +3815,14 @@
         {
           "related_person": "166470-P00147",
           "relationship_type": "child"
+        },
+        {
+          "related_person": "166470-P00144",
+          "relationship_type": "parent"
+        },
+        {
+          "related_person": "166470-P00143",
+          "relationship_type": "parent"
         }
       ],
       "references": [
@@ -3534,7 +3856,20 @@
       "status": null,
       "titles": null,
       "ranks": null,
-      "relationships": null,
+      "relationships": [
+        {
+          "related_person": "166470-P00147",
+          "relationship_type": "grandchild"
+        },
+        {
+          "related_person": "166470-P00142",
+          "relationship_type": "spouse"
+        },
+        {
+          "related_person": "166470-P00138",
+          "relationship_type": "child"
+        }
+      ],
       "references": [
         "166470-1006-3"
       ]
@@ -3550,7 +3885,20 @@
       "status": null,
       "titles": null,
       "ranks": null,
-      "relationships": null,
+      "relationships": [
+        {
+          "related_person": "166470-P00147",
+          "relationship_type": "grandchild"
+        },
+        {
+          "related_person": "166470-P00141",
+          "relationship_type": "spouse"
+        },
+        {
+          "related_person": "166470-P00138",
+          "relationship_type": "child"
+        }
+      ],
       "references": [
         "166470-1006-3"
       ]
@@ -3566,7 +3914,20 @@
       "status": null,
       "titles": null,
       "ranks": null,
-      "relationships": null,
+      "relationships": [
+        {
+          "related_person": "166470-P00147",
+          "relationship_type": "grandchild"
+        },
+        {
+          "related_person": "166470-P00144",
+          "relationship_type": "spouse"
+        },
+        {
+          "related_person": "166470-P00139",
+          "relationship_type": "child"
+        }
+      ],
       "references": [
         "166470-1006-3"
       ]
@@ -3582,7 +3943,20 @@
       "status": null,
       "titles": null,
       "ranks": null,
-      "relationships": null,
+      "relationships": [
+        {
+          "related_person": "166470-P00147",
+          "relationship_type": "grandchild"
+        },
+        {
+          "related_person": "166470-P00143",
+          "relationship_type": "spouse"
+        },
+        {
+          "related_person": "166470-P00139",
+          "relationship_type": "child"
+        }
+      ],
       "references": [
         "166470-1006-3"
       ]
@@ -3633,7 +4007,7 @@
       "id": "166470-P00147",
       "name": "Geronimo de Jesus",
       "ethnicities": null,
-      "age": "parvulo",
+      "age": "infant",
       "legitimacy": "illegitimate",
       "occupation": null,
       "phenotype": null,
@@ -3641,6 +4015,22 @@
       "titles": null,
       "ranks": null,
       "relationships": [
+        {
+          "related_person": "166470-P00141",
+          "relationship_type": "grandparent"
+        },
+        {
+          "related_person": "166470-P00142",
+          "relationship_type": "grandparent"
+        },
+        {
+          "related_person": "166470-P00143",
+          "relationship_type": "grandparent"
+        },
+        {
+          "related_person": "166470-P00144",
+          "relationship_type": "grandparent"
+        },
         {
           "related_person": "166470-P00145",
           "relationship_type": "godparent"
@@ -3666,7 +4056,7 @@
       "id": "166470-P00148",
       "name": "Regina de Maria Caridad Torres",
       "ethnicities": null,
-      "age": "parvula",
+      "age": "infant",
       "legitimacy": "illegitimate",
       "occupation": null,
       "phenotype": null,
@@ -3755,6 +4145,14 @@
       "ranks": null,
       "relationships": [
         {
+          "related_person": "166470-P00156",
+          "relationship_type": "grandparent"
+        },
+        {
+          "related_person": "166470-P00157",
+          "relationship_type": "grandparent"
+        },
+        {
           "related_person": "166470-P00159",
           "relationship_type": "godparent"
         }
@@ -3806,7 +4204,16 @@
       "status": null,
       "titles": null,
       "ranks": null,
-      "relationships": null,
+      "relationships": [
+        {
+          "related_person": "166470-P00153",
+          "relationship_type": "grandchild"
+        },
+        {
+          "related_person": "166470-P00157",
+          "relationship_type": "spouse"
+        }
+      ],
       "references": [
         "166470-1006-5"
       ]
@@ -3822,7 +4229,16 @@
       "status": null,
       "titles": null,
       "ranks": null,
-      "relationships": null,
+      "relationships": [
+        {
+          "related_person": "166470-P00153",
+          "relationship_type": "grandchild"
+        },
+        {
+          "related_person": "166470-P00156",
+          "relationship_type": "spouse"
+        }
+      ],
       "references": [
         "166470-1006-5"
       ]
@@ -3868,7 +4284,7 @@
       "id": "166470-P00160",
       "name": "Seberina Cuinas",
       "ethnicities": null,
-      "age": "parvula",
+      "age": "infant",
       "legitimacy": "naturales",
       "occupation": null,
       "phenotype": null,
@@ -3974,7 +4390,7 @@
       "id": "166470-P00166",
       "name": "Patricio Carras",
       "ethnicities": null,
-      "age": "parvulo",
+      "age": "infant",
       "legitimacy": "naturales",
       "occupation": null,
       "phenotype": null,
@@ -4131,7 +4547,7 @@
       "id": "166470-P00174",
       "name": "Gregorio Nota",
       "ethnicities": null,
-      "age": "parvulo",
+      "age": "infant",
       "legitimacy": "naturales",
       "occupation": null,
       "phenotype": null,
@@ -4237,7 +4653,7 @@
       "id": "166470-P00180",
       "name": "Simona Corras",
       "ethnicities": null,
-      "age": "parvula",
+      "age": "infant",
       "legitimacy": "naturales",
       "occupation": null,
       "phenotype": null,
@@ -4317,7 +4733,7 @@
       "id": "166470-P00185",
       "name": "Atanacio Corras",
       "ethnicities": null,
-      "age": "parvulo",
+      "age": "infant",
       "legitimacy": "naturales",
       "occupation": null,
       "phenotype": null,
@@ -4407,7 +4823,7 @@
       "id": "166470-P00190",
       "name": "Pablo Corras",
       "ethnicities": null,
-      "age": "parvulo",
+      "age": "infant",
       "legitimacy": "naturales",
       "occupation": null,
       "phenotype": null,
@@ -4497,7 +4913,7 @@
       "id": "166470-P00195",
       "name": "Maria Oleta Corras",
       "ethnicities": null,
-      "age": "parvula",
+      "age": "infant",
       "legitimacy": "naturales",
       "occupation": null,
       "phenotype": null,
@@ -4566,7 +4982,7 @@
       "id": "166470-P00199",
       "name": "Antonia Corras",
       "ethnicities": null,
-      "age": "parvula",
+      "age": "infant",
       "legitimacy": "naturales",
       "occupation": null,
       "phenotype": null,
@@ -4682,7 +5098,7 @@
       "id": "166470-P00205",
       "name": "Corras",
       "ethnicities": null,
-      "age": "parvula",
+      "age": "infant",
       "legitimacy": "naturales",
       "occupation": null,
       "phenotype": null,
@@ -4735,8 +5151,8 @@
       "id": "166470-P00208",
       "name": "Jose de la Luz Corras",
       "ethnicities": null,
-      "age": "parvulo",
-      "legitimacy": "hijo legitimo",
+      "age": "infant",
+      "legitimacy": "legitimate",
       "occupation": null,
       "phenotype": null,
       "status": null,
@@ -4825,7 +5241,7 @@
       "id": "166470-P00213",
       "name": "Merced Corras",
       "ethnicities": null,
-      "age": "parvula",
+      "age": "infant",
       "legitimacy": "naturales",
       "occupation": null,
       "phenotype": null,
@@ -4894,7 +5310,7 @@
       "id": "166470-P00217",
       "name": "Maria del Carmen Corras",
       "ethnicities": null,
-      "age": "parvula",
+      "age": "infant",
       "legitimacy": "naturales",
       "occupation": null,
       "phenotype": null,
@@ -4984,7 +5400,7 @@
       "id": "166470-P00222",
       "name": "Luis Corras",
       "ethnicities": null,
-      "age": "parvulo",
+      "age": "infant",
       "legitimacy": "naturales",
       "occupation": null,
       "phenotype": null,
@@ -5119,7 +5535,16 @@
       "status": null,
       "titles": null,
       "ranks": null,
-      "relationships": null,
+      "relationships": [
+        {
+          "related_person": "166470-P00230",
+          "relationship_type": "grandchild"
+        },
+        {
+          "related_person": "166470-P00229",
+          "relationship_type": "spouse"
+        }
+      ],
       "references": [
         "166470-1009-1"
       ]
@@ -5135,7 +5560,16 @@
       "status": null,
       "titles": null,
       "ranks": null,
-      "relationships": null,
+      "relationships": [
+        {
+          "related_person": "166470-P00230",
+          "relationship_type": "grandchild"
+        },
+        {
+          "related_person": "166470-P00228",
+          "relationship_type": "spouse"
+        }
+      ],
       "references": [
         "166470-1009-1"
       ]
@@ -5144,7 +5578,7 @@
       "id": "166470-P00230",
       "name": "Jose Crecencio",
       "ethnicities": null,
-      "age": "parvulo",
+      "age": "infant",
       "legitimacy": "naturales",
       "occupation": null,
       "phenotype": null,
@@ -5152,6 +5586,14 @@
       "titles": null,
       "ranks": null,
       "relationships": [
+        {
+          "related_person": "166470-P00228",
+          "relationship_type": "grandparent"
+        },
+        {
+          "related_person": "166470-P00229",
+          "relationship_type": "grandparent"
+        },
         {
           "related_person": "166470-P00763",
           "relationship_type": "godparent"
@@ -5415,7 +5857,7 @@
       "id": "166470-P00243",
       "name": "Eulogia Maria ##",
       "ethnicities": null,
-      "age": "parvula",
+      "age": "infant",
       "legitimacy": "naturales",
       "occupation": null,
       "phenotype": null,
@@ -5423,6 +5865,22 @@
       "titles": null,
       "ranks": null,
       "relationships": [
+        {
+          "related_person": "166470-P00246",
+          "relationship_type": "grandparent"
+        },
+        {
+          "related_person": "166470-P00247",
+          "relationship_type": "grandparent"
+        },
+        {
+          "related_person": "166470-P00248",
+          "relationship_type": "grandparent"
+        },
+        {
+          "related_person": "166470-P00249",
+          "relationship_type": "grandparent"
+        },
         {
           "related_person": "166470-P00251",
           "relationship_type": "godparent"
@@ -5475,7 +5933,16 @@
       "status": null,
       "titles": null,
       "ranks": null,
-      "relationships": null,
+      "relationships": [
+        {
+          "related_person": "166470-P00243",
+          "relationship_type": "grandchild"
+        },
+        {
+          "related_person": "166470-P00247",
+          "relationship_type": "spouse"
+        }
+      ],
       "references": [
         "166470-1009-6"
       ]
@@ -5491,7 +5958,16 @@
       "status": null,
       "titles": null,
       "ranks": null,
-      "relationships": null,
+      "relationships": [
+        {
+          "related_person": "166470-P00243",
+          "relationship_type": "grandchild"
+        },
+        {
+          "related_person": "166470-P00246",
+          "relationship_type": "spouse"
+        }
+      ],
       "references": [
         "166470-1009-6"
       ]
@@ -5507,7 +5983,16 @@
       "status": null,
       "titles": null,
       "ranks": null,
-      "relationships": null,
+      "relationships": [
+        {
+          "related_person": "166470-P00243",
+          "relationship_type": "grandchild"
+        },
+        {
+          "related_person": "166470-P00249",
+          "relationship_type": "spouse"
+        }
+      ],
       "references": [
         "166470-1009-6"
       ]
@@ -5523,7 +6008,16 @@
       "status": null,
       "titles": null,
       "ranks": null,
-      "relationships": null,
+      "relationships": [
+        {
+          "related_person": "166470-P00243",
+          "relationship_type": "grandchild"
+        },
+        {
+          "related_person": "166470-P00248",
+          "relationship_type": "spouse"
+        }
+      ],
       "references": [
         "166470-1009-6"
       ]
@@ -5569,7 +6063,7 @@
       "id": "166470-P00252",
       "name": "Fransisco Maria Matamoros",
       "ethnicities": null,
-      "age": "parvulo",
+      "age": "infant",
       "legitimacy": null,
       "occupation": null,
       "phenotype": null,
@@ -5926,7 +6420,7 @@
       "id": "166470-P00270",
       "name": "Liborio Apolomio de la Caridad",
       "ethnicities": null,
-      "age": "parvulo",
+      "age": "infant",
       "legitimacy": null,
       "occupation": null,
       "phenotype": null,
@@ -6069,7 +6563,7 @@
       "id": "166470-P00278",
       "name": "Maria Petrona de la Caridad Correa",
       "ethnicities": null,
-      "age": "parvula",
+      "age": "infant",
       "legitimacy": "naturales",
       "occupation": null,
       "phenotype": null,
@@ -6077,6 +6571,18 @@
       "titles": null,
       "ranks": null,
       "relationships": [
+        {
+          "related_person": "166470-P00282",
+          "relationship_type": "grandparent"
+        },
+        {
+          "related_person": "166470-P00283",
+          "relationship_type": "grandparent"
+        },
+        {
+          "related_person": "166470-P00284",
+          "relationship_type": "grandparent"
+        },
         {
           "related_person": "166470-P00286",
           "relationship_type": "godparent"
@@ -6113,6 +6619,14 @@
         {
           "related_person": "166470-P00278",
           "relationship_type": "child"
+        },
+        {
+          "related_person": "166470-P00283",
+          "relationship_type": "parent"
+        },
+        {
+          "related_person": "166470-P00282",
+          "relationship_type": "parent"
         }
       ],
       "references": [
@@ -6134,6 +6648,10 @@
         {
           "related_person": "166470-P00278",
           "relationship_type": "child"
+        },
+        {
+          "related_person": "166470-P00284",
+          "relationship_type": "parent"
         }
       ],
       "references": [
@@ -6167,7 +6685,20 @@
       "status": null,
       "titles": null,
       "ranks": null,
-      "relationships": null,
+      "relationships": [
+        {
+          "related_person": "166470-P00278",
+          "relationship_type": "grandchild"
+        },
+        {
+          "related_person": "166470-P00283",
+          "relationship_type": "spouse"
+        },
+        {
+          "related_person": "166470-P00279",
+          "relationship_type": "child"
+        }
+      ],
       "references": [
         "166470-1011-1"
       ]
@@ -6183,7 +6714,20 @@
       "status": null,
       "titles": null,
       "ranks": null,
-      "relationships": null,
+      "relationships": [
+        {
+          "related_person": "166470-P00278",
+          "relationship_type": "grandchild"
+        },
+        {
+          "related_person": "166470-P00282",
+          "relationship_type": "spouse"
+        },
+        {
+          "related_person": "166470-P00279",
+          "relationship_type": "child"
+        }
+      ],
       "references": [
         "166470-1011-1"
       ]
@@ -6199,7 +6743,16 @@
       "status": null,
       "titles": null,
       "ranks": null,
-      "relationships": null,
+      "relationships": [
+        {
+          "related_person": "166470-P00278",
+          "relationship_type": "grandchild"
+        },
+        {
+          "related_person": "166470-P00280",
+          "relationship_type": "child"
+        }
+      ],
       "references": [
         "166470-1011-1"
       ]
@@ -6523,7 +7076,7 @@
       "id": "166470-P00301",
       "name": "Calisto Horculano",
       "ethnicities": null,
-      "age": "parvulo",
+      "age": "infant",
       "legitimacy": null,
       "occupation": null,
       "phenotype": null,
@@ -6548,7 +7101,7 @@
       "id": "166470-P00302",
       "name": "Nicomedes Domingo Ocacupo",
       "ethnicities": null,
-      "age": "parvulo",
+      "age": "infant",
       "legitimacy": null,
       "occupation": null,
       "phenotype": null,
@@ -6799,7 +7352,7 @@
       "id": "166470-P00315",
       "name": "Maria Del Pilar Marrero",
       "ethnicities": null,
-      "age": "parvula",
+      "age": "infant",
       "legitimacy": "naturales",
       "occupation": null,
       "phenotype": null,
@@ -6807,6 +7360,10 @@
       "titles": null,
       "ranks": null,
       "relationships": [
+        {
+          "related_person": "166470-P00319",
+          "relationship_type": "grandparent"
+        },
         {
           "related_person": "166470-P00321",
           "relationship_type": "godparent"
@@ -6839,6 +7396,10 @@
         {
           "related_person": "166470-P00315",
           "relationship_type": "child"
+        },
+        {
+          "related_person": "166470-P00319",
+          "relationship_type": "parent"
         }
       ],
       "references": [
@@ -6893,7 +7454,16 @@
       "status": null,
       "titles": null,
       "ranks": null,
-      "relationships": null,
+      "relationships": [
+        {
+          "related_person": "166470-P00315",
+          "relationship_type": "grandchild"
+        },
+        {
+          "related_person": "166470-P00316",
+          "relationship_type": "child"
+        }
+      ],
       "references": [
         "166470-1012-3"
       ]
@@ -7384,7 +7954,7 @@
       "id": "166470-P00345",
       "name": "Jacoba Rita Ramona Barrueta",
       "ethnicities": null,
-      "age": "parvula",
+      "age": "infant",
       "legitimacy": "naturales",
       "occupation": null,
       "phenotype": "mixed-race",
@@ -7392,6 +7962,22 @@
       "titles": null,
       "ranks": null,
       "relationships": [
+        {
+          "related_person": "166470-P00349",
+          "relationship_type": "grandparent"
+        },
+        {
+          "related_person": "166470-P00350",
+          "relationship_type": "grandparent"
+        },
+        {
+          "related_person": "166470-P00351",
+          "relationship_type": "grandparent"
+        },
+        {
+          "related_person": "166470-P00352",
+          "relationship_type": "grandparent"
+        },
         {
           "related_person": "166470-P00354",
           "relationship_type": "godparent"
@@ -7448,6 +8034,14 @@
         {
           "related_person": "166470-P00348",
           "relationship_type": "spouse"
+        },
+        {
+          "related_person": "166470-P00350",
+          "relationship_type": "parent"
+        },
+        {
+          "related_person": "166470-P00349",
+          "relationship_type": "parent"
         }
       ],
       "references": [
@@ -7473,6 +8067,14 @@
         {
           "related_person": "166470-P00347",
           "relationship_type": "spouse"
+        },
+        {
+          "related_person": "166470-P00352",
+          "relationship_type": "parent"
+        },
+        {
+          "related_person": "166470-P00351",
+          "relationship_type": "parent"
         }
       ],
       "references": [
@@ -7490,7 +8092,20 @@
       "status": null,
       "titles": null,
       "ranks": null,
-      "relationships": null,
+      "relationships": [
+        {
+          "related_person": "166470-P00345",
+          "relationship_type": "grandchild"
+        },
+        {
+          "related_person": "166470-P00350",
+          "relationship_type": "spouse"
+        },
+        {
+          "related_person": "166470-P00347",
+          "relationship_type": "child"
+        }
+      ],
       "references": [
         "166470-1013-3"
       ]
@@ -7506,7 +8121,20 @@
       "status": null,
       "titles": null,
       "ranks": null,
-      "relationships": null,
+      "relationships": [
+        {
+          "related_person": "166470-P00345",
+          "relationship_type": "grandchild"
+        },
+        {
+          "related_person": "166470-P00349",
+          "relationship_type": "spouse"
+        },
+        {
+          "related_person": "166470-P00347",
+          "relationship_type": "child"
+        }
+      ],
       "references": [
         "166470-1013-3"
       ]
@@ -7522,7 +8150,20 @@
       "status": null,
       "titles": null,
       "ranks": null,
-      "relationships": null,
+      "relationships": [
+        {
+          "related_person": "166470-P00345",
+          "relationship_type": "grandchild"
+        },
+        {
+          "related_person": "166470-P00352",
+          "relationship_type": "spouse"
+        },
+        {
+          "related_person": "166470-P00348",
+          "relationship_type": "child"
+        }
+      ],
       "references": [
         "166470-1013-3"
       ]
@@ -7538,7 +8179,20 @@
       "status": null,
       "titles": null,
       "ranks": null,
-      "relationships": null,
+      "relationships": [
+        {
+          "related_person": "166470-P00345",
+          "relationship_type": "grandchild"
+        },
+        {
+          "related_person": "166470-P00351",
+          "relationship_type": "spouse"
+        },
+        {
+          "related_person": "166470-P00348",
+          "relationship_type": "child"
+        }
+      ],
       "references": [
         "166470-1013-3"
       ]
@@ -7632,6 +8286,22 @@
         {
           "related_person": "166470-P00365",
           "relationship_type": "child"
+        },
+        {
+          "related_person": "166470-P00360",
+          "relationship_type": "parent"
+        },
+        {
+          "related_person": "166470-P00359",
+          "relationship_type": "parent"
+        },
+        {
+          "related_person": "166470-P00362",
+          "relationship_type": "parent"
+        },
+        {
+          "related_person": "166470-P00361",
+          "relationship_type": "parent"
         }
       ],
       "references": [
@@ -7665,7 +8335,20 @@
       "status": null,
       "titles": null,
       "ranks": null,
-      "relationships": null,
+      "relationships": [
+        {
+          "related_person": "166470-P00365",
+          "relationship_type": "grandchild"
+        },
+        {
+          "related_person": "166470-P00360",
+          "relationship_type": "spouse"
+        },
+        {
+          "related_person": "166470-P00357",
+          "relationship_type": "child"
+        }
+      ],
       "references": [
         "166470-1013-4"
       ]
@@ -7681,7 +8364,20 @@
       "status": null,
       "titles": null,
       "ranks": null,
-      "relationships": null,
+      "relationships": [
+        {
+          "related_person": "166470-P00365",
+          "relationship_type": "grandchild"
+        },
+        {
+          "related_person": "166470-P00359",
+          "relationship_type": "spouse"
+        },
+        {
+          "related_person": "166470-P00357",
+          "relationship_type": "child"
+        }
+      ],
       "references": [
         "166470-1013-4"
       ]
@@ -7697,7 +8393,20 @@
       "status": null,
       "titles": null,
       "ranks": null,
-      "relationships": null,
+      "relationships": [
+        {
+          "related_person": "166470-P00365",
+          "relationship_type": "grandchild"
+        },
+        {
+          "related_person": "166470-P00362",
+          "relationship_type": "spouse"
+        },
+        {
+          "related_person": "166470-P00357",
+          "relationship_type": "child"
+        }
+      ],
       "references": [
         "166470-1013-4"
       ]
@@ -7713,7 +8422,20 @@
       "status": null,
       "titles": null,
       "ranks": null,
-      "relationships": null,
+      "relationships": [
+        {
+          "related_person": "166470-P00365",
+          "relationship_type": "grandchild"
+        },
+        {
+          "related_person": "166470-P00361",
+          "relationship_type": "spouse"
+        },
+        {
+          "related_person": "166470-P00357",
+          "relationship_type": "child"
+        }
+      ],
       "references": [
         "166470-1013-4"
       ]
@@ -7764,7 +8486,7 @@
       "id": "166470-P00365",
       "name": "Pablo Jose Liberato",
       "ethnicities": null,
-      "age": "parvulo",
+      "age": "infant",
       "legitimacy": "naturales",
       "occupation": null,
       "phenotype": null,
@@ -7772,6 +8494,22 @@
       "titles": null,
       "ranks": null,
       "relationships": [
+        {
+          "related_person": "166470-P00359",
+          "relationship_type": "grandparent"
+        },
+        {
+          "related_person": "166470-P00360",
+          "relationship_type": "grandparent"
+        },
+        {
+          "related_person": "166470-P00361",
+          "relationship_type": "grandparent"
+        },
+        {
+          "related_person": "166470-P00362",
+          "relationship_type": "grandparent"
+        },
         {
           "related_person": "166470-P00363",
           "relationship_type": "godparent"
@@ -7793,7 +8531,7 @@
       "id": "166470-P00366",
       "name": "Filomena Caridad Ramos",
       "ethnicities": null,
-      "age": "parvula",
+      "age": "infant",
       "legitimacy": "hija ilegítimo",
       "occupation": null,
       "phenotype": null,
@@ -7921,7 +8659,7 @@
       "id": "166470-P00372",
       "name": "Maria Rufina Delgado",
       "ethnicities": null,
-      "age": "parvula",
+      "age": "infant",
       "legitimacy": null,
       "occupation": null,
       "phenotype": null,
@@ -8011,7 +8749,7 @@
       "id": "166470-P00377",
       "name": "Maria Fransisca Curiel",
       "ethnicities": null,
-      "age": "parvula",
+      "age": "infant",
       "legitimacy": "hija ilegítimo",
       "occupation": null,
       "phenotype": null,
@@ -8158,8 +8896,8 @@
       "id": "166470-P00385",
       "name": "Rafael Manuel Delgado",
       "ethnicities": null,
-      "age": "parvulo",
-      "legitimacy": "hijo legitimo",
+      "age": "infant",
+      "legitimacy": "legitimate",
       "occupation": null,
       "phenotype": null,
       "status": null,
@@ -8323,14 +9061,30 @@
       "id": "166470-P00392",
       "name": "Bernardo Jose Jlilarion Soriano",
       "ethnicities": null,
-      "age": "parvulo",
-      "legitimacy": "hijo legitimo",
+      "age": "infant",
+      "legitimacy": "legitimate",
       "occupation": null,
       "phenotype": null,
       "status": null,
       "titles": null,
       "ranks": null,
       "relationships": [
+        {
+          "related_person": "166470-P00396",
+          "relationship_type": "grandparent"
+        },
+        {
+          "related_person": "166470-P00397",
+          "relationship_type": "grandparent"
+        },
+        {
+          "related_person": "166470-P00399",
+          "relationship_type": "grandparent"
+        },
+        {
+          "related_person": "166470-P00398",
+          "relationship_type": "grandparent"
+        },
         {
           "related_person": "166470-P00401",
           "relationship_type": "godparent"
@@ -8387,6 +9141,14 @@
         {
           "related_person": "166470-P00395",
           "relationship_type": "spouse"
+        },
+        {
+          "related_person": "166470-P00397",
+          "relationship_type": "parent"
+        },
+        {
+          "related_person": "166470-P00396",
+          "relationship_type": "parent"
         }
       ],
       "references": [
@@ -8412,6 +9174,14 @@
         {
           "related_person": "166470-P00394",
           "relationship_type": "spouse"
+        },
+        {
+          "related_person": "166470-P00398",
+          "relationship_type": "parent"
+        },
+        {
+          "related_person": "166470-P00399",
+          "relationship_type": "parent"
         }
       ],
       "references": [
@@ -8429,7 +9199,20 @@
       "status": null,
       "titles": null,
       "ranks": null,
-      "relationships": null,
+      "relationships": [
+        {
+          "related_person": "166470-P00392",
+          "relationship_type": "grandchild"
+        },
+        {
+          "related_person": "166470-P00397",
+          "relationship_type": "spouse"
+        },
+        {
+          "related_person": "166470-P00394",
+          "relationship_type": "child"
+        }
+      ],
       "references": [
         "166470-1014-2"
       ]
@@ -8445,7 +9228,20 @@
       "status": null,
       "titles": null,
       "ranks": null,
-      "relationships": null,
+      "relationships": [
+        {
+          "related_person": "166470-P00392",
+          "relationship_type": "grandchild"
+        },
+        {
+          "related_person": "166470-P00396",
+          "relationship_type": "spouse"
+        },
+        {
+          "related_person": "166470-P00394",
+          "relationship_type": "child"
+        }
+      ],
       "references": [
         "166470-1014-2"
       ]
@@ -8461,7 +9257,20 @@
       "status": null,
       "titles": null,
       "ranks": null,
-      "relationships": null,
+      "relationships": [
+        {
+          "related_person": "166470-P00392",
+          "relationship_type": "grandchild"
+        },
+        {
+          "related_person": "166470-P00399",
+          "relationship_type": "spouse"
+        },
+        {
+          "related_person": "166470-P00395",
+          "relationship_type": "child"
+        }
+      ],
       "references": [
         "166470-1014-2"
       ]
@@ -8477,7 +9286,20 @@
       "status": null,
       "titles": null,
       "ranks": null,
-      "relationships": null,
+      "relationships": [
+        {
+          "related_person": "166470-P00392",
+          "relationship_type": "grandchild"
+        },
+        {
+          "related_person": "166470-P00398",
+          "relationship_type": "spouse"
+        },
+        {
+          "related_person": "166470-P00395",
+          "relationship_type": "child"
+        }
+      ],
       "references": [
         "166470-1014-2"
       ]
@@ -8544,7 +9366,7 @@
       "id": "166470-P00403",
       "name": "Maria Nicolasa A",
       "ethnicities": null,
-      "age": "parvula",
+      "age": "infant",
       "legitimacy": null,
       "occupation": null,
       "phenotype": null,
@@ -8650,7 +9472,7 @@
       "id": "166470-P00409",
       "name": "Jose Maria Sancehz",
       "ethnicities": null,
-      "age": "parvulo",
+      "age": "infant",
       "legitimacy": null,
       "occupation": null,
       "phenotype": null,
@@ -8687,7 +9509,7 @@
       "id": "166470-P00411",
       "name": "Maria Josefa Sanchez",
       "ethnicities": null,
-      "age": "parvula",
+      "age": "infant",
       "legitimacy": null,
       "occupation": null,
       "phenotype": null,
@@ -8740,7 +9562,7 @@
       "id": "166470-P00414",
       "name": "Unknown principal",
       "ethnicities": null,
-      "age": "parvula",
+      "age": "infant",
       "legitimacy": null,
       "occupation": null,
       "phenotype": null,
@@ -8761,8 +9583,8 @@
       "id": "166470-P00415",
       "name": "Jacobo A",
       "ethnicities": null,
-      "age": "parvulo",
-      "legitimacy": "hijo legitimo",
+      "age": "infant",
+      "legitimacy": "legitimate",
       "occupation": null,
       "phenotype": null,
       "status": null,
@@ -9566,7 +10388,7 @@
       "id": "166470-P00456",
       "name": "Jose Bencerlao de la Caridad",
       "ethnicities": null,
-      "age": "parvulo",
+      "age": "infant",
       "legitimacy": "naturales",
       "occupation": null,
       "phenotype": null,
@@ -9599,7 +10421,7 @@
       "id": "166470-P00457",
       "name": "Maria Jacoba Facunda Porregue",
       "ethnicities": null,
-      "age": "parvula",
+      "age": "infant",
       "legitimacy": "hija ilegítimo",
       "occupation": null,
       "phenotype": null,
@@ -9769,7 +10591,7 @@
       "id": "166470-P00465",
       "name": "Maria Foinasa A",
       "ethnicities": null,
-      "age": "parvula",
+      "age": "infant",
       "legitimacy": "hija legitimo",
       "occupation": null,
       "phenotype": null,
@@ -10074,7 +10896,7 @@
       "id": "166470-P00480",
       "name": "Jose Regino de la Caridad",
       "ethnicities": null,
-      "age": "parvulo",
+      "age": "infant",
       "legitimacy": "hijo ilegítimo",
       "occupation": null,
       "phenotype": null,
@@ -10107,7 +10929,7 @@
       "id": "166470-P00481",
       "name": "Maria del Pilar Sorria",
       "ethnicities": null,
-      "age": "parvula",
+      "age": "infant",
       "legitimacy": "hija ilegítimo",
       "occupation": null,
       "phenotype": null,
@@ -10240,7 +11062,7 @@
       "id": "166470-P00487",
       "name": "Jose Domingo Sorria",
       "ethnicities": null,
-      "age": "parvulo",
+      "age": "infant",
       "legitimacy": "hijo ilegítimo",
       "occupation": null,
       "phenotype": null,
@@ -10537,7 +11359,7 @@
       "id": "166470-P00502",
       "name": "Jacobo",
       "ethnicities": null,
-      "age": "parvulo",
+      "age": "infant",
       "legitimacy": null,
       "occupation": null,
       "phenotype": null,
@@ -10562,7 +11384,7 @@
       "id": "166470-P00503",
       "name": "Juan Gregorio Lupy",
       "ethnicities": null,
-      "age": "parvulo",
+      "age": "infant",
       "legitimacy": "hijo ilegítimo",
       "occupation": null,
       "phenotype": null,
@@ -10709,7 +11531,7 @@
       "id": "166470-P00511",
       "name": "Juana Luisa Martinez",
       "ethnicities": null,
-      "age": "parvula",
+      "age": "infant",
       "legitimacy": "illegitimate",
       "occupation": null,
       "phenotype": null,
@@ -10865,7 +11687,7 @@
       "id": "166470-P00519",
       "name": "Serapia Maria Nacarro",
       "ethnicities": null,
-      "age": "parvula",
+      "age": "infant",
       "legitimacy": "hija ilegítimo",
       "occupation": null,
       "phenotype": null,
@@ -10998,7 +11820,7 @@
       "id": "166470-P00525",
       "name": "Victoria del Carmen Calderon",
       "ethnicities": null,
-      "age": "parvula",
+      "age": "infant",
       "legitimacy": "naturales",
       "occupation": null,
       "phenotype": "moreno",
@@ -11292,7 +12114,7 @@
       "id": "166470-P00541",
       "name": "Juan Jose de la Cruz Valdes",
       "ethnicities": null,
-      "age": "parvulo",
+      "age": "infant",
       "legitimacy": null,
       "occupation": null,
       "phenotype": null,
@@ -11550,7 +12372,7 @@
       "id": "166470-P00553",
       "name": "Cecilia del Rosario",
       "ethnicities": null,
-      "age": "parvula",
+      "age": "infant",
       "legitimacy": "legitimate",
       "occupation": null,
       "phenotype": null,
@@ -11583,7 +12405,7 @@
       "id": "166470-P00554",
       "name": "Maria Vicente Moya",
       "ethnicities": null,
-      "age": "parvula",
+      "age": "infant",
       "legitimacy": "legitimate",
       "occupation": null,
       "phenotype": "mixed-race",
@@ -11804,7 +12626,7 @@
       "id": "166470-P00565",
       "name": "Maria Marcela Morales",
       "ethnicities": null,
-      "age": "parvula",
+      "age": "infant",
       "legitimacy": null,
       "occupation": null,
       "phenotype": null,
@@ -11984,7 +12806,7 @@
       "id": "166470-P00575",
       "name": "Maria Criostoma",
       "ethnicities": null,
-      "age": "parvula",
+      "age": "infant",
       "legitimacy": null,
       "occupation": null,
       "phenotype": null,
@@ -12009,7 +12831,7 @@
       "id": "166470-P00576",
       "name": "Fransisco Bibián Bestarnante",
       "ethnicities": null,
-      "age": "parvulo",
+      "age": "infant",
       "legitimacy": null,
       "occupation": null,
       "phenotype": null,
@@ -12115,7 +12937,7 @@
       "id": "166470-P00582",
       "name": "Matea Rodriguez",
       "ethnicities": null,
-      "age": "parvula",
+      "age": "infant",
       "legitimacy": null,
       "occupation": null,
       "phenotype": null,
@@ -12221,7 +13043,7 @@
       "id": "166470-P00588",
       "name": "Victor",
       "ethnicities": null,
-      "age": "parvula",
+      "age": "infant",
       "legitimacy": "illegitimate",
       "occupation": null,
       "phenotype": null,
@@ -12434,7 +13256,7 @@
       "id": "166470-P00599",
       "name": "Dorotea Valle",
       "ethnicities": null,
-      "age": "parvula",
+      "age": "infant",
       "legitimacy": null,
       "occupation": null,
       "phenotype": null,
@@ -12642,7 +13464,7 @@
       "id": "166470-P00609",
       "name": "Maria Crispina",
       "ethnicities": null,
-      "age": "parvula",
+      "age": "infant",
       "legitimacy": "naturales",
       "occupation": null,
       "phenotype": null,
@@ -12815,7 +13637,7 @@
       "id": "166470-P00617",
       "name": "Candelaria de la Caridad",
       "ethnicities": null,
-      "age": "parvula",
+      "age": "infant",
       "legitimacy": "illegitimate",
       "occupation": null,
       "phenotype": null,
@@ -12890,7 +13712,7 @@
       "id": "166470-P00620",
       "name": "Luis de la O Ramon",
       "ethnicities": null,
-      "age": "parvulo",
+      "age": "infant",
       "legitimacy": null,
       "occupation": null,
       "phenotype": null,
@@ -13089,7 +13911,7 @@
       "id": "166470-P00630",
       "name": "Ambrosio Jose de la Caridad",
       "ethnicities": null,
-      "age": "parvulo",
+      "age": "infant",
       "legitimacy": "naturales",
       "occupation": null,
       "phenotype": "mixed-race",
@@ -13175,7 +13997,7 @@
       "id": "166470-P00634",
       "name": "Cristobal",
       "ethnicities": null,
-      "age": "parvulo",
+      "age": "infant",
       "legitimacy": null,
       "occupation": null,
       "phenotype": null,
@@ -13196,7 +14018,7 @@
       "id": "166470-P00635",
       "name": "Jose Polonia Rebasa",
       "ethnicities": null,
-      "age": "parvulo",
+      "age": "infant",
       "legitimacy": null,
       "occupation": null,
       "phenotype": null,
@@ -13370,7 +14192,7 @@
       "id": "166470-P00644",
       "name": "Teresa Donata",
       "ethnicities": null,
-      "age": "parvula",
+      "age": "infant",
       "legitimacy": null,
       "occupation": null,
       "phenotype": null,
@@ -13395,7 +14217,7 @@
       "id": "166470-P00645",
       "name": "Juana Maria Reyna Reyna",
       "ethnicities": null,
-      "age": "parvula",
+      "age": "infant",
       "legitimacy": "illegitimate",
       "occupation": null,
       "phenotype": null,
@@ -13608,7 +14430,7 @@
       "id": "166470-P00656",
       "name": "Maria Modesta Cordero",
       "ethnicities": null,
-      "age": "parvula",
+      "age": "infant",
       "legitimacy": "naturales",
       "occupation": null,
       "phenotype": "mixed-race",
@@ -14108,7 +14930,7 @@
       "id": "166470-P00683",
       "name": "Maria Arcadia",
       "ethnicities": null,
-      "age": "parvula",
+      "age": "infant",
       "legitimacy": "hija ilegítimo",
       "occupation": null,
       "phenotype": null,
@@ -14375,7 +15197,7 @@
       "id": "166470-P00697",
       "name": "Margarita Chevenffeu",
       "ethnicities": null,
-      "age": "parvula",
+      "age": "infant",
       "legitimacy": null,
       "occupation": null,
       "phenotype": null,
@@ -14490,7 +15312,7 @@
       "id": "166470-P00703",
       "name": "Longrino Raymundo",
       "ethnicities": null,
-      "age": "parvulo",
+      "age": "infant",
       "legitimacy": "illegitimate",
       "occupation": null,
       "phenotype": "mixed-race",
@@ -14727,8 +15549,8 @@
       "id": "166470-P00715",
       "name": "Jose Estanislao",
       "ethnicities": null,
-      "age": "parvulo",
-      "legitimacy": "hijo legitimo",
+      "age": "infant",
+      "legitimacy": "legitimate",
       "occupation": null,
       "phenotype": null,
       "status": null,
@@ -14995,7 +15817,7 @@
       "id": "166470-P00728",
       "name": "Leona Juliana",
       "ethnicities": null,
-      "age": "parvula",
+      "age": "infant",
       "legitimacy": "hija ilegítimo",
       "occupation": null,
       "phenotype": null,
@@ -15188,7 +16010,7 @@
       "id": "166470-P00738",
       "name": "Maria Cleote",
       "ethnicities": null,
-      "age": "parvula",
+      "age": "infant",
       "legitimacy": "naturales",
       "occupation": null,
       "phenotype": null,
@@ -15221,7 +16043,7 @@
       "id": "166470-P00739",
       "name": "Maria Catalina Hood",
       "ethnicities": null,
-      "age": "parvula",
+      "age": "infant",
       "legitimacy": "legitimate",
       "occupation": null,
       "phenotype": null,
