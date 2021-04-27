@@ -43,11 +43,12 @@ def retrieve_controlled_vocabularies():
     titles = ["frai", "sr", "sr.", "rexidor", "regr", "probin sial", "probinsial", "herm.o", "hermano", "dr.", "doc tor", "dna", "difin.dor", "difin.or", "difinidor", "d.a", "aiudante", "doctor", "d.r", "dor", "dr", "d.or", "b.er", "br", "ber", "don", "doña", "da", "padre", "pe", "predicador", "fray", "d.n", "d.", "d,n", "d;n", "p.e", "p", "dn", "fr.", "fr", "f", "regidor", "rex.or", "alg.l m.or", "ldo", "licenciado", "d", "alg.l", "alcalde"]
     ranks = ["my.r", "comandan.te", "com.te", "capt.n", "capp[roto]", "cap[roto]", "capitn", "comend.te63", "comand.te", "alferes", "alfer.s mayor", "capitan", "capitam", "cap.n", "capit.n", "capn", "sarg.to may.r", "sarg.to", "sargento", "sarjento mayor", "sarjento", "sargto mayor", "theniente", "teniente", "thente"]
     ethnicities = ["ganga", "español", "espanol", "caravali", "ingles", "yngles", "angola", "carabalí", "carabali", "carabaly", "congo", "conga", "mandinga", "mina", "temo", "malagas", "arara", "manga"]
-    status = ["escrava", "escravos", "esclabo", "esclaba", "escl.a", "escl.o", "clavo", "clava", "escl", "escl.", "escl.s", "clabo", "claba", "esc.va", "esc.ba", "esc.vo", "escvo", "esclavo", "esclava", "escva", "esc.bo", "esclabos", "esclavos", "esc.os", "esc.a", "esc.o", "libre", "esc.s", "esco", "esca"]
+    status = ["propiedad", "escrava", "escravos", "esclabo", "esclaba", "escl.a", "escl.o", "clavo", "clava", "escl", "escl.", "escl.s", "clabo", "claba", "esc.va", "esc.ba", "esc.vo", "escvo", "esclavo", "esclava", "escva", "esc.bo", "esclabos", "esclavos", "esc.os", "esc.a", "esc.o", "libre", "esc.s", "esco", "esca"]
     legitimacy = ["lexma", "lexmo", "legitima", "legitimo", "h l", "natural", "nral", "lexitima", "lexitimo", "nat.l"]
     relationships = ["hermano", "hijo", "hija", "esposo", "esposa", "viudo", "viuda", "padrinos", "padrino", "padryno", "soltera", "soltero", "madrina", "padre", "p.p.", "p. ", "p."]
+    origin = ["naturales"]
 
-    vocabs = {"legitimacy": legitimacy, "age": age, "occupation": occupation, "phenotype": phenotype, "titles": titles, "ranks": ranks, "ethnicities": ethnicities, "status": status, "relationships": relationships}
+    vocabs = {"origin": origin, "legitimacy": legitimacy, "age": age, "occupation": occupation, "phenotype": phenotype, "titles": titles, "ranks": ranks, "ethnicities": ethnicities, "status": status, "relationships": relationships}
 
     return vocabs
 
@@ -191,6 +192,8 @@ def alt_assign_relationships(entry_text, entities, people_df, people, volume_met
     found_godparents = False
     found_paternal_grandparents = False
     found_maternal_grandparents = False
+    found_enslaver = False
+    enslaver_id = None
 
     #build godparent/godchild relationships
     #future improvement: add logic to look for spousal relationship between godparents
@@ -405,6 +408,23 @@ def alt_assign_relationships(entry_text, entities, people_df, people, volume_met
                 elif (ens != -1) and (close_ep != -1):
                     people = build_reciprocal_relationship(people, people_df["unique_id"][ens], people_df["unique_id"][close_ep], "enslaver")
             #match enslaved person to owner
+            elif "propiedad" in cat_char["pred_entity"][i].lower():
+                for j in range(len(entities)):
+                    if entities["pred_start"][j] == cat_char["pred_start"][i]:
+                        signal_entity_index = j
+                        break
+                if found_enslaver and (entry_text.rfind("misma", cat_char["pred_start"][i] - 25, cat_char["pred_start"][i]) != -1):
+                    if (entities["pred_label"][signal_entity_index - 1] == "PER") and (cat_char["pred_start"][i] - entities["pred_end"][signal_entity_index - 1] <= 20):
+                        people = build_reciprocal_relationship(people, enslaver_id, entities["unique_id"][signal_entity_index - 1], "enslaver")
+                        if (entities["pred_label"][signal_entity_index - 2] == "PER") and (entities["pred_end"][signal_entity_index - 2] - entities["pred_start"][signal_entity_index - 1] <= 5):
+                            people = build_reciprocal_relationship(people, enslaver_id, entities["unique_id"][signal_entity_index - 2], "enslaver")
+                elif (entities["pred_label"][signal_entity_index + 1] == "PER") and ((entities["pred_start"][signal_entity_index + 1] - cat_char["pred_start"][i]) <= 25):
+                    for j in range(len(people_df)):
+                        if people_df['pred_start'][j] == entities['pred_start'][signal_entity_index + 1]:
+                            found_enslaver = True
+                            enslaver_id = people_df["unique_id"][j]
+                            people = build_reciprocal_relationship(people, enslaver_id, principal_id, "enslaver")
+                            break
             else:
                 ep = -1
                 ens = -1
@@ -531,6 +551,8 @@ def categorize_characteristics(entities_df, characteristics_df):
         for cat in vocabs:
             if (characteristic['pred_entity'] == 'h') or (characteristic['pred_entity'] == "h."):
                 category = "relationships"
+            elif characteristic["pred_entity"] == "propiedad":
+                category = "status"
             if category != None:
                 break
             for term in vocabs[cat]:
@@ -615,14 +637,47 @@ def assign_characteristics(entry_text, entities_df, characteristics_df, unique_i
                 assignments[index] = ids[0] + ';' + ids[1]
             elif len(ids) == 1:
                 assignments[index] = ids[0]
+        elif categorized_characteristics["category"][index] == "origin":
+            for i, entity in entities_df.iterrows():
+                if entity["pred_start"] == categorized_characteristics["pred_start"][index]:
+                    signal_entity_index = i
+                    break
+            if (entities_df["pred_label"][signal_entity_index - 1] == "PER") and (entities_df["pred_label"][signal_entity_index + 1] == "LOC") and (entities_df["pred_start"][signal_entity_index + 1] - entities_df["pred_end"][signal_entity_index - 1] <= 20):
+                place = entities_df["pred_entity"][signal_entity_index + 1]
+                multiple = False
+                if categorized_characteristics["pred_entity"][index] == "naturales":
+                    multiple = True
+                categorized_characteristics.at[index, "pred_entity"] = place
+                for i, person in unique_individuals.iterrows():
+                    if person["pred_start"] == entities_df["pred_start"][signal_entity_index - 1]:
+                        assignments[index] = person["unique_id"]
+                        break
+                if multiple and (entities_df["pred_label"][signal_entity_index - 2] == "PER") and (entities_df["pred_start"][signal_entity_index - 1] - entities_df["pred_end"][signal_entity_index - 2] <= 10):
+                    for i, person in unique_individuals.iterrows():
+                        if person["pred_start"] == entities_df["pred_start"][signal_entity_index - 2]:
+                            assignments[index] += ';' + person["unique_id"]
+                            break
+            elif entities_df["pred_label"][signal_entity_index + 1] == "LOC":
+                place = entities_df["pred_entity"][signal_entity_index + 1]
+                categorized_characteristics.at[index, "pred_entity"] = place
+                principal = determine_principals(entry_text, unique_individuals, 1)
+                if principal != None:
+                    principal = determine_principals(entry_text, unique_individuals, 1)[0]
+                else:
+                    principal = "Unknown principal"
+                princ_loc = unique_individuals.index[unique_individuals["pred_entity"] == principal].tolist()
+                for loc in princ_loc:
+                    if assignments[index] == None:
+                        assignments[index] = unique_individuals["unique_id"][loc]
+                    else:
+                        assignments[index] += ';' + unique_individuals["unique_id"][loc]
+
 
     categorized_characteristics["assignment"] = assignments
 
-    #display(categorized_characteristics)
-
     for i in range(len(unique_individuals.index)):
 
-        characteristics = {"ethnicities":[], "age":None, "legitimacy":None,"occupation":[], "phenotype":[], "status":None, "titles":None, "ranks":None, "relationships":None}
+        characteristics = {"origin": None, "ethnicities":[], "age":None, "legitimacy":None,"occupation":[], "phenotype":[], "status":None, "titles":None, "ranks":None, "relationships":None}
 
         for eth in ethnicities:
             if eth in unique_individuals["pred_entity"][i].lower():
@@ -632,7 +687,7 @@ def assign_characteristics(entry_text, entities_df, characteristics_df, unique_i
             if (categorized_characteristics["assignment"][j] == None):
                 continue
             if unique_individuals["unique_id"][i] in categorized_characteristics["assignment"][j]:
-                if (categorized_characteristics["category"][j] == "age") or (categorized_characteristics["category"][j] == "legitimacy") or (categorized_characteristics["category"][j] == "status"):
+                if (categorized_characteristics["category"][j] == "origin") or (categorized_characteristics["category"][j] == "age") or (categorized_characteristics["category"][j] == "legitimacy") or (categorized_characteristics["category"][j] == "status"):
                     characteristics[categorized_characteristics["category"][j]] = categorized_characteristics["pred_entity"][j]
                 else:
                     characteristics[categorized_characteristics["category"][j]].append(categorized_characteristics["pred_entity"][j])
@@ -1258,7 +1313,7 @@ def id_obvious_duplicates(people, principals, cleric):
 
         for index, person in people.iterrows():
 
-            if (person['pred_entity'] == principals[0]):
+            if (person['pred_entity'] == principals[0]) or ((len(person["pred_entity"].split(' ')) == 1) and (person["pred_entity"] in principals[0])):
                 obv_dups["principal"].append(person["unique_id"])
 
             if (person['pred_entity'] == cleric):

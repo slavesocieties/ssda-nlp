@@ -60,6 +60,10 @@ def process_volume(path_to_transcription, path_to_model):
     ent_preds_df, metrics_df, per_ent_metrics = test_model(trained_model, entry_df, "entry_no", "text", score_model=False)
     print("Entities extracted.")
 
+    #development
+    #pd.set_option("display.max_rows", 101)
+    #display(ent_preds_df.head(100))
+
     #iterate through each entry and build relationships
 
     people = []
