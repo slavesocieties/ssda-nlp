@@ -10,7 +10,7 @@
   },
   "images": [
     {
-      "id": "1002",
+      "id": "0002",
       "type": "JPG",
       "number": null,
       "entries": [
@@ -736,7 +736,7 @@
         }
       ],
       "references": [
-        "166470-1002-1"
+        "166470-0002-1"
       ]
     },
     {
@@ -758,13 +758,13 @@
         }
       ],
       "references": [
-        "166470-1002-1"
+        "166470-0002-1"
       ]
     },
     {
       "id": "166470-P00003",
       "name": "Roque Cruz",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": "adult",
       "legitimacy": null,
@@ -788,7 +788,7 @@
         }
       ],
       "references": [
-        "166470-1002-1"
+        "166470-0002-1"
       ]
     },
     {
@@ -810,7 +810,7 @@
         }
       ],
       "references": [
-        "166470-1002-2"
+        "166470-0002-2"
       ]
     },
     {
@@ -832,13 +832,13 @@
         }
       ],
       "references": [
-        "166470-1002-2"
+        "166470-0002-2"
       ]
     },
     {
       "id": "166470-P00006",
       "name": "Maria Filomenia",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": "adult",
       "legitimacy": null,
@@ -858,13 +858,13 @@
         }
       ],
       "references": [
-        "166470-1002-2"
+        "166470-0002-2"
       ]
     },
     {
       "id": "166470-P00007",
       "name": "Maria Lugrada",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": "adult",
       "legitimacy": null,
@@ -884,7 +884,7 @@
         }
       ],
       "references": [
-        "166470-1002-3"
+        "166470-0002-3"
       ]
     },
     {
@@ -901,7 +901,7 @@
       "ranks": null,
       "relationships": null,
       "references": [
-        "166470-1002-3"
+        "166470-0002-3"
       ]
     },
     {
@@ -923,7 +923,7 @@
         }
       ],
       "references": [
-        "166470-1002-3"
+        "166470-0002-3"
       ]
     },
     {
@@ -1110,7 +1110,7 @@
     {
       "id": "166470-P00018",
       "name": "Candelaria Santa Cruz",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": "adult",
       "legitimacy": null,
@@ -1136,7 +1136,7 @@
     {
       "id": "166470-P00019",
       "name": "Isabel Santa Cruz",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": "adult",
       "legitimacy": null,
@@ -1162,7 +1162,7 @@
     {
       "id": "166470-P00020",
       "name": "Ariceta",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -1265,7 +1265,7 @@
     {
       "id": "166470-P00024",
       "name": "Manuel Connnegra",
-      "origin": "Santo Espiri#",
+      "origin": "166470-L3",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -1295,7 +1295,7 @@
     {
       "id": "166470-P00025",
       "name": "Josefa Sanchez",
-      "origin": "villa Clara",
+      "origin": "166470-L4",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -1447,7 +1447,7 @@
     {
       "id": "166470-P00032",
       "name": "Scolastica",
-      "origin": "la Habana",
+      "origin": "166470-L5",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -1546,7 +1546,7 @@
     {
       "id": "166470-P00037",
       "name": "Ase#cio# Belen",
-      "origin": "Pipiceu",
+      "origin": "166470-L6",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -1698,7 +1698,7 @@
     {
       "id": "166470-P00044",
       "name": "caridad Guerrero",
-      "origin": "Paceraras",
+      "origin": "166470-L7",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -1815,7 +1815,7 @@
     {
       "id": "166470-P00050",
       "name": "Fereza",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -2198,7 +2198,7 @@
     {
       "id": "166470-P00065",
       "name": "Regina",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": "adult",
       "legitimacy": null,
@@ -2224,7 +2224,7 @@
     {
       "id": "166470-P00066",
       "name": "Joaquina",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -2416,7 +2416,7 @@
     {
       "id": "166470-P00074",
       "name": "Maria Dominga",
-      "origin": "Cumanayagua",
+      "origin": "166470-L8",
       "ethnicities": null,
       "age": "infant",
       "legitimacy": "hija ilegítimo",
@@ -2649,7 +2649,7 @@
     {
       "id": "166470-P00084",
       "name": "Maria Vericitada Perez",
-      "origin": "Villa Clara",
+      "origin": "166470-L9",
       "ethnicities": null,
       "age": "infant",
       "legitimacy": "legitimate",
@@ -3108,7 +3108,7 @@
     {
       "id": "166470-P00101",
       "name": "Marcial de la Caridad",
-      "origin": "Trinidad",
+      "origin": "166470-L10",
       "ethnicities": null,
       "age": "infant",
       "legitimacy": "legitimate",
@@ -3180,7 +3180,7 @@
     {
       "id": "166470-P00103",
       "name": "Margarita",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -3288,7 +3288,7 @@
     {
       "id": "166470-P00107",
       "name": "Maria Regla",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -3376,7 +3376,7 @@
     {
       "id": "166470-P00111",
       "name": "Jose Fereso Hernandez",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": "infant",
       "legitimacy": "legitimate",
@@ -3734,7 +3734,7 @@
     {
       "id": "166470-P00126",
       "name": "Antonia Sivero",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": "adult",
       "legitimacy": null,
@@ -3760,7 +3760,7 @@
     {
       "id": "166470-P00127",
       "name": "Bruno Santa Cruz",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": "adult",
       "legitimacy": null,
@@ -3997,7 +3997,7 @@
     {
       "id": "166470-P00137",
       "name": "Rafaela Villavicencio",
-      "origin": "Trinidad",
+      "origin": "166470-L10",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -4430,7 +4430,7 @@
     {
       "id": "166470-P00155",
       "name": "Julian",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -4447,7 +4447,7 @@
     {
       "id": "166470-P00156",
       "name": "Sabrina",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -4534,7 +4534,7 @@
     {
       "id": "166470-P00160",
       "name": "Fernando",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -4556,7 +4556,7 @@
     {
       "id": "166470-P00161",
       "name": "Ramona",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -4755,7 +4755,7 @@
     {
       "id": "166470-P00171",
       "name": "Gregorio Nota",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": "infant",
       "legitimacy": "legitimate",
@@ -4781,7 +4781,7 @@
     {
       "id": "166470-P00172",
       "name": "Jacundo",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -4798,7 +4798,7 @@
     {
       "id": "166470-P00173",
       "name": "Maria Belem",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -4849,7 +4849,7 @@
     {
       "id": "166470-P00176",
       "name": "Rafael",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -4866,7 +4866,7 @@
     {
       "id": "166470-P00177",
       "name": "Aria",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -4927,7 +4927,7 @@
     {
       "id": "166470-P00180",
       "name": "Javier",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -4944,7 +4944,7 @@
     {
       "id": "166470-P00181",
       "name": "Isabel",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -5031,7 +5031,7 @@
     {
       "id": "166470-P00185",
       "name": "Jose",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -5048,7 +5048,7 @@
     {
       "id": "166470-P00186",
       "name": "Antonia Maria",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -5165,7 +5165,7 @@
     {
       "id": "166470-P00192",
       "name": "Antonia Corras",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": "infant",
       "legitimacy": "legitimate",
@@ -5209,7 +5209,7 @@
     {
       "id": "166470-P00194",
       "name": "Estevan",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -5226,7 +5226,7 @@
     {
       "id": "166470-P00195",
       "name": "Jorracia esta",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -5282,7 +5282,7 @@
     {
       "id": "166470-P00198",
       "name": "Maria esta libre",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -5338,7 +5338,7 @@
     {
       "id": "166470-P00201",
       "name": "Sebastian",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -5355,7 +5355,7 @@
     {
       "id": "166470-P00202",
       "name": "Jucina",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -5424,7 +5424,7 @@
     {
       "id": "166470-P00205",
       "name": "Fabian",
-      "origin": "Africa",
+      "origin": "166470-L11",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -5441,7 +5441,7 @@
     {
       "id": "166470-P00206",
       "name": "Isabel",
-      "origin": "Africa",
+      "origin": "166470-L11",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -5589,7 +5589,7 @@
     {
       "id": "166470-P00213",
       "name": "Maria Josefa Valvidez",
-      "origin": "Cumanayagua",
+      "origin": "166470-L8",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -5606,7 +5606,7 @@
     {
       "id": "166470-P00214",
       "name": "Jose Manuel",
-      "origin": "Trinidad",
+      "origin": "166470-L10",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -5632,7 +5632,7 @@
     {
       "id": "166470-P00215",
       "name": "Micaela Ramirez",
-      "origin": "Trinidad",
+      "origin": "166470-L10",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -5705,7 +5705,7 @@
     {
       "id": "166470-P00218",
       "name": "Calletana Leonor Santa Cruz",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": "adult",
       "legitimacy": null,
@@ -5775,7 +5775,7 @@
     {
       "id": "166470-P00221",
       "name": "Rosendo",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": "adult",
       "legitimacy": null,
@@ -5827,7 +5827,7 @@
     {
       "id": "166470-P00223",
       "name": "Jeorge Santa Cruz",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -5897,7 +5897,7 @@
     {
       "id": "166470-P00226",
       "name": "Petronila",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": "adult",
       "legitimacy": null,
@@ -5982,7 +5982,7 @@
     {
       "id": "166470-P00229",
       "name": "Rosa Villavicencio",
-      "origin": "Trinidad",
+      "origin": "166470-L10",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -6168,7 +6168,7 @@
     {
       "id": "166470-P00237",
       "name": "Bartola Lufan",
-      "origin": "esta Isla",
+      "origin": "166470-L12",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -6295,7 +6295,7 @@
     {
       "id": "166470-P00243",
       "name": "Rafael Rodriguez Prieto",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": "adult",
       "legitimacy": null,
@@ -6343,7 +6343,7 @@
     {
       "id": "166470-P00245",
       "name": "Seferino Santa Cruz",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": "adult",
       "legitimacy": null,
@@ -6369,7 +6369,7 @@
     {
       "id": "166470-P00246",
       "name": "Liberato Santa Cruz",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": "adult",
       "legitimacy": null,
@@ -6395,7 +6395,7 @@
     {
       "id": "166470-P00247",
       "name": "Narciso Santa Cruz",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": "adult",
       "legitimacy": null,
@@ -6421,7 +6421,7 @@
     {
       "id": "166470-P00248",
       "name": "Estefania Santa Cruz",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": "adult",
       "legitimacy": null,
@@ -6508,7 +6508,7 @@
     {
       "id": "166470-P00252",
       "name": "Juana Maria de la Candelaria",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -6886,7 +6886,7 @@
     {
       "id": "166470-P00268",
       "name": "Rodriguez Prieto",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": "adult",
       "legitimacy": null,
@@ -6956,7 +6956,7 @@
     {
       "id": "166470-P00271",
       "name": "Justo Rodriguez Prieto",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": "adult",
       "legitimacy": null,
@@ -7022,7 +7022,7 @@
     {
       "id": "166470-P00274",
       "name": "Justa Santa Cruz",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": "adult",
       "legitimacy": null,
@@ -7156,7 +7156,7 @@
     {
       "id": "166470-P00280",
       "name": "Merced",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -7268,7 +7268,7 @@
     {
       "id": "166470-P00285",
       "name": "Unknown principal",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": "adult",
       "legitimacy": null,
@@ -7372,7 +7372,7 @@
     {
       "id": "166470-P00290",
       "name": "Felipa Santa Cruz",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": "adult",
       "legitimacy": null,
@@ -7566,7 +7566,7 @@
     {
       "id": "166470-P00298",
       "name": "Jose Ivaxisto Castellanos",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": "adult",
       "legitimacy": null,
@@ -8004,7 +8004,7 @@
     {
       "id": "166470-P00319",
       "name": "Jacoba Rita Ramona Barrueta",
-      "origin": "San Luis de Laguavamal",
+      "origin": "166470-L13",
       "ethnicities": null,
       "age": "infant",
       "legitimacy": "legitimate",
@@ -8556,7 +8556,7 @@
     {
       "id": "166470-P00339",
       "name": "Pablo Jose Liberato",
-      "origin": "Villa Clara",
+      "origin": "166470-L9",
       "ethnicities": null,
       "age": "infant",
       "legitimacy": "hijo ilegítimo",
@@ -9158,7 +9158,7 @@
     {
       "id": "166470-P00366",
       "name": "Bernardo Jose Jlilarion Soriano",
-      "origin": "Trinidad",
+      "origin": "166470-L10",
       "ethnicities": null,
       "age": "infant",
       "legitimacy": "legitimate",
@@ -9552,7 +9552,7 @@
     {
       "id": "166470-P00381",
       "name": "Mendoza",
-      "origin": "rio",
+      "origin": "166470-L14",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -9985,7 +9985,7 @@
     {
       "id": "166470-P00401",
       "name": "Hernandez",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": "adult",
       "legitimacy": null,
@@ -10011,7 +10011,7 @@
     {
       "id": "166470-P00402",
       "name": "Melchor Hernandez",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": "adult",
       "legitimacy": null,
@@ -10037,7 +10037,7 @@
     {
       "id": "166470-P00403",
       "name": "Tirso Hernandez",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": "adult",
       "legitimacy": null,
@@ -10063,7 +10063,7 @@
     {
       "id": "166470-P00404",
       "name": "Vicente Hernandez",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": "adult",
       "legitimacy": null,
@@ -10089,7 +10089,7 @@
     {
       "id": "166470-P00405",
       "name": "Julian Hernandez",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": "adult",
       "legitimacy": null,
@@ -10115,7 +10115,7 @@
     {
       "id": "166470-P00406",
       "name": "Cristobal Hernandez",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": "adult",
       "legitimacy": null,
@@ -10141,7 +10141,7 @@
     {
       "id": "166470-P00407",
       "name": "Antonio Hernandez",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": "adult",
       "legitimacy": null,
@@ -10167,7 +10167,7 @@
     {
       "id": "166470-P00408",
       "name": "Gaspar Hernandez",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": "adult",
       "legitimacy": null,
@@ -10193,7 +10193,7 @@
     {
       "id": "166470-P00409",
       "name": "Manuel Hernandez",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": "adult",
       "legitimacy": null,
@@ -10241,7 +10241,7 @@
     {
       "id": "166470-P00411",
       "name": "Rufina Hernandez",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": "adult",
       "legitimacy": null,
@@ -10267,7 +10267,7 @@
     {
       "id": "166470-P00412",
       "name": "Jose Gregoria Bega",
-      "origin": "San Juan de los Remedios",
+      "origin": "166470-L15",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -10289,7 +10289,7 @@
     {
       "id": "166470-P00413",
       "name": "Rosa Santa",
-      "origin": "San Juan de los Remedios",
+      "origin": "166470-L15",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -10345,7 +10345,7 @@
     {
       "id": "166470-P00416",
       "name": "Andres Santa Ana",
-      "origin": "Villa Clara",
+      "origin": "166470-L9",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -10362,7 +10362,7 @@
     {
       "id": "166470-P00417",
       "name": "Andrea Gallardo",
-      "origin": "Villa Clara",
+      "origin": "166470-L9",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -10548,7 +10548,7 @@
     {
       "id": "166470-P00425",
       "name": "Maria Fransisca Porregue",
-      "origin": "Villa Clara",
+      "origin": "166470-L9",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -11518,7 +11518,7 @@
     {
       "id": "166470-P00469",
       "name": "Maria Emilia Lupez",
-      "origin": "villa libre,",
+      "origin": "166470-L16",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -11933,7 +11933,7 @@
     {
       "id": "166470-P00489",
       "name": "Victoria del Carmen Calderon",
-      "origin": "Trinidad",
+      "origin": "166470-L10",
       "ethnicities": null,
       "age": "infant",
       "legitimacy": "illegitimate",
@@ -12019,7 +12019,7 @@
     {
       "id": "166470-P00493",
       "name": "Faustina de Leon",
-      "origin": "Trinidad",
+      "origin": "166470-L10",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -12036,7 +12036,7 @@
     {
       "id": "166470-P00494",
       "name": "Felipe Calderon",
-      "origin": "Trinidad",
+      "origin": "166470-L10",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -12070,7 +12070,7 @@
     {
       "id": "166470-P00496",
       "name": "Juan de Leon",
-      "origin": "Trinidad",
+      "origin": "166470-L10",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -12087,7 +12087,7 @@
     {
       "id": "166470-P00497",
       "name": "Fransisca Combida",
-      "origin": "Trinidad",
+      "origin": "166470-L10",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -13245,7 +13245,7 @@
     {
       "id": "166470-P00552",
       "name": "Manuel Victor",
-      "origin": "Trinidad",
+      "origin": "166470-L10",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -13267,7 +13267,7 @@
     {
       "id": "166470-P00553",
       "name": "Maria Manuela Dorer",
-      "origin": "Trinidad",
+      "origin": "166470-L10",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -13323,7 +13323,7 @@
     {
       "id": "166470-P00556",
       "name": "Jose Ignacio Dorer",
-      "origin": "Trinidad",
+      "origin": "166470-L10",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -13619,7 +13619,7 @@
     {
       "id": "166470-P00570",
       "name": "Maria Crispina",
-      "origin": "Costa",
+      "origin": "166470-L17",
       "ethnicities": null,
       "age": "infant",
       "legitimacy": "legitimate",
@@ -13739,7 +13739,7 @@
     {
       "id": "166470-P00575",
       "name": "Joaquina Cleouga",
-      "origin": "Cumanayagua",
+      "origin": "166470-L8",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -13992,7 +13992,7 @@
     {
       "id": "166470-P00586",
       "name": "Maria Antonia Reynoso",
-      "origin": "Trinidad",
+      "origin": "166470-L10",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -14009,7 +14009,7 @@
     {
       "id": "166470-P00587",
       "name": "Juan Tomas Mena",
-      "origin": "Villa Clara",
+      "origin": "166470-L9",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -14026,7 +14026,7 @@
     {
       "id": "166470-P00588",
       "name": "Benita Agüero",
-      "origin": "Villa Clara",
+      "origin": "166470-L9",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -14447,7 +14447,7 @@
     {
       "id": "166470-P00608",
       "name": "Manuel Reyna",
-      "origin": "Trinidad",
+      "origin": "166470-L10",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -15171,7 +15171,7 @@
     {
       "id": "166470-P00644",
       "name": "Jose Maria Najarro",
-      "origin": "Santo Principe",
+      "origin": "166470-L19",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -15193,7 +15193,7 @@
     {
       "id": "166470-P00645",
       "name": "Maria Rita Antiaga",
-      "origin": "Villa Clara",
+      "origin": "166470-L9",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -15210,7 +15210,7 @@
     {
       "id": "166470-P00646",
       "name": "Jose Fernando Najarro",
-      "origin": "Santo Principe",
+      "origin": "166470-L19",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -15244,7 +15244,7 @@
     {
       "id": "166470-P00648",
       "name": "Manuel Artiaga",
-      "origin": "idem",
+      "origin": "166470-L20",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -15261,7 +15261,7 @@
     {
       "id": "166470-P00649",
       "name": "Maria Beatriz Hurtado",
-      "origin": "Villa Clara",
+      "origin": "166470-L9",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -15612,7 +15612,7 @@
     {
       "id": "166470-P00665",
       "name": "Damiana Perejia",
-      "origin": "Guanalacoa",
+      "origin": "166470-L21",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -16086,7 +16086,7 @@
     {
       "id": "166470-P00688",
       "name": "Andres Serrano",
-      "origin": "Villa Clara",
+      "origin": "166470-L9",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -16108,7 +16108,7 @@
     {
       "id": "166470-P00689",
       "name": "Isabel Nabarro",
-      "origin": "Villa Clara",
+      "origin": "166470-L9",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -16658,9 +16658,9 @@
       "ranks": null,
       "relationships": null,
       "references": [
-        "166470-1002-1",
-        "166470-1002-2",
-        "166470-1002-3",
+        "166470-0002-1",
+        "166470-0002-2",
+        "166470-0002-3",
         "166470-1002-4",
         "166470-1003-1",
         "166470-1003-2",
@@ -16832,7 +16832,7 @@
         }
       ],
       "references": [
-        "166470-1002-1",
+        "166470-0002-1",
         "166470-1006-1",
         "166470-1009-2",
         "166470-1009-4",
@@ -16873,9 +16873,9 @@
         }
       ],
       "references": [
-        "166470-1002-1",
-        "166470-1002-2",
-        "166470-1002-3",
+        "166470-0002-1",
+        "166470-0002-2",
+        "166470-0002-3",
         "166470-1002-4",
         "166470-1003-1",
         "166470-1003-2",
@@ -17070,7 +17070,7 @@
         }
       ],
       "references": [
-        "166470-1002-3",
+        "166470-0002-3",
         "166470-1003-1",
         "166470-1003-2",
         "166470-1006-2",
@@ -17087,7 +17087,7 @@
     {
       "id": "166470-P00717",
       "name": "Maria del Rosario",
-      "origin": "Guinea",
+      "origin": "166470-L2",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -17569,7 +17569,7 @@
     {
       "id": "166470-P00729",
       "name": "Juan Bautista Aristica",
-      "origin": "la Jlabanco",
+      "origin": "166470-L18",
       "ethnicities": null,
       "age": null,
       "legitimacy": null,
@@ -17590,11 +17590,91 @@
     {
       "id": "166470-L1",
       "location": "Catedral de Nuestra Señora de la Purisima Concepción"
+    },
+    {
+      "id": "166470-L2",
+      "location": "Guinea"
+    },
+    {
+      "id": "166470-L3",
+      "location": "Santo Espiri#"
+    },
+    {
+      "id": "166470-L4",
+      "location": "villa Clara"
+    },
+    {
+      "id": "166470-L5",
+      "location": "la Habana"
+    },
+    {
+      "id": "166470-L6",
+      "location": "Pipiceu"
+    },
+    {
+      "id": "166470-L7",
+      "location": "Paceraras"
+    },
+    {
+      "id": "166470-L8",
+      "location": "Cumanayagua"
+    },
+    {
+      "id": "166470-L9",
+      "location": "Villa Clara"
+    },
+    {
+      "id": "166470-L10",
+      "location": "Trinidad"
+    },
+    {
+      "id": "166470-L11",
+      "location": "Africa"
+    },
+    {
+      "id": "166470-L12",
+      "location": "esta Isla"
+    },
+    {
+      "id": "166470-L13",
+      "location": "San Luis de Laguavamal"
+    },
+    {
+      "id": "166470-L14",
+      "location": "rio"
+    },
+    {
+      "id": "166470-L15",
+      "location": "San Juan de los Remedios"
+    },
+    {
+      "id": "166470-L16",
+      "location": "villa libre,"
+    },
+    {
+      "id": "166470-L17",
+      "location": "Costa"
+    },
+    {
+      "id": "166470-L18",
+      "location": "la Jlabanco"
+    },
+    {
+      "id": "166470-L19",
+      "location": "Santo Principe"
+    },
+    {
+      "id": "166470-L20",
+      "location": "idem"
+    },
+    {
+      "id": "166470-L21",
+      "location": "Guanalacoa"
     }
   ],
   "events": [
     {
-      "id": "166470-1002-1-E1",
+      "id": "166470-0002-1-E1",
       "type": "baptism",
       "principal": "166470-P00003",
       "date": "1830-08-14",
@@ -17602,7 +17682,7 @@
       "cleric": "166470-P00715"
     },
     {
-      "id": "166470-1002-2-E1",
+      "id": "166470-0002-2-E1",
       "type": "baptism",
       "principal": "166470-P00006",
       "date": "1830-08-15",
@@ -17610,7 +17690,7 @@
       "cleric": "166470-P00715"
     },
     {
-      "id": "166470-1002-3-E1",
+      "id": "166470-0002-3-E1",
       "type": "baptism",
       "principal": "166470-P00007",
       "date": "1830-08-20",

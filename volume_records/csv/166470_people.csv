@@ -1,0 +1,730 @@
+id,name,origin,ethnicity,age,legitimacy,occupation,phenotype,status,titles,ranks,references
+166470-P00001,Jose,,,,,,,,,,166470-0002-1
+166470-P00002,Monserrate,,,,,,,,,,166470-0002-1
+166470-P00003,Roque Cruz,166470-L2,,adult,,,,,,,166470-0002-1
+166470-P00004,Leferino Amador,,,,,,negro,,Don,,166470-0002-2
+166470-P00005,Arriceta Redesibace,,,,,,,,,,166470-0002-2
+166470-P00006,Maria Filomenia,166470-L2,,adult,,,,,,,166470-0002-2
+166470-P00007,Maria Lugrada,166470-L2,,adult,,,,,,,166470-0002-3
+166470-P00008,Maria Lugarda,,,,,,,,,,166470-0002-3
+166470-P00009,Maria Moncerrate,,,,,,,,,,166470-0002-3
+166470-P00010,Eugenio Vega,,,,,,,,,,166470-1002-4
+166470-P00011,Socorra Paulina,,,,,,,enslaved,,,166470-1002-4
+166470-P00012,Eugenio,,,,,,,,,,166470-1002-4
+166470-P00013,Josefa,,,,,,,,,,166470-1002-4
+166470-P00014,Miguel,,,,,,,,,,166470-1002-4
+166470-P00015,Atonacia Prieto,,,,,,,,,,166470-1002-4
+166470-P00016,Desidero Nafarro y Robles,,,,,,,,,,166470-1002-4
+166470-P00017,Toribio de Caridad,,,infant,legitimate,,,,,,166470-1002-4
+166470-P00018,Candelaria Santa Cruz,166470-L2,,adult,,,,,,,166470-1003-1
+166470-P00019,Isabel Santa Cruz,166470-L2,,adult,,,,,,,166470-1003-2
+166470-P00020,Ariceta,166470-L2,,,,,,propiedad,,,166470-1003-3
+166470-P00021,Juan Viver,,,,,,negro,,Don,,166470-1003-3
+166470-P00022,Dominga,,,parvola,hija ilegítimo,,,,,,166470-1003-3
+166470-P00023,Alejandro,,,infant,legitimate,,,,,,166470-1003-4
+166470-P00024,Manuel Connnegra,166470-L3,,,,,negro,,,,166470-1003-4
+166470-P00025,Josefa Sanchez,166470-L4,,,,,,,,,166470-1003-4
+166470-P00026,#ita Connnegra,,,,,,negro,,,,166470-1003-4
+166470-P00027,Jeraria Bautista Sanchez,,,,,,,,,,166470-1003-4
+166470-P00028,Alejandro Videl,,,,,,,,,,166470-1003-4
+166470-P00029,Juan F##,,,,,,,,Don,,166470-1003-4
+166470-P00030,Francesca Sanchez,,,,,,,,,,166470-1003-4
+166470-P00031,Flores Pedro Tomas,,,infant,,,,,,,166470-1003-5
+166470-P00032,Scolastica,166470-L5,,,,,,,,,166470-1003-5
+166470-P00033,Jose Antonio Tomas,,,,,,,,Don,,166470-1003-5
+166470-P00034,Flores Pedro,,,,,,mixed-race,,,,166470-1003-5
+166470-P00035,Maria Josefa Prieta,,,,,,,,,,166470-1003-5
+166470-P00036,Justa Maria Gonzalez,,,parvola,hija ilegítimo,,,,,,166470-1003-6
+166470-P00037,Ase#cio# Belen,166470-L6,,,,,,,,,166470-1003-6
+166470-P00038,padres no conocido,,,,,,,enslaved,,,166470-1003-6
+166470-P00039,Dorcteo Gonzalez,,,,,,,,Don,,166470-1003-6
+166470-P00040,Justa Maria,,,,,,,,,,166470-1003-6
+166470-P00041,Miguel Villavicencio,,,,,,,,,,166470-1003-6
+166470-P00042,Fransisca Guerrero,,,,,,,,,,166470-1003-6
+166470-P00043,Fransisco Bautista Guerrero,,,infant,hijo ilegítimo,,,,,,166470-1003-7
+166470-P00044,caridad Guerrero,166470-L7,,,,,,,,,166470-1003-7
+166470-P00045,Antonio Jose,,,,,,,,,,166470-1003-7
+166470-P00046,Maria Luganes,,,,,,,,,,166470-1003-7
+166470-P00047,Fransisco Bautista,,,,,,,,,,166470-1003-7
+166470-P00048,Caliste Lisama,,,,,,,,,,166470-1003-7
+166470-P00049,Maria Aremea,,,,,,,,,,166470-1003-7
+166470-P00050,Fereza,166470-L2,,,,,,,,,166470-1004-1
+166470-P00051,Jose Gregorio Diaz de Villegas,,,,,,,,Don,,166470-1004-1
+166470-P00052,Fiercoteo Castilla,,,,,,,,,,166470-1004-1
+166470-P00053,Juan Raucio,,,infant,hijo ilegítimo,,,,,,166470-1004-1
+166470-P00054,Pedro Jose De la Caridad,,,infant,legitimate,,,,,,166470-1004-2
+166470-P00055,Juan Mateo Media,,,,,,,,,,166470-1004-2
+166470-P00056,Jeracia de Dios Ojeda,,,,,,,,,,166470-1004-2
+166470-P00057,Juan Bautista,,,,,,,,,,166470-1004-2
+166470-P00058,Jerecia Rodriguez,,,,,,,,,,166470-1004-2
+166470-P00059,Jose Euscuvio,,,,,,,,,,166470-1004-2
+166470-P00060,Maria Matanzas,,,,,,,,,,166470-1004-2
+166470-P00061,Pedro Jose de la Caridad,,,,,,,,,,166470-1004-2
+166470-P00062,Jeraci Jose Ojeda,,,,,,,,,,166470-1004-2
+166470-P00063,Sabina Oreba,,,,,,,,,,166470-1004-2
+166470-P00064,Candelaria Castellano,,,,,,,,,,166470-1004-3
+166470-P00065,Regina,166470-L2,,adult,,,,,,,166470-1004-3
+166470-P00066,Joaquina,166470-L2,,,,,,,,,166470-1004-4
+166470-P00067,Miguel Collaro,,,,,,,,Don,,166470-1004-4
+166470-P00068,Rafael Collaro,,,,,,,,Don,,166470-1004-4
+166470-P00069,Seferineo Callazo,,,infant,hijo ilegítimo,,,,,,166470-1004-4
+166470-P00070,Antonia Siervo,,,,,,,enslaved,,,166470-1004-5
+166470-P00071,Juan Siervo,,,,,,,,Don,,166470-1004-5
+166470-P00072,Maricereo Rosillo,,,,,,,,,,166470-1004-5
+166470-P00073,Jose Calazan,,,infant,hijo ilegítimo,,,,,,166470-1004-5
+166470-P00074,Maria Dominga,166470-L8,,infant,hija ilegítimo,,,,,,166470-1004-6
+166470-P00075,Juliana Martinez,,,,,,,,,,166470-1004-6
+166470-P00076,Maria Flortiz,,,,,,,,,,166470-1004-6
+166470-P00077,Juan Martinez,,,,,,,,,,166470-1004-6
+166470-P00078,Petrona Rega,,,,,,,,,,166470-1004-6
+166470-P00079,Juan Flortiz,,,,,,,,,,166470-1004-6
+166470-P00080,Regla Hernandez,,,,,,,enslaved,,,166470-1004-6
+166470-P00081,Maria Dominga Nicolasa,,,,,,,,,,166470-1004-6
+166470-P00082,Pedro Seigido,,,,,,,,Don,,166470-1004-6
+166470-P00083,Nicolasa Regnecin,,,,,,,,Doña,,166470-1004-6
+166470-P00084,Maria Vericitada Perez,166470-L9,,infant,legitimate,,,,,,166470-1004-7
+166470-P00085,Blaz Perez,,,,,,,,,,166470-1004-7
+166470-P00086,Isabel Maya,,,,,,,,,,166470-1004-7
+166470-P00087,Nicario Perez,,,,,,,,,,166470-1004-7
+166470-P00088,Micaela Furimo,,,,,,,,,,166470-1004-7
+166470-P00089,Juan Bautista,,,,,,,,,,166470-1004-7
+166470-P00090,Maria Rodriguez,,,,,,mixed-race,,,,166470-1004-7
+166470-P00091,Maria Vericitada,,,,,,,,,,166470-1004-7
+166470-P00092,Felipe Cordero,,,,,,,,,,166470-1004-7
+166470-P00093,Manuela Alejo,,,,,,,,,,166470-1004-7
+166470-P00094,Juan de Dios Gutierrez,,,,,,,,,,166470-1005-1
+166470-P00095,Monica Josefa Vega,,,,,,,,,,166470-1005-1
+166470-P00096,Juan,,,,,,,,,,166470-1005-1
+166470-P00097,Nicolasa Jicarro,,,,,,,,,,166470-1005-1
+166470-P00098,Eugenio,,,,,,,,,,166470-1005-1
+166470-P00099,Josefa Padron,,,,,,,,,,166470-1005-1
+166470-P00100,Boverta Maria Vega,,,,,,,,,,166470-1005-1
+166470-P00101,Marcial de la Caridad,166470-L10,,infant,legitimate,,,,,,166470-1005-1
+166470-P00102,Ciriaco,,,,,,,,,,166470-1005-2
+166470-P00103,Margarita,166470-L2,,,,,,enslaved,,,166470-1005-2
+166470-P00104,Jose Fernandez,,,,,,,,Don,,166470-1005-2
+166470-P00105,Maria Rosalia,,,,,,,,,,166470-1005-2
+166470-P00106,Jose Isidoro,,,infant,legitimate,,,,,,166470-1005-2
+166470-P00107,Maria Regla,166470-L2,,,,,,,,,166470-1005-3
+166470-P00108,Jose Hernandez,,,,,,,,Don,,166470-1005-3
+166470-P00109,Rosalia,,,,,,,,,,166470-1005-3
+166470-P00110,Sieta,,,parvola,,,,,,,166470-1005-3
+166470-P00111,Jose Fereso Hernandez,166470-L2,,infant,legitimate,,,,,,166470-1005-4
+166470-P00112,Luis,,,,,,,propiedad,,,166470-1005-4
+166470-P00113,Jose Hernandez,,,,,,,,Don,,166470-1005-4
+166470-P00114,Jose Fereso,,,,,,,,,,166470-1005-4
+166470-P00115,Maria Rosalia,,,,,,,,,,166470-1005-4
+166470-P00116,Jose Serafin Gonzalez,,,infant,illegitimate,,mixed-race,,,,166470-1005-5
+166470-P00117,Maria Petrona Gonzalez,,,,,,,,,,166470-1005-5
+166470-P00118,Camarones,,,,,,,,,,166470-1005-5
+166470-P00119,Candido,,,,,,,,,,166470-1005-5
+166470-P00120,Maria de,,,,,,,,,,166470-1005-5
+166470-P00121,Dolores,,,,,,,,,,166470-1005-5
+166470-P00122,Jose Serafin,,,,,,,,,,166470-1005-5
+166470-P00123,Candido Muñoz,,,,,,,,,,166470-1005-5
+166470-P00124,Josefa Diaz,,,,,,mixed-race,,,,166470-1005-5
+166470-P00125,Juan Sivero,,,,,,negro,,Don,,166470-1005-6
+166470-P00126,Antonia Sivero,166470-L2,,adult,,,,,,,166470-1005-6
+166470-P00127,Bruno Santa Cruz,166470-L2,,adult,,,,,,,166470-1006-1
+166470-P00128,Jose,,,,,,,,,,166470-1006-1
+166470-P00129,Jose Cuafoia,,,,,,,,,,166470-1006-1
+166470-P00130,Maria De la Luz Santa Cruz,,,,,,,,,,166470-1006-2
+166470-P00131,Maria de la Luz,,,,,,,,,,166470-1006-2
+166470-P00132,Liborio,,,,,,,,,,166470-1006-2
+166470-P00133,Antonio de la Cruz,,,,,,,,,,166470-1006-3
+166470-P00134,Balentina Billabicencio,,,,,,,,,,166470-1006-3
+166470-P00135,Camarones,,,,,,,,,,166470-1006-3
+166470-P00136,Pedro Mito##,,,,,,,,,,166470-1006-3
+166470-P00137,Rafaela Villavicencio,166470-L10,,,,,,,,,166470-1006-3
+166470-P00138,Miguel,,,,,,,,,,166470-1006-3
+166470-P00139,Petrona Chongo,,,,,,,,,,166470-1006-3
+166470-P00140,Jose Lergado Gonzales,,,,,,,,,,166470-1006-3
+166470-P00141,Joaquina Caldenona,,,,,,,,,,166470-1006-3
+166470-P00142,Geronimo de Jesus,,,infant,illegitimate,,,,,,166470-1006-3
+166470-P00143,Regina de Maria Caridad Torres,,,infant,illegitimate,,,,,,166470-1006-4
+166470-P00144,Ana Torres,,,,,,,,,,166470-1006-4
+166470-P00145,Regina de la Caridad,,,,,,,,,,166470-1006-4
+166470-P00146,Nicolas de Soto,,,,,,,,Don,,166470-1006-4
+166470-P00147,Dolores del Puerto,,,,,,,,Doña,,166470-1006-4
+166470-P00148,Antonia de la Caridad Castillo,,,,illegitimate,,,,,,166470-1006-5
+166470-P00149,Ana Joaquina Castillo,,,,,,,,,,166470-1006-5
+166470-P00150,Jeranico del Castillo,,,,,,,,Don,,166470-1006-5
+166470-P00151,Miguel Iduciado,,,,,,,,,,166470-1006-5
+166470-P00152,Antonia del Castillo,,,,,,,,,,166470-1006-5
+166470-P00153,Antonia de la Caridad,,,,,,,,,,166470-1006-5
+166470-P00154,Caridad Baroneta,,,,,,,,,,166470-1006-5
+166470-P00155,Julian,166470-L2,,,,,,,,,166470-1006-6
+166470-P00156,Sabrina,166470-L2,,,,,,propiedad,,,166470-1006-6
+166470-P00157,Jose Cuinas,,,,,,,,Don,,166470-1006-6
+166470-P00158,Aguada,,,,,,,,,,166470-1006-6
+166470-P00159,Seberina Cuinas,,,infant,legitimate,,,,,,166470-1006-6
+166470-P00160,Fernando,166470-L2,,,,,,,,,166470-1007-1
+166470-P00161,Ramona,166470-L2,,,,,,enslaved,,,166470-1007-1
+166470-P00162,Jose Carras,,,,,,,,Don,,166470-1007-1
+166470-P00163,Florro,,,,,,,,,,166470-1007-1
+166470-P00164,Avelina,,,,,,,,,,166470-1007-1
+166470-P00165,Atonio Loreto Sanchez,,,,,,,,,,166470-1007-1
+166470-P00166,Patricio Carras,,,infant,hiijo legitimo,,negro,,,,166470-1007-1
+166470-P00167,Corras,,,,,,,,,,166470-1007-2
+166470-P00168,Mayo del año,,,,,,,,,,166470-1007-2
+166470-P00169,Federico,,,,,,,propiedad,,,166470-1007-2
+166470-P00170,Joaquin Molina,,,,,,,,,,166470-1007-2
+166470-P00171,Gregorio Nota,166470-L2,,infant,legitimate,,,,,,166470-1007-2
+166470-P00172,Jacundo,166470-L2,,,,,,,,,166470-1007-3
+166470-P00173,Maria Belem,166470-L2,,,,,,,,,166470-1007-3
+166470-P00174,Francisca Maria Herrera,,,,,,,,,,166470-1007-3
+166470-P00175,Simona Corras,,,infant,hija legitimo,,moreno,,,,166470-1007-3
+166470-P00176,Rafael,166470-L2,,,,,,,,,166470-1007-4
+166470-P00177,Aria,166470-L2,,,,,,,,,166470-1007-4
+166470-P00178,Joaquin,,,,,,,,,,166470-1007-4
+166470-P00179,Atanacio Corras,,,infant,legitimate,,,,,,166470-1007-4
+166470-P00180,Javier,166470-L2,,,,,,,,,166470-1007-5
+166470-P00181,Isabel,166470-L2,,,,,,,,,166470-1007-5
+166470-P00182,Manuel,,,,,,,,,,166470-1007-5
+166470-P00183,Pablo Corras,,,infant,legitimate,,,,,,166470-1007-5
+166470-P00184,Maria Oleta Corras,,,infant,legitimate,,,,,,166470-1007-6
+166470-P00185,Jose,166470-L2,,,,,,,,,166470-1007-6
+166470-P00186,Antonia Maria,166470-L2,,,,,,,,,166470-1007-6
+166470-P00187,Maria Oleta,,,,,,,,,,166470-1007-6
+166470-P00188,Junio del año de mil,,,,,,,,,,166470-1008-1
+166470-P00189,Julian,,,,,,,,,,166470-1008-1
+166470-P00190,Sabina,,,,,,,,,,166470-1008-1
+166470-P00191,Budesiceda,,,,,,,,,,166470-1008-1
+166470-P00192,Antonia Corras,166470-L2,,infant,legitimate,,,,,,166470-1008-1
+166470-P00193,Corras,,,infant,legitimate,,,,,,166470-1008-2
+166470-P00194,Estevan,166470-L2,,,,,,,,,166470-1008-2
+166470-P00195,Jorracia esta,166470-L2,,,,,,,,,166470-1008-2
+166470-P00196,Jose de la Luz Corras,,,infant,legitimate,,,,,,166470-1008-3
+166470-P00197,Jaciendo,,,,,,,,,,166470-1008-3
+166470-P00198,Maria esta libre,166470-L2,,,,,,,,,166470-1008-3
+166470-P00199,Jose de la Luz,,,,,,,,,,166470-1008-3
+166470-P00200,Pedro,,,,,,,,,,166470-1008-3
+166470-P00201,Sebastian,166470-L2,,,,,,,,,166470-1008-4
+166470-P00202,Jucina,166470-L2,,,,,,propiedad,,,166470-1008-4
+166470-P00203,Merced Corras,,,infant,legitimate,,,,,,166470-1008-4
+166470-P00204,Maria del Carmen Corras,,,infant,legitimate,,,,,,166470-1008-5
+166470-P00205,Fabian,166470-L11,,,,,,,,,166470-1008-5
+166470-P00206,Isabel,166470-L11,,,,,,propiedad,,,166470-1008-5
+166470-P00207,Maria del Carmen,,,,,,,,,,166470-1008-5
+166470-P00208,Francisca Maria Herrera,,,,,,,,,,166470-1008-5
+166470-P00209,Manuel,,,,,,,,,,166470-1008-6
+166470-P00210,Africa,,,,,,,enslaved,,,166470-1008-6
+166470-P00211,Juan Jernandez,,,,,,,,Don,,166470-1008-6
+166470-P00212,Luis Corras,,,infant,legitimate,,,,,,166470-1008-6
+166470-P00213,Maria Josefa Valvidez,166470-L8,,,,,,,,,166470-1009-1
+166470-P00214,Jose Manuel,166470-L10,,,,,,,,,166470-1009-1
+166470-P00215,Micaela Ramirez,166470-L10,,,,,,,,,166470-1009-1
+166470-P00216,Jose Crecencio,,,infant,,,,,,,166470-1009-1
+166470-P00217,Calletana Leonor,,,,,,,,,,166470-1009-2
+166470-P00218,Calletana Leonor Santa Cruz,166470-L2,,adult,,,,,,,166470-1009-2
+166470-P00219,Feliz,,,,,,,,,,166470-1009-3
+166470-P00220,Regina,,,,,,,,,,166470-1009-3
+166470-P00221,Rosendo,166470-L2,,adult,,,,,,,166470-1009-3
+166470-P00222,Ramon,,,,,,,,,,166470-1009-4
+166470-P00223,Jeorge Santa Cruz,166470-L2,,,,,,,,,166470-1009-4
+166470-P00224,Marcos,,,,,,,,,,166470-1009-5
+166470-P00225,Adriana,,,,,,,,,,166470-1009-5
+166470-P00226,Petronila,166470-L2,,adult,,,,,,,166470-1009-5
+166470-P00227,Eulogia Maria ##,,,infant,hija ilegítimo,,,,,,166470-1009-6
+166470-P00228,Villavivencio,,,,,,,,,,166470-1009-6
+166470-P00229,Rosa Villavicencio,166470-L10,,,,,,,,,166470-1009-6
+166470-P00230,Pedro Antonio,,,,,,,,,,166470-1009-6
+166470-P00231,Rafaela Villavicencio,,,,,,,,,,166470-1009-6
+166470-P00232,Miguel,,,,,,,,,,166470-1009-6
+166470-P00233,Petrona Chonga,,,,,,mixed-race,,,,166470-1009-6
+166470-P00234,Eulogia Maria,,,,,,,,,,166470-1009-6
+166470-P00235,Feodora Prieto,,,,,,,,,,166470-1009-6
+166470-P00236,Fransisco Maria Matamoros,,,infant,,,,,,,166470-1010-1
+166470-P00237,Bartola Lufan,166470-L12,,,,,,,,,166470-1010-1
+166470-P00238,Diego Matamoros,,,,,,,,Don,,166470-1010-1
+166470-P00239,Fransisco Maria,,,,,,,,,,166470-1010-1
+166470-P00240,Santiago,,,,,,,,,,166470-1010-1
+166470-P00241,Isabel Gonzalez,,,,,,,,,,166470-1010-1
+166470-P00242,Jose Domingo,,,,,,,,,,166470-1010-2
+166470-P00243,Rafael Rodriguez Prieto,166470-L2,,adult,,,,,,,166470-1010-2
+166470-P00244,Isidro,,,,,,,,,,166470-1010-3
+166470-P00245,Seferino Santa Cruz,166470-L2,,adult,,,,,,,166470-1010-3
+166470-P00246,Liberato Santa Cruz,166470-L2,,adult,,,,,,,166470-1010-4
+166470-P00247,Narciso Santa Cruz,166470-L2,,adult,,,,,,,166470-1010-5
+166470-P00248,Estefania Santa Cruz,166470-L2,,adult,,,,,,,166470-1010-6
+166470-P00249,Merced Santa Cruz,,,,,,,,,,166470-1010-6
+166470-P00250,Liborio Apolomio de la Caridad,,,infant,,,,,,,166470-1010-7
+166470-P00251,Fabares,,,,,vicario Eclesiastico,,,,,166470-1010-7
+166470-P00252,Juana Maria de la Candelaria,166470-L2,,,,,,,,,166470-1010-7
+166470-P00253,Maria Ramona Fabares,,,,,,,,Doña,,166470-1010-7
+166470-P00254,Ana Garcia,,,,,,,,Doña,,166470-1010-7
+166470-P00255,Liborio Apoloemio,,,,,,,,,,166470-1010-7
+166470-P00256,Pedro Jose Morales,,,,,,,,,,166470-1010-7
+166470-P00257,Donticos,,,,,,,,,,166470-1010-7
+166470-P00258,Maria Petrona de la Caridad Correa,,,infant,hija ilegítimo,,,,,,166470-1011-1
+166470-P00259,Andres Correa,,,,,,,,,,166470-1011-1
+166470-P00260,Isabel Rodriguez,,,,,,mixed-race,,,,166470-1011-1
+166470-P00261,Camarones,,,,,,,,,,166470-1011-1
+166470-P00262,Manuel,,,,,,,,,,166470-1011-1
+166470-P00263,Monserrate Herrera,,,,,,,,,,166470-1011-1
+166470-P00264,Monserrate Puento,,,,,,,,,,166470-1011-1
+166470-P00265,Maria Petrona de la Caridad,,,,,,,,,,166470-1011-1
+166470-P00266,Trinidad Correa,,,,,,,,,,166470-1011-1
+166470-P00267,Fransisco Correa,,,,,,,,,,166470-1011-1
+166470-P00268,Rodriguez Prieto,166470-L2,,adult,,,,,,,166470-1011-2
+166470-P00269,Donato Rodriguez,,,,,,,,,,166470-1011-2
+166470-P00270,Donato Rodriguez,,,,,,,,,,166470-1011-3
+166470-P00271,Justo Rodriguez Prieto,166470-L2,,adult,,,,,,,166470-1011-3
+166470-P00272,Marcos,,,,,,,,,,166470-1011-4
+166470-P00273,Paula de la,,,,,,,,,,166470-1011-4
+166470-P00274,Justa Santa Cruz,166470-L2,,adult,,,,,,,166470-1011-4
+166470-P00275,Jenoveva,,,,,,,,,,166470-1011-5
+166470-P00276,Ramon Cordoves,,,,,,,,Don,,166470-1011-5
+166470-P00277,Manuel de Terres Medina,,,,,,,,,,166470-1011-5
+166470-P00278,Candelaria Alvarez,,,,,,,,,,166470-1011-5
+166470-P00279,Calisto Horculano,,,infant,,,,,,,166470-1011-5
+166470-P00280,Merced,166470-L2,,,,,,propiedad,,,166470-1011-6
+166470-P00281,Miguel Ocacupo,,,,,,,,Don,,166470-1011-6
+166470-P00282,Nicomedes Domingo,,,,,,,,,,166470-1011-6
+166470-P00283,Nicomedes Domingo Ocacupo,,,infant,,,,,,,166470-1011-6
+166470-P00284,Mateo,,,,,,,,,,166470-1012-1
+166470-P00285,Unknown principal,166470-L2,,adult,,,,,,,166470-1012-1
+166470-P00286,Mateo,,,,,,,,,,166470-1012-2
+166470-P00287,Matea,,,,,,,,,,166470-1012-2
+166470-P00288,Maria,,,,,,,,,,166470-1012-2
+166470-P00289,Mateo,,,,,,,,,,166470-1012-2
+166470-P00290,Felipa Santa Cruz,166470-L2,,adult,,,,,,,166470-1012-2
+166470-P00291,Maria Del Pilar Marrero,,,infant,hija ilegítimo,,,,,,166470-1012-3
+166470-P00292,Diego Marrero,,,,,,,,,,166470-1012-3
+166470-P00293,Maria del Roasrio Borge,,,,,,,,,,166470-1012-3
+166470-P00294,Madruga,,,,,,,,,,166470-1012-3
+166470-P00295,Juan Galbain,,,,,,,,,,166470-1012-3
+166470-P00296,Maria Del Pilar,,,,,,,,,,166470-1012-3
+166470-P00297,Maria Magdalena Coronale,,,,,,,,,,166470-1012-3
+166470-P00298,Jose Ivaxisto Castellanos,166470-L2,,adult,,,,,,,166470-1012-4
+166470-P00299,Jose Ivaxisto,,,,,,,,,,166470-1012-4
+166470-P00300,Pedro Juano Castellano,,,,,,,,,,166470-1012-4
+166470-P00301,Gangau,,Gangá,,,,,,,,166470-1012-5
+166470-P00302,Jueri Jose de,,,,,,,,,,166470-1012-5
+166470-P00303,Kongo,,Kongo,,,,,,,,166470-1012-5
+166470-P00304,Antonio Jose Trujillo,,,,,,,,Don,,166470-1012-5
+166470-P00305,Rafaela Cruz,,,,hija ilegítimo,,,,,,166470-1012-5
+166470-P00306,Lucia de la,,,,,,negro,,,,166470-1012-6
+166470-P00307,Mateo Criollo,,,,,,Creole,,,,166470-1012-6
+166470-P00308,Gangá,,Gangá,,,,,,,,166470-1012-6
+166470-P00309,Carlos Sin,,,,,,,,,,166470-1012-6
+166470-P00310,Jose Ylarion Sin,,,,hijo ilegítimo,,,,,,166470-1013-1
+166470-P00311,Joaquina Kongo,,Kongo,,,,negro,,,,166470-1013-1
+166470-P00312,Jose Ylarion,,,,,,,,,,166470-1013-1
+166470-P00313,Fusicoteo Criollo,,,,,,Creole,enslaved,,,166470-1013-1
+166470-P00314,Catalina de la Cruz Tenq,,,,hija ilegítimo,,,,,,166470-1013-2
+166470-P00315,Jauna,,,,,,,enslaved,,,166470-1013-2
+166470-P00316,Tomas Tenq,,,,,,negro,,Don,,166470-1013-2
+166470-P00317,Catalina de la Cruz,,,,,,,,,,166470-1013-2
+166470-P00318,Cayetona,,,,,,moreno,,,,166470-1013-2
+166470-P00319,Jacoba Rita Ramona Barrueta,166470-L13,,infant,legitimate,,mixed-race,,,,166470-1013-3
+166470-P00320,Quinteros,,,,,,,,,,166470-1013-3
+166470-P00321,Manuel de Jesus Barrueta,,,,,,,,,,166470-1013-3
+166470-P00322,Barbara Longina Quinteros,,,,,,,,,,166470-1013-3
+166470-P00323,Jose Evaristo Barrueta,,,,,,,,,,166470-1013-3
+166470-P00324,Maria Josefa Joventi,,,,,,,,,,166470-1013-3
+166470-P00325,Jose Ramon Quintero,,,,,,,,,,166470-1013-3
+166470-P00326,Maria dio de Leon,,,,,,mixed-race,,,,166470-1013-3
+166470-P00327,Jacoba Rita Romona,,,,,,,,,,166470-1013-3
+166470-P00328,Jose Balentin de Leon,,,,,,,,,,166470-1013-3
+166470-P00329,Maria Ramona de la Caridad Quintero,,,,,,mixed-race,,,,166470-1013-3
+166470-P00330,Barrio de Avango,,,,,,,,,,166470-1013-3
+166470-P00331,Juan Cristobal Nicolas,,,,,,,,,,166470-1013-4
+166470-P00332,Maria Candelaria Esguila,,,,,,moreno,,,,166470-1013-4
+166470-P00333,Fransisco Buviosa,,,,,,,,,,166470-1013-4
+166470-P00334,Maria Marta,,,,,,,,,,166470-1013-4
+166470-P00335,Jose Manuel,,,,,,,,,,166470-1013-4
+166470-P00336,Maria Madalena,,,,,,,,,,166470-1013-4
+166470-P00337,Alusicion Sola,,,,,,,,,,166470-1013-4
+166470-P00338,Maria Micaela,,,,,,,,,,166470-1013-4
+166470-P00339,Pablo Jose Liberato,166470-L9,,infant,hijo ilegítimo,,,,,,166470-1013-4
+166470-P00340,Filomena Caridad Ramos,,,infant,hija ilegítimo,,,,,,166470-1013-5
+166470-P00341,Gonzalez,,,,,,,,,,166470-1013-5
+166470-P00342,Jose Fransisco Ramos,,,,,,,,,,166470-1013-5
+166470-P00343,Maria Caridad Gonzalez,,,,,,,,,,166470-1013-5
+166470-P00344,Filomena Caridad,,,,,,,,,,166470-1013-5
+166470-P00345,Jose Pastor Lopez,,,,,,,,,,166470-1013-5
+166470-P00346,Maria Rufina Delgado,,,infant,,,,,,,166470-1013-6
+166470-P00347,Fransisco Delgado,,,,,,,,Don,,166470-1013-6
+166470-P00348,Maria Rafina de,,,,,,,,,,166470-1013-6
+166470-P00349,Lucumí,,Lucumí,,,,,,,,166470-1013-6
+166470-P00350,Agustina Delgado,,,,,,,,Doña,,166470-1013-6
+166470-P00351,Maria Fransisca Curiel,,,infant,hija ilegítimo,,,,,,166470-1013-7
+166470-P00352,Lucumí,,Lucumí,,,,,,,,166470-1013-7
+166470-P00353,Mina Juliana Juliana Criolla,,Mina,,,,Creole,,,,166470-1013-7
+166470-P00354,Abuela Materna Candelaria de,,,,,,,,,,166470-1013-7
+166470-P00355,Kongo,,Kongo,,,,,enslaved,,,166470-1013-7
+166470-P00356,Juan Curiel,,,,,,,,Don,,166470-1013-7
+166470-P00357,Maria Fransisca,,,,,,mixed-race,,,,166470-1013-7
+166470-P00358,Dolores Juliana,,,,,,,,,,166470-1013-7
+166470-P00359,Rafael Manuel Delgado,,,infant,legitimate,,,,,,166470-1014-1
+166470-P00360,Fransisco Lucumí,,Lucumí,,,,,,,,166470-1014-1
+166470-P00361,Maria Rosario Gangá,,Gangá,,,,,enslaved,,,166470-1014-1
+166470-P00362,Loreto Delgado,,,,,,,,Don,,166470-1014-1
+166470-P00363,Lucia Molina,,,,,,,,Doña,,166470-1014-1
+166470-P00364,Rafael Manuel,,,,,,,,,,166470-1014-1
+166470-P00365,Fransisco Molina,,,,,,,,Don,,166470-1014-1
+166470-P00366,Bernardo Jose Jlilarion Soriano,166470-L10,,infant,legitimate,,,,,,166470-1014-2
+166470-P00367,Aguilas,,,,,,,,,,166470-1014-2
+166470-P00368,Manuel de Jesus Soriano,,,,,,,,,,166470-1014-2
+166470-P00369,Maria del Carmen Aguilas,,,,,,,,,,166470-1014-2
+166470-P00370,Rafael Soriano,,,,,,,,,,166470-1014-2
+166470-P00371,Maria Concepcion,,,,,,,,,,166470-1014-2
+166470-P00372,Abad Aguilas,,,,,,,,,,166470-1014-2
+166470-P00373,Ana Marcela Gonzalez,,,,,,,,,,166470-1014-2
+166470-P00374,Bernardo Jose Jlilarion,,,,,,,,,,166470-1014-2
+166470-P00375,Bernardo Albericle,,,,,,,,Don,,166470-1014-2
+166470-P00376,Maria Josefa Albericle,,,,,,,,Doña,,166470-1014-2
+166470-P00377,Maria Nicolasa A,,,infant,,,,,,,166470-1014-3
+166470-P00378,Ana Larsilo,,,,,,,,Doña,,166470-1014-3
+166470-P00379,Maria Nicolasa,,,,,,,,,,166470-1014-3
+166470-P00380,Francisca de,,,,,,,,,,166470-1014-3
+166470-P00381,Mendoza,166470-L14,,,,,,,,,166470-1014-3
+166470-P00382,Corta Firme,,,,,,,,,,166470-1014-3
+166470-P00383,Jose Maria Sancehz,,,infant,,,,,,,166470-1014-4
+166470-P00384,Jose Maria,,,,,,,,,,166470-1014-4
+166470-P00385,Maria Josefa Sanchez,,,infant,,,,,,,166470-1014-5
+166470-P00386,Maria Josefa,,,,,,,,,,166470-1014-5
+166470-P00387,Teresa de la,,,,,,,propiedad,,,166470-1014-6
+166470-P00388,Unknown principal,,,infant,,,,,,,166470-1014-6
+166470-P00389,Jose Lucumí,,Lucumí,,,,,enslaved,,,166470-1014-7
+166470-P00390,Salbados Arguindeguy,,,,,,,,Don,,166470-1014-7
+166470-P00391,Margarita Carabalí,,Carabalí,,,,,,,,166470-1014-7
+166470-P00392,Pedro Kongo,,Kongo,,,,,,,,166470-1014-7
+166470-P00393,Juliana Lucumí,,Lucumí,,,,,enslaved,,,166470-1014-7
+166470-P00394,Arguindeguy,,,,,,,,,,166470-1014-7
+166470-P00395,Jacobo A,,,infant,legitimate,,,,,,166470-1014-7
+166470-P00396,Maria de Jesus Ortega,,,adult,,,,,,,166470-1015-1
+166470-P00397,Juez,,,,,Eclesiastico,,,,,166470-1015-1
+166470-P00398,Carabalí,,Carabalí,,,,,enslaved,,,166470-1015-1
+166470-P00399,Maria de Jesus,,,,,,,,Doña,,166470-1015-1
+166470-P00400,Maria de la Caridad,,,,,,,,,,166470-1015-1
+166470-P00401,Hernandez,166470-L2,,adult,,,,,,,166470-1015-2
+166470-P00402,Melchor Hernandez,166470-L2,,adult,,,,,,,166470-1015-3
+166470-P00403,Tirso Hernandez,166470-L2,,adult,,,,,,,166470-1015-4
+166470-P00404,Vicente Hernandez,166470-L2,,adult,,,,,,,166470-1015-5
+166470-P00405,Julian Hernandez,166470-L2,,adult,,,,,,,166470-1015-6
+166470-P00406,Cristobal Hernandez,166470-L2,,adult,,,,,,,166470-1015-7
+166470-P00407,Antonio Hernandez,166470-L2,,adult,,,,,,,166470-1015-8
+166470-P00408,Gaspar Hernandez,166470-L2,,adult,,,,,,,166470-1016-1
+166470-P00409,Manuel Hernandez,166470-L2,,adult,,,,,,,166470-1016-2
+166470-P00410,Ysadora,,,,,,,,,,166470-1016-3
+166470-P00411,Rufina Hernandez,166470-L2,,adult,,,,,,,166470-1016-3
+166470-P00412,Jose Gregoria Bega,166470-L15,,,,,,,,,166470-1016-4
+166470-P00413,Rosa Santa,166470-L15,,,,,,,,,166470-1016-4
+166470-P00414,Eugenio Bega,,,,,,,,,,166470-1016-4
+166470-P00415,Josefa Rafaela,,,,,,mixed-race,,,,166470-1016-4
+166470-P00416,Andres Santa Ana,166470-L9,,,,,,,,,166470-1016-4
+166470-P00417,Andrea Gallardo,166470-L9,,,,,mixed-race,,,,166470-1016-4
+166470-P00418,Pedro Gonzalez,,,,,,,,Don,,166470-1016-4
+166470-P00419,Bartola Santa,,,,,,,,,,166470-1016-4
+166470-P00420,Año de 1840,,,,,,,,,,166470-1016-4
+166470-P00421,Jose Bencerlao de la Caridad,,,infant,hijo ilegítimo,,,,,,166470-1016-4
+166470-P00422,Maria Jacoba Facunda Porregue,,,infant,hija ilegítimo,,,,,,166470-1016-5
+166470-P00423,Caridad Jabalero,,,,,,,,,,166470-1016-5
+166470-P00424,Kongo,,Kongo,,,,,,,,166470-1016-5
+166470-P00425,Maria Fransisca Porregue,166470-L9,,,,,,,Doña,,166470-1016-5
+166470-P00426,Maria Jacoba Facunda,,,,,,,,,,166470-1016-5
+166470-P00427,Agustin Machú,,,,,,,,,,166470-1016-5
+166470-P00428,Joaquina Maria Machú,,,,,,,,,,166470-1016-5
+166470-P00429,Antonio L. Sancehz,,,,,,,,,,166470-1016-5
+166470-P00430,Maria Foinasa A,,,infant,hija legitimo,,,,,,166470-1016-6
+166470-P00431,Juan Aristica,,,,,,,,,,166470-1016-6
+166470-P00432,Maria Hilaria Perez,,,,,,,,,,166470-1016-6
+166470-P00433,Maria Damiana,,,,,,,,,,166470-1016-6
+166470-P00434,Gabriel Perez,,,,,,,,,,166470-1016-6
+166470-P00435,Maria Gregoria Calderon,,,,,,,,,,166470-1016-6
+166470-P00436,Maria Foinasa,,,,,,,,,,166470-1016-6
+166470-P00437,Ramon Gonzalez,,,,,,,,,,166470-1016-6
+166470-P00438,Maria Caridad Cuella,,,,,,,,,,166470-1016-6
+166470-P00439,Pedro Mauricio Liño,,,,,,,,,,166470-1016-7
+166470-P00440,Paulina Calderon,,,,,,,,,,166470-1016-7
+166470-P00441,Manuel Aristica,,,,,,,,,,166470-1016-7
+166470-P00442,Celestina Perez,,,,,,mixed-race,,,,166470-1016-7
+166470-P00443,Marcelino Perez,,,,,,,,,,166470-1016-7
+166470-P00444,Maria Gertudas Perez,,,,,,,,,,166470-1016-7
+166470-P00445,Jose Regino de la Caridad,,,infant,hijo ilegítimo,,,,,,166470-1016-7
+166470-P00446,Maria del Pilar Sorria,,,infant,hija ilegítimo,,,,,,166470-1017-1
+166470-P00447,Josefa,,,,,,,enslaved,,,166470-1017-1
+166470-P00448,Juan Bautista de Sorria,,,,,,,,Don,,166470-1017-1
+166470-P00449,Maria del Pilar,,,,,,,,,,166470-1017-1
+166470-P00450,Yanacio,,,,,,,,,,166470-1017-1
+166470-P00451,Josefa Socarro,,,,,,,,,,166470-1017-1
+166470-P00452,Jose Domingo Sorria,,,infant,hijo ilegítimo,,,,,,166470-1017-2
+166470-P00453,Maria Regla,,,,,,,enslaved,,,166470-1017-2
+166470-P00454,Juan Bautista de Sorria,,,,,,,,Don,,166470-1017-2
+166470-P00455,Jose Domingo,,,,,,,,,,166470-1017-2
+166470-P00456,Pedro Jose,,,,,,,,,,166470-1017-2
+166470-P00457,Nacion Lucumí,,Lucumí,,,,,propiedad,,,166470-1017-3
+166470-P00458,Julian del Sol,,,,,,negro,,Don,,166470-1017-3
+166470-P00459,Camilo,,,,,,,enslaved,,,166470-1017-3
+166470-P00460,Rafael del Sol,,,,,,,,Don,,166470-1017-3
+166470-P00461,Manuel Sol,,,adult,,,,,,,166470-1017-3
+166470-P00462,Merced de la Caridad,,,,,,,,,,166470-1017-4
+166470-P00463,Selsotina Hernandez,,,,,,,,Doña,,166470-1017-4
+166470-P00464,Pedro Arguinderi,,,,,,,,,,166470-1017-4
+166470-P00465,Maria Yersa,,,,,,,,,,166470-1017-4
+166470-P00466,Jacobo,,,infant,,,,,,,166470-1017-4
+166470-P00467,Juan Gregorio Lupy,,,infant,hijo ilegítimo,,,,,,166470-1017-5
+166470-P00468,Mayo del año,,,,,,mixed-race,,,,166470-1017-5
+166470-P00469,Maria Emilia Lupez,166470-L16,,,,,,,,,166470-1017-5
+166470-P00470,Victor Lupy,,,,,,,,,,166470-1017-5
+166470-P00471,Felicidad Doval,,,,,,mixed-race,,,,166470-1017-5
+166470-P00472,Juan Gregorio,,,,,,,,,,166470-1017-5
+166470-P00473,# Juan Guerios,,,,,,,,,,166470-1017-5
+166470-P00474,Rosa Zacaria Guerios,,,,,,,,,,166470-1017-5
+166470-P00475,Juana Luisa Martinez,,,infant,illegitimate,,,,,,166470-1017-6
+166470-P00476,Luisa Martinez Hels,,,,,,,,,,166470-1017-6
+166470-P00477,Curacao,,,,,,,,,,166470-1017-6
+166470-P00478,Antonio Martinez Hels,,,,,,,,,,166470-1017-6
+166470-P00479,Maria Rosa Hels,,,,,,,,,,166470-1017-6
+166470-P00480,Juana Luisa,,,,,,,,,,166470-1017-6
+166470-P00481,Juan Guierios,,,,,,,,Don,,166470-1017-6
+166470-P00482,Madana Luisa Sebilla,,,,,,,,,,166470-1017-6
+166470-P00483,Serapia Maria Nacarro,,,infant,hija ilegítimo,,,,,,166470-1017-7
+166470-P00484,Dorotea Herrera,,,,,,,enslaved,,,166470-1017-7
+166470-P00485,Justo Nabarro,,,,,,,,,,166470-1017-7
+166470-P00486,Serapia Maria,,,,,,,,,,166470-1017-7
+166470-P00487,Salbador Cren,,,,,,,,,,166470-1017-7
+166470-P00488,Caridad Lopez,,,,,,,,,,166470-1017-7
+166470-P00489,Victoria del Carmen Calderon,166470-L10,,infant,illegitimate,,moreno,,,,166470-1018-1
+166470-P00490,Leon,,,,,,,,,,166470-1018-1
+166470-P00491,Santiago Calderón,,,,,,,,,,166470-1018-1
+166470-P00492,Caniar,,,,,,,,,,166470-1018-1
+166470-P00493,Faustina de Leon,166470-L10,,,,,,,,,166470-1018-1
+166470-P00494,Felipe Calderon,166470-L10,,,,,,,,,166470-1018-1
+166470-P00495,Maria Josefa de la Cruz Gonzalez,,,,,,,,,,166470-1018-1
+166470-P00496,Juan de Leon,166470-L10,,,,,,,,,166470-1018-1
+166470-P00497,Fransisca Combida,166470-L10,,,,,moreno,,,,166470-1018-1
+166470-P00498,Victoria del Carmen,,,,,,,,,,166470-1018-1
+166470-P00499,Manuel Alonso,,,,,,,,Don,,166470-1018-1
+166470-P00500,Fransisco Gonzalez,,,,,,,,Don,,166470-1018-1
+166470-P00501,Rafael Toledo,,,,,,negro,,Don,,166470-1018-2
+166470-P00502,Agustin Rodriquez,,,,,,,,Don,,166470-1018-2
+166470-P00503,Juan Toledo,,,adult,,,,,,,166470-1018-2
+166470-P00504,Juan Jose de la Cruz Valdes,,,infant,,,,,,,166470-1018-3
+166470-P00505,Isabel Gangá,,Gangá,,,,,enslaved,,,166470-1018-3
+166470-P00506,Fonicara,,,,,,,,Doña,,166470-1018-3
+166470-P00507,Juan Jose de la Cruz,,,,,,,,,,166470-1018-3
+166470-P00508,Pedro Kongo,,Kongo,,,,,,,,166470-1018-3
+166470-P00509,Juliana Lucumí,,Lucumí,,,,,enslaved,,,166470-1018-3
+166470-P00510,Salbador Arquindegui,,,,,,,,Don,,166470-1018-3
+166470-P00511,Jose Alonso,,,,,,,,,,166470-1018-4
+166470-P00512,Maria Castro,,,,,,,,,,166470-1018-4
+166470-P00513,Juana Garcia,,,,,,,,Don,,166470-1018-4
+166470-P00514,Alejandro Garcia,,,,,,,,,,166470-1018-4
+166470-P00515,Petrona Gonzalez,,,,,,,,,,166470-1018-4
+166470-P00516,Cecilia del Rosario,,,infant,legitimate,,,,,,166470-1018-4
+166470-P00517,Maria Vicente Moya,,,infant,legitimate,,mixed-race,,,,166470-1018-5
+166470-P00518,Vega,,,,,,,,,,166470-1018-5
+166470-P00519,Eusebio de Moya,,,,,,,,,,166470-1018-5
+166470-P00520,Cecilia Vega,,,,,,,,,,166470-1018-5
+166470-P00521,Jose de la Cruz de Moyeo,,,,,,,,,,166470-1018-5
+166470-P00522,Maria Petrona Vicente,,,,,,,,,,166470-1018-5
+166470-P00523,Jose Agustin de la Vega,,,,,,,,,,166470-1018-5
+166470-P00524,Juana Jacoba Olibera,,,,,,,,,,166470-1018-5
+166470-P00525,Ana Maria Vicente,,,,,,,,,,166470-1018-5
+166470-P00526,Jose del Carmen Vega,,,,,,,,,,166470-1018-5
+166470-P00527,Maria Clemonia de Moya,,,,,,mixed-race,,,,166470-1018-5
+166470-P00528,Maria Marcela Morales,,,infant,,,,,,,166470-1018-6
+166470-P00529,Maria del Carmen Lucumí,,Lucumí,,,,,,,,166470-1018-6
+166470-P00530,Jose Maria Morales,,,,,,,,Don,,166470-1018-6
+166470-P00531,Maria Marcela,,,,,,,,,,166470-1018-6
+166470-P00532,Rita,,,,,,,,,,166470-1018-6
+166470-P00533,Gonzalez,,,,,vicario Eclesiastico,,,,,166470-1018-7
+166470-P00534,Margaria Cartalla,,,,,,,,,,166470-1018-7
+166470-P00535,Jose Manuel del Campo Gonzalez,,,,,,,,Don,,166470-1018-7
+166470-P00536,Juan Jose Cartalla,,,,,,,,,,166470-1018-7
+166470-P00537,Petrona Cartalla,,,,,,,,,,166470-1018-7
+166470-P00538,Maria Criostoma,,,infant,,,,,,,166470-1018-7
+166470-P00539,Fransisco Bibián Bestarnante,,,infant,,,,,,,166470-1019-1
+166470-P00540,Juana Criolla,,,,,,Creole,,,,166470-1019-1
+166470-P00541,de la Peña Bestarnante,,,,,,,,Don,,166470-1019-1
+166470-P00542,Fransisco Bibián,,,,,,,,,,166470-1019-1
+166470-P00543,Salomé,,,,,,,enslaved,,,166470-1019-1
+166470-P00544,José Guifasco,,,,,,,,Don,,166470-1019-1
+166470-P00545,Lugarda,,,,,,,,,,166470-1019-2
+166470-P00546,Cristobal Rodriguez,,,,,,,,Don,,166470-1019-2
+166470-P00547,Jose Antonio Ramirez,,,,,,,,Don,,166470-1019-2
+166470-P00548,Matea Rodriguez,,,infant,,,,,,,166470-1019-2
+166470-P00549,Maria Dá,,,,,,moreno;mixed-race,,,,166470-1019-3
+166470-P00550,Victor,,,infant,illegitimate,,,,,,166470-1019-3
+166470-P00551,Dorer,,,,,,,,,,166470-1019-3
+166470-P00552,Manuel Victor,166470-L10,,,,,,,,,166470-1019-3
+166470-P00553,Maria Manuela Dorer,166470-L10,,,,,,,,,166470-1019-3
+166470-P00554,Manuel Pablo,,,,,,,,,,166470-1019-3
+166470-P00555,Maria Antonia Duito,,,,,,,,,,166470-1019-3
+166470-P00556,Jose Ignacio Dorer,166470-L10,,,,,,,,,166470-1019-3
+166470-P00557,Maria,,,,,,moreno,,,,166470-1019-3
+166470-P00558,Maria Dámasa,,,,,,,,,,166470-1019-3
+166470-P00559,Jose Domingo Maria,,,,,,,,,,166470-1019-3
+166470-P00560,Maria Josefa Villavicencio,,,,,,mixed-race,,,,166470-1019-3
+166470-P00561,Maria Simona Criolla,,,,,,Creole,enslaved,,,166470-1019-4
+166470-P00562,Manuel del Valle,,,,,,,,Don,,166470-1019-4
+166470-P00563,Dolores Ciolla,,,,,,,,,,166470-1019-4
+166470-P00564,Dorotea Valle,,,infant,,,,,,,166470-1019-4
+166470-P00565,Jose de la Trinidad de Armas,,,,,,,,,,166470-1019-5
+166470-P00566,Ilaria Eugenio del,,,,,,,,,,166470-1019-5
+166470-P00567,Africa,,,,,,moreno,,,,166470-1019-5
+166470-P00568,Antonio Gonzalez,,,,,,,,,,166470-1019-5
+166470-P00569,Maria Petrona Gonzalez,,,,,,,,,,166470-1019-5
+166470-P00570,Maria Crispina,166470-L17,,infant,legitimate,,,,,,166470-1019-5
+166470-P00571,Jose Antonio Aristica,,,,,,,,,,166470-1019-6
+166470-P00572,Maria Torre,,,,,,,,,,166470-1019-6
+166470-P00573,Jose de los Santos Torre,,,,,,,,,,166470-1019-6
+166470-P00574,Albarez,,,,,,,,,,166470-1019-6
+166470-P00575,Joaquina Cleouga,166470-L8,,,,,,,,,166470-1019-6
+166470-P00576,Luis Dueña,,,,,,,,,,166470-1019-6
+166470-P00577,Ana de Leon,,,,,,,,,,166470-1019-6
+166470-P00578,Candelaria de la Caridad,,,infant,illegitimate,,,,,,166470-1019-6
+166470-P00579,Maria Kongo,,Kongo,,,,,enslaved,,,166470-1020-1
+166470-P00580,Jose Rebellas,,,,,,,,Don,,166470-1020-1
+166470-P00581,Luis de la O Ramon,,,infant,,,,,,,166470-1020-1
+166470-P00582,Jose Rebella,,,,,,,,Don,,166470-1020-1
+166470-P00583,Dolores Valdes Albarez,,,,,,,,Don,,166470-1020-1
+166470-P00584,Marcos Reynoso,,,,,,,,,,166470-1020-2
+166470-P00585,Felipa Mena,,,,,,,,,,166470-1020-2
+166470-P00586,Maria Antonia Reynoso,166470-L10,,,,,,,,,166470-1020-2
+166470-P00587,Juan Tomas Mena,166470-L9,,,,,,,,,166470-1020-2
+166470-P00588,Benita Agüero,166470-L9,,,,,,,,,166470-1020-2
+166470-P00589,Jose Serapio,,,,,,,,Don,,166470-1020-2
+166470-P00590,Maria Mena del,,,,,,mixed-race,,Don,,166470-1020-2
+166470-P00591,Ambrosio Jose de la Caridad,,,infant,hijo ilegítimo,,mixed-race,,,,166470-1020-2
+166470-P00592,Maria de la Ascension Morejon,,,,,,,,,,166470-1020-3
+166470-P00593,Diego Espin,,,,,,,,Don,,166470-1020-3
+166470-P00594,Maria Carmen Caro,,,,,,,,,,166470-1020-3
+166470-P00595,Cristobal,,,infant,,,,,,,166470-1020-3
+166470-P00596,Jose Polonia Rebasa,,,infant,,,,,,,166470-1020-4
+166470-P00597,Rosario Criolla,,,,,,Creole,,,,166470-1020-4
+166470-P00598,Juan Rebasa,,,,,,,,Don,,166470-1020-4
+166470-P00599,Jose Polonia,,,,,,,,,,166470-1020-4
+166470-P00600,Jose Dolores Perez,,,,,,,,,,166470-1020-4
+166470-P00601,Maria Locaria,,,,,,,enslaved,,,166470-1020-5
+166470-P00602,Bayardo Gazel,,,,,,,,,,166470-1020-5
+166470-P00603,Baltasar Lopez,,,,,,,,,,166470-1020-5
+166470-P00604,Teresa Aleman,,,,,,,,,,166470-1020-5
+166470-P00605,Teresa Donata,,,infant,,,,,,,166470-1020-5
+166470-P00606,Gonzalez,,,,,,,,,,166470-1020-6
+166470-P00607,Basilia Gonzalez,,,,,,,,,,166470-1020-6
+166470-P00608,Manuel Reyna,166470-L10,,,,,,,,,166470-1020-6
+166470-P00609,Manuel Reyna,,,,,,,,Don,,166470-1020-6
+166470-P00610,Angela Korma,,,,,,,,,,166470-1020-6
+166470-P00611,Pedro Antonio Gonzalez,,,,,,,,,,166470-1020-6
+166470-P00612,Rafaela Villa Vicencio,,,,,,mixed-race,,,,166470-1020-6
+166470-P00613,Juana Maria Reyna,,,,,,,,,,166470-1020-6
+166470-P00614,Domicio de Sibras,,,,,,,,Don,,166470-1020-6
+166470-P00615,Juana Maria Reyna Reyna,,,infant,illegitimate,,,,,,166470-1020-6
+166470-P00616,Maria Modesta Cordero,,,infant,illegitimate,,mixed-race,,,,166470-1021-1
+166470-P00617,Roman,,,,,,,,,,166470-1021-1
+166470-P00618,Jose Cordero,,,,,,,,,,166470-1021-1
+166470-P00619,Camarones,,,,,,,,,,166470-1021-1
+166470-P00620,Maria Isdora Roman,,,,,,,,,,166470-1021-1
+166470-P00621,Yaguaramas,,,,,,,,,,166470-1021-1
+166470-P00622,Diego Cordero,,,,,,,,,,166470-1021-1
+166470-P00623,Yaguaramas,,,,,,,,,,166470-1021-1
+166470-P00624,Rio Blanco,,,,,,,,,,166470-1021-1
+166470-P00625,Domingo Roman,,,,,,,,,,166470-1021-1
+166470-P00626,Rita Gonzalez,,,,,,mixed-race,,,,166470-1021-1
+166470-P00627,Maria Modesta,,,,,,,,,,166470-1021-1
+166470-P00628,Silberte Roman,,,,,,,,,,166470-1021-1
+166470-P00629,Maria Prudencia Roman,,,,,,,,,,166470-1021-1
+166470-P00630,Africa,,,,,,,,,,166470-1021-2
+166470-P00631,Gangá,,Gangá,,,,,enslaved,,,166470-1021-2
+166470-P00632,Fernando Sirno,,,,,,negro,,Don,,166470-1021-2
+166470-P00633,Juan Vallego,,,,,,,,,,166470-1021-2
+166470-P00634,Carlos Sirno,,,adult,,,,,,,166470-1021-2
+166470-P00635,Marrugat,,,,,,,,,,166470-1021-3
+166470-P00636,Kongo,,Kongo,,,,negro,,,,166470-1021-3
+166470-P00637,Domingo,,,,,,,,,,166470-1021-3
+166470-P00638,Fernando,,,,,,,enslaved,,,166470-1021-3
+166470-P00639,Marrugat,,,,,,,,,,166470-1021-4
+166470-P00640,Gangá,,Gangá,,,,negro,,,,166470-1021-4
+166470-P00641,Domingo,,,,,,,,,,166470-1021-4
+166470-P00642,Miguel,,,,,,,,,,166470-1021-4
+166470-P00643,Maria Arcadia,,,infant,hija ilegítimo,,,,,,166470-1021-5
+166470-P00644,Jose Maria Najarro,166470-L19,,,,,,,,,166470-1021-5
+166470-P00645,Maria Rita Antiaga,166470-L9,,,,,,,,,166470-1021-5
+166470-P00646,Jose Fernando Najarro,166470-L19,,,,,,,Don,,166470-1021-5
+166470-P00647,Maria del Socorro Bargas,,,,,,,,,,166470-1021-5
+166470-P00648,Manuel Artiaga,166470-L20,,,,,,,,,166470-1021-5
+166470-P00649,Maria Beatriz Hurtado,166470-L9,,,,,,,,,166470-1021-5
+166470-P00650,Maria Arcadoa,,,,,,,,,,166470-1021-5
+166470-P00651,Jose Herrera,,,,,,,,Don,,166470-1021-5
+166470-P00652,Natalia Herrera,,,,,,,,,,166470-1021-5
+166470-P00653,Carabalí,,Carabalí,,,,,enslaved,,,166470-1021-6
+166470-P00654,Ramon,,,,,,,enslaved,,,166470-1021-6
+166470-P00655,Pelallo Santa Cruz,,,adult,,,,,,,166470-1021-6
+166470-P00656,Maria de la Merced,,,,,,,,,,166470-1021-7
+166470-P00657,Julio Lebrane,,,,,,,,Don,,166470-1021-7
+166470-P00658,Manuel Chevenffeu,,,,,,,,,,166470-1021-7
+166470-P00659,Isabel Yzurcita,,,,,,,,,,166470-1021-7
+166470-P00660,Margarita Chevenffeu,,,infant,,,,,,,166470-1021-7
+166470-P00661,Longrino Raymundo,,,infant,illegitimate,,mixed-race,,,,166470-1022-1
+166470-P00662,Ygnacio Aristica,,,,,,,,,,166470-1022-1
+166470-P00663,Carmen Torre,,,,,,,,,,166470-1022-1
+166470-P00664,Matanzas,,,,,,,,,,166470-1022-1
+166470-P00665,Damiana Perejia,166470-L21,,,,,,,,,166470-1022-1
+166470-P00666,Jose de los Santos Torre,,,,,,,,,,166470-1022-1
+166470-P00667,Matanzas,,,,,,,,,,166470-1022-1
+166470-P00668,Agustin Chongo,,,,,,,,,,166470-1022-1
+166470-P00669,Camanaygua,,,,,,mixed-race,,,,166470-1022-1
+166470-P00670,Longinó Raymundo,,,,,,,,,,166470-1022-1
+166470-P00671,Ramon Ramirez,,,,,,,,,,166470-1022-1
+166470-P00672,Sabrina Caraba,,,,,,,,,,166470-1022-1
+166470-P00673,Jose Estanislao,,,infant,legitimate,,,,,,166470-1022-2
+166470-P00674,Jose Estanilao Salabino,,,,,,,,,,166470-1022-2
+166470-P00675,Juana Satana,,,,,,,,,,166470-1022-2
+166470-P00676,Jose Martia Salabino,,,,,,,,,,166470-1022-2
+166470-P00677,Maria Trinidad Palma,,,,,,,,,,166470-1022-2
+166470-P00678,Lucas Satana,,,,,,,,,,166470-1022-2
+166470-P00679,Maria Rosalia Moreno,,,,,,moreno,,,,166470-1022-2
+166470-P00680,Jose Estanilao,,,,,,,,,,166470-1022-2
+166470-P00681,Jose ##,,,,,,,,Don,,166470-1022-2
+166470-P00682,Maria Ysidora,,,,,,,enslaved,,,166470-1022-3
+166470-P00683,Diego Juente,,,,,,,,Don,,166470-1022-3
+166470-P00684,Juan Daniel,,,,,,,,Don,,166470-1022-3
+166470-P00685,Maria Padilla,,,,,,,,Doña,,166470-1022-3
+166470-P00686,Leona Juliana,,,infant,hija ilegítimo,,,,,,166470-1022-3
+166470-P00687,Antonio Loreto Sancehz,,,,,priest,,,Don,,166470-1022-4
+166470-P00688,Andres Serrano,166470-L9,,,,,,,,,166470-1022-4
+166470-P00689,Isabel Nabarro,166470-L9,,,,,,,,,166470-1022-4
+166470-P00690,Pedro Serrano,,,,,,,,,,166470-1022-4
+166470-P00691,Manuela Tirreño,,,,,,,,,,166470-1022-4
+166470-P00692,Jose Torres,,,,,,,,,,166470-1022-4
+166470-P00693,Clemente Nabarro,,,,,,,,,,166470-1022-4
+166470-P00694,Ramon Nabarro,,,,,,,,,,166470-1022-4
+166470-P00695,Juliana Nabarro,,,,,,,,,,166470-1022-4
+166470-P00696,Maria Cleote,,,infant,hija ilegítimo,,,,,,166470-1022-4
+166470-P00697,Ramon Hood,,,,,,,,,,166470-1022-5
+166470-P00698,Guillermo Hood,,,,,,,,Don,,166470-1022-5
+166470-P00699,Alejandro Garcia,,,,,,,enslaved,,,166470-1022-5
+166470-P00700,Isabel Gonzalez,,,,,,,,,,166470-1022-5
+166470-P00701,Maria Catalina Hood,,,infant,legitimate,,,,,,166470-1022-5
+166470-P00702,Claudio Mauzano,,,,,,negro,,Don,,166470-1022-6
+166470-P00703,Fransisco,,,adult,,,,,,,166470-1022-6
+166470-P00704,Claudio Manzano,,,,,,negro,,Don,,166470-1022-7
+166470-P00705,Jose Manzano,,,,,,,,Don,,166470-1022-7
+166470-P00706,Manuel,,,adult,,,,,,,166470-1022-7
+166470-P00707,Claudio Manzano,,,,,,negro,,Don,,166470-1023-1
+166470-P00708,Margarita,,,adult,,,,,,,166470-1023-1
+166470-P00709,Africa,,,,,,,propiedad,,,166470-1023-2
+166470-P00710,Antonio Ferri,,,,,,negro,,Don,,166470-1023-2
+166470-P00711,Alejandro Gareni,,,,,,,enslaved,,,166470-1023-2
+166470-P00712,Unknown principal,,,adult,illegitimate,,,,,,166470-1023-2
+166470-P00713,Antonio Loreto Sanchez,,,,,priest,,,Don,,166470-0002-1;166470-0002-2;166470-0002-3;166470-1002-4;166470-1003-1;166470-1003-2;166470-1003-3;166470-1003-4;166470-1003-5;166470-1003-6;166470-1003-7;166470-1004-1;166470-1004-2;166470-1004-3;166470-1004-4;166470-1004-5;166470-1004-6;166470-1004-7;166470-1005-1;166470-1005-2;166470-1005-3;166470-1005-4;166470-1005-5;166470-1005-6;166470-1006-1;166470-1006-2;166470-1006-3;166470-1006-4;166470-1006-5;166470-1006-6;166470-1007-1;166470-1007-2;166470-1007-3;166470-1007-4;166470-1007-5;166470-1007-6;166470-1008-1;166470-1008-2;166470-1008-3;166470-1008-4;166470-1008-5;166470-1008-6;166470-1009-1;166470-1009-2;166470-1009-3;166470-1009-4;166470-1009-5;166470-1009-6;166470-1010-1;166470-1010-2;166470-1010-3;166470-1010-4;166470-1010-5;166470-1010-6;166470-1010-7;166470-1011-1;166470-1011-2;166470-1011-3;166470-1011-4;166470-1011-5;166470-1011-6;166470-1012-1;166470-1012-2;166470-1012-3;166470-1012-4;166470-1012-5;166470-1012-6;166470-1013-1;166470-1013-2;166470-1013-3;166470-1013-4;166470-1013-5;166470-1013-6;166470-1013-7;166470-1014-1;166470-1014-2;166470-1014-3;166470-1014-4;166470-1014-5;166470-1014-6;166470-1014-7;166470-1015-1;166470-1015-2;166470-1015-3;166470-1015-4;166470-1015-5;166470-1015-6;166470-1015-7;166470-1015-8;166470-1016-1;166470-1016-2;166470-1016-3;166470-1016-4;166470-1016-5;166470-1016-6;166470-1016-7;166470-1017-1;166470-1017-2;166470-1017-3;166470-1017-4;166470-1017-5;166470-1017-6;166470-1017-7;166470-1018-1;166470-1018-2;166470-1018-3;166470-1018-4;166470-1018-5;166470-1018-6;166470-1018-7;166470-1019-1;166470-1019-2;166470-1019-3;166470-1019-4;166470-1019-5;166470-1019-6;166470-1020-1;166470-1020-2;166470-1020-3;166470-1020-4;166470-1020-5;166470-1020-6;166470-1021-1;166470-1021-2;166470-1021-3;166470-1021-4;166470-1021-5;166470-1021-6;166470-1021-7;166470-1022-1;166470-1022-2;166470-1022-3;166470-1022-5;166470-1022-6;166470-1022-7;166470-1023-1;166470-1023-2
+166470-P00714,Agustin de Santa Cruz,,,,,,negro,,Don,,166470-0002-1;166470-1006-1;166470-1009-2;166470-1009-4;166470-1010-3;166470-1012-5;166470-1012-6;166470-1021-6
+166470-P00715,Antonio L. Sanchez,,,,,,,,,,166470-0002-1;166470-0002-2;166470-0002-3;166470-1002-4;166470-1003-1;166470-1003-2;166470-1003-3;166470-1003-4;166470-1003-5;166470-1003-6;166470-1003-7;166470-1004-1;166470-1004-2;166470-1004-3;166470-1004-4;166470-1004-5;166470-1004-6;166470-1004-7;166470-1005-2;166470-1005-3;166470-1005-4;166470-1005-5;166470-1005-6;166470-1006-1;166470-1006-2;166470-1006-3;166470-1006-4;166470-1006-5;166470-1006-6;166470-1007-2;166470-1007-3;166470-1007-4;166470-1007-5;166470-1007-6;166470-1008-1;166470-1008-2;166470-1008-3;166470-1008-4;166470-1008-5;166470-1008-6;166470-1009-2;166470-1009-3;166470-1009-4;166470-1009-6;166470-1010-1;166470-1010-2;166470-1010-3;166470-1010-4;166470-1010-5;166470-1010-6;166470-1010-7;166470-1011-1;166470-1011-2;166470-1011-3;166470-1011-4;166470-1011-5;166470-1011-6;166470-1012-1;166470-1012-2;166470-1012-3;166470-1012-4;166470-1012-5;166470-1012-6;166470-1013-2;166470-1013-3;166470-1013-4;166470-1013-5;166470-1013-6;166470-1013-7;166470-1014-1;166470-1014-2;166470-1014-3;166470-1014-4;166470-1014-5;166470-1014-6;166470-1014-7;166470-1015-1;166470-1015-2;166470-1015-3;166470-1015-4;166470-1015-5;166470-1015-6;166470-1015-7;166470-1015-8;166470-1016-1;166470-1016-2;166470-1016-3;166470-1016-4;166470-1016-6;166470-1016-7;166470-1017-1;166470-1017-2;166470-1017-3;166470-1017-4;166470-1017-5;166470-1017-6;166470-1017-7;166470-1018-1;166470-1018-2;166470-1018-3;166470-1018-4;166470-1018-5;166470-1018-6;166470-1018-7;166470-1019-1;166470-1019-2;166470-1019-3;166470-1019-4;166470-1019-5;166470-1019-6;166470-1020-1;166470-1020-2;166470-1020-3;166470-1020-4;166470-1020-5;166470-1020-6;166470-1021-1;166470-1021-2;166470-1021-3;166470-1021-4;166470-1021-5;166470-1021-6;166470-1021-7;166470-1022-1;166470-1022-2;166470-1022-3;166470-1022-4;166470-1022-5;166470-1022-6;166470-1022-7;166470-1023-1;166470-1023-2
+166470-P00716,Agustin Santa Cruz,,,,,,negro,,Don,,166470-0002-3;166470-1003-1;166470-1003-2;166470-1006-2;166470-1009-3;166470-1009-5;166470-1010-4;166470-1010-5;166470-1010-6;166470-1011-4;166470-1012-1;166470-1012-2
+166470-P00717,Maria del Rosario,166470-L2,,,,,,,,,166470-1003-1;166470-1003-2;166470-1013-5;166470-1014-3;166470-1021-1
+166470-P00718,Maria Figueroa,,,,,,,,,,166470-1003-3;166470-1004-5;166470-1005-6
+166470-P00719,no conocido,,,,,,,enslaved;esclavas,padre,,166470-1003-5;166470-1004-4;166470-1005-5;166470-1006-4;166470-1009-1;166470-1010-1;166470-1010-7;166470-1011-5;166470-1011-6;166470-1014-3;166470-1016-5
+166470-P00720,Andres Castellano,,,,,,negro,,Don,,166470-1003-5;166470-1004-3;166470-1009-1;166470-1012-4
+166470-P00721,Anotnio L. Sanchez,,,,,,,,,,166470-1005-1;166470-1009-1;166470-1009-5;166470-1013-1
+166470-P00722,Jose Corras,,,,,,,,Don,,166470-1007-2;166470-1007-3;166470-1007-4;166470-1007-5;166470-1007-6;166470-1008-1;166470-1008-2;166470-1008-3;166470-1008-4;166470-1008-5;166470-1008-6
+166470-P00723,Maria Ramona Prieto,,,,,,,,Don;Doña,,166470-1007-6;166470-1008-2;166470-1008-4;166470-1008-6
+166470-P00724,Antonio Rodriguez Prieto,,,,,,negro,,Don,,166470-1010-2;166470-1011-2;166470-1011-3
+166470-P00725,Jose Torcuato Sanchez,,,,,,,,Don,,166470-1014-4;166470-1014-5;166470-1014-6
+166470-P00726,Antonia Josefa,,,,,,,,,,166470-1014-4;166470-1014-5;166470-1014-6
+166470-P00727,Santiago Hernandez,,,,,,negro,,Don,,166470-1015-2;166470-1015-3;166470-1015-4;166470-1015-5;166470-1015-6;166470-1015-7;166470-1015-8;166470-1016-1;166470-1016-2;166470-1016-3
+166470-P00728,Rafael Kongo,,Kongo,,,,,,,,166470-1015-2;166470-1015-3;166470-1015-4;166470-1015-5;166470-1015-6;166470-1015-7;166470-1015-8;166470-1016-1;166470-1016-2
+166470-P00729,Juan Bautista Aristica,166470-L18,,,,,,,,,166470-1016-6;166470-1019-6;166470-1022-1

@@ -92,6 +92,10 @@ def process_volume(path_to_transcription, path_to_model):
         if (place != None) and (place not in unique_places):
             unique_places.append(place)
 
+    for person in people:
+        if (person["origin"] != None) and (person["origin"] not in unique_places):
+            unique_places.append(person["origin"])
+
     places = []
     curr_place = 1
     for unique_place in unique_places:
@@ -99,7 +103,7 @@ def process_volume(path_to_transcription, path_to_model):
         places.append(place_record)
         curr_place += 1
 
-    #incorporate location ids into event metadata
+    #incorporate location ids into event metadata and person records
 
     for event in events:
         location = event["location"]
@@ -116,6 +120,22 @@ def process_volume(path_to_transcription, path_to_model):
 
         if event["location"] == "unknown":
             event["location"] = None
+
+    for person in people:
+        if person["origin"] == None:
+            continue
+
+        #development
+        found_origin_id = False
+
+        for place in places:
+            if place["location"] == person["origin"]:
+                person["origin"] = place["id"]
+                break
+
+        #development
+        if '-L' not in person["origin"]:
+            print("failed to find id for " + person["origin"])
 
     #bracket missing or incomplete event dates
 
