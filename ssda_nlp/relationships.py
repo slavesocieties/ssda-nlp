@@ -37,7 +37,7 @@ def retrieve_controlled_vocabularies():
     '''
     returns a dictionary containing current version of controlled vocabularies for characteristics
     '''
-    age = ["parvulo", "parvula", "parv", "adulto", "adulta", "adul", "niño", "niña", "nino", "nina", "dulto", "dulta"]
+    age = ["parvola", "parvolo", "parvulo", "parvula", "parv", "adulto", "adulta", "adul", "niño", "niña", "nino", "nina", "dulto", "dulta"]
     occupation = ["religioso", "ingen.o", "sacristan", "sac.", "sachristan", "cura", "vicario", "eclesiastico", "clerigo", "estudiante"]
     phenotype = ["negro", "negra", "preto", "moreno", "morena", "indio", "india", "pardo", "parda", "mestizo", "mestiza", "mulato", "mulata", "blanco", "blanca", "criollo", "criolla", "branco", "branca"]
     titles = ["frai", "sr", "sr.", "rexidor", "regr", "probin sial", "probinsial", "herm.o", "hermano", "dr.", "doc tor", "dna", "difin.dor", "difin.or", "difinidor", "d.a", "aiudante", "doctor", "d.r", "dor", "dr", "d.or", "b.er", "br", "ber", "don", "doña", "da", "padre", "pe", "predicador", "fray", "d.n", "d.", "d,n", "d;n", "p.e", "p", "dn", "fr.", "fr", "f", "regidor", "rex.or", "alg.l m.or", "ldo", "licenciado", "d", "alg.l", "alcalde"]
@@ -535,6 +535,9 @@ def categorize_characteristics(entities_df, characteristics_df):
     categories = []
 
     for index, characteristic in entities_df.iterrows():
+        #development
+        if characteristic["pred_entity"] == "libre":
+            print(characteristic["pred_label"])
         if characteristic["pred_label"] != "CHAR":
             continue
         category = None
@@ -588,6 +591,9 @@ def assign_characteristics(entry_text, entities_df, characteristics_df, unique_i
     unique_individuals.reset_index(inplace=True)
 
     for index in range(len(categorized_characteristics)):
+        #development
+        if categorized_characteristics["pred_entity"][index] == "libre":
+            print("libre")
         if ((categorized_characteristics["category"][index] == "age") or (categorized_characteristics["category"][index] == "legitimacy")) and (volume_metadata["type"] == "baptism"):
             principal = determine_principals(entry_text, unique_individuals, 1)
             if principal != None:

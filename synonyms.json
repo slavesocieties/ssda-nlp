@@ -163,6 +163,8 @@
 {"baseword": "parda", "synonyms": ["Parda"], "context": "characteristic"},
 {"baseword": "pardo", "synonyms": ["Pardo"], "context": "characteristic"},
 {"baseword": "pardos", "synonyms": ["Pardos"], "context": "characteristic"},
+{"baseword": "parvula", "synonyms": ["parvola"], "context": "characteristic"},
+{"baseword": "parvulo", "synonyms": ["parvolo"], "context": "characteristic"},
 {"baseword": "Pasqual", "synonyms": ["Pas qual"], "context": "name"},
 {"baseword": "Phelipe", "synonyms": ["Phe lipe"], "context": "name"},
 {"baseword": "primero", "synonyms": ["prim.o"]},
