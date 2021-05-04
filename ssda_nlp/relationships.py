@@ -285,7 +285,7 @@ def alt_assign_relationships(entry_text, entities, people_df, people, volume_met
                             people = build_reciprocal_relationship(people, paternal_grandmother, principal_id, "grandparent")
                         if (paternal_grandfather != '') and (paternal_grandmother != ''):
                             people = build_reciprocal_relationship(people, paternal_grandfather, paternal_grandmother, "spouse")
-                    elif ("maternos" in entities["pred_entity"][index].lower()) and (found_paternal_grandparents == False):
+                    elif ("matern" in entities["pred_entity"][index].lower()) and (found_maternal_grandparents == False):
                         maternal_grandfather = ''
                         maternal_grandmother = ''
                         if entities["pred_label"][index + 1] == "PER":
@@ -327,7 +327,7 @@ def alt_assign_relationships(entry_text, entities, people_df, people, volume_met
                             people = build_reciprocal_relationship(people, maternal_grandmother, principal_id, "grandparent")
                         if (maternal_grandfather != '') and (maternal_grandmother != ''):
                             people = build_reciprocal_relationship(people, maternal_grandfather, maternal_grandmother, "spouse")
-                elif ("maternos" in entities["pred_entity"][index].lower()) and found_paternal_grandparents and (found_maternal_grandparents == False):
+                elif ("matern" in entities["pred_entity"][index].lower()) and found_paternal_grandparents and (found_maternal_grandparents == False):
                     maternal_grandfather = ''
                     maternal_grandmother = ''
                     if entities["pred_label"][index + 1] == "PER":
