@@ -15,17 +15,27 @@ def xml_to_jsonl(path_to_xml_transcription):
     prodigy_input = open(path_to_xml_transcription[:path_to_xml_transcription.find(".xml")] + ".jsonl", 'w', encoding="utf-8")
 
     in_entry = False
+    in_partial_entry = False
     current_entry = ''
 
     for line in xml_transcription:
-        if "<entry" in line:
+        if ("<entry" in line) and in_partial_entry:
+            in_partial_entry = False
+            prodigy_input.write("{\"text\":\"" + current_entry + "\"}\n")
+            current_entry = ''
             in_entry = True
+        elif "<entry" in line:
+            in_entry = True
+        elif "<partial id" in line:
+            in_partial_entry = True
+        elif in_partial_entry and ("image" in line) or ("partial" in line):
+            continue
         elif in_entry and ("</entry>" in line):
             current_entry += line[:line.find("</entry>")]
             in_entry = False
             prodigy_input.write("{\"text\":\"" + current_entry + "\"}\n")
             current_entry = ''
-        elif in_entry:
+        elif in_entry or in_partial_entry:
             while line[0] == ' ':
                 line = line[1:]
             if ((line[len(line) - 1] == '\n') or (line[len(line) - 1] == '\n')) and (line[len(line) - 2] == '-'):

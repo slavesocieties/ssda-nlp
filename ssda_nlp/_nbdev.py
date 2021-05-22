@@ -65,7 +65,8 @@ index = {"parse_xml": "12-ssda-xml-parser.ipynb",
          "merge_duplicates": "71-relationship-builder.ipynb",
          "build_new_person": "71-relationship-builder.ipynb",
          "build_entry_metadata": "71-relationship-builder.ipynb",
-         "process_volume": "72-full-volume-processor.ipynb"}
+         "process_volume": "72-full-volume-processor.ipynb",
+         "flatten_volume_json": "72-full-volume-processor.ipynb"}
 
 modules = ["xml_parser.py",
            "collate.py",
@@ -77,7 +78,8 @@ modules = ["xml_parser.py",
            "markup2sh.py",
            "utility.py",
            "relationships.py",
-           "full_volume.py"]
+           "full_volume.py",
+           "tables.py"]
 
 doc_url = "https://d-genk.github.io/ssda_nlp/"
 
