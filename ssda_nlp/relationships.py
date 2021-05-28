@@ -190,6 +190,7 @@ def alt_assign_relationships(entry_text, entities, people_df, people, volume_met
 
     found_parents = False
     found_godparents = False
+    godparents = []
     found_paternal_grandparents = False
     found_maternal_grandparents = False
     found_enslaver = False
@@ -207,6 +208,8 @@ def alt_assign_relationships(entry_text, entities, people_df, people, volume_met
                                 from_person = people_df['unique_id'][j]
                         people = build_reciprocal_relationship(people, from_person, principal_id, "godparent")
                         found_godparents = True
+                        godparent = {"name": people_df["pred_entity"][j], "id": people_df["unique_id"][j]}
+                        godparents.append(godparent)
                 elif ((entities['pred_entity'][index].lower() == "padrinos") or (entities['pred_entity'][index].lower() == "p.p.")) and (found_godparents == False):
                     if (len(entities) > (index + 1)) and (entities['pred_label'][index + 1] == "PER"):
                         for j in range(len(people_df)):
@@ -214,12 +217,16 @@ def alt_assign_relationships(entry_text, entities, people_df, people, volume_met
                                 from_person = people_df['unique_id'][j]
                         people = build_reciprocal_relationship(people, from_person, principal_id, "godparent")
                         found_godparents = True
+                        godparent = {"name": people_df["pred_entity"][j], "id": people_df["unique_id"][j]}
+                        godparents.append(godparent)
                     if (len(entities) > (index + 2)) and (entities['pred_label'][index + 2] == "PER"):
                         for j in range(len(people_df)):
                             if people_df['pred_start'][j] == entities['pred_start'][index + 2]:
                                 from_person = people_df['unique_id'][j]
                         people = build_reciprocal_relationship(people, from_person, principal_id, "godparent")
                         found_godparents = True
+                        godparent = {"name": people_df["pred_entity"][j], "id": people_df["unique_id"][j]}
+                        godparents.append(godparent)
                 elif ("p." in entities['pred_entity'][index].lower()) and (found_godparents == False):
                     if (len(entities) > (index + 1)) and not ("p." in entities['pred_entity'][index + 1].lower()):
                         if (len(entities) > (index + 1)) and (entities['pred_label'][index + 1] == "PER"):
@@ -228,6 +235,8 @@ def alt_assign_relationships(entry_text, entities, people_df, people, volume_met
                                     from_person = people_df['unique_id'][j]
                             people = build_reciprocal_relationship(people, from_person, principal_id, "godparent")
                             found_godparents = True
+                            godparent = {"name": people_df["pred_entity"][j], "id": people_df["unique_id"][j]}
+                            godparents.append(godparent)
                     elif (len(entities) > (index + 1)):
                         if (len(entities) > (index + 2)) and (entities['pred_label'][index + 2] == "PER"):
                             for j in range(len(people_df)):
@@ -235,12 +244,16 @@ def alt_assign_relationships(entry_text, entities, people_df, people, volume_met
                                     from_person = people_df['unique_id'][j]
                             people = build_reciprocal_relationship(people, from_person, principal_id, "godparent")
                             found_godparents = True
+                            godparent = {"name": people_df["pred_entity"][j], "id": people_df["unique_id"][j]}
+                            godparents.append(godparent)
                         if (len(entities) > (index + 3)) and (entities['pred_label'][index + 3] == "PER"):
                             for j in range(len(people_df)):
                                 if people_df['pred_start'][j] == entities['pred_start'][index + 3]:
                                     from_person = people_df['unique_id'][j]
                             people = build_reciprocal_relationship(people, from_person, principal_id, "godparent")
                             found_godparents = True
+                            godparent = {"name": people_df["pred_entity"][j], "id": people_df["unique_id"][j]}
+                            godparents.append(godparent)
                 #build grandparents
                 elif ("abuelos" in entities["pred_entity"][index].lower()):
                     if ("paternos" in entities["pred_entity"][index].lower()) and (found_paternal_grandparents == False):
@@ -369,6 +382,14 @@ def alt_assign_relationships(entry_text, entities, people_df, people, volume_met
                         people = build_reciprocal_relationship(people, maternal_grandmother, principal_id, "grandparent")
                     if (maternal_grandfather != '') and (maternal_grandmother != ''):
                             people = build_reciprocal_relationship(people, maternal_grandfather, maternal_grandmother, "spouse")
+
+    if len(godparents) == 2:
+        first_godparent_sex = determine_sex(godparents[0]["name"].split(' ')[0], name_list="names.json")
+        second_godparent_sex = determine_sex(godparents[1]["name"].split(' ')[0], name_list="names.json")
+        if (first_godparent_sex != second_godparent_sex) or (first_godparent_sex == "unknown" and second_godparent_sex == "unknown"):
+            print("found possible godparent couple: ")
+            print(godparents[0]["name"])
+            print(godparents[1]["name"])
 
     for i in range(len(cat_char)):
         #build enslaver/enslaved person relationships
@@ -536,8 +557,8 @@ def categorize_characteristics(entities_df, characteristics_df):
 
     for index, characteristic in entities_df.iterrows():
         #development
-        if characteristic["pred_entity"] == "libre":
-            print(characteristic["pred_label"])
+        #if characteristic["pred_entity"] == "libre":
+            #print(characteristic["pred_label"])
         if characteristic["pred_label"] != "CHAR":
             continue
         category = None
@@ -592,8 +613,8 @@ def assign_characteristics(entry_text, entities_df, characteristics_df, unique_i
 
     for index in range(len(categorized_characteristics)):
         #development
-        if categorized_characteristics["pred_entity"][index] == "libre":
-            print("libre")
+        #if categorized_characteristics["pred_entity"][index] == "libre":
+            #print("libre")
         if ((categorized_characteristics["category"][index] == "age") or (categorized_characteristics["category"][index] == "legitimacy")) and (volume_metadata["type"] == "baptism"):
             principal = determine_principals(entry_text, unique_individuals, 1)
             if principal != None:
