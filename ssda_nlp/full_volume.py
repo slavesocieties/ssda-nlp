@@ -93,7 +93,6 @@ def process_volume(path_to_transcription, path_to_model):
             unique_places.append(place)
 
     for person in people:
-        print(person)
         if (person["origin"] != None) and (person["origin"] not in unique_places):
             unique_places.append(person["origin"])
 

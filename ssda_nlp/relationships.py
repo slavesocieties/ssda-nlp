@@ -386,10 +386,10 @@ def alt_assign_relationships(entry_text, entities, people_df, people, volume_met
     if len(godparents) == 2:
         first_godparent_sex = determine_sex(godparents[0]["name"].split(' ')[0], name_list="names.json")
         second_godparent_sex = determine_sex(godparents[1]["name"].split(' ')[0], name_list="names.json")
-        if (first_godparent_sex != second_godparent_sex) or (first_godparent_sex == "unknown" and second_godparent_sex == "unknown"):
-            print("found possible godparent couple: ")
-            print(godparents[0]["name"])
-            print(godparents[1]["name"])
+        #if (first_godparent_sex != second_godparent_sex) or (first_godparent_sex == "unknown" and second_godparent_sex == "unknown"):
+            #print("found possible godparent couple: ")
+            #print(godparents[0]["name"])
+            #print(godparents[1]["name"])
 
     for i in range(len(cat_char)):
         #build enslaver/enslaved person relationships
@@ -1336,6 +1336,13 @@ def id_obvious_duplicates(people, principals, cleric):
 
     obv_dups = {"principal":[], "cleric":[]}
 
+    #clumsy fix for corner case where principal and cleric share first name
+    if (len(principals) > 0) and (cleric != None):
+        for principal in principals:
+            for p in principal.split(' '):
+                if p in cleric:
+                    return obv_dups
+
     if (principals != None) and (len(principals) == 1):
 
         for index, person in people.iterrows():
@@ -1521,9 +1528,7 @@ def build_entry_metadata(entry_text, entities, path_to_volume_xml, entry_number=
 
         characteristics_df = categorize_characteristics(entities, characteristics_df)
         people = assign_characteristics(entry_text, entities, characteristics_df, people_df, volume_metadata)
-
         people = alt_assign_relationships(entry_text, entities, people_df, people, volume_metadata)
-
         obvious_duplicates = id_obvious_duplicates(people_df, principal, cleric)
         people = merge_duplicates(people, obvious_duplicates)
 
