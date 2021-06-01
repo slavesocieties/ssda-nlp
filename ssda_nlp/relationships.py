@@ -1550,4 +1550,7 @@ def build_entry_metadata(entry_text, entities, path_to_volume_xml, entry_number=
         print("That record type is not supported yet.")
         return None
 
-    return people, places, events
+    ########################################################################
+    ### KAI EDIT: changed it so that characteristics_df is returned ###
+    ########################################################################
+    return people, places, events, characteristics_df
