@@ -175,6 +175,16 @@ def alt_assign_relationships(entry_text, entities, people_df, people, volume_met
     cat_char = categorize_characteristics(entities, characteristics)
     entities.reset_index(inplace=True)
 
+    #############################################################
+    ### KAI EDIT: ###
+    #############################################################
+    #Get the size
+    entities_shape = entities.shape
+    #Now define a column vector that is the approriate size, True by default
+    truths_list = [True] * entities_shape[0] #[0] is the number of rows
+    #Now add that column to entities
+    entities['assgnmt_status'] = truths_list
+
     if determine_principals(entry_text, entities, 1) != None:
         principal = determine_principals(entry_text, entities, 1)[0]
         for i in range(len(people)):
@@ -382,6 +392,19 @@ def alt_assign_relationships(entry_text, entities, people_df, people, volume_met
                         people = build_reciprocal_relationship(people, maternal_grandmother, principal_id, "grandparent")
                     if (maternal_grandfather != '') and (maternal_grandmother != ''):
                             people = build_reciprocal_relationship(people, maternal_grandfather, maternal_grandmother, "spouse")
+
+                #############################################################
+                ### KAI EDIT: ###
+                #############################################################
+                #Make sure that this is aligned correctly...
+                elif ((found_parents == False) and (found_godparents == False) and (found_paternal_grandparents == False) and (found_maternal_grandparents == False) and (found_enslaver == False)):
+                    #ie if after all these checks, there are still no relationships found, then we have a case where we have a relationship but no assignment
+                    #Initial attempt: add a column to entities, just binary whether
+                    #Note that this relies on setting ALL to FOUND by default, so I don't have to add to the code above each time
+                    #Thus, we only flip it in the case that no relationships are found
+                    entities['assgnmt_status'][index] == False
+
+
 
     if len(godparents) == 2:
         first_godparent_sex = determine_sex(godparents[0]["name"].split(' ')[0], name_list="names.json")
@@ -1550,7 +1573,4 @@ def build_entry_metadata(entry_text, entities, path_to_volume_xml, entry_number=
         print("That record type is not supported yet.")
         return None
 
-    ########################################################################
-    ### KAI EDIT: changed it so that characteristics_df is returned ###
-    ########################################################################
-    return people, places, events, characteristics_df
+    return people, places, events

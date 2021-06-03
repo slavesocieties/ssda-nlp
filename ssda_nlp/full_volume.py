@@ -77,10 +77,7 @@ def process_volume(path_to_transcription, path_to_model):
 
         entities = ent_preds_df.loc[ent_preds_df['entry_no'] == entry_no]
 
-        ########################################################################
-        ### KAI EDIT: Now returns characteristics_df ###
-        ########################################################################
-        entry_people, entry_places, entry_events, characteristics_df = build_entry_metadata(entry_text, entities, path_to_transcription, entry_no)
+        entry_people, entry_places, entry_events, hold = build_entry_metadata(entry_text, entities, path_to_transcription, entry_no)
 
         people += entry_people
         places += entry_places
@@ -448,9 +445,9 @@ def process_volume(path_to_transcription, path_to_model):
     print("JSON built, processing completed.")
 
     ########################################################################
-    ### KAI EDIT: Now returns characteristics_df ###
+    ### KAI EDIT: Now returns ent_pred_df and entites (also a df) ###
     ########################################################################
-    return people, places, events, volume_metadata["id"] + "_ppe.json", characteristics_df, entities, ent_preds_df
+    return people, places, events, volume_metadata["id"] + "_ppe.json", entities, ent_preds_df, hold
 
 # Cell
 
