@@ -403,6 +403,7 @@ def alt_assign_relationships(entry_text, entities, people_df, people, volume_met
                     #Note that this relies on setting ALL to FOUND by default, so I don't have to add to the code above each time
                     #Thus, we only flip it in the case that no relationships are found
                     entities['assgnmt_status'][index] == False
+                    print("Failed to find a category for " + entities["pred_entity"][index])
 
 
 
@@ -606,8 +607,16 @@ def categorize_characteristics(entities_df, characteristics_df):
                 if term in characteristic['pred_entity'].lower():
                         category = cat
                         break
-        #if category == None:
-            #print("Failed to find a category for " + characteristic['pred_entity'])
+        #############################################################
+        ### KAI EDIT: Don't think I actually need this, this isn't related to the assignment process... ###
+        #############################################################
+        if category == None:
+            #for row in entities:
+            #    if (entities.iloc[row] == characteristic['pred_entity']) and (entities.loc['assgnmt_status'] == True):
+            #        entities['assgnmt_status'][row] == False
+            #        break
+            print("Failed to find a category for " + characteristic['pred_entity'])
+
         categories.append(category)
 
     characteristics_df["category"] = categories
@@ -662,6 +671,13 @@ def assign_characteristics(entry_text, entities_df, characteristics_df, unique_i
                     assign = i
             if assign != None:
                 assignments[index] = unique_individuals["unique_id"][assign]
+            #############################################################
+            ### KAI EDIT: ###
+            #############################################################
+            #This appears to be where I would be looking for assign == None
+            else: #elif assign is None
+                #FILL THIS IN
+                pass
         elif categorized_characteristics["category"][index] == "status":
             char_start = categorized_characteristics["pred_start"][index]
             lowest_diff = 30
@@ -683,10 +699,16 @@ def assign_characteristics(entry_text, entities_df, characteristics_df, unique_i
             for a in assign:
                 if a != None:
                     ids.append(unique_individuals["unique_id"][a])
+                #############################################################
+                ### KAI EDIT: A) Is here the right place ###
+                #############################################################
             if len(ids) == 2:
                 assignments[index] = ids[0] + ';' + ids[1]
             elif len(ids) == 1:
                 assignments[index] = ids[0]
+            #############################################################
+            ### KAI EDIT: B) Not sure if here is the right place ###
+            #############################################################
         elif categorized_characteristics["category"][index] == "origin":
             for i, entity in entities_df.iterrows():
                 if entity["pred_start"] == categorized_characteristics["pred_start"][index]:
@@ -757,7 +779,12 @@ def assign_characteristics(entry_text, entities_df, characteristics_df, unique_i
 
         people.append(person_record)
 
-    return people
+#for row in entities:
+#    if (entities.iloc[row] == characteristic['pred_entity']) and (entities.loc['assgnmt_status'] == True):
+#        entities['assgnmt_status'][row] == False
+#        break
+
+    return people, categorized_characteristics
 
 # Cell
 
@@ -1550,7 +1577,7 @@ def build_entry_metadata(entry_text, entities, path_to_volume_xml, entry_number=
             events.append(build_event(entry_text, entities, "birth", principal, volume_metadata, 2, people_df))
 
         characteristics_df = categorize_characteristics(entities, characteristics_df)
-        people = assign_characteristics(entry_text, entities, characteristics_df, people_df, volume_metadata)
+        people, categorized_characteristics = assign_characteristics(entry_text, entities, characteristics_df, people_df, volume_metadata)
         people = alt_assign_relationships(entry_text, entities, people_df, people, volume_metadata)
         obvious_duplicates = id_obvious_duplicates(people_df, principal, cleric)
         people = merge_duplicates(people, obvious_duplicates)
@@ -1573,4 +1600,4 @@ def build_entry_metadata(entry_text, entities, path_to_volume_xml, entry_number=
         print("That record type is not supported yet.")
         return None
 
-    return people, places, events
+    return people, places, events, categorized_characteristics
