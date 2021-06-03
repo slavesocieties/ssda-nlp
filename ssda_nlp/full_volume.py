@@ -450,7 +450,7 @@ def process_volume(path_to_transcription, path_to_model):
     ########################################################################
     ### KAI EDIT: Now returns characteristics_df ###
     ########################################################################
-    return people, places, events, volume_metadata["id"] + "_ppe.json", characteristics_df
+    return people, places, events, volume_metadata["id"] + "_ppe.json", characteristics_df, entities, ent_preds_df
 
 # Cell
 
