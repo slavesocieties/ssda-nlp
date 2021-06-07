@@ -70,6 +70,11 @@ def process_volume(path_to_transcription, path_to_model):
     places = []
     events = []
 
+    #############################################################
+    ### KAI EDIT: ###
+    #############################################################
+    entitiesRunning = pd.DataFrame()
+
     for i in range(len(entry_df.index)):
 
         entry_no = entry_df['entry_no'][i]
@@ -77,8 +82,11 @@ def process_volume(path_to_transcription, path_to_model):
 
         entities = ent_preds_df.loc[ent_preds_df['entry_no'] == entry_no]
 
+        #############################################################
+        ### KAI EDIT: ###
+        #############################################################
         entry_people, entry_places, entry_events, entities = build_entry_metadata(entry_text, entities, path_to_transcription, entry_no)
-        entitiesRunnning = entitiesRunnning.append(entities)
+        entitiesRunning = entitiesRunning.append(entities)
 
         #categorized_characteristics
 
@@ -450,7 +458,7 @@ def process_volume(path_to_transcription, path_to_model):
     ########################################################################
     ### KAI EDIT: Now returns ent_pred_df and entites (also a df) ###
     ########################################################################
-    return people, places, events, volume_metadata["id"] + "_ppe.json", entities, ent_preds_df
+    return people, places, events, volume_metadata["id"] + "_ppe.json", entitiesRunning, ent_preds_df
 
 # Cell
 
