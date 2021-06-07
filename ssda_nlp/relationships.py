@@ -403,7 +403,7 @@ def alt_assign_relationships(entry_text, entities, people_df, people, volume_met
                     #Note that this relies on setting ALL to FOUND by default, so I don't have to add to the code above each time
                     #Thus, we only flip it in the case that no relationships are found
                     entities['assgnmt_status'][index] == False
-                    print("Failed to find a category for " + entities["pred_entity"][index])
+                    print("Failed to find a category for entity: " + entities["pred_entity"][index])
 
 
 
@@ -610,12 +610,12 @@ def categorize_characteristics(entities_df, characteristics_df):
         #############################################################
         ### KAI EDIT: Don't think I actually need this, this isn't related to the assignment process... ###
         #############################################################
-        if category == None:
+        #if category == None:
             #for row in entities:
             #    if (entities.iloc[row] == characteristic['pred_entity']) and (entities.loc['assgnmt_status'] == True):
             #        entities['assgnmt_status'][row] == False
             #        break
-            print("Failed to find a category for " + characteristic['pred_entity'])
+            #print("Failed to find a category for characteristic: " + characteristic['pred_entity'])
 
         categories.append(category)
 
