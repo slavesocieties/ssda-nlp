@@ -564,7 +564,7 @@ def alt_assign_relationships(entry_text, entities, people_df, people, volume_met
             else:
                 people = build_reciprocal_relationship(people, people_df["unique_id"][maternal_grandfather_index], people_df["unique_id"][close_parent], "parent")
 
-    return people
+    return people, entities
 
 # Cell
 
@@ -1578,7 +1578,10 @@ def build_entry_metadata(entry_text, entities, path_to_volume_xml, entry_number=
 
         characteristics_df = categorize_characteristics(entities, characteristics_df)
         people, categorized_characteristics = assign_characteristics(entry_text, entities, characteristics_df, people_df, volume_metadata)
-        people = alt_assign_relationships(entry_text, entities, people_df, people, volume_metadata)
+        #############################################################
+        ### KAI EDIT: added entities here as output ###
+        #############################################################
+        people, entities = alt_assign_relationships(entry_text, entities, people_df, people, volume_metadata)
         obvious_duplicates = id_obvious_duplicates(people_df, principal, cleric)
         people = merge_duplicates(people, obvious_duplicates)
 
@@ -1600,4 +1603,4 @@ def build_entry_metadata(entry_text, entities, path_to_volume_xml, entry_number=
         print("That record type is not supported yet.")
         return None
 
-    return people, places, events, categorized_characteristics
+    return people, places, events, entities

@@ -77,8 +77,10 @@ def process_volume(path_to_transcription, path_to_model):
 
         entities = ent_preds_df.loc[ent_preds_df['entry_no'] == entry_no]
 
-        entry_people, entry_places, entry_events, categorized_characteristics = build_entry_metadata(entry_text, entities, path_to_transcription, entry_no)
-        categorized_characteristics
+        entry_people, entry_places, entry_events, entities = build_entry_metadata(entry_text, entities, path_to_transcription, entry_no)
+        entitiesRunnning = entitiesRunnning.append(entities)
+
+        #categorized_characteristics
 
         people += entry_people
         places += entry_places
@@ -448,7 +450,7 @@ def process_volume(path_to_transcription, path_to_model):
     ########################################################################
     ### KAI EDIT: Now returns ent_pred_df and entites (also a df) ###
     ########################################################################
-    return people, places, events, volume_metadata["id"] + "_ppe.json", entities, ent_preds_df, categorized_characteristics
+    return people, places, events, volume_metadata["id"] + "_ppe.json", entities, ent_preds_df
 
 # Cell
 
