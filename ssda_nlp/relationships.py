@@ -175,16 +175,6 @@ def alt_assign_relationships(entry_text, entities, people_df, people, volume_met
     cat_char = categorize_characteristics(entities, characteristics)
     entities.reset_index(inplace=True)
 
-    #############################################################
-    ### KAI EDIT: ###
-    #############################################################
-    #Get the size
-    entities_shape = entities.shape
-    #Now define a column vector that is the approriate size, True by default
-    truths_list = [True] * entities_shape[0] #[0] is the number of rows
-    #Now add that column to entities
-    entities['assgnmt_status'] = truths_list
-
     if determine_principals(entry_text, entities, 1) != None:
         principal = determine_principals(entry_text, entities, 1)[0]
         for i in range(len(people)):
@@ -402,7 +392,7 @@ def alt_assign_relationships(entry_text, entities, people_df, people, volume_met
                     #Initial attempt: add a column to entities, just binary whether
                     #Note that this relies on setting ALL to FOUND by default, so I don't have to add to the code above each time
                     #Thus, we only flip it in the case that no relationships are found
-                    entities['assgnmt_status'][index] == False
+                    entities['assgnmt_status'][index] = False
                     #print("Failed to find a category for entity: " + entities["pred_entity"][index])
 
 
@@ -564,6 +554,12 @@ def alt_assign_relationships(entry_text, entities, people_df, people, volume_met
             else:
                 people = build_reciprocal_relationship(people, people_df["unique_id"][maternal_grandfather_index], people_df["unique_id"][close_parent], "parent")
 
+    #############################################################
+    ### KAI EDIT: ###
+    #############################################################
+    unassigned_df = entities[entities['assgnmt_status'] == False]
+    display(entities.head(20))
+
     return people, entities
 
 # Cell
@@ -610,12 +606,12 @@ def categorize_characteristics(entities_df, characteristics_df):
         #############################################################
         ### KAI EDIT: Don't think I actually need this, this isn't related to the assignment process... ###
         #############################################################
-        #if category == None:
-            #for row in entities:
-            #    if (entities.iloc[row] == characteristic['pred_entity']) and (entities.loc['assgnmt_status'] == True):
-            #        entities['assgnmt_status'][row] == False
-            #        break
-            #print("Failed to find a category for characteristic: " + characteristic['pred_entity'])
+        if category == None:
+            for row in entities:
+                if (entities.iloc[row] == characteristic['pred_entity']) and (entities.loc['assgnmt_status'] == True):
+                    entities['assgnmt_status'][row] = False
+                    break
+            print("Failed to find a category for characteristic: " + characteristic['pred_entity'])
 
         categories.append(category)
 
@@ -781,7 +777,7 @@ def assign_characteristics(entry_text, entities_df, characteristics_df, unique_i
 
 #for row in entities:
 #    if (entities.iloc[row] == characteristic['pred_entity']) and (entities.loc['assgnmt_status'] == True):
-#        entities['assgnmt_status'][row] == False
+#        entities['assgnmt_status'][row] = False
 #        break
 
     return people, categorized_characteristics

@@ -85,6 +85,13 @@ def process_volume(path_to_transcription, path_to_model):
         #############################################################
         ### KAI EDIT: ###
         #############################################################
+        #Get the size
+        entities_shape = entities.shape
+        #Now define a column vector that is the approriate size, True by default
+        truths_list = [True] * entities_shape[0] #[0] is the number of rows
+        #Now add that column to entities
+        entities['assgnmt_status'] = truths_list
+
         entry_people, entry_places, entry_events, entities = build_entry_metadata(entry_text, entities, path_to_transcription, entry_no)
         entitiesRunning = entitiesRunning.append(entities)
 
@@ -255,7 +262,7 @@ def process_volume(path_to_transcription, path_to_model):
         if person["name"] != None:
             name_parts = person["name"].split(' ')
 
-            if len(name_parts) >= 2:
+            if len(name_parts) >= 2:a
                 while ((name_parts[0].lower() + ' ' + name_parts[1].lower()) in vocabularies["titles"]) or ((name_parts[0].lower() + ' ' + name_parts[1].lower()) in vocabularies["ranks"]):
                     if len(name_parts) == 2:
                         person["name"] = None
