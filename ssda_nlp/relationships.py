@@ -558,7 +558,7 @@ def alt_assign_relationships(entry_text, entities, people_df, people, volume_met
     ### KAI EDIT: ###
     #############################################################
     unassigned_df = entities[entities['assgnmt_status'] == False]
-    display(entities.head(20))
+    display(unassigned_df.head(20))
 
     return people, entities
 
