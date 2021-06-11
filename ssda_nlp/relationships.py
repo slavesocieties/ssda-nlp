@@ -607,9 +607,9 @@ def categorize_characteristics(entities_df, characteristics_df):
         ### KAI EDIT: Don't think I actually need this, this isn't related to the assignment process... ###
         #############################################################
         if category == None:
-            for row in entities:
-                if (entities.iloc[row] == characteristic['pred_entity']) and (entities.loc['assgnmt_status'] == True):
-                    entities['assgnmt_status'][row] = False
+            for row in entities_df:
+                if (entities_df.iloc[row] == characteristic['pred_entity']) and (entities_df.loc['assgnmt_status'] == True):
+                    entities_df['assgnmt_status'][row] = False
                     break
             print("Failed to find a category for characteristic: " + characteristic['pred_entity'])
 

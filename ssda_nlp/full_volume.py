@@ -262,7 +262,7 @@ def process_volume(path_to_transcription, path_to_model):
         if person["name"] != None:
             name_parts = person["name"].split(' ')
 
-            if len(name_parts) >= 2:a
+            if len(name_parts) >= 2:
                 while ((name_parts[0].lower() + ' ' + name_parts[1].lower()) in vocabularies["titles"]) or ((name_parts[0].lower() + ' ' + name_parts[1].lower()) in vocabularies["ranks"]):
                     if len(name_parts) == 2:
                         person["name"] = None
