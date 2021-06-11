@@ -392,8 +392,10 @@ def alt_assign_relationships(entry_text, entities, people_df, people, volume_met
                     #Initial attempt: add a column to entities, just binary whether
                     #Note that this relies on setting ALL to FOUND by default, so I don't have to add to the code above each time
                     #Thus, we only flip it in the case that no relationships are found
-                    entities['assgnmt_status'][index] = False
-                    #print("Failed to find a category for entity: " + entities["pred_entity"][index])
+
+                    #entities['assgnmt_status'][index] = False
+                    entities.iloc[6,index] = False
+                    print("Failed to find a category for relationship: " + entities["pred_entity"][index])
 
 
 
