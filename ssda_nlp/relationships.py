@@ -175,7 +175,8 @@ def alt_assign_relationships(entry_text, entities, people_df, people, volume_met
     cat_char = categorize_characteristics(entities, characteristics)
     entities.reset_index(inplace=True)
 
-    if determine_principals(entry_text, entities, 1) != None:
+    #if determine_principals(entry_text, entities, 1) != None:
+    if not (determine_principals(entry_text, entities, 1) == None):
         principal = determine_principals(entry_text, entities, 1)[0]
         for i in range(len(people)):
             if people[i]["name"] == principal:

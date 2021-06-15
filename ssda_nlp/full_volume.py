@@ -87,17 +87,22 @@ def process_volume(path_to_transcription, path_to_model):
         entities.insert(0, "assgnmt_status", truths_list)
 
         entry_people, entry_places, entry_events, entities, characteristics_df, categorized_characteristics = build_entry_metadata(entry_text, entities, path_to_transcription, entry_no)
-        for ent_ndex, ent_row in entities.iterrows():
+
+        #display(characteristics_df.head())
+
+        for ent_index, ent_row in entities.iterrows():
             for char_index, char_row in characteristics_df.iterrows():
-                if ent_row["pred_label"]==char_row["pred_label"] and ent_row["pred_start"]==char_row["pred_start"]:
-                    ent_row["assgnmt_status"] = char_row["assignment"]
-                    if ent_row["assgnmt_status"] == False:
-                        print("Found a match: updating characteristic")
+                if (ent_row.loc["pred_label"] == char_row.loc["pred_label"]) and (ent_row.loc["pred_start"] == char_row.loc["pred_start"]):
+                    ent_row.loc["assgnmt_status"] = char_row.loc["assignment"]
+                    if ent_row.loc["assgnmt_status"] == False:
+                        print("UNASSIGNED CHARACTERSTICS UPDATED")
                     break
 
         entitiesRunning = entitiesRunning.append(entities)
 
-        display(characteristics_df.head())
+        if not characteristics_df['assignment'].all():
+            display(characteristics_df.head())
+        print("---------------------------------------------------------")
 
         people += entry_people
         places += entry_places
