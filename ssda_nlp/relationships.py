@@ -561,7 +561,9 @@ def alt_assign_relationships(entry_text, entities, people_df, people, volume_met
     ### KAI EDIT: ###
     #############################################################
     unassigned_df = entities[entities['assgnmt_status'] == False]
-    display(unassigned_df.head(20))
+    [unassigned_rows, _] = unassigned_df.shape
+    if unassigned_rows>0:
+        display(unassigned_df.head(20))
 
     return people, entities
 
@@ -671,13 +673,6 @@ def assign_characteristics(entry_text, entities_df, characteristics_df, unique_i
                     assign = i
             if assign != None:
                 assignments[index] = unique_individuals["unique_id"][assign]
-            #############################################################
-            ### KAI EDIT: ###
-            #############################################################
-            #This appears to be where I would be looking for assign == None
-            else: #elif assign is None
-                #FILL THIS IN
-                pass
         elif categorized_characteristics["category"][index] == "status":
             char_start = categorized_characteristics["pred_start"][index]
             lowest_diff = 30
@@ -699,16 +694,10 @@ def assign_characteristics(entry_text, entities_df, characteristics_df, unique_i
             for a in assign:
                 if a != None:
                     ids.append(unique_individuals["unique_id"][a])
-                #############################################################
-                ### KAI EDIT: A) Is here the right place ###
-                #############################################################
             if len(ids) == 2:
                 assignments[index] = ids[0] + ';' + ids[1]
             elif len(ids) == 1:
                 assignments[index] = ids[0]
-            #############################################################
-            ### KAI EDIT: B) Not sure if here is the right place ###
-            #############################################################
         elif categorized_characteristics["category"][index] == "origin":
             for i, entity in entities_df.iterrows():
                 if entity["pred_start"] == categorized_characteristics["pred_start"][index]:
@@ -778,11 +767,6 @@ def assign_characteristics(entry_text, entities_df, characteristics_df, unique_i
                 person_record[key] = None
 
         people.append(person_record)
-
-#for row in entities:
-#    if (entities.iloc[row] == characteristic['pred_entity']) and (entities.loc['assgnmt_status'] == True):
-#        entities['assgnmt_status'][row] = False
-#        break
 
     return people, categorized_characteristics
 

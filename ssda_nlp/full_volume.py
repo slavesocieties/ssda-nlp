@@ -70,9 +70,6 @@ def process_volume(path_to_transcription, path_to_model):
     places = []
     events = []
 
-    #############################################################
-    ### KAI EDIT: ###
-    #############################################################
     entitiesRunning = pd.DataFrame()
 
     for i in range(len(entry_df.index)):
@@ -82,21 +79,25 @@ def process_volume(path_to_transcription, path_to_model):
 
         entities = ent_preds_df.loc[ent_preds_df['entry_no'] == entry_no]
 
-        #############################################################
-        ### KAI EDIT: ###
-        #############################################################
         #Get the size
         entities_shape = entities.shape
         #Now define a column vector that is the approriate size, True by default
         truths_list = [True] * entities_shape[0] #[0] is the number of rows
         #Now add that column to entities
         entities.insert(0, "assgnmt_status", truths_list)
-        #entities['assgnmt_status'] = truths_list
 
         entry_people, entry_places, entry_events, entities, characteristics_df, categorized_characteristics = build_entry_metadata(entry_text, entities, path_to_transcription, entry_no)
+        for ent_ndex, ent_row in entities.iterrows():
+            for char_index, char_row in characteristics_df.iterrows():
+                if ent_row["pred_label"]==char_row["pred_label"] and ent_row["pred_start"]==char_row["pred_start"]:
+                    ent_row["assgnmt_status"] = char_row["assignment"]
+                    if ent_row["assgnmt_status"] == False:
+                        print("Found a match: updating characteristic")
+                    break
+
         entitiesRunning = entitiesRunning.append(entities)
 
-        ###############################################################
+        display(characteristics_df.head())
 
         people += entry_people
         places += entry_places
@@ -463,10 +464,7 @@ def process_volume(path_to_transcription, path_to_model):
 
     print("JSON built, processing completed.")
 
-    ########################################################################
-    ### KAI EDIT: Now returns ent_pred_df and entites (also a df) ###
-    ########################################################################
-    return people, places, events, volume_metadata["id"] + "_ppe.json", entitiesRunning, ent_preds_df, characteristics_df, categorized_characteristics
+    return people, places, events, volume_metadata["id"] + "_ppe.json", entitiesRunning
 
 # Cell
 
