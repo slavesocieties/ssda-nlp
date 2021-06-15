@@ -90,12 +90,13 @@ def process_volume(path_to_transcription, path_to_model):
         #Now define a column vector that is the approriate size, True by default
         truths_list = [True] * entities_shape[0] #[0] is the number of rows
         #Now add that column to entities
-        entities['assgnmt_status'] = truths_list
+        entities.insert(0, "assgnmt_status", truths_list)
+        #entities['assgnmt_status'] = truths_list
 
-        entry_people, entry_places, entry_events, entities = build_entry_metadata(entry_text, entities, path_to_transcription, entry_no)
+        entry_people, entry_places, entry_events, entities, characteristics_df, categorized_characteristics = build_entry_metadata(entry_text, entities, path_to_transcription, entry_no)
         entitiesRunning = entitiesRunning.append(entities)
 
-        #categorized_characteristics
+        ###############################################################
 
         people += entry_people
         places += entry_places
@@ -465,7 +466,7 @@ def process_volume(path_to_transcription, path_to_model):
     ########################################################################
     ### KAI EDIT: Now returns ent_pred_df and entites (also a df) ###
     ########################################################################
-    return people, places, events, volume_metadata["id"] + "_ppe.json", entitiesRunning, ent_preds_df
+    return people, places, events, volume_metadata["id"] + "_ppe.json", entitiesRunning, ent_preds_df, characteristics_df, categorized_characteristics
 
 # Cell
 
