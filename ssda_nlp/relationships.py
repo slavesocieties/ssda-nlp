@@ -394,7 +394,9 @@ def alt_assign_relationships(entry_text, entities, people_df, people, volume_met
                     #Note that this relies on setting ALL to FOUND by default, so I don't have to add to the code above each time
                     #Thus, we only flip it in the case that no relationships are found
 
-                    entities['assgnmt_status'][index] = False
+                    entities = copy.deepcopy(entities['assgnmt_status'][index] = False)
+                    #entities['assgnmt_status'][index] = False
+
                     #Assuming assgnmt_status is column 0
                     #entities.iloc[0,index] = False
                     print("Failed to find a category for relationship: " + entities["pred_entity"][index])
@@ -557,14 +559,6 @@ def alt_assign_relationships(entry_text, entities, people_df, people, volume_met
                 people = build_reciprocal_relationship(people, people_df["unique_id"][maternal_grandmother_index], people_df["unique_id"][close_parent], "parent")
             else:
                 people = build_reciprocal_relationship(people, people_df["unique_id"][maternal_grandfather_index], people_df["unique_id"][close_parent], "parent")
-
-    #############################################################
-    ### KAI EDIT: ###
-    #############################################################
-    unassigned_df = entities[entities['assgnmt_status'] == False]
-    [unassigned_rows, _] = unassigned_df.shape
-    if unassigned_rows>0:
-        display(unassigned_df.head(20))
 
     return people, entities
 

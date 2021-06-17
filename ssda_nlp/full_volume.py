@@ -71,7 +71,7 @@ def process_volume(path_to_transcription, path_to_model):
     events = []
 
     entitiesRunning = pd.DataFrame()
-    my_count = 0
+    noCategoryRunning = pd.DataFrame()
 
     for i in range(len(entry_df.index)):
 
@@ -89,38 +89,24 @@ def process_volume(path_to_transcription, path_to_model):
 
         entry_people, entry_places, entry_events, entities, characteristics_df, categorized_characteristics = build_entry_metadata(entry_text, entities, path_to_transcription, entry_no)
 
-        #display(characteristics_df.head())
+        noCategory_df = copy.deepcopy(characteristics_df[characteristics_df['category'] == None])
+        if noCategory_df.shape[0]<1:
+            noCategory_df = copy.deepcopy(characteristics_df[characteristics_df['category'] == "None"])
 
         for ent_index, ent_row in entities.iterrows():
             for char_index, char_row in characteristics_df.iterrows():
-                if (ent_row.loc["pred_label"] == char_row.loc["pred_label"]) and (ent_row.loc["pred_start"] == char_row.loc["pred_start"]):
-                    #print("FOUND A MATCH")
-                    if (char_row.loc["assignment"] == "None") or (char_row.loc["assignment"] == None):
-                        ent_row.loc["assgnmt_status"] = False
-                        my_count += 1
-                        print("UNASSIGNED CHARACTERSTICS UPDATED, now at: " + str(my_count))
+                #If CATEGORY is unassigned:
+                #if (not (char_row.loc["category"] == None)) and (ent_row.loc["pred_label"] == char_row.loc["pred_label"]) and (ent_row.loc["pred_start"] == char_row.loc["pred_start"]) and (ent_row.loc["pred_entity"] == char_row.loc["pred_entity"]):
+                    #Pass because I already created this df
+                    #pass
+                #Catergory is assigned BUT CHARACTERISTICS IS UNASSIGNED
+                if (not (char_row.loc["category"] == None)) and (ent_row.loc["pred_label"] == char_row.loc["pred_label"]) and (ent_row.loc["pred_start"] == char_row.loc["pred_start"]) and (ent_row.loc["pred_entity"] == char_row.loc["pred_entity"]):
+                    if (char_row.loc["assignment"] == None):
+                        entities.loc[ent_index,"assgnmt_status"] = False
+                        characteristics_df.loc[char_index,"assgnmt_status"] = False
 
-                        if my_count<50:
-                            display(characteristics_df.head(10)) #[characteristics_df["assignment"] == None]
-                            display(entities[entities["pred_label"] == "CHAR"].head(10)) #[entities["assgnmt_status"] == False]
-
+        noCategoryRunning = noCategoryRunning.append(noCategory_df)
         entitiesRunning = entitiesRunning.append(entities)
-
-        if not entities['assgnmt_status'].all() and my_count<50:
-            print("A false was found at iteration number: " + str(my_count))
-            display(characteristics_df.head())
-            print("---------------------------------------------------------")
-        else:
-            my_count += 1
-            #print("Continuing at iteration number: " + str(my_count))
-
-            #if my_count%20==0:
-            #    display(characteristics_df.head())
-
-
-
-
-
 
         people += entry_people
         places += entry_places
@@ -487,7 +473,7 @@ def process_volume(path_to_transcription, path_to_model):
 
     print("JSON built, processing completed.")
 
-    return people, places, events, volume_metadata["id"] + "_ppe.json", entitiesRunning
+    return people, places, events, volume_metadata["id"] + "_ppe.json", entitiesRunning, noCategoryRunning
 
 # Cell
 
