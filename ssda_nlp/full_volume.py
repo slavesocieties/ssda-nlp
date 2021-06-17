@@ -71,6 +71,7 @@ def process_volume(path_to_transcription, path_to_model):
     events = []
 
     entitiesRunning = pd.DataFrame()
+    my_count = 0
 
     for i in range(len(entry_df.index)):
 
@@ -93,16 +94,33 @@ def process_volume(path_to_transcription, path_to_model):
         for ent_index, ent_row in entities.iterrows():
             for char_index, char_row in characteristics_df.iterrows():
                 if (ent_row.loc["pred_label"] == char_row.loc["pred_label"]) and (ent_row.loc["pred_start"] == char_row.loc["pred_start"]):
-                    ent_row.loc["assgnmt_status"] = char_row.loc["assignment"]
-                    if ent_row.loc["assgnmt_status"] == False:
-                        print("UNASSIGNED CHARACTERSTICS UPDATED")
-                    break
+                    #print("FOUND A MATCH")
+                    if (char_row.loc["assignment"] == "None") or (char_row.loc["assignment"] == None):
+                        ent_row.loc["assgnmt_status"] = False
+                        my_count += 1
+                        print("UNASSIGNED CHARACTERSTICS UPDATED, now at: " + str(my_count))
+
+                        if my_count<50:
+                            display(characteristics_df.head(10)) #[characteristics_df["assignment"] == None]
+                            display(entities[entities["pred_label"] == "CHAR"].head(10)) #[entities["assgnmt_status"] == False]
 
         entitiesRunning = entitiesRunning.append(entities)
 
-        if not characteristics_df['assignment'].all():
+        if not entities['assgnmt_status'].all() and my_count<50:
+            print("A false was found at iteration number: " + str(my_count))
             display(characteristics_df.head())
-        print("---------------------------------------------------------")
+            print("---------------------------------------------------------")
+        else:
+            my_count += 1
+            #print("Continuing at iteration number: " + str(my_count))
+
+            #if my_count%20==0:
+            #    display(characteristics_df.head())
+
+
+
+
+
 
         people += entry_people
         places += entry_places

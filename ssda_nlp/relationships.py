@@ -609,16 +609,9 @@ def categorize_characteristics(entities_df, characteristics_df):
                 if term in characteristic['pred_entity'].lower():
                         category = cat
                         break
-        #############################################################
-        ### KAI EDIT: Don't think I actually need this, this isn't related to the assignment process... ###
-        #############################################################
-        if category == None:
-        #Keeps telling me that the row var is not an integer...
-        #    for row in entities_df:
-        #        if (entities_df.iloc[row] == characteristic['pred_entity']) and (entities_df.loc['assgnmt_status'] == True):
-        #            entities_df['assgnmt_status'][row] = False
-        #            break
-             print("Failed to find a category for characteristic: " + characteristic['pred_entity'])
+
+        #if category == None:
+        #     print("Failed to find a category for characteristic: " + characteristic['pred_entity'])
 
         categories.append(category)
 
