@@ -397,7 +397,7 @@ def alt_assign_relationships(entry_text, entities, people_df, people, volume_met
                     entities.loc[index,"assgnmt_status"] = False
                     #entities['assgnmt_status'][index] = False
 
-                    print("Failed to find a category for relationship: " + entities["pred_entity"][index])
+                    #print("Failed to find a category for relationship: " + entities["pred_entity"][index])
 
 
 
