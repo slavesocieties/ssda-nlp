@@ -395,6 +395,7 @@ def alt_assign_relationships(entry_text, entities, people_df, people, volume_met
                     #Thus, we only flip it in the case that no relationships are found
 
                     entities = copy.deepcopy(entities['assgnmt_status'][index] == False)
+                    entities.loc[char_index,"assgnmt_status"] = False
                     #entities['assgnmt_status'][index] = False
 
                     #Assuming assgnmt_status is column 0
