@@ -70,6 +70,9 @@ def process_volume(path_to_transcription, path_to_model):
     places = []
     events = []
 
+    entitiesRunning = pd.DataFrame()
+    noCategoryRunning = pd.DataFrame()
+
     for i in range(len(entry_df.index)):
 
         entry_no = entry_df['entry_no'][i]
@@ -77,7 +80,28 @@ def process_volume(path_to_transcription, path_to_model):
 
         entities = ent_preds_df.loc[ent_preds_df['entry_no'] == entry_no]
 
-        entry_people, entry_places, entry_events = build_entry_metadata(entry_text, entities, path_to_transcription, entry_no)
+        #Get the size
+        entities_shape = entities.shape
+        #Now define a column vector that is the approriate size, True by default
+        truths_list = [True] * entities_shape[0] #[0] is the number of rows
+        #Now add that column to entities
+        entities.insert(0, "assgnmt_status", truths_list)
+
+        entry_people, entry_places, entry_events, entities, characteristics_df, categorized_characteristics = build_entry_metadata(entry_text, entities, path_to_transcription, entry_no)
+
+        #FIND ENTRIES THAT ARE UNASSIGNED OR UNCATEGORIZED
+        for ent_index, ent_row in entities.iterrows():
+            for char_index, char_row in characteristics_df.iterrows():
+                #If CATEGORY is unassigned:
+                if (char_row.loc["category"] == None) and (ent_row.loc["pred_label"] == char_row.loc["pred_label"]) and (ent_row.loc["pred_start"] == char_row.loc["pred_start"]) and (ent_row.loc["pred_entity"] == char_row.loc["pred_entity"]):
+                    noCategoryRunning = noCategoryRunning.append(char_row)
+                #Catergory is assigned BUT CHARACTERISTICS IS UNASSIGNED
+                elif (ent_row.loc["pred_label"] == char_row.loc["pred_label"]) and (ent_row.loc["pred_start"] == char_row.loc["pred_start"]) and (ent_row.loc["pred_entity"] == char_row.loc["pred_entity"]):
+                    if (char_row.loc["assignment"] == None):
+                        entities.loc[ent_index,"assgnmt_status"] = False
+                        characteristics_df.loc[char_index,"assgnmt_status"] = False
+
+        entitiesRunning = entitiesRunning.append(entities)
 
         people += entry_people
         places += entry_places
@@ -444,7 +468,7 @@ def process_volume(path_to_transcription, path_to_model):
 
     print("JSON built, processing completed.")
 
-    return people, places, events, volume_metadata["id"] + "_ppe.json"
+    return people, places, events, volume_metadata["id"] + "_ppe.json", entitiesRunning, noCategoryRunning
 
 # Cell
 

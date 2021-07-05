@@ -175,7 +175,8 @@ def alt_assign_relationships(entry_text, entities, people_df, people, volume_met
     cat_char = categorize_characteristics(entities, characteristics)
     entities.reset_index(inplace=True)
 
-    if determine_principals(entry_text, entities, 1) != None:
+    #if determine_principals(entry_text, entities, 1) != None:
+    if not (determine_principals(entry_text, entities, 1) == None):
         principal = determine_principals(entry_text, entities, 1)[0]
         for i in range(len(people)):
             if people[i]["name"] == principal:
@@ -383,6 +384,23 @@ def alt_assign_relationships(entry_text, entities, people_df, people, volume_met
                     if (maternal_grandfather != '') and (maternal_grandmother != ''):
                             people = build_reciprocal_relationship(people, maternal_grandfather, maternal_grandmother, "spouse")
 
+                #############################################################
+                ### KAI EDIT: ###
+                #############################################################
+                #Make sure that this is aligned correctly...
+                elif ((found_parents == False) and (found_godparents == False) and (found_paternal_grandparents == False) and (found_maternal_grandparents == False) and (found_enslaver == False)):
+                    #ie if after all these checks, there are still no relationships found, then we have a case where we have a relationship but no assignment
+                    #Initial attempt: add a column to entities, just binary whether
+                    #Note that this relies on setting ALL to FOUND by default, so I don't have to add to the code above each time
+                    #Thus, we only flip it in the case that no relationships are found
+
+                    entities.loc[index,"assgnmt_status"] = False
+                    #entities['assgnmt_status'][index] = False
+
+                    #print("Failed to find a category for relationship: " + entities["pred_entity"][index])
+
+
+
     if len(godparents) == 2:
         first_godparent_sex = determine_sex(godparents[0]["name"].split(' ')[0], name_list="names.json")
         second_godparent_sex = determine_sex(godparents[1]["name"].split(' ')[0], name_list="names.json")
@@ -540,7 +558,7 @@ def alt_assign_relationships(entry_text, entities, people_df, people, volume_met
             else:
                 people = build_reciprocal_relationship(people, people_df["unique_id"][maternal_grandfather_index], people_df["unique_id"][close_parent], "parent")
 
-    return people
+    return people, entities
 
 # Cell
 
@@ -583,8 +601,10 @@ def categorize_characteristics(entities_df, characteristics_df):
                 if term in characteristic['pred_entity'].lower():
                         category = cat
                         break
+
         #if category == None:
-            #print("Failed to find a category for " + characteristic['pred_entity'])
+        #     print("Failed to find a category for characteristic: " + characteristic['pred_entity'])
+
         categories.append(category)
 
     characteristics_df["category"] = categories
@@ -734,7 +754,7 @@ def assign_characteristics(entry_text, entities_df, characteristics_df, unique_i
 
         people.append(person_record)
 
-    return people
+    return people, categorized_characteristics
 
 # Cell
 
@@ -1527,8 +1547,11 @@ def build_entry_metadata(entry_text, entities, path_to_volume_xml, entry_number=
             events.append(build_event(entry_text, entities, "birth", principal, volume_metadata, 2, people_df))
 
         characteristics_df = categorize_characteristics(entities, characteristics_df)
-        people = assign_characteristics(entry_text, entities, characteristics_df, people_df, volume_metadata)
-        people = alt_assign_relationships(entry_text, entities, people_df, people, volume_metadata)
+        people, categorized_characteristics = assign_characteristics(entry_text, entities, characteristics_df, people_df, volume_metadata)
+        #############################################################
+        ### KAI EDIT: added entities here as output ###
+        #############################################################
+        people, entities = alt_assign_relationships(entry_text, entities, people_df, people, volume_metadata)
         obvious_duplicates = id_obvious_duplicates(people_df, principal, cleric)
         people = merge_duplicates(people, obvious_duplicates)
 
@@ -1550,4 +1573,4 @@ def build_entry_metadata(entry_text, entities, path_to_volume_xml, entry_number=
         print("That record type is not supported yet.")
         return None
 
-    return people, places, events
+    return people, places, events, entities, characteristics_df, categorized_characteristics
