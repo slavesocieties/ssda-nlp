@@ -172,7 +172,7 @@ def alt_assign_relationships(entry_text, entities, people_df, people, volume_met
     relationships.reset_index(inplace=True)
     characteristics = copy.deepcopy(entities.loc[entities['pred_label'] == 'CHAR'])
     characteristics.reset_index(inplace=True)
-    cat_char = categorize_characteristics(entities, characteristics)
+    cat_char, uncat_char = categorize_characteristics(entities, characteristics)
     entities.reset_index(inplace=True)
 
     #if determine_principals(entry_text, entities, 1) != None:
@@ -394,7 +394,7 @@ def alt_assign_relationships(entry_text, entities, people_df, people, volume_met
                     #Note that this relies on setting ALL to FOUND by default, so I don't have to add to the code above each time
                     #Thus, we only flip it in the case that no relationships are found
 
-                    entities.loc[index,"assgnmt_status"] = False
+                    entities.loc[index,"assigned"] = False
                     #entities['assgnmt_status'][index] = False
 
                     #print("Failed to find a category for relationship: " + entities["pred_entity"][index])
@@ -572,6 +572,8 @@ def categorize_characteristics(entities_df, characteristics_df):
 
     vocabs = retrieve_controlled_vocabularies()
     categories = []
+    uncategorized_characteristics = pd.DataFrame({"entry_no": pd.Series([], dtype="str"), "pred_entity": pd.Series([], dtype="str"), "pred_label": pd.Series([], dtype="str"), "pred_start": pd.Series([], dtype="int"), "pred_end": pd.Series([], dtype="int"), "assigned": pd.Series([], dtype="bool")})
+    entities_df.reset_index(inplace = True, drop = True)
 
     for index, characteristic in entities_df.iterrows():
         #development
@@ -602,14 +604,15 @@ def categorize_characteristics(entities_df, characteristics_df):
                         category = cat
                         break
 
-        #if category == None:
-        #     print("Failed to find a category for characteristic: " + characteristic['pred_entity'])
+        if category == None:
+            uncategorized_characteristics = uncategorized_characteristics.append(entities_df.iloc[index])
 
         categories.append(category)
 
     characteristics_df["category"] = categories
+    uncategorized_characteristics["category"] = None
 
-    return characteristics_df
+    return characteristics_df, uncategorized_characteristics
 
 # Cell
 #this is currently configured specifically for baptisms/burials
@@ -626,7 +629,7 @@ def assign_characteristics(entry_text, entities_df, characteristics_df, unique_i
     '''
     people = []
     ethnicities = retrieve_controlled_vocabularies()["ethnicities"]
-    categorized_characteristics = categorize_characteristics(entities_df, characteristics_df)
+    categorized_characteristics, uncat_char = categorize_characteristics(entities_df, characteristics_df)
     assignments = [None] * len(characteristics_df.index)
     categorized_characteristics.reset_index(inplace=True)
     unique_individuals.reset_index(inplace=True)
@@ -1546,7 +1549,7 @@ def build_entry_metadata(entry_text, entities, path_to_volume_xml, entry_number=
         if (len(dates_df.index) > 1):
             events.append(build_event(entry_text, entities, "birth", principal, volume_metadata, 2, people_df))
 
-        characteristics_df = categorize_characteristics(entities, characteristics_df)
+        characteristics_df, uncategorized_characteristics = categorize_characteristics(entities, characteristics_df)
         people, categorized_characteristics = assign_characteristics(entry_text, entities, characteristics_df, people_df, volume_metadata)
         #############################################################
         ### KAI EDIT: added entities here as output ###
@@ -1573,4 +1576,4 @@ def build_entry_metadata(entry_text, entities, path_to_volume_xml, entry_number=
         print("That record type is not supported yet.")
         return None
 
-    return people, places, events, entities, characteristics_df, categorized_characteristics
+    return people, places, events, entities, characteristics_df, categorized_characteristics, uncategorized_characteristics

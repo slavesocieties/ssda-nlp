@@ -78,28 +78,45 @@ def process_volume(path_to_transcription, path_to_model):
         entry_no = entry_df['entry_no'][i]
         entry_text = entry_df['text'][i]
 
-        entities = ent_preds_df.loc[ent_preds_df['entry_no'] == entry_no]
+        #entities = ent_preds_df.loc[ent_preds_df['entry_no'] == entry_no]
+        entities = copy.deepcopy(ent_preds_df[ent_preds_df['entry_no'] == entry_no])
 
         #Get the size
-        entities_shape = entities.shape
+        #entities_shape = entities.shape
         #Now define a column vector that is the approriate size, True by default
-        truths_list = [True] * entities_shape[0] #[0] is the number of rows
+        #truths_list = [True] * entities_shape[0] #[0] is the number of rows
         #Now add that column to entities
-        entities.insert(0, "assgnmt_status", truths_list)
+        #entities.insert(0, "assigned", truths_list)
 
-        entry_people, entry_places, entry_events, entities, characteristics_df, categorized_characteristics = build_entry_metadata(entry_text, entities, path_to_transcription, entry_no)
+        entities["assigned"] = True
 
-        #FIND ENTRIES THAT ARE UNASSIGNED OR UNCATEGORIZED
-        for ent_index, ent_row in entities.iterrows():
-            for char_index, char_row in characteristics_df.iterrows():
-                #If CATEGORY is unassigned:
-                if (char_row.loc["category"] == None) and (ent_row.loc["pred_label"] == char_row.loc["pred_label"]) and (ent_row.loc["pred_start"] == char_row.loc["pred_start"]) and (ent_row.loc["pred_entity"] == char_row.loc["pred_entity"]):
-                    noCategoryRunning = noCategoryRunning.append(char_row)
-                #Catergory is assigned BUT CHARACTERISTICS IS UNASSIGNED
-                elif (ent_row.loc["pred_label"] == char_row.loc["pred_label"]) and (ent_row.loc["pred_start"] == char_row.loc["pred_start"]) and (ent_row.loc["pred_entity"] == char_row.loc["pred_entity"]):
-                    if (char_row.loc["assignment"] == None):
-                        entities.loc[ent_index,"assgnmt_status"] = False
-                        characteristics_df.loc[char_index,"assgnmt_status"] = False
+        entry_people, entry_places, entry_events, entities, characteristics_df, categorized_characteristics, uncategorized_characteristics = build_entry_metadata(entry_text, entities, path_to_transcription, entry_no)
+        #characteristics_df.reset_index(drop = True, inplace = True)
+        #characteristics_df.drop(columns = ["index", "level_0"])
+        #display(characteristics_df)
+
+        if uncategorized_characteristics.shape[0] > 0:
+            noCategoryRunning = noCategoryRunning.append(uncategorized_characteristics)
+
+        #FIND ENTITIES THAT ARE UNASSIGNED OR UNCATEGORIZED
+        entity_index = 0
+        for ent_data in entities.itertuples():
+            for char_data in characteristics_df.itertuples():
+                char_index = 0
+                #characteristic is not categorized:
+                if (char_data.category == None) and (ent_data.pred_start == char_data.pred_start) and (ent_data.pred_entity == char_data.pred_entity):
+                    continue
+                    #characteristics_df.at[char_index, "assigned"] = False
+                    #noCategoryRunning = noCategoryRunning.append(characteristics_df.iloc[char_index])
+                    #entities.at[entity_index, "assigned"] = False
+                    #characteristics_df.loc[char_index,"assgnmt_status"] = False
+                #characteristic is categorized but not assigned
+                elif (ent_data.pred_label == char_data.pred_label) and (ent_data.pred_start == char_data.pred_start) and (ent_data.pred_entity == char_data.pred_entity):
+                    if (char_data.assignment == None):
+                        entities.at[entity_index, "assigned"] = False
+                        #characteristics_df.loc[char_index,"assgnmt_status"] = False
+                char_index += 1
+            entity_index += 1
 
         entitiesRunning = entitiesRunning.append(entities)
 
@@ -107,6 +124,8 @@ def process_volume(path_to_transcription, path_to_model):
         places += entry_places
         events += entry_events
 
+    noCategoryRunning.reset_index(drop = True, inplace = True)
+    noCategoryRunning["assigned"] = False
     print("Relationships linked.")
 
     #disambiguate locations and assign unique ids
