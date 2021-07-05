@@ -89,33 +89,18 @@ def process_volume(path_to_transcription, path_to_model):
 
         entry_people, entry_places, entry_events, entities, characteristics_df, categorized_characteristics = build_entry_metadata(entry_text, entities, path_to_transcription, entry_no)
 
-        """
-        noCategory_df = copy.deepcopy(characteristics_df[characteristics_df['category'] == None])
-        if noCategory_df.shape[0]<1:
-            print("First pass, no categories found")
-            noCategory_df = copy.deepcopy(characteristics_df[characteristics_df['category'] == "None"])
-        if noCategory_df.shape[0]<1:
-            noCategory_df = copy.deepcopy(characteristics_df[characteristics_df['category'] == characteristics_df['assignment']])
-        if noCategory_df.shape[0]<1:
-            print("No categories listed as false apparently")
-            display(characteristics_df.head(10))
-        else:
-            print("None category found!")
-        """
-
+        #FIND ENTRIES THAT ARE UNASSIGNED OR UNCATEGORIZED
         for ent_index, ent_row in entities.iterrows():
             for char_index, char_row in characteristics_df.iterrows():
                 #If CATEGORY is unassigned:
                 if (char_row.loc["category"] == None) and (ent_row.loc["pred_label"] == char_row.loc["pred_label"]) and (ent_row.loc["pred_start"] == char_row.loc["pred_start"]) and (ent_row.loc["pred_entity"] == char_row.loc["pred_entity"]):
                     noCategoryRunning = noCategoryRunning.append(char_row)
                 #Catergory is assigned BUT CHARACTERISTICS IS UNASSIGNED
-                #(not (char_row.loc["category"] == None)) and
                 elif (ent_row.loc["pred_label"] == char_row.loc["pred_label"]) and (ent_row.loc["pred_start"] == char_row.loc["pred_start"]) and (ent_row.loc["pred_entity"] == char_row.loc["pred_entity"]):
                     if (char_row.loc["assignment"] == None):
                         entities.loc[ent_index,"assgnmt_status"] = False
                         characteristics_df.loc[char_index,"assgnmt_status"] = False
 
-        #noCategoryRunning = noCategoryRunning.append(noCategory_df)
         entitiesRunning = entitiesRunning.append(entities)
 
         people += entry_people
