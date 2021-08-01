@@ -27,7 +27,7 @@ from .relationships import *
 
 # Cell
 
-def validate_entry(entry_entities, entry_people, entry_places, entry_events, entry_type = "baptism"):
+def validate_entry(entry_entities, entry_people, entry_places, entry_events, uncategorized_characteristics, entry_type = "baptism"):
     '''
     analyzes data extracted from a single ecclesiastical entry to assess accuracy of automated entity and relationship extraction
         entry_type: baptism, marriage, or burial
@@ -48,12 +48,30 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, ent
     isInfant=0; hasParents=0; isBirthEvent=0; hasBirthDate=0; hasBirthLocation=0;
     isBirthEvent=0; isDateComplete_birth=0; hasLocation_birth=0;
     isEnslaved=0;
+    princEnslaverIdent = 0;
+    similarNames = 0;
+    hasWrongEthAssgnt_ensl = 0; hasWrongEthAssgnt_cler = 0
+    hasUncatChars = 0; hasUnassgnEnts = 0
+
+    my_keys = []
+    my_values = []
+
+    print("Entry entities:")
+    display(entry_entities.head())
+    print("Entry people:")
+    display(entry_people)
+    print("Entry places:")
+    display(entry_places)
+    print("Entry events:")
+    display(entry_events)
+    print("Uncategorized characteristics:") #This is a dataframe
+    display(uncategorized_characteristics)
 
     if entry_type == "baptism":
         #is there a baptism event?
         baptism_event = {} #Initialization
         for bapt_idx in range(len(entry_events)):
-            isBaptism = entry_events[bapt_idx].get('type')=='baptism' #Verify that this is indeed the string
+            isBaptism = entry_events[bapt_idx].get('type')=='baptism'
             if isBaptism:
                 baptism_event = entry_events[bapt_idx]
                 break
@@ -69,9 +87,11 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, ent
             #^Implement an actual check to verify... not sure if this is good enough by itself
 
         #is there an identified cleric?
-        hasCleric = not (type(baptism_event.get('cleric'))=='NoneType') # and len(baptism_event.get('cleric'))==15
+        hasCleric = not (type(baptism_event.get('cleric'))=='NoneType')
+
         #is there an identified principal?
-        hasPrincipal = not (type(baptism_event.get('principal'))=='NoneType') #len(baptism_event.get('principal'))==15
+        hasPrincipal = not (type(baptism_event.get('principal'))=='NoneType')
+
         #if so:
         if hasCleric and hasPrincipal:
             principal_PID = baptism_event.get('principal')
@@ -102,6 +122,9 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, ent
                             hasParents = 1
                         if relations[rel_idx].get('relationship_type')=='enslaver':
                             hasEnslaver = 1
+                        ########### Extra check ###########
+                        if relations[rel_idx].get('relationship_type')=='slave' and (ethnicities[rel_idx].get() is not None):
+                            hasWrongEthAssgnt_ensl = 1
 
         if (baptism_princ.get('status') is not None) and ('esclava' in baptism_princ.get('status') or 'Esc' in baptism_princ.get('status') ):
             isEnslaved = 1
@@ -111,7 +134,6 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, ent
             isInfant = 1
         #if so, and if principal is an infant:
         if hasGodparents and isInfant:
-            pass
             #are principal's parent(s) identified? #Took care of this above
             #is there a birth event?
             birth_event = {} #Initialization
@@ -133,13 +155,77 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, ent
         #if so, and if principal is enslaved:
         if isEnslaved:
             #is principal's enslaver identified?
+            for person_idx in range(len(entry_people)):
+                relationships = entry_people[person_idx].get('relationships')
+                if relationships is not None:
+                    for relation in relationships:
+                        if relation.get('relationship_type')=='enslaver':
+                            princEnslaverIdent = 1
             #hasEnslaver is already been checked for
-            pass
 
         #other questions re people:
+        name_list = []
+        for person_idx in range(len(entry_people)):
         #are there any entities labeled PER who do not have an explicit role in the baptism (e.g. principal, cleric, parent, enslaver, etc.)
+        #^Assuming that this means no relationships essentially
+
+        #are there likely couples (e.g. parents, godparents) not explicitly flagged as such
+
+        #are there any people with very similar names that still appear separately
+            nameTemp = entry_people[person_idx].get('name')
+            name_list.append(nameTemp)
+
+        #How to check if they are similar (TO BE DONE AFTER THE NAME LIST IS MADE)
+        #1: Short name that could be a first name
+        firstNameThreshold = 7
+        #Make a boolean list to flag which names may be first names (based on length)
+        possibleFirstNames = [name for name in name_list if len(name)<firstNameThreshold]
+        fullNames = [name for name in name_list if len(name)>firstNameThreshold]
+        #Check to see if names appear within each other (i.e. is a person double counted)
+        doubleCountedNames = []
+        for idx in range(len(possibleFirstNames)):
+            doubleCountedNames= doubleCountedNames + ([name for name in fullNames if possibleFirstNames[idx] in name])
+        if not len(doubleCountedNames)==0:
+            print("Possible double count (first name appears in a second instance (full name))")
+            #print(name_list)
+            similarNames = 1
+        print(name_list)
+
+        #2: Two similarly-sized names, that could be variations (i.e. missing hypens or have #'s for unknown letters')
+        #3: Might want to actually parse names into first and last, just to check.
+        #         Ex) 'Juan Joseph', 'Maria Josepha'
+        #         Are Joseph and Josepha possibly the same?
+        #4: Essentially random errors...
+
+        #questions re characteristics:
+        #are there characteristics that were not categorized
+        num_rowsC, num_colsC = uncategorized_characteristics.shape
+        print(num_rowsC)
+        if num_rowsC>0:
+            hasUncatChars = 1
+
+        #are there characteristics or relationships that were not assigned
+        unassigned_df = check_unassigned(entry_entities)
+        num_rowsA, num_colsA = unassigned_df.shape
+        display(unassigned_df)
+        print(num_rowsA)
+        if num_rowsA>0:
+            hasUnassgnEnts = 1
+
+        #######################################################################################
+        ## Summary of all extra checks:
+        #other questions re people:
+        #are there any entities labeled PER who do not have an explicit role in the baptism (e.g. principal, cleric, parent, enslaver, etc.)
+        #         ^Assuming that this means no relationships essentially
         #are there likely couples (e.g. parents, godparents) not explicitly flagged as such
         #are there any people with very similar names that still appear separately
+        #How to check if they are similar (TO BE DONE AFTER THE NAME LIST IS MADE)
+        #1: Short name that could be a first name
+        #2: Two similarly-sized names, that could be variations (i.e. missing hypens or have #'s for unknown letters')
+        #3: Might want to actually parse names into first and last, just to check.
+        #         Ex) 'Juan Joseph', 'Maria Josepha'
+        #         Are Joseph and Josepha possibly the same?
+        #4: Essentially random errors...
 
         #questions re characteristics:
         #are there characteristics that were not categorized
@@ -231,8 +317,8 @@ def process_volume(path_to_transcription, path_to_model):
 
         entitiesRunning = entitiesRunning.append(entities)
 
-        validation_dict = validate_entry(entities, entry_people, entry_places, entry_events)
-        #Do I need to pass in uncategorized_characteristics,
+        if i==1:
+            validation_dict = validate_entry(entities, entry_people, entry_places, entry_events, uncategorized_characteristics)
         #^Where are the unassigned relations?
 
         people += entry_people
