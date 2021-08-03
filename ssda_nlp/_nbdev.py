@@ -66,6 +66,7 @@ index = {"parse_xml": "12-ssda-xml-parser.ipynb",
          "build_new_person": "71-relationship-builder.ipynb",
          "build_entry_metadata": "71-relationship-builder.ipynb",
          "check_unassigned": "72-full-volume-processor.ipynb",
+         "check_lengths": "72-full-volume-processor.ipynb",
          "validate_entry": "72-full-volume-processor.ipynb",
          "process_volume": "72-full-volume-processor.ipynb",
          "flatten_volume_json": "72-full-volume-processor.ipynb"}
