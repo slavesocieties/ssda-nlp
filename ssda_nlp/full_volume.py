@@ -155,7 +155,7 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, unc
             baptism_princ = '' #Initialization
             for princ_idx in range(len(entry_people)):
                 foundPrinc = principal_PID in entry_people[princ_idx].get('id')
-                #Need to do "in" because, as per the first case, the listed PID is actually 2 PIDs appeneded together (separated by a ;)
+                #Need to do "in" because, as per the first case, the listed PID is actually 2 PIDs appended together (separated by a ;)
                 if foundPrinc:
                     baptism_princ = entry_people[princ_idx]
                     break
@@ -306,6 +306,9 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, unc
 
     validation_dict = dict(zip(my_keys,my_values))
 
+    #if isVerbose:
+        #print(validation_dict)
+
     return validation_dict
 
 
@@ -357,7 +360,7 @@ def process_volume(path_to_transcription, path_to_model):
     entitiesRunning = pd.DataFrame()
     noCategoryRunning = pd.DataFrame()
 
-    validation_dict_ALL = {}
+    validation_dict_ALL = []
 
     for i in range(len(entry_df.index)):
 
@@ -391,8 +394,8 @@ def process_volume(path_to_transcription, path_to_model):
         entitiesRunning = entitiesRunning.append(entities)
 
         verbosity = 1 if i<3 else 0
-        validation_array = validate_entry(entities, entry_people, entry_places, entry_events, uncategorized_characteristics, isVerbose = verbosity)
-        validation_dict_ALL[i] = validation_array
+        entry_validation_dict = validate_entry(entities, entry_people, entry_places, entry_events, uncategorized_characteristics, isVerbose = verbosity)
+        validation_dict_ALL.append(entry_validation_dict)
 
         people += entry_people
         places += entry_places
@@ -757,6 +760,19 @@ def process_volume(path_to_transcription, path_to_model):
                 outfile.write(",\n")
             json.dump(event, outfile)
         outfile.write("\n]\n")
+        outfile.write('}')
+
+    #dump validation dictionaries
+    with open("validation\\" + volume_metadata["id"] + ".json", "w") as outfile:
+        outfile.write('{\n\"entries\": [\n')
+        first_entry = True
+        for entry in validation_dict_ALL:
+            if first_entry:
+                first_entry = False
+            else:
+                outfile.write(",\n")
+            json.dump(entry, outfile)
+        outfile.write("\n],\n")
         outfile.write('}')
 
     print("JSON built, processing completed.")
