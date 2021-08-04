@@ -772,7 +772,7 @@ def process_volume(path_to_transcription, path_to_model):
             else:
                 outfile.write(",\n")
             json.dump(entry, outfile)
-        outfile.write("\n],\n")
+        outfile.write("\n]\n")
         outfile.write('}')
 
     print("JSON built, processing completed.")
