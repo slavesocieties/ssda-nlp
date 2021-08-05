@@ -304,7 +304,9 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, unc
               hasWrongEthAssgnt_ensl, hasWrongEthAssgnt_cler, hasUncatChars, hasUnassgnEnts,
               hasUncoupledParents, hasUncoupledGodparents, hasUnrelatedPersons]
 
-    validation_dict = dict(zip(my_keys,my_values))
+    val_bools = [True if elem==True else False for elem in my_values]
+
+    validation_dict = dict(zip(my_keys,val_bools))
 
     #if isVerbose:
         #print(validation_dict)
