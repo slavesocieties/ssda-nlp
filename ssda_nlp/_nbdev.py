@@ -82,7 +82,8 @@ modules = ["xml_parser.py",
            "utility.py",
            "relationships.py",
            "full_volume.py",
-           "tables.py"]
+           "tables.py",
+           "validation_visuals.py"]
 
 doc_url = "https://d-genk.github.io/ssda_nlp/"
 
