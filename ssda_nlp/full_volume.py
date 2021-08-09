@@ -395,7 +395,7 @@ def process_volume(path_to_transcription, path_to_model):
 
         entitiesRunning = entitiesRunning.append(entities)
 
-        verbosity = 1 if i<3 else 0
+        verbosity = 0
         entry_validation_dict = validate_entry(entities, entry_people, entry_places, entry_events, uncategorized_characteristics, isVerbose = verbosity)
         validation_dict_ALL.append(entry_validation_dict)
 
