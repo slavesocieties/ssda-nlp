@@ -247,7 +247,7 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, unc
                         if relation.get('relationship_type')=='slave' and (relation.get('ethnicities') is not None):
                             hasWrongEthAssgnt_ensl = 1
                 #Check if cleric has been assigned any ethnithicities
-                elif relationships is None and (entry_people[person_idx].get('id') is cleric_PID) and (relation.get('ethnicities') is not None):
+                elif relationships is None and (entry_people[person_idx].get('id') is cleric_PID) and (entry_people[person_idx].get('ethnicities') is not None):
                     hasWrongEthAssgnt_cler = 1
                 #Check for people without any role in the event (i.e. no relations, and not the cleric)
                 elif relationships is None and (entry_people[person_idx].get('id') is not cleric_PID):
