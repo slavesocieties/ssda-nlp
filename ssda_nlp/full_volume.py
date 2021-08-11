@@ -219,9 +219,11 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, unc
 
         status = ["propiedad", "escrava", "escravos", "esclabo", "esclaba", "escl.a", "escl.o", "clavo", "clava", "escl", "escl.", "escl.s", "clabo", "claba", "esc.va", "esc.ba", "esc.vo", "escvo", "esclavo", "esclava", "escva", "esc.bo", "esclabos", "esclavos", "esc.os", "esc.a", "esc.o", "libre", "esc.s", "esco", "esca"]
         if baptism_princ.get('status') is not None:
+            print(baptism_princ.get('status'))
             for term in status:
                 if term in baptism_princ.get('status'):
                     isEnslaved = 1
+                    break
 
         #IF PRINCIPAL IS AN INFANT:###########################################################################
         if hasGodparents and isInfant:
@@ -249,6 +251,15 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, unc
         if isEnslaved:
             #is principal's enslaver identified? #########################################################################
             for person_idx in range(len(entry_people)):
+                relationships = entry_people[person_idx].get('relationships')
+                if relationships is not None:
+                    for relation in relationships:
+                        #Check if enslaver has been assigned any ethnicities
+                        if relation.get('relationship_type')=='slave' and (relation.get('ethnicities') is not None):
+                            hasWrongEthAssgnt_ensl = 1
+                            break
+
+        for person_idx in range(len(entry_people)):
                 relationships = entry_people[person_idx].get('relationships')
                 if relationships is not None:
                     for relation in relationships:
