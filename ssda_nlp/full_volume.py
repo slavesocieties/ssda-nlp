@@ -144,10 +144,6 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, unc
 
         #is there an identified principal? ##############################################################################
         hasPrincipal = not (type(baptism_event.get('principal'))=='NoneType')
-        #is the principal an infant? ##############################################################################
-        princ_age = baptism_princ.get('age')
-        if princ_age == 'infant':
-            isInfant = 1
 
         #if so:
         if hasCleric and hasPrincipal:
@@ -162,6 +158,11 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, unc
                 if foundPrinc:
                     baptism_princ = entry_people[princ_idx]
                     break
+
+            #is the principal an infant? ##############################################################################
+            princ_age = baptism_princ.get('age')
+            if princ_age == 'infant':
+                isInfant = 1
 
             #are principal's godparent(s) identified? ##################################################################
             count_godparents = 0
