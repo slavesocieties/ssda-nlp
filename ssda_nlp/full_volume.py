@@ -169,9 +169,8 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, unc
                 print("NO PRINCIPAL FOUND") #This should never happen since hasPrincipal is true
             else:
                 relations = baptism_princ.get('relationships')
-                if relations is None:
-                    hasRelations = 0
-                else:
+                if relations is not None:
+                    hasRelations = 1
                     for rel_idx in range(len(relations)):
                         if relations[rel_idx].get('relationship_type')=='godparent':
                             hasGodparents = 1
@@ -191,6 +190,7 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, unc
                     if relations is not None:
                         for rel_idx in range(len(relations)):
                             if relations[0][rel_idx].get('relationship_type')=='husband' or relations[0][rel_idx].get('relationship_type')=='wife':
+                                #They are coupled to someone else
                                 pass
                             else:
                                 hasUncoupledGodparents = 1
@@ -205,8 +205,12 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, unc
                                 hasUncoupledParents = 1
             del relations
 
-        if (baptism_princ.get('status') is not None) and ('esclava' in baptism_princ.get('status') or 'Esc' in baptism_princ.get('status') ):
-            isEnslaved = 1
+        status = ["propiedad", "escrava", "escravos", "esclabo", "esclaba", "escl.a", "escl.o", "clavo", "clava", "escl", "escl.", "escl.s", "clabo", "claba", "esc.va", "esc.ba", "esc.vo", "escvo", "esclavo", "esclava", "escva", "esc.bo", "esclabos", "esclavos", "esc.os", "esc.a", "esc.o", "libre", "esc.s", "esco", "esca"]
+
+        if baptism_princ.get('status') is not None:
+            for term in status:
+                if term in baptism_princ.get('status'):
+                    isEnslaved = 1
 
         princ_age = baptism_princ.get('age')
         if princ_age == 'infant': #Double check this string
@@ -243,14 +247,17 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, unc
                         if relation.get('relationship_type')=='enslaver':
                             princEnslaverIdent = 1
                         ########### Extra checks ###########
-                        #Check if enslaver has been assigned any ethnithicities
+                        #Check if enslaver has been assigned any ethnicities
                         if relation.get('relationship_type')=='slave' and (relation.get('ethnicities') is not None):
                             hasWrongEthAssgnt_ensl = 1
+                #########################################################################
+                #########################################################################
+                #########################################################################
                 #Check if cleric has been assigned any ethnithicities
-                elif relationships is None and (entry_people[person_idx].get('id') is cleric_PID) and (entry_people[person_idx].get('ethnicities') is not None):
+                elif (relationships is None) and (entry_people[person_idx].get('id') is cleric_PID) and (entry_people[person_idx].get('ethnicities') is not None):
                     hasWrongEthAssgnt_cler = 1
                 #Check for people without any role in the event (i.e. no relations, and not the cleric)
-                elif relationships is None and (entry_people[person_idx].get('id') is not cleric_PID):
+                elif (relationships is None) and (entry_people[person_idx].get('id') is not cleric_PID):
                     hasUnrelatedPersons = 1
 
                 #are there any people with very similar names that still appear separately
