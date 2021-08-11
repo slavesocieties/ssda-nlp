@@ -105,8 +105,7 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, unc
 
     my_keys = ['isBaptism', 'isDateComplete', 'hasLocation', 'hasCleric', 'hasPrincipal',
               'hasEnslaver', 'isEnslaved', 'hasRelations', 'hasGodparents',
-              'isInfant', 'hasParents', 'isBirthEvent', 'hasBirthDate', 'hasBirthLocation',
-              'isBirthEvent', 'isDateComplete_birth', 'hasLocation_birth',
+              'isInfant', 'hasParents', 'isBirthEvent', 'isDateComplete_birth', 'hasLocation_birth',
               'hasUnrelatedPersons', 'hasUncoupledParents', 'hasUncoupledGodparents','similarNames',
               'hasWrongEthAssgnt_ensl', 'hasWrongEthAssgnt_cler', 'hasUncatChars', 'hasUnassgnEnts']
 
@@ -183,6 +182,9 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, unc
                         count_parents += 1
                     if relations[rel_idx].get('relationship_type')=='enslaver':
                         hasEnslaver = 1
+                        print("Enslaver found.  This should lead to a true for isEnslaved")
+                        print(relations)
+                        print("------------------")
 
             #are there likely couples (e.g. parents, godparents) not explicitly flagged as such
             if count_godparents>1:
@@ -219,11 +221,18 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, unc
 
         status = ["propiedad", "escrava", "escravos", "esclabo", "esclaba", "escl.a", "escl.o", "clavo", "clava", "escl", "escl.", "escl.s", "clabo", "claba", "esc.va", "esc.ba", "esc.vo", "escvo", "esclavo", "esclava", "escva", "esc.bo", "esclabos", "esclavos", "esc.os", "esc.a", "esc.o", "libre", "esc.s", "esco", "esca"]
         if baptism_princ.get('status') is not None:
+            print("Printing principal status:")
             print(baptism_princ.get('status'))
+            print("---------------------")
             for term in status:
                 if term in baptism_princ.get('status'):
                     isEnslaved = 1
                     break
+        ##########################################
+        if hasEnslaver and not isEnslaved:
+            print("Enslaver found, but thinks principal is not enslaved...")
+            print(baptism_princ)
+            print("-------------------------")
 
         #IF PRINCIPAL IS AN INFANT:###########################################################################
         if hasGodparents and isInfant:
@@ -235,40 +244,36 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, unc
                     isBirthEvent = entry_events[birth_idx].get('type')=='birth'
                     if isBirthEvent:
                         birth_event = entry_events[birth_idx]
+                        #e.g. this assumes there is only one birth event per entry (max)
                         break
             #if so:
             if isBirthEvent:
                 #does birth event have a complete date? ##################################################################
                 event_date_birth = birth_event.get('date')
-                isDateComplete_birth = ( ('?' in event_date_birth) ) # Unfinished date: '????-??-22'
+                isDateComplete_birth = not ( ('?' in event_date_birth) ) # Unfinished date: '????-??-22'
                 #does birth event have a location? #######################################################################
                 event_location_birth = birth_event.get('location')
-                hasLocation_birth = ( (len(entry_places)>0) )
+                if (birth_event.get('location') is not None) and (entry_places is not None) and (len(entry_places)>1):
+                    hasLocation_birth = 1
+                elif (birth_event.get('location') is not None) or (entry_places is not None) or (len(entry_places)>1):
+                    hasLocation_birth = 1
+                    print("Dobule check birth location")
+                    print(entry_events)
+                    print(entry_places)
+                    print("--------------------")
 
         name_list = []
         firstNameThreshold = 7
         #if so, and if principal is enslaved: ##########################################################################
-        if isEnslaved:
-            #is principal's enslaver identified? #########################################################################
-            for person_idx in range(len(entry_people)):
-                relationships = entry_people[person_idx].get('relationships')
-                if relationships is not None:
-                    for relation in relationships:
-                        #Check if enslaver has been assigned any ethnicities
-                        if relation.get('relationship_type')=='slave' and (relation.get('ethnicities') is not None):
-                            hasWrongEthAssgnt_ensl = 1
-                            break
-
+        #is principal's enslaver identified? ########################################################################
         for person_idx in range(len(entry_people)):
                 relationships = entry_people[person_idx].get('relationships')
                 if relationships is not None:
                     for relation in relationships:
                         #Check if enslaver has been assigned any ethnicities
-                        if relation.get('relationship_type')=='slave' and (relation.get('ethnicities') is not None):
+                        if relation.get('relationship_type')=='slave' and (relation.get('ethnicities') is not None) and (isEnslaved):
                             hasWrongEthAssgnt_ensl = 1
-                #########################################################################
-                #########################################################################
-                #########################################################################
+                            break
                 #Check if cleric has been assigned any ethnithicities
                 elif (relationships is None) and (entry_people[person_idx].get('id') is cleric_PID) and (entry_people[person_idx].get('ethnicities') is not None):
                     hasWrongEthAssgnt_cler = 1
