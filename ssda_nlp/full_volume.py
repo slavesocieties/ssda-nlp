@@ -96,7 +96,7 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, unc
     #Original base checks related to the event
     isBaptism=0; isDateComplete=0; hasLocation=0; hasCleric=0; hasPrincipal=0;
     hasRelations=0; hasGodparents=0; hasEnslaver=0;
-    isInfant=0; hasParents=0; isBirthEvent=0; hasBirthDate=0; hasBirthLocation=0;
+    isInfant=0; hasParents=0; isBirthEvent=0;
     isBirthEvent=0; isDateComplete_birth=0; hasLocation_birth=0;
     isEnslaved=0; similarNames=0;
     #"Extra" checks related to people
@@ -182,9 +182,9 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, unc
                         count_parents += 1
                     if relations[rel_idx].get('relationship_type')=='enslaver':
                         hasEnslaver = 1
-                        print("Enslaver found.  This should lead to a true for isEnslaved")
-                        print(relations)
-                        print("------------------")
+                        #print("Enslaver found.  This should lead to a true for isEnslaved")
+                        #print(relations)
+                        #print("------------------")
 
             #are there likely couples (e.g. parents, godparents) not explicitly flagged as such
             if count_godparents>1:
@@ -335,8 +335,7 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, unc
 
     my_values = [isBaptism, isDateComplete, hasLocation, hasCleric, hasPrincipal,
               hasEnslaver, isEnslaved, hasRelations, hasGodparents,
-              isInfant, hasParents, isBirthEvent, hasBirthDate, hasBirthLocation,
-              isBirthEvent, isDateComplete_birth, hasLocation_birth,
+              isInfant, hasParents, isBirthEvent, isDateComplete_birth, hasLocation_birth,
               hasUnrelatedPersons, hasUncoupledParents, hasUncoupledGodparents, similarNames,
               hasWrongEthAssgnt_ensl, hasWrongEthAssgnt_cler, hasUncatChars, hasUnassgnEnts]
 
