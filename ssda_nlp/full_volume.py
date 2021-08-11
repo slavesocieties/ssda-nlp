@@ -96,8 +96,7 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, unc
     #Original base checks related to the event
     isBaptism=0; isDateComplete=0; hasLocation=0; hasCleric=0; hasPrincipal=0;
     hasRelations=0; hasGodparents=0; hasEnslaver=0;
-    isInfant=0; hasParents=0; isBirthEvent=0;
-    isBirthEvent=0; isDateComplete_birth=0; hasLocation_birth=0;
+    isInfant=0; hasParents=0; isBirthEvent=0; isDateComplete_birth=0; hasLocation_birth=0;
     isEnslaved=0; similarNames=0;
     #"Extra" checks related to people
     hasWrongEthAssgnt_ensl = 0; hasWrongEthAssgnt_cler = 0; hasUncatChars = 0; hasUnassgnEnts = 0
