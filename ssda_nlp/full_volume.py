@@ -98,18 +98,17 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, unc
     hasRelations=0; hasGodparents=0; hasEnslaver=0;
     isInfant=0; hasParents=0; isBirthEvent=0; hasBirthDate=0; hasBirthLocation=0;
     isBirthEvent=0; isDateComplete_birth=0; hasLocation_birth=0;
-    isEnslaved=0; princEnslaverIdent=0; similarNames=0;
+    isEnslaved=0; similarNames=0;
     #"Extra" checks related to people
     hasWrongEthAssgnt_ensl = 0; hasWrongEthAssgnt_cler = 0; hasUncatChars = 0; hasUnassgnEnts = 0
     hasUncoupledParents = 0; hasUncoupledGodparents = 0; hasUnrelatedPersons=0
 
     my_keys = ['isBaptism', 'isDateComplete', 'hasLocation', 'hasCleric', 'hasPrincipal',
-              'hasRelations', 'hasGodparents', 'hasEnslaver',
+              'hasEnslaver', 'isEnslaved', 'hasRelations', 'hasGodparents',
               'isInfant', 'hasParents', 'isBirthEvent', 'hasBirthDate', 'hasBirthLocation',
               'isBirthEvent', 'isDateComplete_birth', 'hasLocation_birth',
-              'isEnslaved', 'princEnslaverIdent', 'similarNames',
-              'hasWrongEthAssgnt_ensl', 'hasWrongEthAssgnt_cler', 'hasUncatChars', 'hasUnassgnEnts',
-              'hasUncoupledParents', 'hasUncoupledGodparents','hasUnrelatedPersons']
+              'hasUnrelatedPersons', 'hasUncoupledParents', 'hasUncoupledGodparents','similarNames',
+              'hasWrongEthAssgnt_ensl', 'hasWrongEthAssgnt_cler', 'hasUncatChars', 'hasUnassgnEnts']
 
     if isVerbose:
         print("Entry entities:")
@@ -120,7 +119,7 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, unc
         display(entry_places)
         print("Entry events:")
         display(entry_events)
-        print("Uncategorized characteristics:") #This is a dataframe
+        #print("Uncategorized characteristics:") #This is a dataframe
 
     if entry_type == "baptism":
         #is there a baptism event? ##############################################################################
@@ -145,6 +144,10 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, unc
 
         #is there an identified principal? ##############################################################################
         hasPrincipal = not (type(baptism_event.get('principal'))=='NoneType')
+        #is the principal an infant? ##############################################################################
+        princ_age = baptism_princ.get('age')
+        if princ_age == 'infant':
+            isInfant = 1
 
         #if so:
         if hasCleric and hasPrincipal:
@@ -165,23 +168,20 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, unc
             godparents_list = []
             count_parents = 0
             parents_list = []
-            if baptism_princ=='': #Ie we didn't find the principal in entry_people
-                print("NO PRINCIPAL FOUND") #This should never happen since hasPrincipal is true
-            else:
-                relations = baptism_princ.get('relationships')
-                if relations is not None:
-                    hasRelations = 1
-                    for rel_idx in range(len(relations)):
-                        if relations[rel_idx].get('relationship_type')=='godparent':
-                            hasGodparents = 1
-                            godparents_list.append(relations[rel_idx].get('related_person'))
-                            count_godparents += 1
-                        if relations[rel_idx].get('relationship_type')=='parent':
-                            hasParents = 1
-                            parents_list.append(relations[rel_idx].get('related_person'))
-                            count_parents += 1
-                        if relations[rel_idx].get('relationship_type')=='enslaver':
-                            hasEnslaver = 1
+            relations = baptism_princ.get('relationships')
+            if relations is not None:
+                hasRelations = 1
+                for rel_idx in range(len(relations)):
+                    if relations[rel_idx].get('relationship_type')=='godparent':
+                        hasGodparents = 1
+                        godparents_list.append(relations[rel_idx].get('related_person'))
+                        count_godparents += 1
+                    if (relations[rel_idx].get('relationship_type')=='parent') and (isInfant):
+                        hasParents = 1
+                        parents_list.append(relations[rel_idx].get('related_person'))
+                        count_parents += 1
+                    if relations[rel_idx].get('relationship_type')=='enslaver':
+                        hasEnslaver = 1
 
             #are there likely couples (e.g. parents, godparents) not explicitly flagged as such
             if count_godparents>1:
@@ -194,28 +194,35 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, unc
                                 pass
                             else:
                                 hasUncoupledGodparents = 1
+                del relations
+
             if count_parents>1:
                 for parent in parents_list:
-                    relations = relations = [person.get('relationships') for person in entry_people if person.get('id')==parent]
+                    relations = [person.get('relationships') for person in entry_people if person.get('id')==parent]
                     if relations is not None:
                         for rel_idx in range(len(relations)):
                             if relations[0][rel_idx].get('relationship_type')=='husband' or relations[0][rel_idx].get('relationship_type')=='wife':
                                 pass
                             else:
                                 hasUncoupledParents = 1
+                                ################################################
+                                ################################################
+                                ################################################
+                                print("Contains uncoupled parents:")
+                                print(relations)
+                                print("-------------------------")
+                                ################################################
+                                ################################################
+                                ################################################
             del relations
 
         status = ["propiedad", "escrava", "escravos", "esclabo", "esclaba", "escl.a", "escl.o", "clavo", "clava", "escl", "escl.", "escl.s", "clabo", "claba", "esc.va", "esc.ba", "esc.vo", "escvo", "esclavo", "esclava", "escva", "esc.bo", "esclabos", "esclavos", "esc.os", "esc.a", "esc.o", "libre", "esc.s", "esco", "esca"]
-
         if baptism_princ.get('status') is not None:
             for term in status:
                 if term in baptism_princ.get('status'):
                     isEnslaved = 1
 
-        princ_age = baptism_princ.get('age')
-        if princ_age == 'infant': #Double check this string
-            isInfant = 1
-        #if so, and if principal is an infant:###########################################################################
+        #IF PRINCIPAL IS AN INFANT:###########################################################################
         if hasGodparents and isInfant:
             #are principal's parent(s) identified? #Took care of this above
             #is there a birth event? ##############################################################################
@@ -244,9 +251,6 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, unc
                 relationships = entry_people[person_idx].get('relationships')
                 if relationships is not None:
                     for relation in relationships:
-                        if relation.get('relationship_type')=='enslaver':
-                            princEnslaverIdent = 1
-                        ########### Extra checks ###########
                         #Check if enslaver has been assigned any ethnicities
                         if relation.get('relationship_type')=='slave' and (relation.get('ethnicities') is not None):
                             hasWrongEthAssgnt_ensl = 1
@@ -256,6 +260,15 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, unc
                 #Check if cleric has been assigned any ethnithicities
                 elif (relationships is None) and (entry_people[person_idx].get('id') is cleric_PID) and (entry_people[person_idx].get('ethnicities') is not None):
                     hasWrongEthAssgnt_cler = 1
+                    ################################################
+                    ################################################
+                    ################################################
+                    print("Cleric with assigned ethnicities?")
+                    print(entry_people[person_idx])
+                    print("-------------------------")
+                    ################################################
+                    ################################################
+                    ################################################
                 #Check for people without any role in the event (i.e. no relations, and not the cleric)
                 elif (relationships is None) and (entry_people[person_idx].get('id') is not cleric_PID):
                     hasUnrelatedPersons = 1
@@ -304,12 +317,11 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, unc
         return {}
 
     my_values = [isBaptism, isDateComplete, hasLocation, hasCleric, hasPrincipal,
-              hasRelations, hasGodparents, hasEnslaver,
+              hasEnslaver, isEnslaved, hasRelations, hasGodparents,
               isInfant, hasParents, isBirthEvent, hasBirthDate, hasBirthLocation,
               isBirthEvent, isDateComplete_birth, hasLocation_birth,
-              isEnslaved, princEnslaverIdent, similarNames,
-              hasWrongEthAssgnt_ensl, hasWrongEthAssgnt_cler, hasUncatChars, hasUnassgnEnts,
-              hasUncoupledParents, hasUncoupledGodparents, hasUnrelatedPersons]
+              hasUnrelatedPersons, hasUncoupledParents, hasUncoupledGodparents, similarNames,
+              hasWrongEthAssgnt_ensl, hasWrongEthAssgnt_cler, hasUncatChars, hasUnassgnEnts]
 
     val_bools = [True if elem==True else False for elem in my_values]
 
