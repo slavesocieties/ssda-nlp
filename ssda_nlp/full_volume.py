@@ -78,7 +78,7 @@ def check_lengths(name_list, idx, idx2):
 
 # Cell
 
-def validate_entry(entry_entities, entry_people, entry_places, entry_events, uncategorized_characteristics, isVerbose = 0, entry_type = "baptism"):
+def validate_entry(entry_entities, entry_people, entry_places, entry_events, uncategorized_characteristics, all_first_names, isVerbose = 0, entry_type = "baptism"):
     '''
     analyzes data extracted from a single ecclesiastical entry to assess accuracy of automated entity and relationship extraction
         entry_type: baptism, marriage, or burial
@@ -132,43 +132,49 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, unc
         if isBaptism:
             #does baptism event have a complete date? #########################################################################
             event_date = baptism_event.get('date')
-            isDateComplete = ( ('?' in event_date) ) # Ex unfinished date: '????-??-22'
+            isDateComplete = not ('?' in event_date) # Ex unfinished date: '????-??-22'
             #does baptism event have a location? ##############################################################################
             event_location = baptism_event.get('location')
-            hasLocation = entry_places is not None and (len(entry_places)>0)
+            hasLocation = (entry_places is not None) and (len(entry_places)>0)
 
         #is there an identified cleric? ##############################################################################
         hasCleric = not (type(baptism_event.get('cleric'))=='NoneType')
+        if hasCleric:
+            cleric_PID = baptism_event.get('cleric')
 
         #is there an identified principal? ##############################################################################
         hasPrincipal = not (type(baptism_event.get('principal'))=='NoneType')
 
         #if so:
-        if hasCleric and hasPrincipal:
+        if hasPrincipal:
             principal_PID = baptism_event.get('principal')
-            cleric_PID = baptism_event.get('cleric')
 
             #Loop through to find the principal's entry in entry_people
-            baptism_princ = '' #Initialization
+            baptism_princ = [] #Initialization
             for princ_idx in range(len(entry_people)):
                 foundPrinc = principal_PID in entry_people[princ_idx].get('id')
                 #Need to do "in" because, as per the first case, the listed PID is actually 2 PIDs appended together (separated by a ;)
                 if foundPrinc:
-                    baptism_princ = entry_people[princ_idx]
-                    break
+                    baptism_princ.append(entry_people[princ_idx])
 
             #is the principal an infant? ##############################################################################
-            princ_age = baptism_princ.get('age')
-            if princ_age == 'infant':
-                isInfant = 1
+            for ref in baptism_princ:
+                princ_age = ref.get('age')
+                if princ_age == 'infant':
+                    isInfant = 1
+                    break
 
             #are principal's godparent(s) identified? ##################################################################
             count_godparents = 0
             godparents_list = []
             count_parents = 0
             parents_list = []
-            relations = baptism_princ.get('relationships')
-            if relations is not None:
+            relations = []
+            for ref in baptism_princ:
+                if ref.get("relationships") is not None:
+                    for rel in ref.get("relationships"):
+                        relations.append(rel)
+            if len(relations) > 0:
                 hasRelations = 1
                 for rel_idx in range(len(relations)):
                     if relations[rel_idx].get('relationship_type')=='godparent':
@@ -204,7 +210,7 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, unc
                     if relations is not None:
                         for rel_idx in range(len(relations)):
                             if relations[0][rel_idx].get('relationship_type')=='husband' or relations[0][rel_idx].get('relationship_type')=='wife':
-                                pass
+                                continue
                             else:
                                 hasUncoupledParents = 1
                                 print("Contains uncoupled parents:")
@@ -213,14 +219,18 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, unc
                 del relations
 
         status = ["propiedad", "escrava", "escravos", "esclabo", "esclaba", "escl.a", "escl.o", "clavo", "clava", "escl", "escl.", "escl.s", "clabo", "claba", "esc.va", "esc.ba", "esc.vo", "escvo", "esclavo", "esclava", "escva", "esc.bo", "esclabos", "esclavos", "esc.os", "esc.a", "esc.o", "libre", "esc.s", "esco", "esca"]
-        if baptism_princ.get('status') is not None:
-            #print("Printing principal status:")
-            #print(baptism_princ.get('status'))
-            #print("---------------------")
-            for term in status:
-                if term in baptism_princ.get('status'):
-                    isEnslaved = 1
-                    break
+        for ref in baptism_princ:
+            if ref.get('status') is not None:
+                #print("Printing principal status:")
+                #print(baptism_princ.get('status'))
+                #print("---------------------")
+                for term in status:
+                    if term in ref.get('status'):
+                        isEnslaved = 1
+                        break
+            if isEnslaved:
+                break
+
         ##########################################
         if hasEnslaver and not isEnslaved:
             print("Enslaver found, but thinks principal is not enslaved... Principal dict:")
@@ -228,7 +238,7 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, unc
             print("-------------------------")
 
         #IF PRINCIPAL IS AN INFANT:###########################################################################
-        if hasGodparents and isInfant:
+        if isInfant:
             #are principal's parent(s) identified? #Took care of this above
             #is there a birth event? ##############################################################################
             birth_event = {} #Initialization
@@ -250,13 +260,12 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, unc
                     hasLocation_birth = 1
                 elif (birth_event.get('location') is not None) or (entry_places is not None) or (len(entry_places)>1):
                     hasLocation_birth = 1
-                    print("Dobule check birth location")
+                    print("Double check birth location")
                     print(entry_events)
                     print(entry_places)
                     print("--------------------")
 
         name_list = []
-        firstNameThreshold = 7
         #if so, and if principal is enslaved: ##########################################################################
         #is principal's enslaver identified? ########################################################################
         for person_idx in range(len(entry_people)):
@@ -264,10 +273,11 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, unc
                 if relationships is not None:
                     for relation in relationships:
                         #Check if enslaver has been assigned any ethnicities
-                        if relation.get('relationship_type')=='slave' and (relation.get('ethnicities') is not None) and (isEnslaved):
+                        #if relation.get('relationship_type')=='slave' and (relation.get('ethnicities') is not None) and (isEnslaved):
+                        if (relation.get('relationship_type')=='slave') and (entry_people[person_idx].get('ethnicities') is not None) and (isEnslaved):
                             hasWrongEthAssgnt_ensl = 1
                             break
-                #Check if cleric has been assigned any ethnithicities
+                #Check if cleric has been assigned any ethnicities
                 elif (relationships is None) and (entry_people[person_idx].get('id') is cleric_PID) and (entry_people[person_idx].get('ethnicities') is not None):
                     hasWrongEthAssgnt_cler = 1
                     ################################################
@@ -288,8 +298,13 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, unc
                 name_list.append(nameTemp)
                 #1: Short name that could be a first name
                 #Make a boolean list to flag which names may be first names (based on length)
-                possibleFirstNames = [name for name in name_list if len(name)<firstNameThreshold]
-                fullNames = [name for name in name_list if len(name)>firstNameThreshold]
+                possibleFirstNames = []
+                fullNames = []
+                for name in name_list:
+                    if name in all_first_names:
+                        possibleFirstNames.append(name)
+                    else:
+                        fullNames.append(name)
                 #Check to see if names appear within each other (i.e. is a person double counted)
                 doubleCountedNames = []
                 for idx in range(len(possibleFirstNames)):
@@ -392,6 +407,15 @@ def process_volume(path_to_transcription, path_to_model):
 
     validation_dict_ALL = []
 
+    #file path could be passed as parameter, as could language (eventually)
+    with open("names.json", encoding="utf-8") as infile:
+        name_file = json.load(infile)
+
+    names = name_file["names"]
+    all_first_names = []
+    for name in names:
+        all_first_names.append(name["name"])
+
     for i in range(len(entry_df.index)):
 
         entry_no = entry_df['entry_no'][i]
@@ -424,7 +448,8 @@ def process_volume(path_to_transcription, path_to_model):
         entitiesRunning = entitiesRunning.append(entities)
 
         verbosity = 0
-        entry_validation_dict = validate_entry(entities, entry_people, entry_places, entry_events, uncategorized_characteristics, isVerbose = verbosity)
+
+        entry_validation_dict = validate_entry(entities, entry_people, entry_places, entry_events, uncategorized_characteristics, all_first_names, isVerbose = verbosity)
         validation_dict_ALL.append(entry_validation_dict)
 
         people += entry_people
