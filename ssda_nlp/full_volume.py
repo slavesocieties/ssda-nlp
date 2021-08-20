@@ -176,16 +176,16 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, unc
                         relations.append(rel)
             if len(relations) > 0:
                 hasRelations = 1
-                for rel_idx in range(len(relations)):
-                    if relations[rel_idx].get('relationship_type')=='godparent':
+                for relation in relations:
+                    if relation.get('relationship_type')=='godparent':
                         hasGodparents = 1
-                        godparents_list.append(relations[rel_idx].get('related_person'))
+                        godparents_list.append(relation.get('related_person'))
                         count_godparents += 1
-                    if (relations[rel_idx].get('relationship_type')=='parent') and (isInfant):
+                    if (relation.get('relationship_type')=='parent') and (isInfant):
                         hasParents = 1
-                        parents_list.append(relations[rel_idx].get('related_person'))
+                        parents_list.append(relation.get('related_person'))
                         count_parents += 1
-                    if relations[rel_idx].get('relationship_type')=='enslaver':
+                    if relation.get('relationship_type')=='enslaver':
                         hasEnslaver = 1
                         #print("Enslaver found.  This should lead to a true for isEnslaved")
                         #print(relations)
@@ -198,7 +198,7 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, unc
                     if relations is not None:
                         for rel_idx in range(len(relations)):
                             if relations[0][rel_idx].get('relationship_type')=='husband' or relations[0][rel_idx].get('relationship_type')=='wife':
-                                #They are coupled to someone else
+                                #They are coupled to someone
                                 pass
                             else:
                                 hasUncoupledGodparents = 1
@@ -273,20 +273,24 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, unc
                 if relationships is not None:
                     for relation in relationships:
                         #Check if enslaver has been assigned any ethnicities
-                        #if relation.get('relationship_type')=='slave' and (relation.get('ethnicities') is not None) and (isEnslaved):
                         if (relation.get('relationship_type')=='slave') and (entry_people[person_idx].get('ethnicities') is not None) and (isEnslaved):
                             hasWrongEthAssgnt_ensl = 1
+                            ################################################
+                            ################################################
+                            print("Enslaver with assigned ethnicities?")
+                            print(entry_people[person_idx])
+                            print("-------------------------")
+                            ################################################
+                            ################################################
                             break
                 #Check if cleric has been assigned any ethnicities
                 elif (relationships is None) and (entry_people[person_idx].get('id') is cleric_PID) and (entry_people[person_idx].get('ethnicities') is not None):
                     hasWrongEthAssgnt_cler = 1
                     ################################################
                     ################################################
-                    ################################################
                     print("Cleric with assigned ethnicities?")
                     print(entry_people[person_idx])
                     print("-------------------------")
-                    ################################################
                     ################################################
                     ################################################
                 #Check for people without any role in the event (i.e. no relations, and not the cleric)
