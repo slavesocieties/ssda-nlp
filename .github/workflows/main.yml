@@ -14,6 +14,7 @@ jobs:
         pip install nbdev jupyter
         pip install -e .
         pip install fastcore==1.3.25
+	pip install matplotlib
     - name: Read all notebooks
       run: |
         nbdev_read_nbs
