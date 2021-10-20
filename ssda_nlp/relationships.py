@@ -384,19 +384,12 @@ def alt_assign_relationships(entry_text, entities, people_df, people, volume_met
                     if (maternal_grandfather != '') and (maternal_grandmother != ''):
                             people = build_reciprocal_relationship(people, maternal_grandfather, maternal_grandmother, "spouse")
 
-                #############################################################
-                ### KAI EDIT: ###
-                #############################################################
-                #Make sure that this is aligned correctly...
                 elif ((found_parents == False) and (found_godparents == False) and (found_paternal_grandparents == False) and (found_maternal_grandparents == False) and (found_enslaver == False)):
                     #ie if after all these checks, there are still no relationships found, then we have a case where we have a relationship but no assignment
-                    #Initial attempt: add a column to entities, just binary whether
                     #Note that this relies on setting ALL to FOUND by default, so I don't have to add to the code above each time
                     #Thus, we only flip it in the case that no relationships are found
 
-                    entities.loc[index,"assigned"] = False
-                    #entities['assgnmt_status'][index] = False
-
+                    entities.loc[index, "assigned"] = False
                     #print("Failed to find a category for relationship: " + entities["pred_entity"][index])
 
 
@@ -692,7 +685,7 @@ def assign_characteristics(entry_text, entities_df, characteristics_df, unique_i
                 if entity["pred_start"] == categorized_characteristics["pred_start"][index]:
                     signal_entity_index = i
                     break
-            if (entities_df["pred_label"][signal_entity_index - 1] == "PER") and (entities_df["pred_label"][signal_entity_index + 1] == "LOC") and (entities_df["pred_start"][signal_entity_index + 1] - entities_df["pred_end"][signal_entity_index - 1] <= 20):
+            if (signal_entity_index != 0) and (len(entities_df["pred_label"]) > (signal_entity_index + 1)) and (entities_df["pred_label"][signal_entity_index - 1] == "PER") and (entities_df["pred_label"][signal_entity_index + 1] == "LOC") and (entities_df["pred_start"][signal_entity_index + 1] - entities_df["pred_end"][signal_entity_index - 1] <= 20):
                 place = entities_df["pred_entity"][signal_entity_index + 1]
                 multiple = False
                 if categorized_characteristics["pred_entity"][index] == "naturales":
@@ -707,7 +700,7 @@ def assign_characteristics(entry_text, entities_df, characteristics_df, unique_i
                         if person["pred_start"] == entities_df["pred_start"][signal_entity_index - 2]:
                             assignments[index] += ';' + person["unique_id"]
                             break
-            elif entities_df["pred_label"][signal_entity_index + 1] == "LOC":
+            elif (len(entities_df["pred_label"]) > (signal_entity_index + 1)) and (entities_df["pred_label"][signal_entity_index + 1] == "LOC"):
                 place = entities_df["pred_entity"][signal_entity_index + 1]
                 categorized_characteristics.at[index, "pred_entity"] = place
                 principal = determine_principals(entry_text, unique_individuals, 1)
