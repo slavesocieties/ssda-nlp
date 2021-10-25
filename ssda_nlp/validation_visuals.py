@@ -61,3 +61,5 @@ def val_vis_bar(validation_list):
     plt.title('Full Volume Validation Checks', fontsize=title_font)
 
     plt.show()
+
+    return performance
