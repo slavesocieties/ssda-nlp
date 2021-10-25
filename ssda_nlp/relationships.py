@@ -685,7 +685,7 @@ def assign_characteristics(entry_text, entities_df, characteristics_df, unique_i
                 if entity["pred_start"] == categorized_characteristics["pred_start"][index]:
                     signal_entity_index = i
                     break
-            if (entities_df["pred_label"][signal_entity_index - 1] == "PER") and (entities_df["pred_label"][signal_entity_index + 1] == "LOC") and (entities_df["pred_start"][signal_entity_index + 1] - entities_df["pred_end"][signal_entity_index - 1] <= 20):
+            if (signal_entity_index != 0) and (len(entities_df["pred_label"]) > (signal_entity_index + 1)) and (entities_df["pred_label"][signal_entity_index - 1] == "PER") and (entities_df["pred_label"][signal_entity_index + 1] == "LOC") and (entities_df["pred_start"][signal_entity_index + 1] - entities_df["pred_end"][signal_entity_index - 1] <= 20):
                 place = entities_df["pred_entity"][signal_entity_index + 1]
                 multiple = False
                 if categorized_characteristics["pred_entity"][index] == "naturales":
@@ -700,7 +700,7 @@ def assign_characteristics(entry_text, entities_df, characteristics_df, unique_i
                         if person["pred_start"] == entities_df["pred_start"][signal_entity_index - 2]:
                             assignments[index] += ';' + person["unique_id"]
                             break
-            elif entities_df["pred_label"][signal_entity_index + 1] == "LOC":
+            elif (len(entities_df["pred_label"]) > (signal_entity_index + 1)) and (entities_df["pred_label"][signal_entity_index + 1] == "LOC"):
                 place = entities_df["pred_entity"][signal_entity_index + 1]
                 categorized_characteristics.at[index, "pred_entity"] = place
                 principal = determine_principals(entry_text, unique_individuals, 1)
