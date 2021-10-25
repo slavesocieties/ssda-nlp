@@ -69,7 +69,8 @@ index = {"parse_xml": "12-ssda-xml-parser.ipynb",
          "check_lengths": "72-full-volume-processor.ipynb",
          "validate_entry": "72-full-volume-processor.ipynb",
          "process_volume": "72-full-volume-processor.ipynb",
-         "flatten_volume_json": "72-full-volume-processor.ipynb"}
+         "flatten_volume_json": "72-full-volume-processor.ipynb",
+         "val_vis_bar": "74-validation-visuals.ipynb"}
 
 modules = ["xml_parser.py",
            "collate.py",
