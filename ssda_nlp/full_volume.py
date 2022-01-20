@@ -78,7 +78,7 @@ def check_lengths(name_list, idx, idx2):
 
 # Cell
 
-def validate_entry(entry_entities, entry_people, entry_places, entry_events, uncategorized_characteristics, all_first_names, isVerbose = 0, entry_type = "baptism"):
+def validate_entry(entry_entities, entry_people, entry_places, entry_events, uncategorized_characteristics, all_first_names, isVerbose=0, entry_type="baptism", verbose=False):
     '''
     analyzes data extracted from a single ecclesiastical entry to assess accuracy of automated entity and relationship extraction
         entry_type: baptism, marriage, or burial
@@ -187,9 +187,9 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, unc
                         count_parents += 1
                     if relation.get('relationship_type')=='enslaver':
                         hasEnslaver = 1
-                        #print("Enslaver found.  This should lead to a true for isEnslaved")
-                        #print(relations)
-                        #print("------------------")
+                        #isEnslaved = 1
+                        # This implies the person is enslaved, but the entity linking may not pick up on it
+                        # Eg we have cases of found enslavers but no status assignment
 
             #are there likely couples (e.g. parents, godparents) not explicitly flagged as such
             if count_godparents>1:
@@ -232,10 +232,11 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, unc
                 break
 
         ##########################################
-        if hasEnslaver and not isEnslaved:
-            print("Enslaver found, but thinks principal is not enslaved... Principal dict:")
-            print(baptism_princ)
-            print("-------------------------")
+        if verbose:
+            if hasEnslaver and not isEnslaved:
+                print("Enslaver found, but thinks principal is not enslaved... Principal dict:")
+                print(baptism_princ)
+                print("-------------------------")
 
         #IF PRINCIPAL IS AN INFANT:###########################################################################
         if isInfant:
