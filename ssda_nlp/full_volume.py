@@ -199,7 +199,8 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, unc
                         for rel_idx in range(len(relations)):
                             if relations[0][rel_idx].get('relationship_type')=='husband' or relations[0][rel_idx].get('relationship_type')=='wife':
                                 #They are coupled to someone
-                                pass
+                                print("Manually link these godparents")
+                                hasUncoupledGodparents = 1
                             else:
                                 hasUncoupledGodparents = 1
                 del relations
@@ -210,7 +211,8 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, unc
                     if relations is not None:
                         for rel_idx in range(len(relations)):
                             if relations[0][rel_idx].get('relationship_type')=='husband' or relations[0][rel_idx].get('relationship_type')=='wife':
-                                continue
+                                print("Manually link these parents")
+                                hasUncoupledParents = 1
                             else:
                                 hasUncoupledParents = 1
                                 print("Contains uncoupled parents:")
@@ -221,15 +223,10 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, unc
         status = ["propiedad", "escrava", "escravos", "esclabo", "esclaba", "escl.a", "escl.o", "clavo", "clava", "escl", "escl.", "escl.s", "clabo", "claba", "esc.va", "esc.ba", "esc.vo", "escvo", "esclavo", "esclava", "escva", "esc.bo", "esclabos", "esclavos", "esc.os", "esc.a", "esc.o", "libre", "esc.s", "esco", "esca"]
         for ref in baptism_princ:
             if ref.get('status') is not None:
-                #print("Printing principal status:")
-                #print(baptism_princ.get('status'))
-                #print("---------------------")
                 for term in status:
                     if term in ref.get('status'):
                         isEnslaved = 1
                         break
-            if isEnslaved:
-                break
 
         ##########################################
         if verbose:
@@ -297,6 +294,13 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, unc
                 #Check for people without any role in the event (i.e. no relations, and not the cleric)
                 elif (relationships is None) and (entry_people[person_idx].get('id') is not cleric_PID):
                     hasUnrelatedPersons = 1
+                    ################################################
+                    ################################################
+                    print("Person with no relations?")
+                    print(entry_people)
+                    print("-------------------------")
+                    ################################################
+                    ################################################
 
                 #are there any people with very similar names that still appear separately
                 nameTemp = entry_people[person_idx].get('name')
@@ -327,7 +331,7 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, unc
                             for idx2 in range(len(name_list)-idx-1):
                                 idx2 = idx2+idx+1
                                 if check_lengths(name_list, idx, idx2):
-                                    #print(name_list)
+                                    print(name_list)
                                     similarNames = 1
 
         #questions re characteristics:
@@ -342,6 +346,13 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, unc
         #display(unassigned_df)
         if num_rowsA>0:
             hasUnassgnEnts = 1
+            ################################################
+            ################################################
+            print("Unassigned Ethnicities?")
+            display(unassigned_df)
+            print("-------------------------")
+            ################################################
+            ################################################
     else:
         print("Entry is not a baptism, and is not yet supported")
         return {}
@@ -454,7 +465,7 @@ def process_volume(path_to_transcription, path_to_model):
 
         verbosity = 0
 
-        entry_validation_dict = validate_entry(entities, entry_people, entry_places, entry_events, uncategorized_characteristics, all_first_names, isVerbose = verbosity)
+        entry_validation_dict = validate_entry(entities, entry_people, entry_places, entry_events, uncategorized_characteristics, all_first_names, isVerbose=verbosity)
         validation_dict_ALL.append(entry_validation_dict)
 
         people += entry_people
