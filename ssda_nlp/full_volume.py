@@ -89,6 +89,7 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, unc
 
         returns: dictionary in which key-value pairs encode various details regarding performance of automation
     '''
+    #print("VALIDATE ENTRY")
 
     validation_dict = {}
 
