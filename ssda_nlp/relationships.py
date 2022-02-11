@@ -18,6 +18,7 @@ from spacy.util import minibatch, compounding
 import pandas as pd
 import numpy as np
 import copy
+import json as json
 
 #internal imports
 from .collate import *
@@ -33,23 +34,20 @@ from .utility import *
 #of the vocabularies as they currently exist
 #should also eventually be enhanced to return equivalents and a requested language
 
-def retrieve_controlled_vocabularies():
+def retrieve_controlled_vocabularies(language = None, types = []):
     '''
     returns a dictionary containing current version of controlled vocabularies for characteristics
     '''
-    age = ["parvola", "parvolo", "parvulo", "parvula", "parv", "adulto", "adulta", "adul", "niño", "niña", "nino", "nina", "dulto", "dulta"]
-    occupation = ["religioso", "ingen.o", "sacristan", "sac.", "sachristan", "cura", "vicario", "eclesiastico", "clerigo", "estudiante"]
-    phenotype = ["negro", "negra", "preto", "moreno", "morena", "indio", "india", "pardo", "parda", "mestizo", "mestiza", "mulato", "mulata", "blanco", "blanca", "criollo", "criolla", "branco", "branca"]
-    titles = ["frai", "sr", "sr.", "rexidor", "regr", "probin sial", "probinsial", "herm.o", "hermano", "dr.", "doc tor", "dna", "difin.dor", "difin.or", "difinidor", "d.a", "aiudante", "doctor", "d.r", "dor", "dr", "d.or", "b.er", "br", "ber", "don", "doña", "da", "padre", "pe", "predicador", "fray", "d.n", "d.", "d,n", "d;n", "p.e", "p", "dn", "fr.", "fr", "f", "regidor", "rex.or", "alg.l m.or", "ldo", "licenciado", "d", "alg.l", "alcalde"]
-    ranks = ["my.r", "comandan.te", "com.te", "capt.n", "capp[roto]", "cap[roto]", "capitn", "comend.te63", "comand.te", "alferes", "alfer.s mayor", "capitan", "capitam", "cap.n", "capit.n", "capn", "sarg.to may.r", "sarg.to", "sargento", "sarjento mayor", "sarjento", "sargto mayor", "theniente", "teniente", "thente"]
-    ethnicities = ["ganga", "español", "espanol", "caravali", "ingles", "yngles", "angola", "carabalí", "carabali", "carabaly", "congo", "conga", "mandinga", "mina", "temo", "malagas", "arara", "manga"]
-    status = ["propiedad", "escrava", "escravos", "esclabo", "esclaba", "escl.a", "escl.o", "clavo", "clava", "escl", "escl.", "escl.s", "clabo", "claba", "esc.va", "esc.ba", "esc.vo", "escvo", "esclavo", "esclava", "escva", "esc.bo", "esclabos", "esclavos", "esc.os", "esc.a", "esc.o", "libre", "esc.s", "esco", "esca"]
-    legitimacy = ["lexma", "lexmo", "legitima", "legitimo", "h l", "natural", "nral", "lexitima", "lexitimo", "nat.l"]
-    relationships = ["hermano", "hijo", "hija", "esposo", "esposa", "viudo", "viuda", "padrinos", "padrino", "padryno", "soltera", "soltero", "madrina", "padre", "p.p.", "p. ", "p."]
-    origin = ["naturales"]
-
-    vocabs = {"origin": origin, "legitimacy": legitimacy, "age": age, "occupation": occupation, "phenotype": phenotype, "titles": titles, "ranks": ranks, "ethnicities": ethnicities, "status": status, "relationships": relationships}
-
+    with open("synonyms.json", encoding="utf-8") as infile:
+        data = json.load(infile)
+    
+    vocabs = {}
+    for vocab in data["controlled_vocabularies"]:
+        t = vocab["type"]
+        if((language == None or vocab["language"] == language) 
+        and (types == [] or t in types)):
+            vocabs[t] = vocab["terms"]
+            #may eventually need functionality for same type, different language
     return vocabs
 
 # Cell
@@ -167,7 +165,7 @@ def alt_assign_relationships(entry_text, entities, people_df, people, volume_met
         returns: updated version of people with interpersonal relationships added
     '''
 
-    rel_types = retrieve_controlled_vocabularies()["relationships"]
+    rel_types = retrieve_controlled_vocabularies(None,["relationships"])
     relationships = copy.deepcopy(entities.loc[entities['pred_label'] == 'REL'])
     relationships.reset_index(inplace=True)
     characteristics = copy.deepcopy(entities.loc[entities['pred_label'] == 'CHAR'])
@@ -621,7 +619,7 @@ def assign_characteristics(entry_text, entities_df, characteristics_df, unique_i
         returns: structured representation (a list of dictionaries)
     '''
     people = []
-    ethnicities = retrieve_controlled_vocabularies()["ethnicities"]
+    ethnicities = retrieve_controlled_vocabularies(None,["ethnicities"])
     categorized_characteristics, uncat_char = categorize_characteristics(entities_df, characteristics_df)
     assignments = [None] * len(characteristics_df.index)
     categorized_characteristics.reset_index(inplace=True)
@@ -961,7 +959,7 @@ def assign_relationships(entry_text, entities, unique_individuals):
 
     principal = determine_principals(entry_text, unique_individuals, 1)[0]
     principal_ID = unique_individuals.loc[unique_individuals.pred_entity==principal,"unique_id"].item()
-    status = retrieve_controlled_vocabularies()["status"]
+    status = retrieve_controlled_vocabularies(None,["status"])
 
     rel = 0 #Variable telling us later whether or not this entry has any identified relationships
     previous = 0 #Variable telling us whether or not the previous REL combined two entities

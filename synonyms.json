@@ -243,7 +243,16 @@
   {"english": "vicar", "spanish": ["vicario"]}
 ],
 "controlled_vocabularies": [
-  {"type": "ethnonyms", "terms": ["Arará", "Bambara", "Carabalí", "Floup", "Gangá", "Inglés", "Kanuri", "Kongo", "Lucumí", "Mandinka", "Ndongo"]},
-  {"type": "phenotypes", "language": "spanish", "terms": ["criolla", "criollo", "criollos", "morena", "moreno", "morenos", "negra", "negro", "negros", "parda", "pardo", "pardos"]}
+  {"type": "ethnonyms", "language": "spanish", "terms": ["Arará", "Bambara", "Carabalí", "Floup", "Gangá", "Inglés", "Kanuri", "Kongo", "Lucumí", "Mandinka", "Ndongo"]},
+  {"type": "ages", "language": "spanish", "terms": ["parvola", "parvolo", "parvulo", "parvula", "parv", "adulto", "adulta", "adul", "niño", "niña", "nino", "nina", "dulto", "dulta"]},
+  {"type": "occupations", "language": "spanish", "terms": ["religioso", "ingen.o", "sacristan", "sac.", "sachristan", "cura", "vicario", "eclesiastico", "clerigo", "estudiante"]},
+  {"type": "phenotypes", "language": "spanish", "terms": ["negro", "negra", "preto", "moreno", "morena", "indio", "india", "pardo", "parda", "mestizo", "mestiza", "mulato", "mulata", "blanco", "blanca", "criollo", "criolla", "branco", "branca"]},
+  {"type": "titles", "language": "spanish", "terms": ["frai", "sr", "sr.", "rexidor", "regr", "probin sial", "probinsial", "herm.o", "hermano", "dr.", "doc tor", "dna", "difin.dor", "difin.or", "difinidor", "d.a", "aiudante", "doctor", "d.r", "dor", "dr", "d.or", "b.er", "br", "ber", "don", "doña", "da", "padre", "pe", "predicador", "fray", "d.n", "d.", "d,n", "d;n", "p.e", "p", "dn", "fr.", "fr", "f", "regidor", "rex.or", "alg.l m.or", "ldo", "licenciado", "d", "alg.l", "alcalde"]},
+  {"type": "ranks", "language": "spanish", "terms": ["my.r", "comandan.te", "com.te", "capt.n", "capp[roto]", "cap[roto]", "capitn", "comend.te63", "comand.te", "alferes", "alfer.s mayor", "capitan", "capitam", "cap.n", "capit.n", "capn", "sarg.to may.r", "sarg.to", "sargento", "sarjento mayor", "sarjento", "sargto mayor", "theniente", "teniente", "thente"]},
+  {"type": "ethnicities", "language": "spanish", "terms": ["ganga", "español", "espanol", "caravali", "ingles", "yngles", "angola", "carabalí", "carabali", "carabaly", "congo", "conga", "mandinga", "mina", "temo", "malagas", "arara", "manga"]},
+  {"type": "status", "language": "spanish", "terms": ["propiedad", "escrava", "escravos", "esclabo", "esclaba", "escl.a", "escl.o", "clavo", "clava", "escl", "escl.", "escl.s", "clabo", "claba", "esc.va", "esc.ba", "esc.vo", "escvo", "esclavo", "esclava", "escva", "esc.bo", "esclabos", "esclavos", "esc.os", "esc.a", "esc.o", "libre", "esc.s", "esco", "esca"]},
+  {"type": "legitimacy", "language": "spanish", "terms": ["lexma", "lexmo", "legitima", "legitimo", "h l", "natural", "nral", "lexitima", "lexitimo", "nat.l"]},
+  {"type": "relationships", "language": "spanish", "terms": ["hermano", "hijo", "hija", "esposo", "esposa", "viudo", "viuda", "padrinos", "padrino", "padryno", "soltera", "soltero", "madrina", "padre", "p.p.", "p. ", "p."]},
+  {"type": "origin", "language": "spanish", "terms": ["naturales"]}
   ]
 }
