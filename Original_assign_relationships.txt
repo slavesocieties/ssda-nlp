@@ -1,0 +1,85 @@
+#export
+
+def assign_relationships(entry_text, entities, unique_individuals):
+    '''
+    Relationship types:
+        parent/child --> P. and P.s are parents
+        godparents/godchildren --> P.P and p.s are godparents
+        slaveholders/enslaved
+        spouses
+        grandparents    
+    Note that this function also calls the determine_principals function to help with rel assignment
+    Returns: the relationship in forms of triples (subject, REL, relation) i.e. (me, godmother, my_godmother)
+    '''    
+    rel_df = entities.loc[entities['pred_label'] == 'REL']
+    rel_df.reset_index(inplace=True)
+    rel_df = rel_df.drop('index',axis=1)
+    #display(rel_df.head()) #Comment this out in final function, this is just for quick verification
+    
+    principal = determine_principals(entry_text, unique_individuals, 1)[0]
+    principal_ID = unique_individuals.loc[unique_individuals.pred_entity==principal,"unique_id"].item()
+    status = retrieve_controlled_vocabularies()["status"]
+
+    rel = 0 #Variable telling us later whether or not this entry has any identified relationships
+    previous = 0 #Variable telling us whether or not the previous REL combined two entities 
+    #(i.e. P. and P. into P.P. and thus can skip the second P. entity)
+    event_id = volume_metadata["id"] + '-' + entities.iloc[0]['entry_no']
+    my_relations = []
+    m,n = entities.shape
+    for i in range(m):
+        if (entities.iloc[i,2]=='REL'):
+            rel = 1 #Relationship present
+            #We must check to make sure the first entity isn't a REL or it breaks the func due to positional index error
+            if i==0 or i==(m-1):
+                print("First/last entity is a REL, this functionality is not yet supported.")
+            elif entities.iloc[i,1]=='P.P.':
+                try:
+                    #This gathers the first name, probably the padrino
+                    my_ID = unique_individuals.loc[unique_individuals.pred_entity==entities.iloc[i+1,1],"unique_id"].item()
+                    my_triple = (principal_ID,'Padrino',my_ID)
+                    my_relations.append(my_triple)
+                    #This should be the second name, probably the madrina
+                    my_ID = unique_individuals.loc[unique_individuals.pred_entity==entities.iloc[i+2,1],"unique_id"].item()
+                    my_triple = (principal_ID,'Madrina',my_ID)
+                    my_relations.append(my_triple)
+                except:
+                    print("Exception: had last entity in DF as a REL and thus out of bounds in current form of function") 
+            #Checking if we have back-to-back entities in the form of 'P.' followed by 'P.'
+            elif ( (entities.iloc[i+1,2]=='REL') and ('P' in entities.iloc[i+1,1]) and (entities.iloc[i+2,2]=='PER') ):
+                previous = 1
+                my_ID = unique_individuals.loc[unique_individuals.pred_entity==entities.iloc[i+2,1],"unique_id"].item()
+                my_triple = (principal_ID,'Padrino',my_ID)
+                my_relations.append(my_triple)
+                my_ID = unique_individuals.loc[unique_individuals.pred_entity==entities.iloc[i+3,1],"unique_id"].item()
+                my_triple = (principal_ID,'Madrina',my_ID)
+                my_relations.append(my_triple)
+            #Skipping the second entity from the above case in the next iteration
+            elif previous:
+                previous = 0
+            elif (entities.iloc[i+1,2]=='PER'):
+                try:
+                    my_ID = unique_individuals.loc[unique_individuals.pred_entity==entities.iloc[i+1,1],"unique_id"].item()
+                    my_triple = (principal_ID,(entities.iloc[i,1]),my_ID)
+                    my_relations.append(my_triple)
+                except:
+                    print("Exception: had last entity in DF as a REL and thus out of bounds in current form of function")
+            elif ((entities.iloc[i,1].strip()=='P.') or (entities.iloc[i,1].strip()=='P')) and (entities.iloc[i+1,2]=='PER'): 
+                try:
+                    my_ID = unique_individuals.loc[unique_individuals.pred_entity==entities.iloc[i+1,1],"unique_id"].item()
+                    my_triple = (principal_ID,"Padre",my_ID)
+                    my_relations.append(my_triple)
+                except:
+                    print("Exception: had last entity in DF as a REL and thus out of bounds in current form of function") 
+            else:
+                print("Relationship found, but not between adjacent people")
+        elif ((entities.iloc[i,1] in status) and (entities.iloc[i+1,2]=='PER')): #Identify the slave owner
+            my_ID = unique_individuals.loc[unique_individuals.pred_entity==entities.iloc[i+1,1],"unique_id"].item()
+            my_triple = (principal_ID,"Esclavista",my_ID)
+            my_relations.append(my_triple)
+    if rel:
+        print(entry_text) #Uncomment this for verification
+        print()
+        print(my_relations)
+    print("------------------------------------------")
+    print()
+    return my_relations
