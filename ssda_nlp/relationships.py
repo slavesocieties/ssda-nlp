@@ -1548,7 +1548,7 @@ def build_entry_metadata(entry_text, entities, path_to_volume_xml, entry_number=
         people, entities = alt_assign_relationships(entry_text, entities, people_df, people, volume_metadata)
         obvious_duplicates = id_obvious_duplicates(people_df, principal, cleric)
         people = merge_duplicates(people, obvious_duplicates)
-
+        print(people)
         #perform more sophisticated disambiguation
 
         for event in events:
