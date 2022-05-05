@@ -320,10 +320,25 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, unc
                 for idx in range(len(possibleFirstNames)):
                     doubleCountedNames= doubleCountedNames + ([name for name in fullNames if possibleFirstNames[idx] in name])
                 if not len(doubleCountedNames)==0:
-                    #print("Possible double count (first name appears in a second instance (full name))")
-                    #print(name_list)
+                    print("Possible double count (first name appears in a second instance (full name))")
+                    print(name_list)
                     similarNames = 1
                 #2: Two similarly-sized names, that could be variations (i.e. missing hypens or have #'s for unknown letters')
+                # This is a bad check that needs to be replaced
+                # Doesn't even check to see if composition is similar, only length...
+                for name_idx in range(len(name_list)):
+                    # Why is it even passing here?
+                    if name_idx==0:
+                        pass
+                    else:
+                        for idx in range(len(name_list)):
+                            for idx2 in range(len(name_list)-idx-1):
+                                idx2 = idx2+idx+1
+                                if check_lengths(name_list, idx, idx2):
+                                    print("Similar Names: similar size")
+                                    print(name_list)
+                                    similarNames = 1
+                #3: Strip spaces, ".", "#", convert accented characters to unaccented
                 for name_idx in range(len(name_list)):
                     if name_idx==0:
                         pass
@@ -332,6 +347,7 @@ def validate_entry(entry_entities, entry_people, entry_places, entry_events, unc
                             for idx2 in range(len(name_list)-idx-1):
                                 idx2 = idx2+idx+1
                                 if check_lengths(name_list, idx, idx2):
+                                    print("Similar Names: similar size")
                                     print(name_list)
                                     similarNames = 1
 
