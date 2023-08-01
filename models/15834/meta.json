@@ -2,26 +2,26 @@
   "lang":"en",
   "name":"pipeline",
   "version":"0.0.0",
-  "spacy_version":">=3.1.3,<3.2.0",
+  "spacy_version":">=3.4.2,<3.5.0",
   "description":"",
   "author":"",
   "email":"",
   "url":"",
   "license":"",
-  "spacy_git_version":"8bda39f08",
+  "spacy_git_version":"3d0e89536",
   "vectors":{
     "width":0,
     "vectors":0,
     "keys":0,
-    "name":null
+    "name":null,
+    "mode":"default"
   },
   "labels":{
     "ner":[
-      "CHAR",
-      "DATE",
-      "LOC",
-      "PER",
-      "REL"
+      "Date",
+      "Location",
+      "Name",
+      "Relationship"
     ]
   },
   "pipeline":[
