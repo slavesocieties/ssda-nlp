@@ -10,6 +10,17 @@ import numpy as np
 
 # Cell
 
+def parseTranskribusOutput(output_paths):    
+    dicts = []
+    for path_to_output in output_paths:
+        with open(path_to_output, "r") as f:
+            text = ''
+            for line in f:
+                text += line[line.find('"text":') + 9:line.find("}") - 1]
+        textDict = {"entry_no": path_to_output[path_to_output.find('.')], "text": text}
+        dicts.append(textDict)
+    return pd.DataFrame.from_dict(dicts)
+
 def genAltEnts(entity):
     '''
     Function genAltEnts: This function takes an entity and generates all possible forms of it with errant spaces or pound
